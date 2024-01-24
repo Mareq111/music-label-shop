@@ -10,33 +10,51 @@ import InputSearch from "../../UI/Inputs/InputSearch";
 
 export default function TopNav() {
   return (
-    <div className="all-top-nav">
+    <nav className="all-top-nav">
       <div className="up-nav">
         {/* left -logo */}
 
         <div className="div-logo">
-          <img id="logo" src={logo} alt="logo" />
+          <img id="logo" src={logo} alt="Logo Strimz Shop" />
+        </div>
+        {/* search bar hidden for mobiles */}
+        <div className="up-nav-search">
+          <InputSearch />
         </div>
         {/* right icon */}
-        <div className="div-right-side-menu-mobile">
-          <div className="div-icon-into-menu">
-            <IconUser />
-          </div>
-          <div className="div-icon-into-menu">
-            <IconHeart />
-          </div>
-          <div className="div-icon-into-menu">
-            <IconShopBag />
-          </div>
-          <div className="div-icon-into-menu">
-            <IconMenu />
-          </div>
+        <div className="div-right-side-menu">
+          <a className="icon-link-to
+          " href="#">
+            <div className="div-icon-into-menu" id="icon-user-text-div">
+              <IconUser id="mobile-icon-user" />
+              <IconUser id="desktop-icon-user" />
+              <p className="p-icon-user-text">Hi! Log in</p>
+            </div>
+          </a>
+          <a className="icon-link-to
+          " href="#">
+            <div className="div-icon-into-menu">
+              <IconHeart />
+            </div>
+          </a>
+          <a className="icon-link-to
+          " href="#">
+            <div className="div-icon-into-menu">
+              <IconShopBag />
+            </div>
+          </a>
+          <a className="icon-link-to
+          " href="#">
+            <div id="menu-mobile" className="div-icon-into-menu">
+              <IconMenu />
+            </div>
+          </a>
         </div>
       </div>
       {/* search bar / down nav*/}
-      <div className="down-nav">
+      <div className="down-nav-search">
         <InputSearch />
       </div>
-    </div>
+    </nav>
   );
 }

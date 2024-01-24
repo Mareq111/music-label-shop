@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function IconUser() {
+export default function IconUser({id}) {
   return (
-    <svg
+    <svg id={id}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"

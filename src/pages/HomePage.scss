@@ -1,5 +1,11 @@
 @import ".././styles/global/global.scss";
 
 .home-content {
-    color: $white;
+  color: $white;
+}
+a {
+  text-decoration: none;
+  color: $ming-blue;
+  font-weight: 700;
+  text-transform: uppercase;
 }

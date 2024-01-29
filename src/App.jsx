@@ -10,20 +10,26 @@ import {
   Routes,
   RouterProvider,
 } from "react-router-dom";
+import ErrorPage from "./pages/ErrorPage.jsx";
+import ProductDetails from "./pages/ProductDetails.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        index: true,
+        /* path: "", */
         element: <HomePage />,
       },
       {
-        path: "/products",
+        path: "products",
         element: <Products />,
       },
+      /* Dynamic path do show any products page with their details */
+      { path: "products/:productId", element: <ProductDetails /> },
     ],
   },
 ]);

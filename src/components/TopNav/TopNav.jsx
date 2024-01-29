@@ -15,7 +15,7 @@ export default function TopNav() {
       <nav className="all-top-nav">
         <div className="up-nav">
           {/* left -logo */}
-          <Link to="/home">
+          <Link to="">
             <div className="div-logo">
               <img id="logo" src={logo} alt="Logo Strimz Shop" />
             </div>
@@ -38,7 +38,7 @@ export default function TopNav() {
               </div>
             </Link>
             <Link
-              to="/favorites"
+              to="favorites"
               className="icon-link-to
           "
             >
@@ -47,7 +47,7 @@ export default function TopNav() {
               </div>
             </Link>
             <Link
-              to="/shopping-bag"
+              to="shopping-bag"
               className="icon-link-to
           "
             >
@@ -56,7 +56,7 @@ export default function TopNav() {
               </div>
             </Link>
             <Link
-              to="/menu"
+              to="menu"
               className="icon-link-to
           "
             >
@@ -67,7 +67,7 @@ export default function TopNav() {
           </div>
         </div>
         {/* search bar / down nav*/}
-        <Link className="Link-search" to="/search">
+        <Link className="Link-search" to="search">
           <div className="down-nav-search">
             <InputSearch />
           </div>

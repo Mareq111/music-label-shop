@@ -1,5 +1,7 @@
-body {
+@import './styles/global/global.scss';
+html {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: $black-900;
 }

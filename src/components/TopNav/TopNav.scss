@@ -84,7 +84,9 @@ path {
   width: 100%;
   padding: 0.5rem 2rem;
 }
-
+.Link-search {
+  text-decoration: none;
+}
 //media query for 425screens
 
 @media (min-width: 425px) {

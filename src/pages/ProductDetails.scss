@@ -2,8 +2,9 @@
 
 main {
   padding: 1rem;
+  color: $white;
 }
-.section__1-up {
+.section__1-images {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,4 +24,39 @@ main {
 .div-name-of-item {
   background-color: $grey-700;
   width: 10%;
+}
+//content text
+.section-2-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+}
+.div-content-text-all {
+  width: 100%;
+  height: auto;
+}
+
+.first-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.h1-content-prod-details {
+  width: 75%;
+}
+.price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  /* border-radius: 1rem;
+  padding: 0.5rem;
+  background-color: $black-700; */
+}
+.star-icon path {
+  fill: $gold;
 }

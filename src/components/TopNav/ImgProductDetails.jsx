@@ -4,7 +4,6 @@ import MainImgProdDetails from "../../UI/Images/MainImgProdDetails";
 import FirstImgProdDetails from "../../UI/Images/FirstImgProdDetails";
 import SecondImgProdDetails from "../../UI/Images/SecondImgProdDetails";
 
-
 export default function ImgProductDetails() {
   return (
     <>

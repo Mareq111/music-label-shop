@@ -1,5 +1,19 @@
 @import "../styles/global/global.scss";
 
+main {
+  padding: 1rem;
+}
+.section__1-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.div-temporary {
+  width: 100%;
+  height: auto;
+}
 .h1-details {
   color: $white;
 }

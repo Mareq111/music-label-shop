@@ -1,6 +1,7 @@
 import React from "react";
 import IconStar from "../../UI/Icons/IconStar.jsx";
 import ChooserVersionRadio from "./ChooserVersionRadio.jsx";
+import BtnAddToCart from "../../UI/Buttons/BtnAddToCart.jsx";
 export default function ContentProductDetails() {
   return (
     <div className="div-content-text-all">
@@ -21,8 +22,9 @@ export default function ContentProductDetails() {
         </div>
       </div>
       {/* checkboxes for item version */}
-      <h3>Choose Your Version</h3>
+      <h2>Choose Your Version</h2>
       <ChooserVersionRadio />
+      <BtnAddToCart initialPrice={33.99} />
     </div>
   );
 }

@@ -1,0 +1,27 @@
+@import "../../styles/global/global.scss";
+
+.btnAddToCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  min-height: 3rem;
+  font-weight: 700;
+  color: $black-700;
+  border: 0;
+  outline: 0;
+  border-radius: 2rem;
+  background-color: $eastern-blue;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $ming-blue;
+    color: $white;
+  }
+  &:focus {
+    border: 0.2rem solid $eastern-blue;
+  }
+}

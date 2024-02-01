@@ -1,5 +1,6 @@
 import React from "react";
 import IconStar from "../../UI/Icons/IconStar.jsx";
+import ChooserVersionRadio from "./ChooserVersionRadio.jsx";
 export default function ContentProductDetails() {
   return (
     <div className="div-content-text-all">
@@ -19,6 +20,9 @@ export default function ContentProductDetails() {
           <span className="number-of-reviews">(11)</span>
         </div>
       </div>
+      {/* checkboxes for item version */}
+      <h3>Choose Your Version</h3>
+      <ChooserVersionRadio />
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import "./ProductDetails.scss";
-import ImgProductDetails from "../components/TopNav/ImgProductDetails";
-import ContentProductDetails from "../components/TopNav/ContentProductDetails";
+import ImgProductDetails from '.././components/ImgProductDetails';
+import ContentProductDetails from "../components/ContentProductDetails";
 export default function ProductDetails() {
   const params = useParams();
 

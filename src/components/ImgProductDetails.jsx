@@ -1,8 +1,8 @@
 import React from "react";
 import "./ImgProductDetails.scss";
-import MainImgProdDetails from "../../UI/Images/MainImgProdDetails";
-import FirstImgProdDetails from "../../UI/Images/FirstImgProdDetails";
-import SecondImgProdDetails from "../../UI/Images/SecondImgProdDetails";
+import MainImgProdDetails from "./../UI/Images/MainImgProdDetails";
+import FirstImgProdDetails from "./../UI/Images/FirstImgProdDetails";
+import SecondImgProdDetails from "./../UI/Images/SecondImgProdDetails";
 
 export default function ImgProductDetails() {
   return (

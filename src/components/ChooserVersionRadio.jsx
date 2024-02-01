@@ -1,5 +1,5 @@
 import React from "react";
-import RadioInput from "../../UI/Inputs/RadioInput";
+import RadioInput from "./../UI/Inputs/RadioInput";
 import "./ChooserVersionRadio.scss";
 export default function ChooserVersionRadio() {
   return (

@@ -11,17 +11,33 @@
   color: $black-700;
   border: 0;
   outline: 0;
+  font-size: 1rem;
   border-radius: 2rem;
   background-color: $eastern-blue;
-  transition: 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    border 0.3s ease-in-out;
   cursor: pointer;
 
   &:hover,
   &:focus {
     background-color: $ming-blue;
     color: $white;
+
+    .circleFilled-icon path {
+      fill: $white;
+    }
+    &:focus {
+      border: 0.2rem solid $eastern-blue;
+    }
   }
-  &:focus {
-    border: 0.2rem solid $eastern-blue;
+}
+
+.circleFilled-icon {
+  width: 0.25rem;
+  height: auto;
+  margin-inline: 0.5rem;
+  path {
+    fill: $black-700;
+    transition: fill 0.3s ease-in-out;
   }
 }

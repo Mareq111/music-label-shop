@@ -15,7 +15,7 @@ export default function TopNav() {
       <nav className="all-top-nav">
         <div className="up-nav">
           {/* left -logo */}
-          <Link to="">
+          <Link to="" aria-label="Homepage / Logo" tabIndex={0}>
             <div className="div-logo">
               <img id="logo" src={logo} alt="Logo Strimz Shop" />
             </div>
@@ -30,6 +30,8 @@ export default function TopNav() {
               to="/user-profile"
               className="icon-link-to
           "
+              aria-label="User Profile"
+              tabIndex={0}
             >
               <div className="div-icon-into-menu" id="icon-user-text-div">
                 <IconUser id="mobile-icon-user" />
@@ -40,7 +42,10 @@ export default function TopNav() {
             <Link
               to="favorites"
               className="icon-link-to
+              
           "
+              aria-label="Favorites"
+              tabIndex={0}
             >
               <div className="div-icon-into-menu">
                 <IconHeart />
@@ -50,6 +55,8 @@ export default function TopNav() {
               to="shopping-bag"
               className="icon-link-to
           "
+              aria-label="Shopping Bag"
+              tabIndex={0}
             >
               <div className="div-icon-into-menu">
                 <IconShopBag />
@@ -59,6 +66,8 @@ export default function TopNav() {
               to="menu"
               className="icon-link-to
           "
+              aria-label="Menu"
+              tabIndex={0}
             >
               <div id="menu-mobile" className="div-icon-into-menu">
                 <IconMenu />
@@ -67,7 +76,12 @@ export default function TopNav() {
           </div>
         </div>
         {/* search bar / down nav*/}
-        <Link className="Link-search" to="search">
+        <Link
+          className="Link-search"
+          to="search"
+          aria-label="Search"
+          tabIndex={0}
+        >
           <div className="down-nav-search">
             <InputSearch />
           </div>

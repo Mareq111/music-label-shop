@@ -6,7 +6,7 @@ export default function InputSearch() {
     <div className="search-bar">
       <IconSearch />
       <input
-        id="search-input"
+        className="search-input"
         type="text"
         placeholder="Search for products..."
       ></input>

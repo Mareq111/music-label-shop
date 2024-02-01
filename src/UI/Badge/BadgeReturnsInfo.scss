@@ -1,0 +1,12 @@
+@import "../../styles/global/global.scss";
+
+.text-with-icon-undo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.text-undo {
+  font-size: 0.9rem;
+}

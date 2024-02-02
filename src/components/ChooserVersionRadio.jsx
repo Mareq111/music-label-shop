@@ -3,7 +3,11 @@ import RadioInput from "./../UI/Inputs/RadioInput";
 import "./ChooserVersionRadio.scss";
 export default function ChooserVersionRadio() {
   return (
+    <div className="div-chooser-text-all">
+      <h2 className="h2-radio-chooser">Choose Your Version</h2>
+   
     <div className="div-radio-chooser">
+      
       <RadioInput
         radioLabel="CD"
         radioId="radio1"
@@ -36,6 +40,7 @@ export default function ChooserVersionRadio() {
         radioAriaLabel="Radio 4"
         radioKey="4"
       />
+    </div>
     </div>
   );
 }

@@ -8,5 +8,5 @@
   gap: 0.5rem;
 }
 .text-undo {
-  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 0.5rem + 1.5vw, 1rem);
 }

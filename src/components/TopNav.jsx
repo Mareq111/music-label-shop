@@ -1,6 +1,5 @@
 import React from "react";
 import "./TopNav.scss";
-import logo from "./../assets/img/logo.png";
 import IconMenu from "./../UI/Icons/IconMenu";
 import IconUser from "./../UI/Icons/IconUser";
 import IconHeart from "./../UI/Icons/IconHeart";
@@ -8,6 +7,7 @@ import IconShopBag from "./../UI/Icons/IconShopBag";
 import IconSearch from "./../UI/Icons/IconSearch";
 import InputSearch from "./../UI/Inputs/InputSearch";
 import { Link } from "react-router-dom";
+import LogoStrimz from "../UI/Icons/Icon-Logo/LogoStrimz";
 
 export default function TopNav() {
   return (
@@ -17,7 +17,7 @@ export default function TopNav() {
           {/* left -logo */}
           <Link to="" aria-label="Homepage / Logo" tabIndex={0}>
             <div className="div-logo">
-              <img id="logo" src={logo} alt="Logo Strimz Shop" />
+              <LogoStrimz />
             </div>
           </Link>
           {/* search bar hidden for mobiles */}

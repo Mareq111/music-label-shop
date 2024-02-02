@@ -6,7 +6,7 @@ export default function Accordion({ titleAccordion, answerAccordion }) {
 
   return (
     <div className="simply-accordion">
-      <button
+      <button tabIndex={0}
          className={`btn-accordion-with-x ${accordionOpen ?   'rotate-icon-back' : 'rotate-icon'}`}
          onClick={() => {
            setAccordionOpen(!accordionOpen);

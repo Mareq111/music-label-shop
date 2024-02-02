@@ -1,0 +1,36 @@
+@import "../../styles/global/global.scss";
+
+.text-free-listen {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.btn-accordion-listen-free {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  overflow-y: hidden;
+  padding: 0.5rem;
+  border: 0.1rem solid $grey-700;
+  gap: 1rem;
+  border-radius: 2rem;
+  background-color: $black-700;
+  color: $white;
+  font-weight: 700;
+  transition: ease-in-out 0.3s;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    background-color: $grey-600;
+    color: $black-700;
+  }
+  &:focus {
+  border: 0.1rem solid $eastern-blue;
+
+  }
+}
+.text-with-logo {
+    font-size: 1.1rem;
+}

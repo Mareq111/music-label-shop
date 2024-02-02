@@ -4,6 +4,7 @@ import ChooserVersionRadio from "./ChooserVersionRadio.jsx";
 import BtnAddToCart from "./../UI/Buttons/BtnAddToCart.jsx";
 import BadgeDeliveryInfo from "../UI/Badge/BadgeDeliveryInfo.jsx";
 import BadgeReturnsInfo from "../UI/Badge/BadgeReturnsInfo.jsx";
+import TextProductDescription from "../UI/Text/TextProductDescription.jsx";
 
 export default function ContentProductDetails() {
   return (
@@ -30,6 +31,7 @@ export default function ContentProductDetails() {
       <BtnAddToCart initialPrice={33.99} />
       <BadgeDeliveryInfo />
       <BadgeReturnsInfo />
+      <TextProductDescription />
     </div>
   );
 }

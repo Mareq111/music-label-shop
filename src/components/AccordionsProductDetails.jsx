@@ -3,6 +3,7 @@ import Accordion from "../UI/Accordions/Accordion";
 import "./AccordionsProductDetail.scss";
 import AccordionStreamingsContent from "../UI/Accordions/AccordionStreamingsContent";
 import AccordionListenFree from "../UI/Accordions/AccordionListenFree";
+import RadioStarRating from "../UI/Inputs/RadioStarRating";
 export default function AccordionsProductDetails() {
   return (
     <div className="div-all-accordions">
@@ -23,7 +24,7 @@ export default function AccordionsProductDetails() {
       <Accordion
         titleAccordion={"Ratings and reviews"}
         answerAccordion={
-          "The ship on the cover represents the voyager who is navigating the unknown, while the abstract sky shows the endless possibilities that are waiting to be discovered."
+          <RadioStarRating />
         }
       />
     </div>

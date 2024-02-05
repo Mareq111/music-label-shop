@@ -32,3 +32,9 @@
   align-items: center;
   gap: 10%;
 }
+ 
+ .star-icon path {
+  fill: $gold;
+  stroke: $gold;
+  stroke-width: 0.1rem;
+} 

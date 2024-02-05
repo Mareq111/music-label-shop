@@ -1,8 +1,8 @@
 import React from "react";
-export default function IconStar({filled}) {
+
+export default function IconStarFilled() {
   return (
-    <svg className="star-icon star-icon-rating"
-    fill={filled ? 'gold' : 'none'}
+    <svg className="icon-star-filled"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"

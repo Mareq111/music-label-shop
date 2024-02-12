@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function TextSongDuration() {
+export default function TextSongDuration({songDuration}) {
   return (
     <div className="durationSong-div">
       <h3 className="detailedInfo-h">Duration:</h3>
-      <p className="detailedInfo-p">00:04:44</p>
+      <p className="detailedInfo-p">{songDuration}</p>
     </div>
   );
 }

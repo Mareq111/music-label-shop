@@ -1,2 +1,16 @@
-@import '../../styles/global/global.scss';
+@import "../../styles/global/global.scss";
 
+.parameters-div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detailedInfo-h {
+  color: $grey-600;
+  font-weight: 700;
+}
+
+.detailedInfo-p {
+  color: $white;
+}

@@ -4,14 +4,13 @@ import "./AccordionsProductDetail.scss";
 import AccordionStreamingsContent from "../UI/Accordions/AccordionStreamingsContent";
 import AccordionListenFree from "../UI/Accordions/AccordionListenFree";
 import RadioStarRating from "../UI/Inputs/RadioStarRating";
+import AccordionDetailedInfo from "../UI/Accordions/AccordionDetailedInfo";
 export default function AccordionsProductDetails() {
   return (
     <div className="div-all-accordions">
       <Accordion
         titleAccordion={"Detailed information"}
-        answerAccordion={
-          "The Wave album is an exploratory journey that guides the listener through diverse landscapes and experiences."
-        }
+        answerAccordion={<AccordionDetailedInfo />}
       />
       <Accordion
         titleAccordion={"Listen on streamings"}
@@ -23,9 +22,7 @@ export default function AccordionsProductDetails() {
       />
       <Accordion
         titleAccordion={"Ratings and reviews"}
-        answerAccordion={
-          <RadioStarRating />
-        }
+        answerAccordion={<RadioStarRating />}
       />
     </div>
   );

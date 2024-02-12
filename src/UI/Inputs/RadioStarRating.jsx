@@ -12,11 +12,11 @@ export default function RadioStarRating() {
 
   return (
     <div className="star-rating">
-      <div className="p-div-text"> 
+      <div className="p-div-text">
         <p className="p-choose-stars">
           {rating > 0
             ? `You gave ${rating} ${rating === 1 ? "star" : "stars"}`
-            : "Please select a rating"}
+            : "Share your feedback! "}
         </p>
       </div>
       <div className="div-stars-wrapper">

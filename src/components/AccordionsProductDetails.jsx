@@ -3,8 +3,8 @@ import Accordion from "../UI/Accordions/Accordion";
 import "./AccordionsProductDetail.scss";
 import AccordionStreamingsContent from "../UI/Accordions/AccordionStreamingsContent";
 import AccordionListenFree from "../UI/Accordions/AccordionListenFree";
-import RadioStarRating from "../UI/Inputs/RadioStarRating";
 import AccordionDetailedInfo from "../UI/Accordions/AccordionDetailedInfo";
+import AccordionRatingComments from "../UI/Accordions/AccordionRatingComments";
 export default function AccordionsProductDetails() {
   return (
     <div className="div-all-accordions">
@@ -22,7 +22,7 @@ export default function AccordionsProductDetails() {
       />
       <Accordion
         titleAccordion={"Ratings and reviews"}
-        answerAccordion={<RadioStarRating />}
+        answerAccordion={<AccordionRatingComments />}
       />
     </div>
   );

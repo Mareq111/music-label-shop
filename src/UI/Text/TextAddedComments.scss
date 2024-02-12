@@ -1,0 +1,60 @@
+@import "../../styles/global/global.scss";
+
+.line-comments-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 2rem;
+  margin-inline: 25%;
+  width: auto;
+  height: 0.1rem;
+  background-color: $eastern-blue;
+  border: 0;
+}
+
+.added-comment-all-div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  background-color: $black-700;
+  border-radius: 1rem;
+  border: 0.1rem solid $grey-600;
+  margin-top: 1rem;
+}
+.icon-user-name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 2rem;
+}
+.added-rating-and-when {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.added-rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: 50%;
+}
+
+.date-when-added {
+  width: 50%;
+}
+
+.added-rating-comments {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.added-text-comment {
+  margin-block: 1rem;
+}

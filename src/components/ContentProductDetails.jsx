@@ -5,7 +5,6 @@ import BtnAddToCart from "./../UI/Buttons/BtnAddToCart.jsx";
 import TextProductDescription from "../UI/Text/TextProductDescription.jsx";
 import BadgesProductDetails from "./BadgesProductDetails.jsx";
 import AccordionsProductDetails from "./AccordionsProductDetails.jsx";
-import IconTinyStarFilled from "../UI/Icons/IconTinyStarFilled.jsx";
 import BadgeRatingProductInfo from "../UI/Badge/BadgeRatingProductInfo.jsx";
 import BadgeTitlePriceAuthor from "../UI/Badge/BadgeTitlePriceAuthor.jsx";
 
@@ -30,7 +29,6 @@ export default function ContentProductDetails() {
         numberOfReviews={prodData.numberOfReviews}
       />
       <ChooserVersionRadio />
-
       <BtnAddToCart itemPrice={prodData.itemPrice} />
       <BadgesProductDetails />
       <TextProductDescription />

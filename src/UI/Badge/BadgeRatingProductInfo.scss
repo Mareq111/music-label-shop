@@ -1,0 +1,31 @@
+@import "../../styles/global/global.scss";
+
+.rating-with-icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+}
+
+.overall-number {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.number-of-reviews {
+  width: auto;
+  height: auto;
+  background-color: $black-700;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0 0.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  color: $grey-500;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    color: $grey-600;
+  }
+}

@@ -37,7 +37,7 @@ export default function AccordionRatingComments() {
   ];
 
   return (
-    <>
+    <div id="rating-review-component" className="rating-div">
       <form>
         <RadioStarRating />
         <TextAreaComment />
@@ -47,6 +47,6 @@ export default function AccordionRatingComments() {
       {commentsData.map((comment, index) => (
         <TextAddedComments key={index} {...comment} />
       ))}
-    </>
+    </div>
   );
 }

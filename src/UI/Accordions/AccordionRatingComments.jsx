@@ -25,7 +25,14 @@ export default function AccordionRatingComments() {
       rating: 5,
       dateAdded: "07.11.2023",
       commentText:
-        "I thought it would be crap but its underrated! I love this album ",
+        "I thought it would be crap but its underrated! I love this album",
+    },
+    {
+      userName: "mainhater111",
+      rating: 1,
+      dateAdded: "22.06.2023",
+      commentText:
+        "Wczoraj wieczorem, spacerując po malowniczej dzielnicy miasta, napotkałem niezwykłą kawiarnię z przytulnym wystrojem i aromatem świeżo mielonej kawy unoszącym się w powietrzu, co sprawiło, że chwilę zatrzymałem się, by zanurzyć w tej magicznej atmosferze.",
     },
   ];
 

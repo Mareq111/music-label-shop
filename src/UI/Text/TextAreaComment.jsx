@@ -9,7 +9,8 @@ export default function TextAreaComment() {
     <textarea 
         className="text-only-comment"
         id="commentInput"
-        placeholder="Add a comment..."
+        placeholder="Add a comment... (max 800 characters)"
+        maxLength={800}
       />
     </div>
     <div className="btns-comment">

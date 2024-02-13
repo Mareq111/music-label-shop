@@ -1,13 +1,11 @@
 import React from "react";
 import "./ContentProductDetails.scss";
-import IconStar from "./../UI/Icons/IconStar.jsx";
 import ChooserVersionRadio from "./ChooserVersionRadio.jsx";
 import BtnAddToCart from "./../UI/Buttons/BtnAddToCart.jsx";
-import BadgeDeliveryInfo from "../UI/Badge/BadgeDeliveryInfo.jsx";
-import BadgeReturnsInfo from "../UI/Badge/BadgeReturnsInfo.jsx";
 import TextProductDescription from "../UI/Text/TextProductDescription.jsx";
 import BadgesProductDetails from "./BadgesProductDetails.jsx";
 import AccordionsProductDetails from "./AccordionsProductDetails.jsx";
+import IconTinyStarFilled from "../UI/Icons/IconTinyStarFilled.jsx";
 
 export default function ContentProductDetails() {
   return (
@@ -24,7 +22,7 @@ export default function ContentProductDetails() {
       <div className="div-ratings">
         <div className="rating-with-icon">
           <span>4.9</span>
-          <IconStar />
+          <IconTinyStarFilled/>
           <span className="number-of-reviews">(11)</span>
         </div>
       </div>

@@ -1,7 +1,5 @@
 @import "../../styles/global/global.scss";
 
-
-
 .added-comment-all-div {
   display: flex;
   flex-direction: column;
@@ -11,32 +9,53 @@
   border-radius: 1rem;
   border: 0.1rem solid $grey-600;
   margin-top: 1rem;
+  gap: 0.5rem;
 }
-.icon-user-name {
+//icon and name user
+.icon-user-name-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  height: 2rem;
+}
+// added rating and date when
+.added-rating-and-when-div {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  height: 2rem;
+  gap: 1rem;
 }
-.added-rating-and-when {
+.added-rating-h {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  font-size: 1.2rem;
 }
 
-.added-rating {
+.added-rating-div {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  width: 50%;
+  gap: 0.2rem;
 }
 
 .date-when-added {
-  width: 50%;
+  color: $grey-600;
+  font-size: 0.8rem;
+}
+//hr line
+.line-hr-separator {
+  background-color: $grey-700;
+  border: 0;
+  height: 0.1rem;
+  width: 100%;
 }
 
+//commentss
 .added-rating-comments {
   display: flex;
   justify-content: flex-start;
@@ -45,6 +64,3 @@
   width: 100%;
 }
 
-.added-text-comment {
-  margin-block: 1rem;
-}

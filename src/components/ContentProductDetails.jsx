@@ -6,29 +6,32 @@ import TextProductDescription from "../UI/Text/TextProductDescription.jsx";
 import BadgesProductDetails from "./BadgesProductDetails.jsx";
 import AccordionsProductDetails from "./AccordionsProductDetails.jsx";
 import IconTinyStarFilled from "../UI/Icons/IconTinyStarFilled.jsx";
+import BadgeRatingProductInfo from "../UI/Badge/BadgeRatingProductInfo.jsx";
+import BadgeTitlePriceAuthor from "../UI/Badge/BadgeTitlePriceAuthor.jsx";
 
 export default function ContentProductDetails() {
+  const prodData = {
+    itemTitle: "Album Wave CD",
+    itemPrice: 12.99,
+    itemAuthor: "El Double M",
+    overallRating: 4.5,
+    numberOfReviews: 4,
+  };
+
   return (
     <div className="div-content-text-all">
-      <div className="main-h1-and-p">
-        <div className="first-line">
-          <h1 className="h1-content-prod-details">Album Wave CD</h1>
-          <div className="price">
-            <span>33.99€</span>
-          </div>
-        </div>
-        <p className="p-content-prod-details">El Double M</p>
-      </div>
-      <div className="div-ratings">
-        <div className="rating-with-icon">
-          <span>4.9</span>
-          <IconTinyStarFilled/>
-          <span className="number-of-reviews">(11)</span>
-        </div>
-      </div>
-
+      <BadgeTitlePriceAuthor
+        itemTitle={prodData.itemTitle}
+        itemPrice={prodData.itemPrice}
+        itemAuthor={prodData.itemAuthor}
+      />
+      <BadgeRatingProductInfo
+        overallRating={prodData.overallRating}
+        numberOfReviews={prodData.numberOfReviews}
+      />
       <ChooserVersionRadio />
-      <BtnAddToCart initialPrice={33.99} />
+
+      <BtnAddToCart itemPrice={prodData.itemPrice} />
       <BadgesProductDetails />
       <TextProductDescription />
       <AccordionsProductDetails />

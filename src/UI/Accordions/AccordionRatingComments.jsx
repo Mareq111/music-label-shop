@@ -3,6 +3,7 @@ import RadioStarRating from "../Inputs/RadioStarRating.jsx";
 import TextAreaComment from "../Text/TextAreaComment.jsx";
 import TextAddedComments from "../Text/TextAddedComments.jsx";
 import BadgeAddedComments from "../Badge/BadgeAddedComments.jsx";
+import BadgeSort from "../Badge/BadgeSort.jsx";
 
 export default function AccordionRatingComments() {
   //test data comments
@@ -43,6 +44,7 @@ export default function AccordionRatingComments() {
         <TextAreaComment />
       </form>
       <BadgeAddedComments />
+      <BadgeSort/>
       {/* Mapping 'added' comments from array to show them dynamically */}
       {commentsData.map((comment, index) => (
         <TextAddedComments key={index} {...comment} />

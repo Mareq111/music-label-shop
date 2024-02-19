@@ -3,6 +3,8 @@ import "./ImgProductDetails.scss";
 import MainImgProdDetails from "./../UI/Images/MainImgProdDetails";
 import FirstImgProdDetails from "./../UI/Images/FirstImgProdDetails";
 import SecondImgProdDetails from "./../UI/Images/SecondImgProdDetails";
+import IconHeart from "../UI/Icons/IconHeart";
+import BtnHeart from "../UI/Buttons/BtnHeart";
 
 export default function ImgProductDetails() {
   return (
@@ -11,6 +13,12 @@ export default function ImgProductDetails() {
         <div className="div-img-main">
           <MainImgProdDetails />
         </div>
+            {/* Badge for adding to favorites */}
+            <div className="badge">
+           <BtnHeart/>
+          </div>
+      
+          {/* Additional images */}
         <div className="div-img-bottom-all">
           <div className="div-img-bottom">
             <FirstImgProdDetails />

@@ -27,7 +27,6 @@ export default function ContentProductDetails() {
       { numberOfSong: 8, songTitle: "On A Delightful Cruise" },
     ],
   };
-
   return (
     <div className="div-content-text-all">
       <BadgeTitlePriceAuthor

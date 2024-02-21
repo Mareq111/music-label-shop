@@ -22,12 +22,6 @@ main {
   background-color: $grey-700;
   width: auto;
 }
-//content text
-
-/* .div-content-text-all {
-  width: 100%;
-  height: auto;
-} */
 
 .first-line {
   display: flex;
@@ -55,6 +49,7 @@ main {
     margin-top: 1rem;
   }
 }
+
 @media (min-width: 560px) {
   .all_sections__product {
     grid-template-columns: 1fr 1fr;
@@ -63,5 +58,8 @@ main {
   //min width could be 5rem but it isnt
   .section-2__right-side {
     margin-top: 7rem;
+  }
+  .section-youMightLike {
+    grid-column: span 2;
   }
 }

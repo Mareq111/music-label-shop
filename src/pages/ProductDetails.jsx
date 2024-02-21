@@ -6,6 +6,7 @@ import ContentProductDetails from "../components/ContentProductDetails";
 import TextSongsOnAlbum from "../UI/Text/TextSongsOnAlbum";
 import TextProductDescription from "../UI/Text/TextProductDescription";
 import ContentProductDetailsLeftSide from "../components/ContentProductDetailsLeftSide";
+import YouMightLike from "../components/YouMightLike";
 export default function ProductDetails() {
   const params = useParams();
 
@@ -26,7 +27,7 @@ export default function ProductDetails() {
             </p>
           </div>
         </div>
-      {/*   <ImgProductDetails /> */}
+        {/*   <ImgProductDetails /> */}
         <ContentProductDetailsLeftSide />
       </section>
       {/* section with content which is on the right side then > 500px screens*/}
@@ -34,6 +35,9 @@ export default function ProductDetails() {
         <ContentProductDetails />
       </section>
       {/* other eg slider  */}
+      <div className="section-youMightLike">
+        <YouMightLike />
+      </div>
     </section>
   );
 }

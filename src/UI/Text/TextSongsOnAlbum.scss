@@ -10,11 +10,11 @@
 }
 .title-songs-all-div {
   background-color: $black-700;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   border: 0.1rem solid $grey-700;
   width: 100%;
   height: auto;
-  padding: 2rem 1rem;
+  padding: 1rem;
 }
 .songs-on-album-h {
   display: flex;
@@ -46,7 +46,7 @@
 .number-song {
   width: 2rem;
   font-weight: 700;
-  color: $eastern-blue;
+  color: $white;
 }
 
 .song-title {

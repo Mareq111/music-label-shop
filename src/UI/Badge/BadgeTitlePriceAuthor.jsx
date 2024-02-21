@@ -1,5 +1,5 @@
 import React from "react";
-
+import './BadgeTitlePriceAuthor.scss'
 export default function BadgeTitlePriceAuthor({
   itemTitle,
   itemPrice,
@@ -11,7 +11,7 @@ export default function BadgeTitlePriceAuthor({
         <div className="first-line">
           <h1 className="h1-content-prod-details">{itemTitle}</h1>
           <div className="price">
-            <span>{itemPrice}€</span>
+            <span className="price-of-item">{itemPrice}€</span>
           </div>
         </div>
         <p className="p-content-prod-details">{itemAuthor}</p>

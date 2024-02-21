@@ -23,14 +23,7 @@ main {
   width: auto;
 }
 //content text
-.section-2__right-side {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  margin-top: 1rem;
-}
+
 /* .div-content-text-all {
   width: 100%;
   height: auto;
@@ -52,23 +45,23 @@ main {
   width: 25%;
 }
 
-/* @media (min-width: 425px) {
-  main {
-    padding: 2rem;
+@media (max-width: 559px) {
+  .section-2__right-side {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
   }
-} */
-
+}
 @media (min-width: 560px) {
   .all_sections__product {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
+  //min width could be 5rem but it isnt
   .section-2__right-side {
-   /*  display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    height: auto; */
-    margin-top: 5rem;
+    margin-top: 7rem;
   }
 }

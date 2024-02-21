@@ -4,6 +4,8 @@ import "./ProductDetails.scss";
 import ImgProductDetails from ".././components/ImgProductDetails";
 import ContentProductDetails from "../components/ContentProductDetails";
 import TextSongsOnAlbum from "../UI/Text/TextSongsOnAlbum";
+import TextProductDescription from "../UI/Text/TextProductDescription";
+import ContentProductDetailsLeftSide from "../components/ContentProductDetailsLeftSide";
 export default function ProductDetails() {
   const params = useParams();
 
@@ -24,9 +26,8 @@ export default function ProductDetails() {
             </p>
           </div>
         </div>
-        <ImgProductDetails />
-
-        {/* <TextSongsOnAlbum songs={prodData} /> */}
+      {/*   <ImgProductDetails /> */}
+        <ContentProductDetailsLeftSide />
       </section>
       {/* section with content which is on the right side then > 500px screens*/}
       <section className="section-2__right-side">

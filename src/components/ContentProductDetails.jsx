@@ -42,7 +42,10 @@ export default function ContentProductDetails() {
       <BtnAddToCart itemPrice={prodData.itemPrice} />
       <BadgesProductDetails />
       <TextProductDescription />
-      <TextSongsOnAlbum songs={prodData.songs} />
+      <span className="hidden-textSongs-560px">
+        <TextSongsOnAlbum songs={prodData.songs} />
+      </span>
+
       <AccordionsProductDetails />
     </div>
   );

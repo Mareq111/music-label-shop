@@ -4,7 +4,7 @@ export default function TextSongsOnAlbum({ songs }) {
   return (
     <article className="songs-on-album-article">
       <div className="title-songs-all-div">
-        <h3 className="songs-on-album-h">Track List</h3>
+        <h3 className="songs-on-album-h">Track list</h3>
         <ol className="songs-on-album-ol">
           {/* mapping each song from prodData into dynamic tracklist  */}
           {songs.map((song) => (

@@ -3,7 +3,6 @@ import "./ImgProductDetails.scss";
 import MainImgProdDetails from "./../UI/Images/MainImgProdDetails";
 import FirstImgProdDetails from "./../UI/Images/FirstImgProdDetails";
 import SecondImgProdDetails from "./../UI/Images/SecondImgProdDetails";
-import IconHeart from "../UI/Icons/IconHeart";
 import BtnHeart from "../UI/Buttons/BtnHeart";
 
 export default function ImgProductDetails() {

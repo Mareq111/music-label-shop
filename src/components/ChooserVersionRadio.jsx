@@ -24,16 +24,17 @@ export default function ChooserVersionRadio() {
         radioAriaLabel="Radio 2"
         radioKey="2"
       />
+    
       <RadioInput
-        radioLabel="Limited Edition"
+        radioLabel="Usb card"
         radioId="radio3"
         radioName="version"
         radioValue="3"
         radioAriaLabel="Radio 3"
         radioKey="3"
       />
-      <RadioInput
-        radioLabel="Mystery Box"
+        <RadioInput
+        radioLabel="Limited edition"
         radioId="radio4"
         radioName="version"
         radioValue="4"

@@ -1,11 +1,12 @@
 import React from "react";
 import "./YouMightLike.scss";
 import CardYouMightLike from "../UI/Cards/CardYouMightLike";
+/* import for covers */
+import arenaCover from "../../public/assets/img/coversMini/albums/arena_of_autumnn_EP-mini.jpg";
 export default function YouMightLike() {
   const itemsData = [
     {
-      imgItem:
-        "/public/assets/img/coversMini/albums/arena_of_autumnn_EP-mini.jpg",
+      imgItem: arenaCover,
       titleItem: "Album Arena Of Autumnn EP",
       titleArtist: "El Double M",
       priceItem: "7.99",

@@ -32,9 +32,9 @@ const router = createBrowserRouter([
         path: "products",
         element: <Products />,
       },
-      // Dynamic path do showing any products page with their details 
+      // Dynamic path do showing any products page with their details
       { path: "products/:productId", element: <ProductDetails /> },
-       // Other sections of the page
+      // Other sections of the page
       { path: "favorites", element: <Favorites /> },
       { path: "user-profile", element: <UserProfile /> },
       { path: "shopping-bag", element: <ShoppingBag /> },

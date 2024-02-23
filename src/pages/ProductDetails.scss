@@ -8,20 +8,8 @@ main {
   display: grid;
   grid-template-columns: 1fr;
 }
-.div-temporary {
-  width: 100%;
-  height: 5rem;
-}
-.h1-details {
-  color: $white;
-}
-.name-of-item {
-  color: $white;
-}
-.div-name-of-item {
-  background-color: $grey-700;
-  width: auto;
-}
+
+
 
 .first-line {
   display: flex;

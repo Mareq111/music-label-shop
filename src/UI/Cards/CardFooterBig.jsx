@@ -11,13 +11,8 @@ export default function CardFooterBig() {
     <div className="card-footer-big">
       {/* two ul list with links for subpages */}
       <div className="all-footer-links-div">
-        
         <div className="footer-links-div">
-          <ul className="ul-list-of-pages">
-            {/*  <Accordion
-        titleAccordion={"Listen on streamings"}
-        answerAccordion={<AccordionStreamingsContent />}
-      /> */}
+          <div className="div-list-of-pages">
             <AccordionFooter
               titleAccordion={"Information"}
               answerAccordion={<AccordionInformationAnswer />}
@@ -38,7 +33,7 @@ export default function CardFooterBig() {
               titleAccordion={"About us"}
               answerAccordion={<AccordionAboutUsAnswer />}
             />
-          </ul>
+          </div>
         </div>
       </div>
     </div>

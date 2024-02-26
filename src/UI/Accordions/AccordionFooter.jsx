@@ -4,20 +4,20 @@ export default function AccordionFooter({ titleAccordion, answerAccordion }) {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
   return (
-    <div className="simply-accordion">
+    <div className="simply-accordion-footer">
       <button
         tabIndex={0}
-        className={`btn-accordion-with-x ${
-          accordionOpen ? "rotate-icon-back" : "rotate-icon"
-        }`}
+        className="btn-accordion-footer"
         onClick={() => {
           setAccordionOpen(!accordionOpen);
         }}
       >
-        <span className="title-of-accordion">{titleAccordion}</span>
+        <span className="title-of-accordion-footer">{titleAccordion}</span>
       </button>
-      <div className={`div-text-inside ${accordionOpen ? "open" : "close"}`}>
-        <p className="accordion-text-inside">{answerAccordion}</p>
+      <div
+        className={`div-text-inside-footer ${accordionOpen ? "open" : "close"}`}
+      >
+        <p className="accordion-text-inside-footer">{answerAccordion}</p>
       </div>
     </div>
   );

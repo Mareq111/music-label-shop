@@ -2,21 +2,41 @@
 
 // direction is set to column
 footer {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  padding: 1rem;
+  padding: 2rem 1rem;
   gap: 1rem;
+  //margin like in you might like section
+  margin-top: clamp(4rem, 3vw + 1rem, 8rem);
 }
-
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../assets/img/others/Project Capture.jpg");
+  background-size: cover;
+  filter: blur(0.5rem);
+  opacity: 0.4;
+  z-index: -1;
+}
 .comeback-btn-footer {
   grid-column: span 1;
   justify-self: flex-end;
 }
 
-//change direction of footer cards with change proportion 45% and 55%
-@media (min-width: 800px) {
+/*  2fr: first column should take up twice as much space as 1fr,
+ 2.44fr: second column should take up 2.44 times more space than 1fr.
+Together, columns will occupy the available space in a 2:2.44 ratio, resulting in a 45% to 55% proportion.
+together, columns will occupy the available space in a 2: 2.44 ratio,
+  resulting in a 45% to 55% proportion  */
+
+@media (min-width: 801px) {
   footer {
-    grid-template-columns: 45% 55%;
+    grid-template-columns: 2fr 2.44fr;
   }
 
   //it takes with of 2 columns

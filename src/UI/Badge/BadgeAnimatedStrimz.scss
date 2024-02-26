@@ -5,12 +5,12 @@
   flex-direction: row;
 }
 
-.logo-footer {
-  width: 100%;
-  height: 100%;
-  max-width: 3rem;
-  max-height: 3rem;
+.logo-footer-div {
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
 }
+
 .logo-and-description {
   display: flex;
   justify-content: center;
@@ -105,9 +105,9 @@
   .strimz-h {
     font-size: 1.6rem;
   }
-  .logo-footer {
-    max-width: 4rem;
-    max-height: 4rem;
+  .logo-footer-div {
+    width: 4rem;
+    height: 4rem;
   }
   .text-animated-strimz {
     font-size: 1rem;

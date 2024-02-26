@@ -1,0 +1,17 @@
+@import '../../styles/global/global.scss';
+
+.card-footer-big {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: $black-700;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 0.1rem solid $grey-600;
+    color: $white;
+    overflow: hidden;
+  }

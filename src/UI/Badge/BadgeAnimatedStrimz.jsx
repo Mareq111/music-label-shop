@@ -4,7 +4,9 @@ import "./BadgeAnimatedStrimz.scss";
 export default function BadgeAnimatedStrimz() {
   return (
     <div className="logo-and-description">
-      <LogoStrimz />
+      <div className="logo-footer-div">
+        <LogoStrimz />
+      </div>
       <div className="description-strimz">
         <h3 className="strimz-h">Strimz Empire Shop</h3>
         <div className="strimz-p-description">

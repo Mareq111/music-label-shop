@@ -1,0 +1,45 @@
+@import '../../styles/global/global.scss';
+@import "../../styles/global/global.scss";
+
+.simply-accordion {
+  width: 100%;
+  height: auto;
+  border: none;
+
+  .btn-accordion-with-x {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    background-color: transparent;
+    color: $white;
+    border: none;
+    cursor: pointer;
+
+    .title-of-accordion {
+      font-size: 1.1rem;
+    }
+  }
+
+
+  //hide text inside if accordion is closed
+  .div-text-inside {
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    /*   &.open {
+      max-height: 10rem;
+    } */
+
+    &.close {
+      max-height: 0;
+    }
+
+    .accordion-text-inside {
+      padding: 2rem 1rem;
+      border-top: 0.1rem solid $amulet-green;
+    }
+  }
+}
+
+

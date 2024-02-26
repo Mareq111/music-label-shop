@@ -1,6 +1,7 @@
 @import "../../styles/global/global.scss";
 
 .btn-arrow-back {
+  /*  margin-top: 1rem; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +16,7 @@
   cursor: pointer;
   transition: 0.3s ease-in-out;
 
-  .icon-arrowBack path {
+  .icon-arrow path {
     transition: 0.3s ease-in-out;
     fill: $white;
   }

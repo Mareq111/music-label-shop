@@ -51,7 +51,6 @@ export default function CardFooterSmall() {
       <p className="text-rights-footer-card">
         © 2024 All Rights Reserved, Strimz Empire.
       </p>
-      <BtnComebackToTop />
     </div>
   );
 }

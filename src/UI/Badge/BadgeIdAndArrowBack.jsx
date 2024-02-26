@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import BtnArrowBack from "../Buttons/BtnArrowBack";
+import BtnArrow from "../Buttons/BtnArrow.jsx";
 import "./BadgeIdAndArrowBack.scss";
 export default function BadgeIdAndArrowBack() {
   const params = useParams();
@@ -11,8 +11,8 @@ export default function BadgeIdAndArrowBack() {
           <p className="text-id">Product ID: {params.productId}</p>
         </div>
         <div className="div-link-btn-comeback">
-          <Link to=".." relative="path">
-            <BtnArrowBack />
+          <Link className="link-arrow-back" to=".." relative="path">
+            <BtnArrow />
           </Link>
         </div>
       </div>

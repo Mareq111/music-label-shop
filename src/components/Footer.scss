@@ -1,5 +1,27 @@
 @import "../styles/global/global.scss";
 
+// direction is set to column
 footer {
+  display: grid;
+  grid-template-columns: 1fr;
   padding: 1rem;
+  gap: 1rem;
+}
+
+.comeback-btn-footer {
+  grid-column: span 1;
+  justify-self: flex-end;
+}
+
+//change direction of footer cards with change proportion 45% and 55%
+@media (min-width: 800px) {
+  footer {
+    grid-template-columns: 45% 55%;
+  }
+
+  //it takes with of 2 columns
+  .comeback-btn-footer {
+    justify-self: flex-end;
+    grid-column: span 2;
+  }
 }

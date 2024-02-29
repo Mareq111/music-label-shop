@@ -17,7 +17,7 @@ export default function AccordionFooter({ titleAccordion, answerAccordion }) {
       <div
         className={`div-text-inside-footer ${accordionOpen ? "open" : "close"}`}
       >
-        <p className="accordion-text-inside-footer">{answerAccordion}</p>
+        <div className="accordion-text-inside-footer">{answerAccordion}</div>
       </div>
     </div>
   );

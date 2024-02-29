@@ -1,5 +1,4 @@
 import React from "react";
-import TextProductDescription from "../UI/Text/TextProductDescription";
 import TextSongsOnAlbum from "../UI/Text/TextSongsOnAlbum";
 import "./ContentProductDetailsLeftSide.scss";
 import ImgProductDetails from "./ImgProductDetails";

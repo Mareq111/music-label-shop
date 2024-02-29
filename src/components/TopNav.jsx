@@ -52,10 +52,10 @@ export default function TopNav() {
               </div>
             </Link>
             <Link
-              to="shopping-bag"
+              to="cart"
               className="icon-link-to
           "
-              aria-label="Shopping Bag"
+              aria-label="Cart"
               tabIndex={0}
             >
               <div className="div-icon-into-menu">

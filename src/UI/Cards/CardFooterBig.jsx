@@ -3,9 +3,8 @@ import "./CardFooterBig.scss";
 import AccordionFooter from "../Accordions/AccordionFooter";
 import AccordionInformationAnswer from "../Accordions/AccordionInformationAnswer";
 import AccordionMyAccountAnswer from "../Accordions/AccordionMyAccountAnswer";
-import AccordionShoppingCartAnswer from "../Accordions/AccordionShoppingCartAnswer";
-import AccordionPaymentsAnswer from "../Accordions/AccordionPaymentsAnswer";
-import AccordionAboutUsAnswer from "../Accordions/AccordionAboutUsAnswer";
+import AccordionAuthorAnswer from "../Accordions/AccordionAuthorAnswer";
+import AccordionShoppingAnswer from "../Accordions/AccordionShoppingAnswer";
 export default function CardFooterBig() {
   return (
     <div className="card-footer-big">
@@ -22,16 +21,12 @@ export default function CardFooterBig() {
               answerAccordion={<AccordionMyAccountAnswer />}
             />
             <AccordionFooter
-              titleAccordion={"Shopping cart"}
-              answerAccordion={<AccordionAboutUsAnswer />}
+              titleAccordion={"Shopping"}
+              answerAccordion={<AccordionShoppingAnswer />}
             />
             <AccordionFooter
-              titleAccordion={"Payments"}
-              answerAccordion={<AccordionPaymentsAnswer />}
-            />
-            <AccordionFooter
-              titleAccordion={"About us"}
-              answerAccordion={<AccordionAboutUsAnswer />}
+              titleAccordion={"Author"}
+              answerAccordion={<AccordionAuthorAnswer />}
             />
           </div>
         </div>

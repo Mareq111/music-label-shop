@@ -5,6 +5,7 @@ import AccordionInformationAnswer from "../Accordions/AccordionInformationAnswer
 import AccordionMyAccountAnswer from "../Accordions/AccordionMyAccountAnswer";
 import AccordionAuthorAnswer from "../Accordions/AccordionAuthorAnswer";
 import AccordionShoppingAnswer from "../Accordions/AccordionShoppingAnswer";
+import BadgeAllSocials from "../Badge/BadgeAllSocials";
 export default function CardFooterBig() {
   return (
     <div className="card-footer-big">
@@ -16,31 +17,34 @@ export default function CardFooterBig() {
               <AccordionFooter
                 titleAccordion={"Information"}
                 answerAccordion={<AccordionInformationAnswer />}
-                ariaLabel={"Information Section"}
               />
             </li>
             <li>
               <AccordionFooter
                 titleAccordion={"My account"}
                 answerAccordion={<AccordionMyAccountAnswer />}
-                ariaLabel={"My Account Section"}
               />
             </li>
             <li>
               <AccordionFooter
                 titleAccordion={"Shopping"}
                 answerAccordion={<AccordionShoppingAnswer />}
-                ariaLabel={"Shopping Section"}
               />
             </li>
             <li>
               <AccordionFooter
                 titleAccordion={"Author"}
                 answerAccordion={<AccordionAuthorAnswer />}
-                ariaLabel={"Author Section"}
               />
             </li>
           </ul>
+        </div>
+        {/* bagde socials and rights */}
+        <div className="socials-badges-rights-div">
+          <BadgeAllSocials />
+          <p className="text-rights-footer-card">
+            © 2024 All Rights Reserved, Strimz Empire.
+          </p>
         </div>
       </div>
     </div>

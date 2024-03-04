@@ -18,12 +18,29 @@
 .list-of-pages {
   padding: 0;
 }
+
+.socials-badges-rights-div {
+  padding: 1rem;
+}
+
 @media (min-width: 801px) {
   .list-of-pages {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     width: auto;
     height: auto;
+    margin-top: 4.5rem;
+  }
+}
+
+@media (min-width: 1365px) {
+  .list-of-pages {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    width: auto;
+    height: auto;
+    margin-top: 4.5rem;
   }
 }

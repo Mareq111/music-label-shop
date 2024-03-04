@@ -1,6 +1,5 @@
 import React from "react";
 import "./CardFooterSmall.scss";
-import BtnComebackToTop from "../Buttons/BtnComebackToTop";
 import BadgeAnimatedStrimz from "../Badge/BadgeAnimatedStrimz";
 import BtnGoToCategories from "../Buttons/BtnGoToCategories";
 export default function CardFooterSmall() {
@@ -48,9 +47,11 @@ export default function CardFooterSmall() {
           </li>
         </ul>
       </div>
-      <p className="text-rights-footer-card">
+      
+      {/* <BadgeAllSocials/> */}
+     {/*  <p className="text-rights-footer-card">
         © 2024 All Rights Reserved, Strimz Empire.
-      </p>
+      </p> */}
     </div>
   );
 }

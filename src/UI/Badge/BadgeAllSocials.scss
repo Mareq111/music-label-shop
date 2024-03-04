@@ -1,0 +1,56 @@
+@import "../../styles/global/global.scss";
+
+.badgeAllSocials-all {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 5rem;
+}
+.badgeAllSocials-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+.wrapper-div-two-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+
+  .first-logo,
+  .second-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .second-logo {
+    top: 50%;
+    transform: translateY(100%);
+  }
+
+  &:hover {
+    .first-logo {
+      transform: translateY(-100%);
+    }
+
+    .second-logo {
+      transform: translateY(-50%);
+    }
+  }
+}

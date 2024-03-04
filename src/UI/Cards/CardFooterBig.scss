@@ -8,16 +8,18 @@
   flex-direction: column;
   width: 100%;
   height: auto;
-  background-color: $black-900;
+  /* background-color: $black-900; */
   border-radius: 1rem;
   padding: 1rem;
-  border: 0.1rem solid $grey-700;
+  /*  border: 0.1rem solid $grey-700; */
   color: $white;
   overflow: hidden;
 }
-
+.list-of-pages {
+  padding: 0;
+}
 @media (min-width: 801px) {
-  .div-list-of-pages {
+  .list-of-pages {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;

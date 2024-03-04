@@ -11,24 +11,36 @@ export default function CardFooterBig() {
       {/* two ul list with links for subpages */}
       <div className="all-footer-links-div">
         <div className="footer-links-div">
-          <div className="div-list-of-pages">
-            <AccordionFooter
-              titleAccordion={"Information"}
-              answerAccordion={<AccordionInformationAnswer />}
-            />
-            <AccordionFooter
-              titleAccordion={"My account"}
-              answerAccordion={<AccordionMyAccountAnswer />}
-            />
-            <AccordionFooter
-              titleAccordion={"Shopping"}
-              answerAccordion={<AccordionShoppingAnswer />}
-            />
-            <AccordionFooter
-              titleAccordion={"Author"}
-              answerAccordion={<AccordionAuthorAnswer />}
-            />
-          </div>
+          <ul className="list-of-pages">
+            <li>
+              <AccordionFooter
+                titleAccordion={"Information"}
+                answerAccordion={<AccordionInformationAnswer />}
+                ariaLabel={"Information Section"}
+              />
+            </li>
+            <li>
+              <AccordionFooter
+                titleAccordion={"My account"}
+                answerAccordion={<AccordionMyAccountAnswer />}
+                ariaLabel={"My Account Section"}
+              />
+            </li>
+            <li>
+              <AccordionFooter
+                titleAccordion={"Shopping"}
+                answerAccordion={<AccordionShoppingAnswer />}
+                ariaLabel={"Shopping Section"}
+              />
+            </li>
+            <li>
+              <AccordionFooter
+                titleAccordion={"Author"}
+                answerAccordion={<AccordionAuthorAnswer />}
+                ariaLabel={"Author Section"}
+              />
+            </li>
+          </ul>
         </div>
       </div>
     </div>

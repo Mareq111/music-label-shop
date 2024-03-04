@@ -9,10 +9,11 @@
   width: 100%;
  
   height: auto;
-  background-color: $black-900;
+/*   background-color: $black-900; */
+background-color: transparent;
   border-radius: 1rem;
   padding: 1rem;
-  border: 0.1rem solid $grey-700;
+ /*  border: 0.1rem solid $grey-700; */
   color: $white;
   overflow: hidden;
 }
@@ -33,11 +34,7 @@
 .li-list-of-pages {
   padding: 0.2rem;
 }
-/* @media (min-width: 801px) {
-.card-footer-small {
-  max-height: 20rem;
-}
-} */
+
 
 // styling for all Accordions Answer components  
 .accordion-footer-answer-div {
@@ -53,3 +50,14 @@
     height: auto;
     padding: 0;
 }
+
+/*  @media (min-width: 801px) {
+.card-footer-small {
+  max-height: 28rem;
+}
+} 
+@media (min-width: 894px) {
+  .card-footer-small {
+    max-height: 28rem;
+  }
+  } */

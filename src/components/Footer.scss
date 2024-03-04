@@ -10,17 +10,21 @@ footer {
   //margin like in you might like section
   margin-top: clamp(4rem, 3vw + 1rem, 8rem);
 }
+
 footer::before {
+  top: 1rem;
   content: "";
   position: absolute;
-  top: 0;
+  /* top: 0; */
   left: 0;
   right: 0;
   bottom: 0;
   background-image: url("../assets/img/others/Project Capture.jpg");
-  background-size: cover;
-  filter: blur(0.5rem);
-  opacity: 0.4;
+  background-size: fill;
+  filter: blur(0.3rem);
+  filter: saturate(0.7rem);
+  filter: contrast(1.8rem);
+  opacity: 0.3;
   z-index: -1;
 }
 .comeback-btn-footer {

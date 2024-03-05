@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./TextProductDescription.scss";
 export default function TextProductDescription() {
   //temporary text

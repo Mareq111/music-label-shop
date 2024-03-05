@@ -1,4 +1,4 @@
-import React from 'react'
+
 import mainImg from '../../assets/img/coversMini/cd-all-album-covers/cd-wave.jpg';
 export default function MainImgProdDetails() {
   return (

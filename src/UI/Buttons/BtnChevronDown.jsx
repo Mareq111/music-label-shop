@@ -1,4 +1,4 @@
-import React from "react";
+
 import IconChevronDown from "../../UI/Icons/IconChevronDown.jsx";
 export default function BtnChevronDown() {
   return (

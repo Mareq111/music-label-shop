@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./BtnComebackToTop.scss";
 import IconArrow from "../Icons/IconArrow";
 export default function BtnComebackToTop() {

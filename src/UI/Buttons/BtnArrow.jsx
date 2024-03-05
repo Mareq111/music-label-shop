@@ -1,4 +1,4 @@
-import React from "react";
+
 import IconArrow from "../Icons/IconArrow";
 import "./BtnArrow.scss";
 

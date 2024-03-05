@@ -1,4 +1,4 @@
-import React from "react";
+
 import IconSearch from "../Icons/IconSearch";
 import "./InputSearch.scss";
 export default function InputSearch() {

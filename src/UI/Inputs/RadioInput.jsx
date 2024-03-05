@@ -1,9 +1,9 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+
 import "./RadioInput.scss";
 export default function RadioInput({
   radioLabel,
   radioId,
-  radioName,
   radioValue,
   radioAriaLabel,
   radioKey,

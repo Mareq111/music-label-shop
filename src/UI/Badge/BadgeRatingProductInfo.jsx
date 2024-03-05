@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+
 import IconTinyStarFilled from "../Icons/IconTinyStarFilled";
 import "./BadgeRatingProductInfo.scss";
 export default function BadgeRatingProductInfo({

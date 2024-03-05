@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./Products.scss";
 import { Link } from "react-router-dom";
 

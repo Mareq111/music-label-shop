@@ -1,4 +1,4 @@
-import React from 'react'
+
 import  secondImgProdDetails from  "../../assets/img/coversMini/albums-collectors/dream-chaser-1-mini.jpg" 
 export default function SecondImgProdDetails() {
   return (

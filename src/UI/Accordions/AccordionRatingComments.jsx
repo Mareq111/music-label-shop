@@ -1,9 +1,8 @@
-import React from "react";
+
 import RadioStarRating from "../Inputs/RadioStarRating.jsx";
 import TextAreaComment from "../Text/TextAreaComment.jsx";
 import TextAddedComments from "../Text/TextAddedComments.jsx";
 import BadgeAddedComments from "../Badge/BadgeAddedComments.jsx";
-import BtnSort from "../Buttons/BtnSort.jsx";
 import RadioDropdown from "../Inputs/RadioDropdown.jsx";
 
 export default function AccordionRatingComments() {

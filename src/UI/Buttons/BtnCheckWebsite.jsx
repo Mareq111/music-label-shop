@@ -1,4 +1,4 @@
-import React from "react";
+
 import LogoStrimz from "../Icons/Icon-Logo/LogoStrimz";
 export default function BtnCheckWebsite() {
   //function with link to strimz page when btn  is clicked and open in another page

@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+
 import "./CardYouMightLike.scss";
 export default function CardYouMightLike({
   imgItem,

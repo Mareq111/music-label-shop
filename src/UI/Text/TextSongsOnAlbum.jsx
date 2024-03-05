@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import "./TextSongsOnAlbum.scss";
 export default function TextSongsOnAlbum({ songs }) {
   return (

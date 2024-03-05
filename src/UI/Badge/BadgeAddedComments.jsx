@@ -1,4 +1,4 @@
-import React from 'react'
+
 import './BadgeAddedComments.scss'
 export default function BadgeAddedComments() {
   return (

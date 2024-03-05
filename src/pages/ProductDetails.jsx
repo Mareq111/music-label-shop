@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./ProductDetails.scss";
 import ContentProductDetails from "../components/ContentProductDetails";
 import ContentProductDetailsLeftSide from "../components/ContentProductDetailsLeftSide";

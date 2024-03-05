@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./CardFooterBig.scss";
 import AccordionFooter from "../Accordions/AccordionFooter";
 import AccordionInformationAnswer from "../Accordions/AccordionInformationAnswer";

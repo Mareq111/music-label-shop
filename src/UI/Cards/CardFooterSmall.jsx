@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./CardFooterSmall.scss";
 import BadgeAnimatedStrimz from "../Badge/BadgeAnimatedStrimz";
 import BtnGoToCategories from "../Buttons/BtnGoToCategories";

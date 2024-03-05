@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import IconChevronDown from "../Icons/IconChevronDown";
 import IconChevronUp from "../Icons/IconChevronUp";
 import "./BtnSort.scss";
-import RadioInput from "../Inputs/RadioInput";
-import RadioDropdown from "../Inputs/RadioDropdown";
 import DropDownSelect from "../Dropddowns/DropDownSelect";
 export default function BtnSort() {
   //data for dropdownselect

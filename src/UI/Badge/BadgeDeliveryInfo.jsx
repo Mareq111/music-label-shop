@@ -1,4 +1,4 @@
-import React from "react";
+
 import IconDelivery from "../Icons/IconDelivery";
 import "./BadgeDeliveryInfo.scss";
 export default function BadgeDeliveryInfo() {

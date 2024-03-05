@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable react/prop-types */
+import { useState } from "react";
 import "./BtnAddToCart.scss";
 import IconCircleFilled from "../Icons/IconCircleFilled";
 export default function BtnAddToCart({ itemPrice }) {

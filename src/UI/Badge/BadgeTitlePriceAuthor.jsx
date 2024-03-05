@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+
 import './BadgeTitlePriceAuthor.scss'
 export default function BadgeTitlePriceAuthor({
   itemTitle,

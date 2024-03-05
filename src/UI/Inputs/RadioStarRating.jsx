@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import{ useState } from "react";
 import IconStarFilled from "../Icons/IconStarFilled.jsx";
 import IconStarEmpty from "../Icons/IconStarEmpty.jsx";
 import "./RadioStarRating.scss";

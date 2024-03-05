@@ -1,13 +1,10 @@
-import React from "react";
+
 import "./App.scss";
 import HomePage from "./pages/HomePage.jsx";
 import Products from "./pages/Products.jsx";
 import RootLayout from "./pages/RootLayout.jsx";
 import {
   createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  Routes,
   RouterProvider,
 } from "react-router-dom";
 import ErrorPage from "./pages/ErrorPage.jsx";

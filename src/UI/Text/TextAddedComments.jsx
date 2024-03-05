@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+
 import IconUser from "../Icons/IconUser.jsx";
 import "./TextAddedComments.scss";
 import IconTinyStarFilled from "../Icons/IconTinyStarFilled.jsx";

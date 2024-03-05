@@ -1,4 +1,4 @@
-import React from "react";
+
 import IconUndo from "../Icons/IconUndo.jsx";
 import "./BadgeReturnsInfo.scss";
 export default function BadgeReturnsInfo() {

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import BtnSubmitComment from '../Buttons/BtnSubmitComment'
 import './TextAreaComment.scss'
 import BtnReset from '../Buttons/BtnReset'

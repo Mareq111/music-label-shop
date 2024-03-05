@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./AccordionDetailedInfo.scss";
 import TextDistributorDetails from "../Text/TextDistributorDetails";
 import TextSongDuration from "../Text/TextSongDuration";

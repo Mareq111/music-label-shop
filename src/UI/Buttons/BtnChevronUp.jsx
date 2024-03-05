@@ -1,4 +1,4 @@
-import React from "react";
+
 import IconChevronUp from "../../UI/Icons/IconChevronUp.jsx";
 export default function BtnChevronUp() {
   return (

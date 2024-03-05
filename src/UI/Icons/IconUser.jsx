@@ -1,8 +1,8 @@
-import React from "react";
-
-export default function IconUser({id}) {
+// eslint-disable-next-line react/prop-types
+export default function IconUser({ id }) {
   return (
-    <svg id={id} 
+    <svg
+      id={id}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"

@@ -1,4 +1,4 @@
-import React from "react";
+
 import LogoStrimz from "../Icons/Icon-Logo/LogoStrimz";
 import "./BadgeAnimatedStrimz.scss";
 export default function BadgeAnimatedStrimz() {

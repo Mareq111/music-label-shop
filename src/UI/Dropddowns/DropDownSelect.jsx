@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+
 import "./DropDownSelect.scss";
 export default function DropDownSelect({ radioOptions }) {
   return (

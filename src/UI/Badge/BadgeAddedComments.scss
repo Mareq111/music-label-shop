@@ -1,0 +1,27 @@
+@import '../../styles/global/global.scss';
+
+
+
+.badge-added-comments {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    height: auto;
+    margin-block: 2rem;
+}
+
+.line-comments-section {
+    margin-inline: 25%;
+    width: auto;
+    height: 0.1rem;
+    background-color: $grey-700;
+    border: 0;
+  }
+  
+  .h-added-comments {
+    font-size: 1.1rem;
+    color: $white;
+    font-weight: 700;
+  }

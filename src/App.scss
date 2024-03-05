@@ -1,0 +1,45 @@
+@import "./styles/global/global.scss";
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $black-900;
+}
+
+//icons styling
+//icon tiny star filled
+
+.icon-tiny-star path {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: $gold;
+  stroke: $gold;
+  stroke-width: 0.1rem;
+}
+//icon star filled
+
+.icon-star-filled path {
+  fill: $gold;
+  stroke: $gold;
+  stroke-width: 0.1rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+//icon star empty
+.icon-star-empty path {
+  fill: $grey-700;
+  stroke: $grey-600;
+  stroke-width: 0.1rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    fill: $grey-600;
+    stroke: $gold;
+    stroke-width: 0.1rem;
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}

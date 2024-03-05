@@ -1,0 +1,70 @@
+@import "../../styles/global/global.scss";
+
+.simply-accordion {
+  width: 100%;
+  height: auto;
+  border: 0.1rem solid $grey-700;
+  border-radius: 0.5rem;
+
+  .btn-accordion-with-x {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    background-color: transparent;
+    color: $white;
+    border: none;
+    cursor: pointer;
+
+    .title-of-accordion {
+      font-size: 1.1rem;
+    }
+    &.rotate-icon {
+      .icon-circleX {
+        transform: rotate(135deg);
+        animation: rotateAnimation 0.2s linear;
+      }
+    }
+    &.rotate-icon-back {
+      .icon-circleX {
+        animation: rotateAnimationBack 0.2s linear;
+      }
+    }
+  }
+  //animation for icons
+  @keyframes rotateAnimation {
+    0% {
+      transform: rotate(135deg);
+    }
+    100% {
+      transform: rotate(45deg);
+    }
+  }
+  @keyframes rotateAnimationBack {
+    0% {
+      transform: rotate(45deg);
+    }
+    100% {
+      transform: rotate(135deg);
+    }
+  }
+
+  //hide text inside if accordion is closed
+  .div-text-inside {
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    /*   &.open {
+      max-height: 10rem;
+    } */
+
+    &.close {
+      max-height: 0;
+    }
+
+    .accordion-text-inside {
+      padding: 2rem 1rem;
+      border-top: 0.1rem solid $amulet-green;
+    }
+  }
+}

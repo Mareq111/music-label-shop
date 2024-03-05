@@ -1,0 +1,36 @@
+@import "../../styles/global/global.scss";
+
+/* .div-all-streaming-logos {
+    padding: 1rem;
+} */
+
+.p-streaming-logos {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.streaming-logos-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    cursor: pointer;
+
+    // select path inside the .icon-wrapper with the class icon-logos
+    &.hovered {
+      .icon-logos path {
+        fill: $amulet-green;
+        transition: 0.1s ease-in-out;
+      }
+    }
+
+    &:hover {
+      @extend .hovered;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@import "../../styles/global/global.scss";
+
+.h1-content-prod-details,
+.price-of-item,
+.p-content-prod-details {
+    font-size: clamp(1.2rem, 0.5rem + 1.5vw, 1.4rem)
+}

@@ -1,0 +1,52 @@
+@import "../../styles/global/global.scss";
+
+//dropdown
+
+.open-dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  width: 50%;
+  height: 12rem;
+  background-color: $black-700;
+  margin: 0.5rem;
+  border-radius: 1rem;
+}
+
+.div-label-input-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-input-dropdown {
+  display: none;
+}
+
+.radio-tile-dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-block: 0.2rem;
+  border-radius: 0.5rem;
+  transition: ease-in-out 0.2s;
+
+  &:hover {
+    background-color: $grey-600;
+    color: $black-700;
+  }
+
+  .radio-label-dropdown {
+    font-size: 0.9rem;
+  }
+}
+
+// checked input radio
+.radio-input-dropdown:checked + .radio-tile-dropdown,
+.radio-input-dropdown:focus + .radio-tile-dropdown {
+  background-color: $eastern-blue;
+  color: $black-700;
+}

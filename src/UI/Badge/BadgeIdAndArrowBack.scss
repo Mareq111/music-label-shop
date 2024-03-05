@@ -1,0 +1,23 @@
+@import "../../styles/global/global.scss";
+
+.badge-id-and-arrow-back {
+  width: auto;
+  height: 5rem;
+}
+.div-id-and-text {
+  width: auto;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.text-id {
+  font-size: 0.8rem;
+  color: $white;
+}
+//div to wrap btn with lin arrow back
+.div-link-btn-comeback {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+  height: auto;
+}

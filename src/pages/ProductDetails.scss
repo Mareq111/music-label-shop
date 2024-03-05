@@ -1,0 +1,53 @@
+@import "../styles/global/global.scss";
+
+main {
+  padding: 1rem;
+  color: $white;
+}
+.all_sections__product {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+
+
+.first-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.h1-content-prod-details {
+  width: 75%;
+}
+.price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+
+@media (max-width: 559px) {
+  .section-2__right-side {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 560px) {
+  .all_sections__product {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  //min width could be 5rem but it isnt
+  .section-2__right-side {
+    margin-top: 7rem;
+  }
+  .section-youMightLike {
+    grid-column: span 2;
+  }
+}

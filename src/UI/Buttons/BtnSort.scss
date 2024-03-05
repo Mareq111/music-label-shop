@@ -1,0 +1,55 @@
+@import "../../styles/global/global.scss";
+/* 
+ .sort-comments-by-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  width: auto;
+  height: auto;
+  background-color: $black-700;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0 0.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  color: $white;
+  transition: 0.2s ease-in-out;
+  &.icon-chevron-down path  {
+    fill: currentColor;
+}
+  &:hover {
+    color: $grey-600;
+    &.icon-chevron-down path {
+        fill: $grey-600;
+    }
+  }
+}
+
+ */
+
+ .sort-comments-by-btn {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0 0.5rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    color: $white;
+    transition: 0.3s ease-in-out;
+  
+   &:hover {
+      background-color: $grey-700;
+
+    }
+  
+    .icon-chevron-down path {
+      fill: currentColor;
+    }
+  }
+  
+ 

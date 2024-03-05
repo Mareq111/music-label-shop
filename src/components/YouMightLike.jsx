@@ -1,4 +1,3 @@
-import React from "react";
 import "./YouMightLike.scss";
 import CardYouMightLike from "../UI/Cards/CardYouMightLike";
 /* import for covers */

@@ -1,4 +1,4 @@
-import React from "react";
+
 import BadgeDeliveryInfo from "../UI/Badge/BadgeDeliveryInfo";
 import BadgeReturnsInfo from "../UI/Badge/BadgeReturnsInfo";
 import './BadgesProductDetails.scss'

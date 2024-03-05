@@ -1,10 +1,9 @@
-import React from "react";
+
 import "./TopNav.scss";
 import IconMenu from "./../UI/Icons/IconMenu";
 import IconUser from "./../UI/Icons/IconUser";
 import IconHeart from "./../UI/Icons/IconHeart";
 import IconShopBag from "./../UI/Icons/IconShopBag";
-import IconSearch from "./../UI/Icons/IconSearch";
 import InputSearch from "./../UI/Inputs/InputSearch";
 import { Link } from "react-router-dom";
 import LogoStrimz from "../UI/Icons/Icon-Logo/LogoStrimz";

@@ -1,4 +1,4 @@
-import React from "react";
+
 import Accordion from "../UI/Accordions/Accordion";
 import "./AccordionsProductDetail.scss";
 import AccordionStreamingsContent from "../UI/Accordions/AccordionStreamingsContent";

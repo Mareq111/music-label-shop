@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import  { useState } from "react";
 import IconCircleX from "../Icons/IconCircleX.jsx";
 import "./Accordion.scss";

@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./ContentProductDetails.scss";
 import ChooserVersionRadio from "./ChooserVersionRadio.jsx";
 import BtnAddToCart from "./../UI/Buttons/BtnAddToCart.jsx";

@@ -1,0 +1,10 @@
+@media (max-width: 559px) {
+  .content-left-side-text-hidden {
+    display: none;
+  }
+}
+@media (min-width: 560px) {
+  .images-of-product-div {
+    margin-bottom: clamp(4rem, 3vw + 1rem, 8rem);
+  }
+}/*# sourceMappingURL=ContentProductDetailsLeftSide.css.map */

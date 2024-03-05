@@ -1,0 +1,60 @@
+.btn-go-to-categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 6rem;
+  width: auto;
+  height: auto;
+  margin: auto;
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid #8d8c8c;
+  border-radius: 2rem;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  color: #f2f2f2;
+  font-weight: 700;
+  z-index: 1;
+  background-color: transparent;
+}
+.btn-go-to-categories:after, .btn-go-to-categories:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.btn-go-to-categories:before {
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  border-radius: 50%;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.btn-go-to-categories:after {
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  border-radius: 50%;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.btn-go-to-categories:hover, .btn-go-to-categories:focus {
+  color: #1c1b1b;
+  border: 0.1rem solid #8d8c8c;
+}
+.btn-go-to-categories:hover:before, .btn-go-to-categories:hover:after, .btn-go-to-categories:focus:before, .btn-go-to-categories:focus:after {
+  background-color: #f2f2f2;
+}
+.btn-go-to-categories:hover:before, .btn-go-to-categories:focus:before {
+  top: -15%;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+.btn-go-to-categories:hover:after, .btn-go-to-categories:focus:after {
+  top: -25%;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.link-go-to-categories {
+  outline: none;
+}/*# sourceMappingURL=BtnGoToCategories.css.map */

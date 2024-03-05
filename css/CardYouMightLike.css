@@ -1,0 +1,155 @@
+.card__youMightLike {
+  display: flex;
+  flex-direction: row;
+  width: 20rem;
+  height: 10rem;
+  max-width: 20rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  color: #f2f2f2;
+  padding: 0;
+  border: 0.1rem solid #1c1b1b;
+  overflow: hidden;
+}
+.card__youMightLike:hover {
+  border: 0.1rem solid #8d8c8c;
+}
+
+.div-top-of-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.div-img-card__youMightLike {
+  height: 100%;
+  overflow-y: hidden;
+  width: 10rem;
+  aspect-ratio: 1/1;
+}
+
+.img-card__youMightLike {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.div-bottom-of-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #1c1b1b;
+  padding: 1rem 0.5rem;
+  width: 10rem;
+  overflow: hidden;
+}
+
+.two-titles-card {
+  overflow: hidden;
+  width: 100%;
+  height: 6rem;
+}
+
+.div-title-card__youMightLike {
+  height: 3rem;
+  overflow: hidden;
+}
+
+.title-card__youMightLike,
+.titleArtist-card__youMightLike {
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.9rem;
+  width: auto;
+  height: auto;
+}
+
+.titleArtist-card__youMightLike {
+  color: #8d8c8c;
+}
+
+.price-card__youMightLike {
+  font-weight: 700;
+  font-size: 1rem;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+
+@media (min-width: 425px) {
+  .card__youMightLike {
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    height: 20rem;
+    max-height: 20rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    color: #f2f2f2;
+    padding: 0;
+    border: 0.1rem solid #1c1b1b;
+  }
+  .card__youMightLike:hover {
+    border: 0.1rem solid #8d8c8c;
+  }
+  .div-top-of-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .div-img-card__youMightLike {
+    width: 100%;
+    overflow-y: hidden;
+    height: 10rem;
+    aspect-ratio: 1/1;
+  }
+  .img-card__youMightLike {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  .div-bottom-of-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #1c1b1b;
+    padding: 1rem 0.5rem;
+    height: 10rem;
+    overflow: hidden;
+  }
+  .two-titles-card {
+    overflow: hidden;
+    width: 100%;
+    height: 6rem;
+  }
+  .div-title-card__youMightLike {
+    height: 3rem;
+    overflow: hidden;
+  }
+  .title-card__youMightLike,
+  .titleArtist-card__youMightLike {
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.9rem;
+    width: auto;
+    height: auto;
+  }
+  .titleArtist-card__youMightLike {
+    color: #8d8c8c;
+  }
+  .price-card__youMightLike {
+    font-weight: 700;
+    font-size: 1rem;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+  }
+}/*# sourceMappingURL=CardYouMightLike.css.map */

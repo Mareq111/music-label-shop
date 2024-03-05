@@ -83,7 +83,7 @@ path {
   width: 100%;
   padding: 0.5rem 2rem;
 }
-.Link-search {
+.link-search {
   text-decoration: none;
 }
 //media query for 425screens
@@ -156,8 +156,8 @@ path {
   .up-nav-search {
     display: block;
     height: auto;
-    width: 40%;
-    margin-inline: 1rem;
+    width: 100%;
+    /*  margin-inline: 1rem; */
   }
 
   .down-nav-search {

@@ -1,17 +1,16 @@
-
 import "./App.scss";
 import HomePage from "./pages/HomePage.jsx";
 import Products from "./pages/Products.jsx";
 import RootLayout from "./pages/RootLayout.jsx";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import ProductDetails from "./pages/ProductDetails.jsx";
 import Favorites from "./pages/Favorites.jsx";
 import UserProfile from "./pages/UserProfile.jsx";
-import ShoppingBag from "./pages/ShoppingBag.jsx";
+import Cart from "./pages/Cart.jsx";
+import SearchResult from "./pages/SearchResult.jsx";
+import Menu from "./pages/Menu.jsx";
+/* import Search from "./pages/Search.jsx"; */
 
 //configure, routing and main layout,initially page index: true is HomePage,
 const router = createBrowserRouter([
@@ -34,7 +33,9 @@ const router = createBrowserRouter([
       // Other sections of the page
       { path: "favorites", element: <Favorites /> },
       { path: "user-profile", element: <UserProfile /> },
-      { path: "shopping-bag", element: <ShoppingBag /> },
+      { path: "cart", element: <Cart /> },
+      { path: "search", element: <SearchResult /> },
+      { path: "menu", element: <Menu /> },
     ],
   },
 ]);

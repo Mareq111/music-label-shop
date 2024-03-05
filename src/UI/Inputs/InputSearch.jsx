@@ -1,4 +1,3 @@
-
 import IconSearch from "../Icons/IconSearch";
 import "./InputSearch.scss";
 export default function InputSearch() {
@@ -11,5 +10,6 @@ export default function InputSearch() {
         placeholder="Search for products..."
       ></input>
     </div>
+   
   );
-}
+}  

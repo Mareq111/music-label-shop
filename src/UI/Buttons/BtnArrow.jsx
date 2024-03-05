@@ -1,10 +1,9 @@
-
 import IconArrow from "../Icons/IconArrow";
 import "./BtnArrow.scss";
 
-export default function BtnArrowBack() {
+export default function BtnArrow() {
   return (
-    <button className="btn-arrow-back" type="button" aria-label="Comeback icon">
+    <button className="btn-arrow" type="button" aria-label="Comeback icon">
       <IconArrow />
     </button>
   );

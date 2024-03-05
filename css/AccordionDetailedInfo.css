@@ -1,0 +1,14 @@
+.parameters-div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detailedInfo-h {
+  color: #8d8c8c;
+  font-weight: 700;
+}
+
+.detailedInfo-p {
+  color: #f2f2f2;
+}/*# sourceMappingURL=AccordionDetailedInfo.css.map */

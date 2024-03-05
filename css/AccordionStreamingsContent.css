@@ -1,0 +1,24 @@
+/* .div-all-streaming-logos {
+    padding: 1rem;
+} */
+.p-streaming-logos {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.streaming-logos-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.streaming-logos-div .icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.streaming-logos-div .icon-wrapper.hovered .icon-logos path, .streaming-logos-div .icon-wrapper:hover .icon-logos path {
+  fill: #85ab7b;
+  transition: 0.1s ease-in-out;
+}/*# sourceMappingURL=AccordionStreamingsContent.css.map */

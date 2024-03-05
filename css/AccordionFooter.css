@@ -1,0 +1,43 @@
+.simply-accordion-footer {
+  width: 100%;
+  height: auto;
+  border: none;
+  /*  border: 0.1rem solid $grey-700; */
+  border-radius: 0.5rem;
+}
+.simply-accordion-footer .btn-accordion-footer {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  justify-content: space-between;
+  outline: none;
+  width: auto;
+  padding: 1rem;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: #f2f2f2;
+  border: none;
+  cursor: pointer;
+  transition: max-height 0.3s ease-in-out;
+}
+.simply-accordion-footer .btn-accordion-footer:hover,
+.simply-accordion-footer .btn-accordion-footer :focus {
+  color: #85ab7b;
+}
+.simply-accordion-footer .btn-accordion-footer .title-of-accordion-footer {
+  font-size: 1.2rem;
+}
+.simply-accordion-footer .div-text-inside-footer {
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  /*   &.open {
+    max-height: 10rem;
+  } */
+}
+.simply-accordion-footer .div-text-inside-footer.close {
+  max-height: 0;
+}
+.simply-accordion-footer .div-text-inside-footer .accordion-text-inside-footer {
+  padding: 2rem 1rem;
+  border-top: 0.1rem solid #85ab7b;
+}/*# sourceMappingURL=AccordionFooter.css.map */

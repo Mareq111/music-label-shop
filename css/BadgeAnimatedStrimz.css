@@ -1,0 +1,113 @@
+.div-logo-brand-name {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo-footer-div {
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+}
+
+.logo-and-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: auto;
+  height: auto;
+  gap: 0.5rem;
+  /*  margin-bottom: 2rem; */
+}
+
+.description-strimz {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.strimz-h {
+  font-size: 1.2rem;
+}
+
+.strimz-p-description {
+  color: #f2f2f2;
+  background-color: transparent;
+  font-size: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: 0.2rem;
+  color: transparent;
+}
+
+.text-animated-strimz {
+  font-size: 0.8rem;
+  padding-bottom: 0.5rem;
+}
+
+#first-strimz-p {
+  border-bottom: 0.1rem solid #26acac;
+  animation: fadeInFirstText 8s infinite;
+}
+
+#second-strimz-p {
+  color: #1c1b1b;
+  border-bottom: 0.1rem solid #85ab7b;
+  animation: fadeInSecondText 8s infinite;
+}
+
+@keyframes fadeInFirstText {
+  0% {
+    opacity: 1;
+    color: transparent;
+  }
+  25% {
+    opacity: 1;
+    color: #f2f2f2;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeInSecondText {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 1;
+    color: transparent;
+  }
+  75% {
+    opacity: 1;
+    color: #8d8c8c;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media (min-width: 375px) {
+  .strimz-h {
+    font-size: 1.6rem;
+  }
+  .logo-footer-div {
+    width: 4rem;
+    height: 4rem;
+  }
+  .text-animated-strimz {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=BadgeAnimatedStrimz.css.map */

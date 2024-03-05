@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import IconCircleX from "../Icons/IconCircleX.jsx";
 import "./Accordion.scss";
 export default function Accordion({ titleAccordion, answerAccordion }) {

@@ -2,7 +2,7 @@
 
 export default function IconSearch() {
   return (
-    <svg className="icon"  id="icon-search"
+    <svg className="icon icon-searching" 
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"

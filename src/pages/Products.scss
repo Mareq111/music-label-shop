@@ -1,6 +1,50 @@
 @import ".././styles/global/global.scss";
 
+/* .section-product-page {
+  margin-top: clamp(4rem, 3vw + 1rem, 8rem);
+} */
 
-.content-prod {
-    color: $white;
+.h-products-page {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.ul-list-productsMain {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.li-productsMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //change width for 90% when screen < 360px
+  width: 90%;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 360px) {
+  .li-productsMain {
+    //change width for 100% when screen > 360px
+    width: 100%;
+  }
+}
+@media (min-width: 425px) {
+  .ul-list-productsMain {
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  }
+  .li-productsMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
 }

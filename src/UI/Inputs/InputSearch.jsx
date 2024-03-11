@@ -1,18 +1,21 @@
+/* eslint-disable react/prop-types */
+
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import IconSearch from "../Icons/IconSearch";
 import "./InputSearch.scss";
-import IconCircleX from "../Icons/IconCircleX";
+import BtnResetSearching from "../Buttons/BtnResetSearching";
 
-export default function InputSearch() {
+export default function InputSearch({ onFocus, onBlur, searchTerm }) {
   const [isInputFocused, setInputFocused] = useState(false);
 
   const handleInputFocus = () => {
     setInputFocused(true);
+    onFocus && onFocus();
   };
 
   const handleInputBlur = () => {
     setInputFocused(false);
+    onBlur && onBlur();
   };
 
   return (
@@ -31,6 +34,7 @@ export default function InputSearch() {
           placeholder="Search for products..."
           onFocus={handleInputFocus}
           onBlur={handleInputBlur}
+          value={searchTerm}
         />
       </div>
       <div
@@ -38,9 +42,7 @@ export default function InputSearch() {
           isInputFocused ? "visible" : ""
         }`}
       >
-        <Link className="link-icon-x" to=".." relative="path">
-          <IconCircleX />
-        </Link>
+        <BtnResetSearching />
         <hr className="hr-searching-divider" />
         <IconSearch />
       </div>

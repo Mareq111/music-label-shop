@@ -1,4 +1,6 @@
-@import "../../styles/global/global.scss";
+@import './MainSearch.scss';
+
+
 
 .search-bar {
   display: flex;
@@ -69,8 +71,7 @@
 .hr-searching-divider {
   height: 1rem;
   width: 0.1rem;
-  background-color: $black-700;
-  border: 0;
+  background-color: $white;
   margin-inline: 0.5rem;
 }
 

@@ -10,7 +10,6 @@ import UserProfile from "./pages/UserProfile.jsx";
 import Cart from "./pages/Cart.jsx";
 import SearchResult from "./pages/SearchResult.jsx";
 import Menu from "./pages/Menu.jsx";
-/* import Search from "./pages/Search.jsx"; */
 
 //configure, routing and main layout,initially page index: true is HomePage,
 const router = createBrowserRouter([
@@ -39,7 +38,6 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-
 function App() {
   return <RouterProvider router={router} />;
 }

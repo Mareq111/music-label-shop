@@ -2,49 +2,43 @@ import { useState } from "react";
 import CardProductMain from "../UI/Cards/CardProductMain";
 import BtnToggleView from "../UI/Buttons/BtnToggleView.jsx";
 import "./Products.scss";
+//import album covers
+import ImgDreamChaser from "../assets/img/coversMini/albums-collectors/dream-chaser-1-mini.jpg";
+import ImgDreamChaser2 from "../assets/img/coversMini/albums-collectors/dream-chaser-2-mini.jpg";
+import ImgDreamChaser3 from "../assets/img/coversMini/albums-collectors/dream-chaser-3-mini.jpg";
+import ImgArenaOfAutumnnEp from "../assets/img/coversMini/albums/arena_of_autumnn_EP-mini.jpg";
+import ImgInitialConfusion from "../assets/img/coversMini/albums/initial-confusion-mini.jpg";
 
 export default function Products() {
   const [layoutView, setLayoutView] = useState("grid");
 
-  // cover images root
-  const imgDreamChaser =
-    "../../src/assets/img/coversMini/albums-collectors/dream-chaser-1-mini.jpg";
-  const imgDreamChaser2 =
-    "../../src/assets/img/coversMini/albums-collectors/dream-chaser-2-mini.jpg";
-  const imgDreamChaser3 =
-    "../../src/assets/img/coversMini/albums-collectors/dream-chaser-3-mini.jpg";
-  const imgArenaAutumnn =
-    "../../src/assets/img/coversMini/albums/arena_of_autumnn_EP-mini.jpg";
-  const imgInitialConfusion =
-    "../../src/assets/img/coversMini/albums/initial-confusion-mini.jpg";
-
   const productsData = [
     {
-      imgItem: imgDreamChaser,
+      imgItem: ImgDreamChaser,
       titleItem: "Album Dream Chaser",
       titleArtist: "El Double M",
       priceItem: 19.99,
     },
     {
-      imgItem: imgDreamChaser2,
+      imgItem: ImgDreamChaser2,
       titleItem: "Album Dream Chaser 2",
       titleArtist: "El Double M",
       priceItem: 24.59,
     },
     {
-      imgItem: imgDreamChaser3,
+      imgItem: ImgDreamChaser3,
       titleItem: "Album Dream Chaser 3",
       titleArtist: "El Double M",
       priceItem: 34.59,
     },
     {
-      imgItem: imgArenaAutumnn,
+      imgItem: ImgArenaOfAutumnnEp,
       titleItem: "Album Arena Of Autumnn EP",
       titleArtist: "El Double M",
       priceItem: 14.99,
     },
     {
-      imgItem: imgInitialConfusion,
+      imgItem: ImgInitialConfusion,
       titleItem: "Album Initial Confusion",
       titleArtist: "El Double M",
       priceItem: 12.99,

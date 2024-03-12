@@ -43,6 +43,7 @@ const CardProductMain = ({
   layout,
 }) => {
   const renderCardContent = () => {
+    // grid view icon visible
     if (layout === "grid") {
       return (
         <div className="card__Product-list">
@@ -70,30 +71,31 @@ const CardProductMain = ({
           </div>
         </div>
       );
+      // list view icon visible
     } else if (layout === "list") {
       return (
-        <div className="card__youMightLike">
-          <div className="div-top-of-card">
-            <div className="div-img-card__youMightLike">
+        <div className="card__Product-grid">
+          <div className="div-top-of-card-Product-grid">
+            <div className="div-img-card__Product-grid">
               <img
-                className="img-card__youMightLike"
+                className="img-card__Product-grid"
                 src={imgItem}
                 alt={`${titleItem} By ${titleArtist}`}
               />
             </div>
           </div>
-          <div className="div-bottom-of-card">
-            <div className="two-titles-card">
-              <div className="div-title-card__youMightLike">
-                <h4 className="title-card__youMightLike">{titleItem}</h4>
+          <div className="div-bottom-of-card-Product-grid">
+            <div className="two-titles-card-Product-grid">
+              <div className="div-title-card__Product-grid">
+                <h4 className="title-card__Product-grid">{titleItem}</h4>
               </div>
-              <div className="div-title-card__youMightLike">
-                <h5 className="titleArtist-card__youMightLike">
+              <div className="div-title-card__Product-grid">
+                <h5 className="titleArtist-card__Product-grid">
                   {titleArtist}
                 </h5>
               </div>
             </div>
-            <h5 className="price-card__youMightLike">From {priceItem}€</h5>
+            <h5 className="price-card__Product-grid">From {priceItem}€</h5>
           </div>
         </div>
       );

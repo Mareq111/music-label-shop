@@ -10,14 +10,13 @@
 .h-products-page {
   font-size: 1.2rem;
   font-weight: 700;
-
   text-transform: uppercase;
 }
 .products-page-container {
   width: 100%;
   height: auto;
 }
-//! if is grid choosen
+//! if is LIST icon choosen
 .ul-list-productsMain--grid {
   display: flex;
   align-items: center;
@@ -30,10 +29,10 @@
   width: 100%;
   height: auto;
 }
-//! if is list choosen
+//! if is GRID icon choosen
 .ul-list-productsMain--list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
   gap: 1rem;
   list-style: none;
   padding: 0;
@@ -49,15 +48,9 @@
   height: auto;
 }
 
-/* @media (min-width: 360px) {
-  .li-productsMain {
-    //change width for 100% when screen > 360px
-    width: 100%;
-  }
-} */
 @media (min-width: 425px) {
   .ul-list-productsMain {
-    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
   }
   .li-productsMain {
     display: flex;
@@ -65,5 +58,11 @@
     align-items: center;
     width: 100%;
     height: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .ul-list-productsMain {
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
   }
 }

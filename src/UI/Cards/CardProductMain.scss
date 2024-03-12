@@ -1,7 +1,117 @@
-@import '../../styles/global/global.scss';
+@import "../../styles/global/global.scss";
 
+//!for grid items styling
 
- .card__ProductMain {
+.card__Product-list {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 10rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  color: $white;
+  padding: 0;
+  border: 0.1rem solid $black-700;
+  overflow: hidden;
+  &:hover {
+    border: 0.1rem solid $grey-600;
+  }
+}
+.div-top-of-card-Product-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.div-img-card__Product-list {
+  height: 100%;
+  overflow-y: hidden;
+  width: auto;
+  aspect-ratio: 1/1;
+}
+
+.img-card__Product-list {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+//card -text inside
+.div-bottom-of-card-Product-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: $black-700;
+  padding: 1rem 0.5rem;
+  width: 10rem;
+  overflow: hidden;
+}
+//div h
+.two-titles-card-Product-list {
+  overflow: hidden;
+  width: 100%;
+  height: 6rem;
+}
+.div-title-card__Product-list {
+  height: 3rem;
+  overflow: hidden;
+}
+
+.title-card__Product-list,
+.titleArtist-card__Product-list {
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.9rem;
+  width: auto;
+  height: auto;
+}
+.titleArtist-card__Product-list {
+  color: $grey-600;
+}
+.price-card__Product-list {
+  font-weight: 700;
+  font-size: 1rem;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+//!styling for min 425px screens - list products
+
+@media (min-width: 425px) {
+  .card__Product-list {
+    width: 100%;
+    height: auto;
+    min-height: 12rem;
+    max-height: 15rem;
+  }
+  .div-img-card__Product-list {
+    width: auto;
+    height: 100%;
+    max-width: 16rem;
+    min-width: 12rem;
+    aspect-ratio: 1/1;
+  }
+  //card -text inside
+  .div-bottom-of-card-Product-list {
+    padding-block: 1rem;
+    padding-inline: clamp(0.5rem, 2vw, 2rem);
+    overflow: hidden;
+    width: 100%;
+    min-width: 40vw;
+  }
+  .title-card__Product-list,
+  .titleArtist-card__Product-list {
+    font-size: clamp(1rem, 1vw + 0.75rem, 1.3rem);
+  }
+  .price-card__Product-list {
+    font-size: clamp(1.1rem, 1.25vw + 0.75rem, 1.4rem);
+  }
+}
+
+//!for grid items styling
+
+/*  .card__Product-list {
   display: flex;
   flex-direction: row;
   width: 20rem;
@@ -17,26 +127,26 @@
     border: 0.1rem solid $grey-600;
   }
 }
-.div-top-of-card {
+.div-top-of-card-Product-list {
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
-.div-img-card__ProductMain {
+.div-img-card__Product-list {
   height: 100%;
   overflow-y: hidden;
   width: 10rem;
   aspect-ratio: 1/1;
 }
 
-.img-card__ProductMain {
+.img-card__Product-list {
   width: 100%;
   height: 100%;
   object-fit: fill;
 }
 //card -text inside
-.div-bottom-of-card {
+.div-bottom-of-card-Product-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,18 +157,18 @@
   overflow: hidden;
 }
 //div h
-.two-titles-card {
+.two-titles-card-Product-list {
   overflow: hidden;
   width: 100%;
   height: 6rem;
 }
-.div-title-card__ProductMain {
+.div-title-card__Product-list {
   height: 3rem;
   overflow: hidden;
 }
 
-.title-card__ProductMain,
-.titleArtist-card__ProductMain {
+.title-card__Product-list,
+.titleArtist-card__Product-list {
   white-space: wrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -66,10 +176,10 @@
   width: auto;
   height: auto;
 }
-.titleArtist-card__ProductMain {
+.titleArtist-card__Product-list {
   color: $grey-600;
 }
-.price-card__ProductMain {
+.price-card__Product-list {
   font-weight: 700;
   font-size: 1rem;
   width: auto;
@@ -79,7 +189,7 @@
 //!styling for min 425px screens
 
 @media (min-width: 425px) {
-  .card__ProductMain {
+  .card__Product-list {
     display: flex;
     flex-direction: column;
     width: 10rem;
@@ -153,4 +263,4 @@
     height: auto;
     overflow: hidden;
   }
-} 
+}  */

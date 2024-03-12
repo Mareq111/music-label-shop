@@ -1,9 +1,11 @@
+import { useState } from "react";
 import CardProductMain from "../UI/Cards/CardProductMain";
+import BtnToggleView from "../UI/Buttons/BtnToggleView.jsx";
 import "./Products.scss";
-import IconGridView from "../UI/Icons/IconGridView.jsx";
-import IconListView from "../UI/Icons/IconListView.jsx";
 
 export default function Products() {
+  const [layoutView, setLayoutView] = useState("grid");
+
   const productsData = [
     {
       imgItem:
@@ -17,44 +19,55 @@ export default function Products() {
         "../../src/assets/img/coversMini/albums-collectors/dream-chaser-2-mini.jpg",
       titleItem: "Album Dream Chaser 2",
       titleArtist: "El Double M",
-      priceItem: 24.5,
+      priceItem: 24.59,
     },
     {
       imgItem:
         "../../src/assets/img/coversMini/albums-collectors/dream-chaser-3-mini.jpg",
       titleItem: "Album Dream Chaser 3",
       titleArtist: "El Double M",
-      priceItem: 34.5,
+      priceItem: 34.59,
     },
     {
       imgItem:
         "../../src/assets/img/coversMini/albums/arena_of_autumnn_EP-mini.jpg",
       titleItem: "Album Arena Of Autumnn EP",
       titleArtist: "El Double M",
-      priceItem: 14.5,
+      priceItem: 14.99,
     },
     {
       imgItem:
         "../../src/assets/img/coversMini/albums/initial-confusion-mini.jpg",
       titleItem: "Album Initial Confusion",
       titleArtist: "El Double M",
-      priceItem: 12.5,
+      priceItem: 12.99,
     },
   ];
 
+  const handleProductsLayout = (newLayout) => {
+    setLayoutView(newLayout);
+  };
+
   return (
     <article className="section-product-page">
-      <div className="icons-view-chooser">
-        <IconGridView />
-        <IconListView />
-      </div>
       <div className="products-page-container">
-        <h4 className="h-products-page">Our Products</h4>
-        <ul className="ul-list-productsMain">
-          {/* maping all items from the array */}
+        <div className="h-and-change-view-products">
+          <h4 className="h-products-page">Albums</h4>
+          <BtnToggleView onLayoutChange={handleProductsLayout} />
+        </div>
+
+        <ul
+          className={`ul-list-productsMain ${
+            layoutView === "grid" ? "ul-list-productsMain--grid" : ""
+          } ${layoutView === "list" ? "ul-list-productsMain--list" : ""}`}
+        >
           {productsData.map((item, index) => (
             <li className="li-productsMain" key={index}>
-              <CardProductMain {...item} />
+              {layoutView === "grid" ? (
+                <CardProductMain {...item} layout="grid" />
+              ) : (
+                <CardProductMain {...item} layout="list" />
+              )}
             </li>
           ))}
         </ul>

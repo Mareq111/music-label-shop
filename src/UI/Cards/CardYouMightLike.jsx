@@ -19,7 +19,6 @@ export default function CardYouMightLike({
         </div>
       </div>
       <div className="div-bottom-of-card">
-        {/* div titles */}
         <div className="two-titles-card">
           <div className="div-title-card__youMightLike">
             <h4 className="title-card__youMightLike">{titleItem}</h4>
@@ -29,7 +28,6 @@ export default function CardYouMightLike({
           </div>
         </div>
         <h5 className="price-card__youMightLike">From {priceItem}€</h5>
-        {/*  <h5 className="price-card__youMightLike old-price"> 12.99€ - 32.99€</h5> */}
       </div>
     </div>
   );

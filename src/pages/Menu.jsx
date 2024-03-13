@@ -1,5 +1,6 @@
 import BtnNavTo from "../UI/Buttons/BtnNavTo";
 import "./Menu.scss";
+import BtnNormalX from "../UI/Buttons/BtnNormalX.jsx";
 import arenaCover from "../assets/img/coversMini/albums/arena_of_autumnn_EP-mini.jpg";
 export default function Menu() {
   const coreNavPages = [
@@ -13,18 +14,26 @@ export default function Menu() {
 
   return (
     <aside className="aside-menu">
+      <div className="top-of-aside-menu">
+        <h2 className="h-menu-name">Menu</h2>
+        <BtnNormalX />
+      </div>
+      <hr className='menu-devider-separator'/>
       <div className="all-content-of-menu">
         {/* mapping elements from array to separate BtnNavTo */}
         <ul className="ul-nav-menu">
-          {coreNavPages.map((page, index) => (
-            <BtnNavTo
-              key={index}
-              link={page.link}
-              img={page.img}
-              title={page.title}
-            />
-          ))}
+          <li>
+            {coreNavPages.map((page, index) => (
+              <BtnNavTo
+                key={index}
+                link={page.link}
+                img={page.img}
+                title={page.title}
+              />
+            ))}
+          </li>
         </ul>
+        <hr className='menu-devider-separator'/>
       </div>
     </aside>
   );

@@ -14,7 +14,6 @@ export default function BtnNavTo({ link, img, title }) {
             alt={`Go to ${title} page`}
           />
         </span>
-
         <span className="title-btn-nav-to">{title}</span>
         <span className="icon-arrow-btn-nav-to">
           <IconArrow />

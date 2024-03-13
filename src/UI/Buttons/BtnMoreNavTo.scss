@@ -1,0 +1,26 @@
+@import "../../styles/global/global.scss";
+
+.btn-more-nav-to {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+//title
+.title-btn-more-nav-to {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+  overflow: hidden;
+  width: 100%;
+  color: $white;
+}

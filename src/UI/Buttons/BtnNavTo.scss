@@ -1,0 +1,47 @@
+@import "../../styles/global/global.scss";
+
+.btn-nav-to {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0.5rem;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+}
+
+.img-container-btn-nav-to {
+  display: flex;
+  width: 25%;
+}
+.img-btn-nav-to {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+//title
+.title-btn-nav-to {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  overflow: hidden;
+  width: 60%;
+  color: $white;
+}
+
+//icon arrow
+.icon-arrow-btn-nav-to {
+  transform: rotate(180deg);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 15%;
+}
+
+.icon-arrow-btn-nav-to path {
+  fill: $white;
+}

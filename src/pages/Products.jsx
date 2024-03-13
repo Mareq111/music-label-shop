@@ -50,7 +50,7 @@ export default function Products() {
   };
 
   return (
-    <article className="section-product-page">
+    <section className="section-product-page">
       <div className="products-page-container">
         <div className="h-and-change-view-products">
           <h4 className="h-products-page">Albums</h4>
@@ -73,6 +73,6 @@ export default function Products() {
           ))}
         </ul>
       </div>
-    </article>
+    </section>
   );
 }

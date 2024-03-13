@@ -24,7 +24,8 @@ export default function TopNav() {
             to="search"
             aria-label="Search"
             tabIndex={0}
-          >``
+          >
+            
             <div className="up-nav-search">
               <InputSearch />
             </div>

@@ -9,7 +9,6 @@
   height: 100vh;
   background-color: $black-900;
   overflow: scroll;
-  /*     padding-block: 1rem; */
 }
 .top-of-aside-menu {
   display: flex;
@@ -29,13 +28,13 @@
 //after devider separator on top
 
 .h-categories-menu {
-    font-size: 1.2rem;
-    text-transform: uppercase; 
-    padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 1rem;
 }
 
 .menu-devider-separator-smaller {
-    width: auto;
+  width: auto;
   border: 0.1rem solid $black-700;
   margin-block: 0.5rem;
   margin-inline: 1rem;
@@ -43,4 +42,35 @@
 
 .ul-nav-menu {
   padding: 0;
+}
+
+.badge-strimz-menu {
+  display: flex;
+  padding: 1rem;
+}
+
+.menu-socials-badges-rights-div {
+  padding: 1rem;
+}
+
+@media (min-width: 425px) {
+  .top-of-aside-menu {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 560px) {
+  .aside-menu {
+    width: 80%;
+  }
+}
+@media (min-width: 660px) {
+  .aside-menu {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .aside-menu {
+    display: none;
+  }
 }

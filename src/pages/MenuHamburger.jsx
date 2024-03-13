@@ -1,5 +1,5 @@
-import BtnNavTo from "../UI/Buttons/BtnNavTo";
-import "./Menu.scss";
+import BtnNavTo from "../UI/Buttons/BtnNavTo.jsx";
+import "./MenuHamburger.scss";
 import BtnNormalX from "../UI/Buttons/BtnNormalX.jsx";
 import arenaCover from "../assets/img/coversMini/albums/arena_of_autumnn_EP-mini.jpg";
 import AccordionWithNav from "../UI/Accordions/AccordionWithNav.jsx";
@@ -7,7 +7,9 @@ import AccordionInformationAnswer from "../UI/Accordions/AccordionInformationAns
 import AccordionMyAccountAnswer from "../UI/Accordions/AccordionMyAccountAnswer.jsx";
 import AccordionShoppingAnswer from "../UI/Accordions/AccordionShoppingAnswer.jsx";
 import AccordionAuthorAnswer from "../UI/Accordions/AccordionAuthorAnswer.jsx";
-export default function Menu() {
+import BadgeAnimatedStrimz from "../UI/Badge/BadgeAnimatedStrimz.jsx";
+import BadgeAllSocials from "../UI/Badge/BadgeAllSocials.jsx";
+export default function MenuHamburger() {
   //array with main  menu buttons to pages
   const mainNavPages = [
     { link: "/albums-type", img: arenaCover, title: "Albums" },
@@ -69,6 +71,18 @@ export default function Menu() {
             />
           </li>
         </ul>
+        {/* badge with logo */}
+        <hr className="menu-devider-separator-smaller" />
+        <div className="badge-strimz-menu">
+          <BadgeAnimatedStrimz />
+        </div>
+        {/* socials and rights */}
+        <div className="menu-socials-badges-rights-div">
+          <BadgeAllSocials />
+          <p className="menu-text-rights">
+            © 2024 All Rights Reserved, Strimz Empire.
+          </p>
+        </div>
       </div>
     </aside>
   );

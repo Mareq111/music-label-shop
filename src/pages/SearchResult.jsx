@@ -1,4 +1,4 @@
-import BadgePopularCategories from "../UI/Badge/BadgePopularCategories";
+import BadgePopularCategories from "../UI/Badge/BadgeCategoriesFooter";
 import "./SearchResult.scss";
 
 export default function SearchResult() {

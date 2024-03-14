@@ -1,7 +1,7 @@
 import BtnGoToCategories from "../Buttons/BtnGoToCategories";
-import "./BadgePopularCategories.scss";
+import "./BadgeCategoriesFooter.scss";
 
-export default function BadgePopularCategories() {
+export default function BadgeCategoriesFooter() {
   return (
     <div className="footer-links-div-category">
       <h4 className="h-popular-categories">Categories</h4>

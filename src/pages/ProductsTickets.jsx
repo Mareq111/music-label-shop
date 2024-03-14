@@ -8,6 +8,7 @@ import ImgDreamChaser2 from "../assets/img/coversMini/albums-collectors/dream-ch
 import ImgDreamChaser3 from "../assets/img/coversMini/albums-collectors/dream-chaser-3-mini.jpg";
 import ImgArenaOfAutumnnEp from "../assets/img/coversMini/albums/arena_of_autumnn_EP-mini.jpg";
 import ImgInitialConfusion from "../assets/img/coversMini/albums/initial-confusion-mini.jpg";
+import BadgePreciseTickets from "../UI/Badge/BadgePreciseTickets.jsx";
 
 export default function ProductsTickets() {
   const [layoutView, setLayoutView] = useState("grid");
@@ -55,6 +56,10 @@ export default function ProductsTickets() {
         <div className="h-and-change-view-products">
           <h4 className="h-products-page">Tickets</h4>
           <BtnToggleView onLayoutChange={handleProductsLayout} />
+        </div>
+        {/* choose precise whos something you looking for */}
+        <div className="div-badge-precise-something">
+          <BadgePreciseTickets />
         </div>
 
         <ul

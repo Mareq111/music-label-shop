@@ -4,7 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+/*  margin-bottom: 1rem;  */
+padding-block: 1rem;
 }
 
 .h-products-page {
@@ -59,10 +60,23 @@
     width: 100%;
     height: auto;
   }
+  .h-and-change-view-products {
+    padding-inline: 1rem;
+  }
 }
 
 @media (min-width: 768px) {
   .ul-list-productsMain {
     grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
   }
+}
+
+
+//Product precise page
+.div-badge-precise-something {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+padding:  1rem;
+margin-bottom: 1rem;
 }

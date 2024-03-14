@@ -8,6 +8,7 @@ import ImgDreamChaser2 from "../assets/img/coversMini/albums-collectors/dream-ch
 import ImgDreamChaser3 from "../assets/img/coversMini/albums-collectors/dream-chaser-3-mini.jpg";
 import ImgArenaOfAutumnnEp from "../assets/img/coversMini/albums/arena_of_autumnn_EP-mini.jpg";
 import ImgInitialConfusion from "../assets/img/coversMini/albums/initial-confusion-mini.jpg";
+import BadgePrecisePosters from "../UI/Badge/BadgePrecisePosters.jsx";
 
 export default function ProductsPosters() {
   const [layoutView, setLayoutView] = useState("grid");
@@ -56,7 +57,10 @@ export default function ProductsPosters() {
           <h4 className="h-products-page">Posters</h4>
           <BtnToggleView onLayoutChange={handleProductsLayout} />
         </div>
-
+        {/* choose precise whos something you looking for */}
+        <div className="div-badge-precise-something">
+          <BadgePrecisePosters />
+        </div>
         <ul
           className={`ul-list-productsMain ${
             layoutView === "grid" ? "ul-list-productsMain--grid" : ""

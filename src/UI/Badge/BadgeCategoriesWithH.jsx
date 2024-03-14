@@ -1,41 +1,41 @@
 import BtnGoToCategories from "../Buttons/BtnGoToCategories";
-import "./BadgeCategoriesFooter.scss";
+import "./BadgeCategoriesWithH.scss";
 
-export default function BadgeCategoriesFooter() {
+export default function BadgeCategoriesWithH() {
   return (
     <div className="footer-links-div-category">
       <h4 className="h-popular-categories">Categories</h4>
       <ul className="ul-list-of-pages">
         <li className="li-list-of-pages">
-          <BtnGoToCategories categoryPath="albums" nameOfCategory={"Albums"} />
+          <BtnGoToCategories categoryPath="/albums" nameOfCategory={"Albums"} />
         </li>
         <li className="li-list-of-pages">
           <BtnGoToCategories
-            categoryPath="tickets"
+            categoryPath="/tickets"
             nameOfCategory={"Tickets"}
           />
         </li>
         <li className="li-list-of-pages">
           <BtnGoToCategories
-            categoryPath="t-shirts"
+            categoryPath="/t-shirts"
             nameOfCategory={"T-shirts"}
           />
         </li>
         <li className="li-list-of-pages">
           <BtnGoToCategories
-            categoryPath="gadgets"
+            categoryPath="/gadgets"
             nameOfCategory={"Gadgets"}
           />
         </li>
         <li className="li-list-of-pages">
           <BtnGoToCategories
-            categoryPath="posters"
+            categoryPath="/posters"
             nameOfCategory={"Posters"}
           />
         </li>
         <li className="li-list-of-pages">
           <BtnGoToCategories
-            categoryPath="puzzles"
+            categoryPath="/puzzles"
             nameOfCategory={"Puzzles"}
           />
         </li>

@@ -12,12 +12,12 @@ import BadgeAllSocials from "../UI/Badge/BadgeAllSocials.jsx";
 export default function MenuHamburger() {
   //array with main  menu buttons to pages
   const mainNavPages = [
-    { link: "/albums-type", img: arenaCover, title: "Albums" },
-    { link: "/tickets-type", img: arenaCover, title: "Tickets" },
-    { link: "/t-shirts-type", img: arenaCover, title: "T-shirts" },
-    { link: "/gadgets-type", img: arenaCover, title: "Gadgets" },
-    { link: "/posters-type", img: arenaCover, title: "Posters" },
-    { link: "/puzzles-type", img: arenaCover, title: "Puzzles" },
+    { link: "/albums", img: arenaCover, title: "Albums" },
+    { link: "/tickets", img: arenaCover, title: "Tickets" },
+    { link: "/t-shirts", img: arenaCover, title: "T-shirts" },
+    { link: "/gadgets", img: arenaCover, title: "Gadgets" },
+    { link: "/posters", img: arenaCover, title: "Posters" },
+    { link: "/puzzles", img: arenaCover, title: "Puzzles" },
   ];
 
   return (

@@ -86,6 +86,10 @@ path {
 .link-search {
   text-decoration: none;
 }
+//badge categories
+.badge-categories-div-top-nav { 
+  display: none;
+}
 //media query for 425screens
 
 @media (min-width: 425px) {
@@ -163,6 +167,15 @@ path {
   .down-nav-search {
     display: none;
   }
+  .badge-categories-div-top-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $black-900;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
 }
 
 //media query for 1024screens
@@ -173,7 +186,7 @@ path {
   }
 }
 
-//media query for 1404screens
+//media query for 1440screens
 
 @media (min-width: 1440px) {
   .up-nav {

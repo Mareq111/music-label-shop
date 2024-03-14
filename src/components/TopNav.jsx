@@ -6,6 +6,7 @@ import IconShopBag from "./../UI/Icons/IconShopBag";
 import InputSearch from "./../UI/Inputs/InputSearch";
 import { Link } from "react-router-dom";
 import LogoStrimz from "../UI/Icons/Icon-Logo/LogoStrimz";
+import BadgeCategoriesTop from "../UI/Badge/BadgeCategoriesTop";
 
 export default function TopNav() {
   return (
@@ -25,7 +26,6 @@ export default function TopNav() {
             aria-label="Search"
             tabIndex={0}
           >
-            
             <div className="up-nav-search">
               <InputSearch />
             </div>
@@ -64,7 +64,7 @@ export default function TopNav() {
             </div>
           </div>
         </div>
-        {/* search bar / down nav*/}
+        {/* search bar / down nav for mobiles*/}
         <Link
           className="link-search"
           to="search"
@@ -75,6 +75,9 @@ export default function TopNav() {
             <InputSearch />
           </div>
         </Link>
+        <div className="badge-categories-div-top-nav">
+          <BadgeCategoriesTop />
+        </div>
       </nav>
     </header>
   );

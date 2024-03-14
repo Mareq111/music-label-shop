@@ -1,7 +1,7 @@
 import { useState } from "react";
-import CardProductMain from "../UI/Cards/CardProductMain";
+import CardProductMain from "../UI/Cards/CardProductMain.jsx";
 import BtnToggleView from "../UI/Buttons/BtnToggleView.jsx";
-import "./Products.scss";
+import "./ProductsAllPages.scss";
 //import album covers
 import ImgDreamChaser from "../assets/img/coversMini/albums-collectors/dream-chaser-1-mini.jpg";
 import ImgDreamChaser2 from "../assets/img/coversMini/albums-collectors/dream-chaser-2-mini.jpg";
@@ -9,7 +9,7 @@ import ImgDreamChaser3 from "../assets/img/coversMini/albums-collectors/dream-ch
 import ImgArenaOfAutumnnEp from "../assets/img/coversMini/albums/arena_of_autumnn_EP-mini.jpg";
 import ImgInitialConfusion from "../assets/img/coversMini/albums/initial-confusion-mini.jpg";
 
-export default function Products() {
+export default function ProductsTshirts() {
   const [layoutView, setLayoutView] = useState("grid");
 
   const productsData = [
@@ -53,7 +53,7 @@ export default function Products() {
     <section className="section-product-page">
       <div className="products-page-container">
         <div className="h-and-change-view-products">
-          <h4 className="h-products-page">Albums</h4>
+          <h4 className="h-products-page">T-shirts</h4>
           <BtnToggleView onLayoutChange={handleProductsLayout} />
         </div>
 

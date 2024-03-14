@@ -8,14 +8,14 @@ export default function HomePage() {
   function navToProductsDetailsHandler() {
     navigate("products/:productId");
   }
-  function navToProducts() {
-    navigate("products");
-  }
+  /* function navToProducts() {
+    navigate("albums");
+  } */
   return (
     <div className="home-content">
       <h1>My home page</h1>
 
-      <button onClick={navToProducts}>Products Page</button>
+     {/*  <button onClick={navToProducts}>Albums</button> */}
       <button onClick={navToProductsDetailsHandler}>Product Details</button>
     </div>
   );

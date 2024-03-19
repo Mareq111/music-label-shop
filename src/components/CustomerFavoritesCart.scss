@@ -1,27 +1,37 @@
 @import "../styles/global/global.scss";
 @import ".././styles/global/global.scss";
 
-.you-might-like {
-  margin-top: clamp(4rem, 3vw + 1rem, 8rem);
+.you-might-like-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+
 }
 
-.h-youMightLike {
+.h-youMightLike-cart {
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 2rem;
   text-transform: uppercase;
 }
 
-.ul-list-youMightLike {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+.ul-list-youMightLike-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+ /*  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); */
   gap: 1rem;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.li-youMightLike {
+.li-youMightLike-cart {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,16 +42,23 @@
 }
 
 @media (min-width: 360px) {
-  .li-youMightLike {
+  .li-youMightLike-cart {
     //change width for 100% when screen > 360px
     width: 100%;
   }
 }
 @media (min-width: 425px) {
-  .ul-list-youMightLike {
+    .you-might-like-cart {
+        display: block;
+        width: 100%;
+        height: auto;
+        
+      }
+  .ul-list-youMightLike-cart {
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
   }
-  .li-youMightLike {
+  .li-youMightLike-cart {
     display: flex;
     justify-content: center;
     align-items: center;

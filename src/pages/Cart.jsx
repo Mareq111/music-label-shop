@@ -3,7 +3,7 @@ import "./Cart.scss";
 import BadgeTopOfAsideNav from "../UI/Badge/BadgeTopOfAsideNav.jsx";
 import BtnContinue from "../UI/Buttons/BtnContinue.jsx";
 import { Link } from "react-router-dom";
-import YouMightLikeCart from "../components/YouMightLikeCart.jsx";
+import CustomerFavoritesCart from "../components/CustomerFavoritesCart.jsx";
 export default function Cart() {
   return (
     <aside className="aside-cart">
@@ -12,8 +12,10 @@ export default function Cart() {
       <hr className="cart-devider-separator" />
       <div className="content-empty-cart">
         <div className="all-text-empty-cart">
-          <p className="p-text-empty-cart">Looks like you're starting fresh.</p>
-          <h3 className="h-cta-empty-cart">Let's dive in!</h3>
+          <p className="p-text-empty-cart">
+            It looks like you're starting with a clean slate.
+          </p>
+          <h3 className="h-cta-empty-cart">Let's explore!</h3>
         </div>
 
         <div>
@@ -25,10 +27,9 @@ export default function Cart() {
       <hr className="cart-devider-separator-smaller" />
       <div className="all-content-of-cart">
         {/* Main mapping elements from array to separate all BtnNavTo */}
-        {/*  <h3 className="h-categories-cart">You might also like</h3> */}
-        {/*   <div className="cart-you-also-like">
-        <YouMightLikeCart/>
-        </div> */}
+        <div className="customer-favorities-cart">
+          <CustomerFavoritesCart />
+        </div>
       </div>
     </aside>
   );

@@ -1,0 +1,79 @@
+@import "../styles/global/global.scss";
+
+.aside-cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  background-color: $black-900;
+  overflow: scroll;
+}
+
+.cart-devider-separator {
+  width: 100%;
+  border: 0.1rem solid $black-700;
+  margin-block: 0.5rem;
+}
+// content idf empty cart
+.content-empty-cart {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+.all-text-empty-cart {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.p-text-empty-cart {
+  font-size: 1rem;
+}
+.h-cta-empty-cart {
+  font-size: 1.2rem;
+}
+.btn-continue-div-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+//after devider separator on top
+.h-categories-cart {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+.cart-devider-separator-smaller {
+  width: auto;
+  border: 0.1rem solid $black-700;
+  margin-block: 0.5rem;
+  margin-inline: 1rem;
+}
+//you might like
+
+.cart-you-also-like {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 560px) {
+  .aside-cart {
+    width: 80%;
+  }
+}
+@media (min-width: 660px) {
+  .aside-cart {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .aside-cart {
+    display: none;
+  }
+}

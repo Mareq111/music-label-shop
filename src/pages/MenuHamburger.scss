@@ -10,16 +10,7 @@
   background-color: $black-900;
   overflow: scroll;
 }
-.top-of-aside-menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-}
-.h-menu-name {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
+
 .menu-devider-separator {
   width: 100%;
   border: 0.1rem solid $black-700;
@@ -51,12 +42,6 @@
 
 .menu-socials-badges-rights-div {
   padding: 0 1rem 1rem 1rem;
-}
-
-@media (min-width: 425px) {
-  .top-of-aside-menu {
-    padding: 1.5rem;
-  }
 }
 
 @media (min-width: 560px) {

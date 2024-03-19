@@ -1,6 +1,5 @@
 import BtnNavTo from "../UI/Buttons/BtnNavTo.jsx";
 import "./MenuHamburger.scss";
-import BtnNormalX from "../UI/Buttons/BtnNormalX.jsx";
 import arenaCover from "../assets/img/coversMini/albums/arena_of_autumnn_EP-mini.jpg";
 import AccordionWithNav from "../UI/Accordions/AccordionWithNav.jsx";
 import AccordionInformationAnswer from "../UI/Accordions/AccordionInformationAnswer.jsx";
@@ -9,6 +8,7 @@ import AccordionShoppingAnswer from "../UI/Accordions/AccordionShoppingAnswer.js
 import AccordionAuthorAnswer from "../UI/Accordions/AccordionAuthorAnswer.jsx";
 import BadgeAnimatedStrimz from "../UI/Badge/BadgeAnimatedStrimz.jsx";
 import BadgeAllSocials from "../UI/Badge/BadgeAllSocials.jsx";
+import BadgeTopOfAsideNav from "../UI/Badge/BadgeTopOfAsideNav.jsx";
 export default function MenuHamburger() {
   //array with main  menu buttons to pages
   const mainNavPages = [
@@ -22,10 +22,8 @@ export default function MenuHamburger() {
 
   return (
     <aside className="aside-menu">
-      <div className="top-of-aside-menu">
-        <h2 className="h-menu-name">Menu</h2>
-        <BtnNormalX />
-      </div>
+      {/* bagde with name of page and x to return */}
+      <BadgeTopOfAsideNav nameOfNavPage={"Menu"} />
       <hr className="menu-devider-separator" />
       <div className="all-content-of-menu">
         {/* Main mapping elements from array to separate all BtnNavTo */}

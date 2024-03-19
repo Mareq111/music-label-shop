@@ -5,7 +5,7 @@ export default function BadgePreciseTickets() {
     <div>
       <ul className="ul-choose-precise-albums">
       <li className="list-choose-precise-albums">
-          <BtnGoToCategories categoryPath="all-locations" nameOfCategory={"All Locations"} />
+          <BtnGoToCategories categoryPath="all-locations" nameOfCategory={"All locations"} />
         </li>
         <li className="list-choose-precise-albums">
           <BtnGoToCategories categoryPath="poland" nameOfCategory={"Poland"} />

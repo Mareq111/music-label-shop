@@ -1,0 +1,22 @@
+@import '../../styles/global/global.scss';
+
+
+.h-top-aside-nav {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+
+.top-of-aside-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+
+
+  @media (min-width: 425px) {
+    .top-of-aside-nav {
+      padding: 1.5rem;
+    }
+  }

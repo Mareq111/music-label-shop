@@ -39,7 +39,7 @@ export default function CustomerFavoritesCart() {
   return (
     <article className="you-might-like-cart">
       <div className="div-youMightLike-cart">
-        <h4 className="h-youMightLike-cart">Customer favorites</h4>
+        <h3 className="h-youMightLike-cart">Customer favorites</h3>
         <ul className="ul-list-youMightLike-cart">
           {/* maping all items from the array */}
           {itemsData.map((item, index) => (

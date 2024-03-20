@@ -1,0 +1,29 @@
+@import "../../styles/global/global.scss";
+
+.card-product-into-cart {
+  display: flex;
+
+  width: 70%;
+}
+.div-img-of-added-product {
+    display: flex;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 20%;
+    margin-right: 0.5rem;
+}
+.img-of-added-product {
+    max-width: 100%;
+    height: auto;
+}
+
+.div-all-text-product-into-cart {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+}
+.name-of-added-product {
+    display: flex;
+    flex-wrap: wrap;
+}

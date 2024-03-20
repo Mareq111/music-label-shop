@@ -1,0 +1,11 @@
+@import "..//styles/global/global.scss";
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 8rem;
+    background-color: $grey-600;
+    padding:0.5rem 1rem ;
+    border-radius: 3rem;
+}

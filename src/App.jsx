@@ -15,6 +15,7 @@ import ProductsTshirts from "./pages/ProductsTshirts.jsx";
 import ProductsGadgets from "./pages/ProductsGadgets.jsx";
 import ProductsPosters from "./pages/ProductsPosters.jsx";
 import ProductsPuzzles from "./pages/ProductsPuzzles.jsx";
+import Checkout from "./pages/Checkout.jsx";
 
 
 
@@ -64,6 +65,7 @@ const router = createBrowserRouter([
       { path: "cart", element: <Cart /> },
       { path: "search", element: <SearchResult /> },
       { path: "menu", element: <MenuHamburger /> },
+      { path: "checkout", element: <Checkout/> },
     ],
   },
 ]);

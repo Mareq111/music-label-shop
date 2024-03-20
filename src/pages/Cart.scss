@@ -16,22 +16,29 @@
   border: 0.1rem solid $black-700;
   margin-block: 0.5rem;
 }
-// content idf empty cart
+// content if empty cart
 .content-empty-cart {
   display: flex;
   flex-direction: column;
   padding: 1rem;
   gap: 1rem;
 }
-.all-text-empty-cart {
+// content if fillcart
+.content-fill-cart {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+.all-text-cart {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.p-text-empty-cart {
+.p-text-cart {
   font-size: 1.1rem;
 }
-.h-cta-empty-cart {
+.h-cta-cart {
   font-size: 1.2rem;
 font-weight: 700;
 }

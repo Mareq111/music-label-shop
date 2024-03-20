@@ -2,7 +2,7 @@
 import { useState } from "react";
 import BtnQuantitySelector from "../UI/Buttons/BtnQuantitySelector";
 import BtnIconTrash from "../UI/Buttons/BtnIconTrash";
-
+import './CartProductActions.scss';
 export default function CartProductActions({
   initialQuantity,
   onQuantityChange,

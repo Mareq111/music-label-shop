@@ -1,38 +1,38 @@
-@import "..//styles/global/global.scss";
+@import "../../styles/global/global.scss";
 
 .quantity-selector {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 10rem;
-    border-radius: 0.5rem;
-    border: 2px solid $grey-700;
-    background-color: $black-700;
-    padding:0.5rem 1rem ;
-    border-radius: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 9rem;
+  border-radius: 0.5rem;
+  border: 2px solid $grey-700;
+  background-color: $black-700;
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
 }
 
 .btn-quantity-selector {
-display: flex;
-justify-content: center ;
-align-items: center;
-border-radius: 50%;
-padding: 0;
-background-color: transparent;
-border: 0;
-outline: 0;
-cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
 
-&:hover {
+  &:hover {
     background-color: $grey-700;
-}
+  }
 }
 
 .btn-quantity-selector path {
-    fill: $white;
+  fill: $white;
 }
 
 .quantity-selector-value {
-    font-weight: 700;
-    font-size: 1.1rem
+  font-weight: 700;
+  font-size: 1.1rem;
 }

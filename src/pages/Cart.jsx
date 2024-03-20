@@ -6,6 +6,10 @@ import BtnContinue from "../UI/Buttons/BtnContinue";
 import CustomerFavoritesCart from "../components/CustomerFavoritesCart";
 import "./Cart.scss";
 import albumCover from "../assets/img/coversMini/albums/kuntry-mini.jpg";
+import flashbackCover from "../assets/img/coversMini/albums/deluxe_edition_flashback_from_2001-mini.jpg";
+
+import introToCover from "../assets/img/other-members/albums/into-to-different-dimension.jpg";
+
 import CardProductIntoCart from "../UI/Cards/CardProductIntoCart.jsx";
 
 export default function Cart() {
@@ -18,6 +22,26 @@ export default function Cart() {
       addedProductInfo: "Version: CD",
       addedProductId: "ABC123",
       quantity: 1,
+      addedProductPrice: "11.99",
+    },
+    {
+      id: 2,
+      addedProductImg: introToCover,
+      addedProductName: "Album Intro To Different Dimension - Molly Granoli",
+      addedProductInfo: "Version: Usb-stick",
+      addedProductId: "ABC124",
+      quantity: 1,
+      addedProductPrice: "9.99",
+    },
+    {
+      id: 2,
+      addedProductImg: flashbackCover,
+      addedProductName:
+        "Album Flashback From 2001 Deluxe Edition - El Double M",
+      addedProductInfo: "Version: Usb-stick",
+      addedProductId: "ABC124",
+      quantity: 1,
+      addedProductPrice: "15.99",
     },
   ]);
 
@@ -37,6 +61,13 @@ export default function Cart() {
       }, 5000);
       return updatedProducts;
     });
+  };
+
+  // calculate a price and total price
+  const calculateTotalPrice = () => {
+    return products.reduce((total, product) => {
+      return total + product.addedProductPrice * product.quantity;
+    }, 0);
   };
 
   return (
@@ -65,8 +96,13 @@ export default function Cart() {
               }
               onRemoveProduct={() => handleRemoveProduct(product.id)}
             />
+            <hr className="cart-devider-separator-smaller" />
+            {/*  <hr className="cart-devider-separator" /> */}
           </div>
         ))}
+        <div>
+          <h3>Subtotal Price : €{calculateTotalPrice().toFixed(2)}</h3>
+        </div>
         <div>
           <Link className="btn-continue-div-wrapper" to={"/checkout"}>
             <BtnContinue continueBtnText={"Continue to checkout"} />

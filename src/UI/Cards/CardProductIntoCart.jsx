@@ -26,14 +26,17 @@ export default function CardProductIntoCart({
           <p className="p-info-added-product">{addedProductInfo}</p>
           <p className="p-info-added-product">ID: {addedProductId}</p>
         </div>
+        <div className="div-price-product">
+          <h3 className="h-price-of-item">11.99€</h3>
+        </div>
 
         {/* <div className="wrapper-cart-product-actions"> */}
-          <CartProductActions
-            initialQuantity={initialQuantity}
-            onQuantityChange={onQuantityChange}
-            onRemoveProduct={onRemoveProduct}
-          />
-     {/*    </div> */}
+        <CartProductActions
+          initialQuantity={initialQuantity}
+          onQuantityChange={onQuantityChange}
+          onRemoveProduct={onRemoveProduct}
+        />
+        {/*    </div> */}
       </div>
     </div>
   );

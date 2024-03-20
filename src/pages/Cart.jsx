@@ -34,12 +34,12 @@ export default function Cart() {
       addedProductPrice: "9.99",
     },
     {
-      id: 2,
+      id: 3,
       addedProductImg: flashbackCover,
       addedProductName:
         "Album Flashback From 2001 Deluxe Edition - El Double M",
       addedProductInfo: "Version: Usb-stick",
-      addedProductId: "ABC124",
+      addedProductId: "ABC125",
       quantity: 1,
       addedProductPrice: "15.99",
     },
@@ -76,12 +76,6 @@ export default function Cart() {
       <hr className="cart-devider-separator" />
 
       <div className="content-fill-cart">
-        <div className="all-text-cart">
-          <p className="p-text-cart">
-            You've added {cartQuantity} {cartQuantity === 1 ? "item" : "items"}{" "}
-            to your cart.
-          </p>
-        </div>
         {/* product card */}
         {products.map((product) => (
           <div key={product.id}>
@@ -100,8 +94,16 @@ export default function Cart() {
             {/*  <hr className="cart-devider-separator" /> */}
           </div>
         ))}
-        <div>
-          <h3>Subtotal Price : €{calculateTotalPrice().toFixed(2)}</h3>
+        <div className="price-summary-cart">
+          <div className="all-text-cart">
+            <p className="p-text-cart">
+              Your cart contains {cartQuantity}{" "}
+              {cartQuantity === 1 ? "item" : "items"}.
+            </p>
+          </div>
+          <h3 className="h-subtotal-price">
+            Subtotal Price : {calculateTotalPrice().toFixed(2)}€
+          </h3>
         </div>
         <div>
           <Link className="btn-continue-div-wrapper" to={"/checkout"}>

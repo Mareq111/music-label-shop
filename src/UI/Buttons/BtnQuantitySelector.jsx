@@ -25,11 +25,19 @@ export default function BtnQuantitySelector({
 
   return (
     <div className="quantity-selector">
-      <button className="btn-quantity-selector" onClick={decreaseQuantity}>
+      <button
+        aria-label="Decrease Quantity"
+        className="btn-quantity-selector"
+        onClick={decreaseQuantity}
+      >
         <IconMinus />
       </button>
       <span className="quantity-selector-value">{quantityItems}</span>
-      <button className="btn-quantity-selector" onClick={increaseQuantity}>
+      <button
+        aria-label="Increase Quantity"
+        className="btn-quantity-selector"
+        onClick={increaseQuantity}
+      >
         <IconPlus />
       </button>
     </div>

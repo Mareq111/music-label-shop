@@ -23,7 +23,7 @@
   padding: 1rem;
   gap: 1rem;
 }
-// content if fillcart
+// content if fill cart
 .content-fill-cart {
   display: flex;
   flex-direction: column;
@@ -37,6 +37,7 @@
 }
 .p-text-cart {
   font-size: 1.1rem;
+  color: $grey-600;
 }
 .h-cta-cart {
   font-size: 1.2rem;
@@ -59,6 +60,17 @@ font-weight: 700;
   border: 0.1rem solid $black-700;
   margin-block: 0.5rem;
   margin-inline: 1rem;
+}
+//price summary 
+.price-summary-cart {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.h-subtotal-price {
+  font-size: 1.2rem;
 }
 //you might like
 

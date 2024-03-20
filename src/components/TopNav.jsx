@@ -49,7 +49,7 @@ export default function TopNav() {
               </Link>
             </div>
             <div className="icon-link-to">
-              <Link to="cart" aria-label="Cart" tabIndex={0}>
+              <Link to="cart"  aria-label="Cart" tabIndex={0}>
                 <div className="div-icon-into-menu">
                   <IconShopBag />
                 </div>

@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import './BtnQuantitySelector.scss'
+import "./BtnQuantitySelector.scss";
+import IconPlus from "../Icons/IconPlus";
+import IconMinus from "../Icons/IconMinus";
 export default function BtnQuantitySelector({
   initialQuantity,
   onQuantityChange,
@@ -11,25 +13,24 @@ export default function BtnQuantitySelector({
     if (quantityItems > 1) {
       setQuantityItems(quantityItems - 1);
       onQuantityChange(quantityItems - 1);
-      console.log('remove item')
+      console.log("remove item");
     }
   };
 
   const increaseQuantity = () => {
     setQuantityItems(quantityItems + 1);
     onQuantityChange(quantityItems + 1);
-    console.log('add item')
-
+    console.log("add item");
   };
 
   return (
     <div className="quantity-selector">
       <button className="btn-quantity-selector" onClick={decreaseQuantity}>
-        -
+        <IconMinus />
       </button>
       <span className="quantity-selector-value">{quantityItems}</span>
       <button className="btn-quantity-selector" onClick={increaseQuantity}>
-        +
+        <IconPlus />
       </button>
     </div>
   );

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import BtnQuantitySelector from "../components/BtnQuantitySelector";
+import BtnQuantitySelector from "../UI/Buttons/BtnQuantitySelector";
 import BtnIconTrash from "../UI/Buttons/BtnIconTrash";
 
 export default function CartProductActions({

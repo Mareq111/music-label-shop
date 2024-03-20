@@ -17,10 +17,6 @@ import ProductsPosters from "./pages/ProductsPosters.jsx";
 import ProductsPuzzles from "./pages/ProductsPuzzles.jsx";
 import Checkout from "./pages/Checkout.jsx";
 
-
-
-
-
 //configure, routing and main layout,initially page index: true is HomePage,
 const router = createBrowserRouter([
   {
@@ -65,7 +61,7 @@ const router = createBrowserRouter([
       { path: "cart", element: <Cart /> },
       { path: "search", element: <SearchResult /> },
       { path: "menu", element: <MenuHamburger /> },
-      { path: "checkout", element: <Checkout/> },
+      { path: "checkout", element: <Checkout /> },
     ],
   },
 ]);

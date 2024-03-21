@@ -12,6 +12,8 @@ import introToCover from "../assets/img/other-members/albums/into-to-different-d
 import CardProductIntoCart from "../UI/Cards/CardProductIntoCart.jsx";
 
 export default function Cart() {
+  //!do usunieica ten const
+  const test = "dousuniaciea";
   const [cartQuantity, setCartQuantity] = useState(1);
   //true = empty page, false = fill page with items
   const [isEmptyCart, setIsEmptyCart] = useState(true);

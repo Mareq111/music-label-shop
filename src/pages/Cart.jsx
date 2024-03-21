@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 import BadgeTopOfAsideNav from "../UI/Badge/BadgeTopOfAsideNav";
@@ -7,13 +8,13 @@ import CustomerFavoritesCart from "../components/CustomerFavoritesCart";
 import "./Cart.scss";
 import albumCover from "../assets/img/coversMini/albums/kuntry-mini.jpg";
 import flashbackCover from "../assets/img/coversMini/albums/deluxe_edition_flashback_from_2001-mini.jpg";
-
 import introToCover from "../assets/img/other-members/albums/into-to-different-dimension.jpg";
-
 import CardProductIntoCart from "../UI/Cards/CardProductIntoCart.jsx";
 
 export default function Cart() {
   const [cartQuantity, setCartQuantity] = useState(1);
+  //true = empty page, false = fill page with items
+  const [isEmptyCart, setIsEmptyCart] = useState(true);
   const [products, setProducts] = useState([
     {
       id: 1,
@@ -49,7 +50,6 @@ export default function Cart() {
     setCartQuantity(newQuantity);
   };
 
-  //if clicked BtnIconTrash , we change state of product card to 0 and after 5sec this card'll be removed
   const handleRemoveProduct = (productId) => {
     setProducts((prevProducts) => {
       const updatedProducts = prevProducts.filter(
@@ -63,7 +63,6 @@ export default function Cart() {
     });
   };
 
-  // calculate a price and total price
   const calculateTotalPrice = () => {
     return products.reduce((total, product) => {
       return total + product.addedProductPrice * product.quantity;
@@ -75,66 +74,14 @@ export default function Cart() {
       <BadgeTopOfAsideNav nameOfNavPage={"Cart"} />
       <hr className="cart-devider-separator" />
 
-      <div className="content-fill-cart">
-        {/* product card */}
-        {products.map((product) => (
-          <div key={product.id}>
-            <CardProductIntoCart
-              addedProductImg={product.addedProductImg}
-              addedProductName={product.addedProductName}
-              addedProductInfo={product.addedProductInfo}
-              addedProductId={product.addedProductId}
-              initialQuantity={product.quantity}
-              onQuantityChange={(newQuantity) =>
-                handleQuantityChange(newQuantity)
-              }
-              onRemoveProduct={() => handleRemoveProduct(product.id)}
-            />
-            <hr className="cart-devider-separator-smaller" />
-            {/*  <hr className="cart-devider-separator" /> */}
-          </div>
-        ))}
-        <div className="price-summary-cart">
+      {/* Conditional rendering based on isEmptyCart state */}
+      {isEmptyCart ? (
+        <div className="content-empty-cart">
           <div className="all-text-cart">
             <p className="p-text-cart">
-              Your cart contains {cartQuantity}{" "}
-              {cartQuantity === 1 ? "item" : "items"}.
-            </p>
-          </div>
-          <h3 className="h-subtotal-price">
-            Subtotal Price : {calculateTotalPrice().toFixed(2)}€
-          </h3>
-        </div>
-        <div>
-          <Link className="btn-continue-div-wrapper" to={"/checkout"}>
-            <BtnContinue continueBtnText={"Continue to checkout"} />
-          </Link>
-        </div>
-      </div>
-
-      <hr className="cart-devider-separator-smaller" />
-      <div className="all-content-of-cart">
-        <div className="customer-favorities-cart">
-          <CustomerFavoritesCart />
-        </div>
-      </div>
-    </aside>
-  );
-}
-
-//dobry kod dla pustego state
-
-{
-  /* change layout if cart has any item  */
-}
-{
-  /*   {isEmptyCart ? (
-        <div className="content-empty-cart">
-          <div className="all-text-empty-cart">
-            <p className="p-text-empty-cart">
               It looks like you're starting with a clean slate.
             </p>
-            <h3 className="h-cta-empty-cart">Let's explore!</h3>
+            <h3 className="h-cart">Let's explore!</h3>
           </div>
 
           <div>
@@ -148,8 +95,48 @@ export default function Cart() {
           </div>
         </div>
       ) : (
-        <div>
-          <h1>full cart</h1>
+        <div className="content-fill-cart">
+          {products.map((product) => (
+            <div key={product.id}>
+              <CardProductIntoCart
+                addedProductImg={product.addedProductImg}
+                addedProductName={product.addedProductName}
+                addedProductInfo={product.addedProductInfo}
+                addedProductId={product.addedProductId}
+                initialQuantity={product.quantity}
+                onQuantityChange={(newQuantity) =>
+                  handleQuantityChange(newQuantity)
+                }
+                onRemoveProduct={() => handleRemoveProduct(product.id)}
+              />
+              <hr className="cart-devider-separator-smaller" />
+            </div>
+          ))}
+
+          <div className="all-text-cart">
+            <p className="p-text-cart">
+              Your cart contains {cartQuantity}{" "}
+              {cartQuantity === 1 ? "item" : "items"}.
+            </p>
+          </div>
+          <h3 className="h-cart">
+            Subtotal Price : {calculateTotalPrice().toFixed(2)}€
+          </h3>
+
+          <div>
+            <Link className="btn-continue-div-wrapper" to={"/checkout"}>
+              <BtnContinue continueBtnText={"Continue to checkout"} />
+            </Link>
+          </div>
         </div>
-      )} */
+      )}
+
+      <hr className="cart-devider-separator-smaller" />
+      <div className="all-content-of-cart">
+        <div className="customer-favorities-cart">
+          <CustomerFavoritesCart />
+        </div>
+      </div>
+    </aside>
+  );
 }

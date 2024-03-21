@@ -1,6 +1,6 @@
 @import "../styles/global/global.scss";
 
-.aside-cart {
+.aside-favorites {
   position: fixed;
   top: 0;
   right: 0;
@@ -10,51 +10,50 @@
   background-color: $black-900;
 }
 
-.cart-devider-separator {
+.favorites-devider-separator {
   width: 100%;
   border: 0.1rem solid $black-700;
   margin-block: 0.5rem;
 }
-// content if empty cart
-.content-empty-cart {
+// content if empty favorites
+.content-empty-favorites {
   display: flex;
   flex-direction: column;
   padding: 1rem;
   gap: 1rem;
 }
-// content if fill cart
-.content-fill-cart {
+// content if fill favorites
+.content-fill-favorites {
   display: flex;
   flex-direction: column;
   padding: 1rem;
   gap: 1rem;
 }
-.all-text-cart {
+.all-text-favorites {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.p-text-cart {
+.p-text-favorites {
   font-size: 1.1rem;
   color: $grey-600;
 }
-.h-cart {
+#summary-p-text-favorites {
+margin-bottom: 1rem;
+}
+.h-favorites {
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
-.btn-continue-div-wrapper {
-  display: flex;
-  width: 100%;
-}
 
 //after devider separator on top
-.h-categories-cart {
+.h-categories-favorites {
   font-size: 1.2rem;
   text-transform: uppercase;
   padding: 1rem;
 }
 
-.cart-devider-separator-smaller {
+.favorites-devider-separator-smaller {
   width: auto;
   border: 0.1rem solid $black-700;
   margin-block: 0.5rem;
@@ -63,7 +62,7 @@
 
 //customer favorites
 
-.customer-favorities-cart {
+.customer-favorities-favorites {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,17 +72,17 @@
 }
 
 @media (min-width: 560px) {
-  .aside-cart {
+  .aside-favorites {
     width: 80%;
   }
 }
 @media (min-width: 660px) {
-  .aside-cart {
+  .aside-favorites {
     width: 60%;
   }
 }
 @media (min-width: 768px) {
-  .aside-cart {
+  .aside-favorites {
     width: 50%;
     max-width: 40rem;
   }

@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
-import CartProductActions from "../../components/CartProductActions";
-import "./CardProductIntoCart.scss";
+import FavoritesProductActions from "../../components/FavoritesProductActions";
+import "./CardProductIntoFavorites.scss";
 
 export default function CardProductIntoCart({
-  addedProductImg,
-  addedProductName,
-  addedProductInfo,
-  addedProductId,
+  favoriteProductImg,
+  favoriteProductName,
+  favoriteProductInfo,
+  favoriteProductId,
   initialQuantity,
   onQuantityChange,
   onRemoveProduct,
@@ -16,21 +16,21 @@ export default function CardProductIntoCart({
       <div className="div-img-of-added-product">
         <img
           className="img-of-added-product"
-          src={addedProductImg}
-          alt={`Added Product image: ${addedProductName}`}
+          src={favoriteProductImg}
+          alt={`Added Product image: ${favoriteProductName}`}
         />
       </div>
       <div className="div-all-content-product-into-cart">
         <div className="div-all-text-product-info">
-          <h3 className="name-of-added-product">{addedProductName}</h3>
-          <p className="p-info-added-product">{addedProductInfo}</p>
-          <p className="p-info-added-product">ID: {addedProductId}</p>
+          <h3 className="name-of-added-product">{favoriteProductName}</h3>
+          <p className="p-info-added-product">{favoriteProductInfo}</p>
+          <p className="p-info-added-product">ID: {favoriteProductId}</p>
         </div>
         <div className="div-price-product">
           <h3 className="h-price-of-item">11.99€</h3>
         </div>
 
-        <CartProductActions
+        <FavoritesProductActions
           initialQuantity={initialQuantity}
           onQuantityChange={onQuantityChange}
           onRemoveProduct={onRemoveProduct}

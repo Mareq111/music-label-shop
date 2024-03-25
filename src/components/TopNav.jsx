@@ -2,11 +2,12 @@ import "./TopNav.scss";
 import IconMenu from "./../UI/Icons/IconMenu";
 import IconUser from "./../UI/Icons/IconUser";
 import IconHeart from "./../UI/Icons/IconHeart";
-import IconShopBag from "./../UI/Icons/IconShopBag";
+/* import IconShopBag from "../UI/Icons/IconCart"; */
 import InputSearch from "./../UI/Inputs/InputSearch";
 import { Link } from "react-router-dom";
 import LogoStrimz from "../UI/Icons/Icon-Logo/LogoStrimz";
 import BadgeCategoriesTop from "../UI/Badge/BadgeCategoriesTop";
+import BtnIconCartMenu from "../UI/Buttons/BtnIconCartMenu";
 
 export default function TopNav() {
   return (
@@ -50,9 +51,8 @@ export default function TopNav() {
             </div>
             <div className="icon-link-to">
               <Link to="cart"  aria-label="Cart" tabIndex={0}>
-                <div className="div-icon-into-menu">
-                  <IconShopBag />
-                </div>
+                  <BtnIconCartMenu itemCount={10}/>
+          
               </Link>
             </div>
             <div className="icon-link-to">

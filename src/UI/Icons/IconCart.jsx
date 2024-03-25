@@ -1,5 +1,4 @@
-
-export default function IconShopBag() {
+export default function IconCart() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

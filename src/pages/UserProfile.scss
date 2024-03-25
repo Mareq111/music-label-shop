@@ -1,0 +1,61 @@
+@import "../styles/global/global.scss";
+
+.aside-user-profile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  background-color: $black-900;
+}
+
+//empty profile
+.content-empty-user-profile {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+.all-text-user-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.p-text-user-profile {
+  font-size: 1.1rem;
+  color: $grey-600;
+}
+.h-user-profile {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.user-profile-devider-separator {
+  width: 100%;
+  border: 0.1rem solid $black-700;
+  margin-block: 0.5rem;
+}
+
+.user-profile-devider-separator-smaller {
+  width: auto;
+  border: 0.1rem solid $black-700;
+  margin-block: 0.5rem;
+  margin-inline: 1rem;
+}
+
+@media (min-width: 560px) {
+  .aside-user-profile {
+    width: 80%;
+  }
+}
+@media (min-width: 660px) {
+  .aside-user-profile {
+    width: 60%;
+  }
+}
+@media (min-width: 768px) {
+  .aside-user-profile {
+    /* display: none; */
+    width: 50%;
+  }
+}

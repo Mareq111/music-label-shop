@@ -1,16 +1,19 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
 import "./BtnAddToCart.scss";
 import IconCircleFilled from "../Icons/IconCircleFilled";
-export default function BtnAddToCart({ itemPrice }) {
-  //state with items quantity
-  const [cartItem, setCartItems] = useState(0);
+export default function BtnAddToCart({ itemTitle, itemPrice, selectedVersion }) {
   const handleAddToCart = () => {
-    setCartItems(cartItem + 1);
+    if (selectedVersion) {
+    /*   console.log(`Adding ${selectedVersion} to cart for $${itemPrice}`); */
+    console.log(`Adding ${selectedVersion} of ${itemTitle} (ID: ${itemTitle.replace(/\s+/g, '_').toLowerCase()}) to cart for $${itemPrice}`);
+    } else {
+      console.error("No version selected.");
+    }
   };
+
   return (
-    <button className="btnAddToCart" type="button" onClick={handleAddToCart}>
+    <button onClick={handleAddToCart} className="btnAddToCart" type="button">
       Add to cart <IconCircleFilled /> {itemPrice}€
     </button>
   );
-}
+} 

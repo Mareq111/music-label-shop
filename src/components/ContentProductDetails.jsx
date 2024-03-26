@@ -1,4 +1,3 @@
-
 import "./ContentProductDetails.scss";
 import ChooserVersionRadio from "./ChooserVersionRadio.jsx";
 import BtnAddToCart from "./../UI/Buttons/BtnAddToCart.jsx";
@@ -8,10 +7,11 @@ import AccordionsProductDetails from "./AccordionsProductDetails.jsx";
 import BadgeRatingProductInfo from "../UI/Badge/BadgeRatingProductInfo.jsx";
 import BadgeTitlePriceAuthor from "../UI/Badge/BadgeTitlePriceAuthor.jsx";
 import TextSongsOnAlbum from "../UI/Text/TextSongsOnAlbum.jsx";
+import { useState } from "react";
 
 export default function ContentProductDetails() {
   const prodData = {
-    itemTitle: "Album Wave CD",
+    itemTitle: "Album Wave",
     itemPrice: 12.99,
     itemAuthor: "El Double M",
     overallRating: 4.5,
@@ -27,6 +27,11 @@ export default function ContentProductDetails() {
       { numberOfSong: 8, songTitle: "On A Delightful Cruise" },
     ],
   };
+  const [selectedVersion, setSelectedVersion] = useState(null);
+
+  const handleVersionChange = (version) => {
+    setSelectedVersion(version);
+  };
   return (
     <div className="div-content-text-all">
       <BadgeTitlePriceAuthor
@@ -38,8 +43,12 @@ export default function ContentProductDetails() {
         overallRating={prodData.overallRating}
         numberOfReviews={prodData.numberOfReviews}
       />
-      <ChooserVersionRadio />
-      <BtnAddToCart itemPrice={prodData.itemPrice} />
+      <ChooserVersionRadio onVersionChange={handleVersionChange} />
+      <BtnAddToCart
+        itemTitle={prodData.itemTitle}
+        itemPrice={prodData.itemPrice}
+        selectedVersion={selectedVersion}
+      />
       <BadgesProductDetails />
       <TextProductDescription />
       <span className="hidden-textSongs-560px">

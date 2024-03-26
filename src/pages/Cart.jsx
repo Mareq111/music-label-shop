@@ -10,7 +10,6 @@ import albumCover from "../assets/img/coversMini/albums/kuntry-mini.jpg";
 import flashbackCover from "../assets/img/coversMini/albums/deluxe_edition_flashback_from_2001-mini.jpg";
 import introToCover from "../assets/img/other-members/albums/into-to-different-dimension.jpg";
 import CardProductIntoCart from "../UI/Cards/CardProductIntoCart.jsx";
-import BtnIconCartMenu from "../UI/Buttons/BtnIconCartMenu.jsx";
 
 export default function Cart() {
   const [cartQuantity, setCartQuantity] = useState(1);

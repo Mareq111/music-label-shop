@@ -51,8 +51,7 @@ export default function TopNav() {
             </div>
             <div className="icon-link-to">
               <Link to="cart"  aria-label="Cart" tabIndex={0}>
-                  <BtnIconCartMenu itemCount={10}/>
-          
+                  <BtnIconCartMenu itemCount={''}/>
               </Link>
             </div>
             <div className="icon-link-to">

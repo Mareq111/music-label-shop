@@ -2,6 +2,7 @@ import "./App.scss";
 import HomePage from "./pages/HomePage.jsx";
 import RootLayout from "./pages/RootLayout.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { useSelector } from "react-redux";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import ProductDetails from "./pages/ProductDetails.jsx";
 import Favorites from "./pages/Favorites.jsx";
@@ -17,56 +18,62 @@ import ProductsPosters from "./pages/ProductsPosters.jsx";
 import ProductsPuzzles from "./pages/ProductsPuzzles.jsx";
 import Checkout from "./pages/Checkout.jsx";
 
-//configure, routing and main layout,initially page index: true is HomePage,
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <RootLayout />,
-    errorElement: <ErrorPage />,
-    // children for main path, various pages
-    children: [
-      {
-        index: true,
-        element: <HomePage />,
-      },
-      {
-        path: "albums",
-        element: <ProductsAlbums />,
-      },
-      {
-        path: "tickets",
-        element: <ProductsTickets />,
-      },
-      {
-        path: "t-shirts",
-        element: <ProductsTshirts />,
-      },
-      {
-        path: "gadgets",
-        element: <ProductsGadgets />,
-      },
-      {
-        path: "posters",
-        element: <ProductsPosters />,
-      },
-      {
-        path: "puzzles",
-        element: <ProductsPuzzles />,
-      },
-      // Dynamic path do showing any products page with their details
-      { path: "products/:productId", element: <ProductDetails /> },
-      // Other sections of the page
-      { path: "favorites", element: <Favorites /> },
-      { path: "user-profile", element: <UserProfile /> },
-      { path: "cart", element: <Cart /> },
-      { path: "search", element: <SearchResult /> },
-      { path: "menu", element: <MenuHamburger /> },
-      { path: "checkout", element: <Checkout /> },
-    ],
-  },
-]);
 function App() {
-  return <RouterProvider router={router} />;
+  // retrieve redux state from ui and check if cartIsVisible is set to true
+  const showCart = useSelector((state) => state.ui.cartIsVisible);
+
+  //configure, routing and main layout,initially page index: true is HomePage,
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <RootLayout />,
+      errorElement: <ErrorPage />,
+      // children for main path, various pages
+      children: [
+        {
+          index: true,
+          element: <HomePage />,
+        },
+        {
+          path: "albums",
+          element: <ProductsAlbums />,
+        },
+        {
+          path: "tickets",
+          element: <ProductsTickets />,
+        },
+        {
+          path: "t-shirts",
+          element: <ProductsTshirts />,
+        },
+        {
+          path: "gadgets",
+          element: <ProductsGadgets />,
+        },
+        {
+          path: "posters",
+          element: <ProductsPosters />,
+        },
+        {
+          path: "puzzles",
+          element: <ProductsPuzzles />,
+        },
+        // Dynamic path do showing any products page with their details
+        { path: "products/:productId", element: <ProductDetails /> },
+        // Other sections of the page
+        { path: "favorites", element: <Favorites /> },
+        { path: "user-profile", element: <UserProfile /> },
+        { path: "cart", element: <Cart /> },
+        { path: "search", element: <SearchResult /> },
+        { path: "menu", element: <MenuHamburger /> },
+        { path: "checkout", element: <Checkout /> },
+      ],
+    },
+  ]);
+
+  return (
+    <RouterProvider router={router}>{showCart && <Cart />}</RouterProvider>
+  );
 }
 
 export default App;

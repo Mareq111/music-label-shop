@@ -44,11 +44,7 @@ export default function ContentProductDetails() {
         numberOfReviews={prodData.numberOfReviews}
       />
       <ChooserVersionRadio onVersionChange={handleVersionChange} />
-      <BtnAddToCart
-        itemTitle={prodData.itemTitle}
-        itemPrice={prodData.itemPrice}
-        selectedVersion={selectedVersion}
-      />
+      <BtnAddToCart item={prodData} selectedVersion={selectedVersion} />
       <BadgesProductDetails />
       <TextProductDescription />
       <span className="hidden-textSongs-560px">

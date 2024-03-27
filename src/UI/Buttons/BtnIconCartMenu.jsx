@@ -1,7 +1,14 @@
 /* eslint-disable react/prop-types */
+
 import IconCart from "../Icons/IconCart";
 import "./BtnIconCartMenu.scss";
-export default function BtnIconCartMenu({ itemCount }) {
+
+import { useSelector } from "react-redux";
+
+export default function BtnIconCartMenu() {
+  const cartItems = useSelector((state) => state.cart.items);
+  const itemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+
   return (
     <button
       title="Cart"

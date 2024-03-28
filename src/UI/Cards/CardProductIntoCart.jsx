@@ -3,14 +3,20 @@ import CartProductActions from "../../components/CartProductActions";
 import "./CardProductIntoCart.scss";
 
 export default function CardProductIntoCart({
-  addedProductImg,
-  addedProductName,
-  addedProductInfo,
-  addedProductId,
-  initialQuantity,
+  productDetail,
   onQuantityChange,
   onRemoveProduct,
 }) {
+  //all props in one spot
+  const {
+    addedProductImg,
+    addedProductName,
+    addedProductInfo,
+    addedProductId,
+    initialQuantity,
+    addedProductPrice,
+  } = productDetail;
+
   return (
     <div className="card-product-into-cart">
       <div className="div-img-of-added-product">
@@ -27,7 +33,7 @@ export default function CardProductIntoCart({
           <p className="p-info-added-product">ID: {addedProductId}</p>
         </div>
         <div className="div-price-product">
-          <h3 className="h-price-of-item">11.99€</h3>
+          <h3 className="h-price-of-item">{addedProductPrice}€</h3>
         </div>
 
         <CartProductActions

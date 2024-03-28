@@ -28,9 +28,11 @@ export default function ContentProductDetails() {
     ],
   };
   const [selectedVersion, setSelectedVersion] = useState(null);
+  const [radioId, setRadioId] = useState(null);
 
-  const handleVersionChange = (version) => {
+  const handleVersionChange = (version, id) => {
     setSelectedVersion(version);
+    setRadioId(id);
   };
   return (
     <div className="div-content-text-all">
@@ -43,8 +45,14 @@ export default function ContentProductDetails() {
         overallRating={prodData.overallRating}
         numberOfReviews={prodData.numberOfReviews}
       />
-      <ChooserVersionRadio onVersionChange={handleVersionChange} />
-      <BtnAddToCart item={prodData} selectedVersion={selectedVersion} />
+      <ChooserVersionRadio
+        prodData={prodData}
+        onVersionChange={handleVersionChange}
+      />
+      <BtnAddToCart
+        item={{ ...prodData, radioId: radioId }}
+        selectedVersion={selectedVersion}
+      />
       <BadgesProductDetails />
       <TextProductDescription />
       <span className="hidden-textSongs-560px">

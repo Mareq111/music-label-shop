@@ -1,11 +1,9 @@
-
 import TextSongsOnAlbum from "../UI/Text/TextSongsOnAlbum";
 import "./ContentProductDetailsLeftSide.scss";
 import ImgProductDetails from "./ImgProductDetails";
 export default function ContentProductDetailsLeftSide() {
-  //test data to names songs
   const prodData = {
-    itemTitle: "Album Wave CD",
+    itemTitle: "Album Wave",
     itemPrice: 12.99,
     itemAuthor: "El Double M",
     overallRating: 4.5,
@@ -23,11 +21,11 @@ export default function ContentProductDetailsLeftSide() {
   };
   return (
     <article className="content-product-details__left">
-      {/* images of any product */}
+      {/*  images of any product  */}
       <div className="images-of-product-div">
         <ImgProductDetails />
       </div>
-      {/* text hidden if  screen is less than 560px */}
+      {/*  text hidden if  screen is less than 560px  */}
       <div className="content-left-side-text-hidden">
         <TextSongsOnAlbum songs={prodData.songs} />
       </div>

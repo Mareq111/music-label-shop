@@ -1,72 +1,41 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-import { useState } from "react";
-import BadgeTopOfAsideNav from "../UI/Badge/BadgeTopOfAsideNav";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import BtnContinue from "../UI/Buttons/BtnContinue";
 import CustomerFavoritesCart from "../components/CustomerFavoritesCart";
 import "./Cart.scss";
-import albumCover from "../assets/img/coversMini/albums/kuntry-mini.jpg";
-import flashbackCover from "../assets/img/coversMini/albums/deluxe_edition_flashback_from_2001-mini.jpg";
-import introToCover from "../assets/img/other-members/albums/into-to-different-dimension.jpg";
 import CardProductIntoCart from "../UI/Cards/CardProductIntoCart.jsx";
+import BadgeTopOfAsideNav from "../UI/Badge/BadgeTopOfAsideNav";
+import { addItemToCart, removeItemFromCart } from "../store/cartSlice.js";
 
 export default function Cart() {
-  const [cartQuantity, setCartQuantity] = useState(1);
-  //true = empty page, false = fill page with items
-  const [isEmptyCart, setIsEmptyCart] = useState(false);
-  const [products, setProducts] = useState([
-    {
-      id: 1,
-      addedProductImg: albumCover,
-      addedProductName: "Album Kuntry - El Double M",
-      addedProductInfo: "Version: CD",
-      addedProductId: "ABC123",
-      quantity: 1,
-      addedProductPrice: "11.99",
-    },
-    {
-      id: 2,
-      addedProductImg: introToCover,
-      addedProductName: "Album Intro To Different Dimension - Molly Granoli",
-      addedProductInfo: "Version: Usb-stick",
-      addedProductId: "ABC124",
-      quantity: 1,
-      addedProductPrice: "9.99",
-    },
-    {
-      id: 3,
-      addedProductImg: flashbackCover,
-      addedProductName:
-        "Album Flashback From 2001 Deluxe Edition - El Double M",
-      addedProductInfo: "Version: Usb-stick",
-      addedProductId: "ABC125",
-      quantity: 1,
-      addedProductPrice: "15.99",
-    },
-  ]);
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.cart.items);
+  const cartQuantity = useSelector((state) => state.cart.totalQuantity);
 
-  const handleQuantityChange = (newQuantity) => {
-    setCartQuantity(newQuantity);
+  const handleQuantityChange = (productId, newQuantity) => {
+    // Dispatch action to update quantity
+    // For simplicity, assuming you have a separate action for updating quantity
   };
 
   const handleRemoveProduct = (productId) => {
-    setProducts((prevProducts) => {
-      const updatedProducts = prevProducts.filter(
-        (product) => product.id !== productId
-      );
-      setCartQuantity(0);
-      setTimeout(() => {
-        setProducts(updatedProducts);
-      }, 5000);
-      return updatedProducts;
-    });
+    // dispatch action to remove product from cart
+    dispatch(removeItemFromCart(productId));
   };
 
   const calculateTotalPrice = () => {
     return products.reduce((total, product) => {
-      return total + product.addedProductPrice * product.quantity;
+      return total + product.price * product.quantity;
     }, 0);
+  };
+
+  //if products array is empty  show message that the cart is empty else show filled cart
+  const isEmptyCart = products.length === 0;
+
+  // Function to add item to cart
+  const handleAddToCart = (item, selectedVersion) => {
+    dispatch(addItemToCart({ ...item, selectedVersion }));
   };
 
   return (
@@ -97,17 +66,16 @@ export default function Cart() {
       ) : (
         <div className="content-fill-cart">
           {products.map((product) => (
-            <div key={product.id}>
+            <div key={product.itemId}>
               <CardProductIntoCart
-                addedProductImg={product.addedProductImg}
-                addedProductName={product.addedProductName}
-                addedProductInfo={product.addedProductInfo}
-                addedProductId={product.addedProductId}
-                initialQuantity={product.quantity}
+                productDetail={product}
                 onQuantityChange={(newQuantity) =>
-                  handleQuantityChange(newQuantity)
+                  handleQuantityChange(product.itemId, newQuantity)
                 }
-                onRemoveProduct={() => handleRemoveProduct(product.id)}
+                onRemoveProduct={() => handleRemoveProduct(product.itemId)}
+                onAddToCart={(item) =>
+                  handleAddToCart(item, product.selectedVersion)
+                }
               />
               <hr className="cart-devider-separator-smaller" />
             </div>

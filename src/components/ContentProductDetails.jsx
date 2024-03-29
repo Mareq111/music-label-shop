@@ -45,6 +45,7 @@ export default function ContentProductDetails() {
         overallRating={prodData.overallRating}
         numberOfReviews={prodData.numberOfReviews}
       />
+      {/* {console.log("prodData:", prodData.itemTitle)} */}
       <ChooserVersionRadio
         prodData={prodData}
         onVersionChange={handleVersionChange}

@@ -65,22 +65,23 @@ export default function Cart() {
         </div>
       ) : (
         <div className="content-fill-cart">
-          {products.map((product) => (
-            <div key={product.itemId}>
-              <CardProductIntoCart
-                productDetail={product}
-                onQuantityChange={(newQuantity) =>
-                  handleQuantityChange(product.itemId, newQuantity)
-                }
-                onRemoveProduct={() => handleRemoveProduct(product.itemId)}
-                onAddToCart={(item) =>
-                  handleAddToCart(item, product.selectedVersion)
-                }
-              />
-              <hr className="cart-devider-separator-smaller" />
-            </div>
-          ))}
-
+          <ul className="ul-product-list-cart">
+            {products.map((product) => (
+              <li key={`${product.name}__${product.version}`}>
+                <CardProductIntoCart
+                  productDetail={product}
+                  onQuantityChange={(newQuantity) =>
+                    handleQuantityChange(product.itemId, newQuantity)
+                  }
+                  onRemoveProduct={() => handleRemoveProduct(product.itemId)}
+                  onAddToCart={(item) =>
+                    handleAddToCart(item, product.selectedVersion)
+                  }
+                />
+                <hr className="cart-devider-separator-smaller" />
+              </li>
+            ))}
+          </ul>
           <div className="all-text-cart">
             <p className="p-text-cart">
               Your cart contains {cartQuantity}{" "}
@@ -107,4 +108,25 @@ export default function Cart() {
       </div>
     </aside>
   );
+}
+
+//old code
+{
+  /* <ul className="ul-product-list-cart">
+            {products.map((product) => (
+              <li key={product.itemId}>
+                <CardProductIntoCart
+                  productDetail={product}
+                  onQuantityChange={(newQuantity) =>
+                    handleQuantityChange(product.itemId, newQuantity)
+                  }
+                  onRemoveProduct={() => handleRemoveProduct(product.itemId)}
+                  onAddToCart={(item) =>
+                    handleAddToCart(item, product.selectedVersion)
+                  }
+                />
+                <hr className="cart-devider-separator-smaller" />
+              </li>
+            ))}
+          </ul> */
 }

@@ -8,6 +8,7 @@ export default function ContentProductDetailsLeftSide() {
     itemAuthor: "El Double M",
     overallRating: 4.5,
     numberOfReviews: 4,
+    version: ["CD", "Digital", "USB Card", "Limited Edition"],
     songs: [
       { numberOfSong: 1, songTitle: "Enjoy" },
       { numberOfSong: 2, songTitle: "Row Your Boat" },

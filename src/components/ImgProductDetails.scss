@@ -15,15 +15,18 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
-}
-
-.main-img {
   max-inline-size: 60%;
   block-size: auto;
   min-height: 8rem;
   min-width: 8rem;
-  /* aspect-ratio: 1/1; */
 }
+
+/* .main-img {
+  max-inline-size: 60%;
+  block-size: auto;
+  min-height: 8rem;
+  min-width: 8rem;
+} */
 .bottom-images {
   max-inline-size: 30%;
   block-size: auto;

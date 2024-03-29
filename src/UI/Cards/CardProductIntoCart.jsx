@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import CartProductActions from "../../components/CartProductActions";
+import MainImgProdDetails from "../Images/MainImgProdDetails";
 import "./CardProductIntoCart.scss";
 
 export default function CardProductIntoCart({
@@ -9,7 +10,7 @@ export default function CardProductIntoCart({
 }) {
   //all props in one spot
   const {
-    addedProductImg,
+    src,
     addedProductName,
     addedProductInfo,
     addedProductId,
@@ -20,11 +21,7 @@ export default function CardProductIntoCart({
   return (
     <div className="card-product-into-cart">
       <div className="div-img-of-added-product">
-        <img
-          className="img-of-added-product"
-          src={addedProductImg}
-          alt={`Added Product image: ${addedProductName}`}
-        />
+        <MainImgProdDetails src={src} />
       </div>
       <div className="div-all-content-product-into-cart">
         <div className="div-all-text-product-info">
@@ -44,4 +41,13 @@ export default function CardProductIntoCart({
       </div>
     </div>
   );
+}
+
+/* //old code */
+{
+  /* <img
+          className="img-of-added-product"
+          src={addedProductImg}
+          alt={`Added Product image: ${addedProductName}`}
+        />  */
 }

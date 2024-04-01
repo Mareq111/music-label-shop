@@ -8,25 +8,11 @@ import BadgeRatingProductInfo from "../UI/Badge/BadgeRatingProductInfo.jsx";
 import BadgeTitlePriceAuthor from "../UI/Badge/BadgeTitlePriceAuthor.jsx";
 import TextSongsOnAlbum from "../UI/Text/TextSongsOnAlbum.jsx";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addItemToCart } from "../store/cartSlice.js";
+import prodData from "../data/prodData.js";
 
 export default function ContentProductDetails() {
-  const prodData = {
-    itemTitle: "Album Wave",
-    itemPrice: 12.99,
-    itemAuthor: "El Double M",
-    overallRating: 4.5,
-    numberOfReviews: 4,
-    songs: [
-      { numberOfSong: 1, songTitle: "Enjoy" },
-      { numberOfSong: 2, songTitle: "Row Your Boat" },
-      { numberOfSong: 3, songTitle: "Neon Soul" },
-      { numberOfSong: 4, songTitle: "Przesmyk" },
-      { numberOfSong: 5, songTitle: "Somewhere In Time" },
-      { numberOfSong: 6, songTitle: "Steamship" },
-      { numberOfSong: 7, songTitle: "Through The Lake" },
-      { numberOfSong: 8, songTitle: "On A Delightful Cruise" },
-    ],
-  };
   const [selectedVersion, setSelectedVersion] = useState(null);
   const [radioId, setRadioId] = useState(null);
 
@@ -34,6 +20,12 @@ export default function ContentProductDetails() {
     setSelectedVersion(version);
     setRadioId(id);
   };
+  //redux add data to cart
+  const dispatch = useDispatch();
+  const handleAddToCart = () => {
+    dispatch(addItemToCart(prodData));
+  };
+
   return (
     <div className="div-content-text-all">
       <BadgeTitlePriceAuthor
@@ -53,6 +45,7 @@ export default function ContentProductDetails() {
       <BtnAddToCart
         item={{ ...prodData, radioId: radioId }}
         selectedVersion={selectedVersion}
+        onClick={handleAddToCart}
       />
       <BadgesProductDetails />
       <TextProductDescription />

@@ -34,8 +34,10 @@ export default function Cart() {
   const isEmptyCart = products.length === 0;
 
   // Function to add item to cart
-  const handleAddToCart = (item, selectedVersion) => {
+  /*  const handleAddToCart = (item, selectedVersion) => {
     dispatch(addItemToCart({ ...item, selectedVersion }));
+  }; */ const handleAddToCart = (item) => {
+    dispatch(addItemToCart(item));
   };
 
   return (
@@ -74,9 +76,10 @@ export default function Cart() {
                     handleQuantityChange(product.itemId, newQuantity)
                   }
                   onRemoveProduct={() => handleRemoveProduct(product.itemId)}
-                  onAddToCart={(item) =>
+                  /*   onAddToCart={(item) =>
                     handleAddToCart(item, product.selectedVersion)
-                  }
+                  } */
+                  onAddToCart={(item) => handleAddToCart(item)}
                 />
                 <hr className="cart-devider-separator-smaller" />
               </li>
@@ -108,25 +111,4 @@ export default function Cart() {
       </div>
     </aside>
   );
-}
-
-//old code
-{
-  /* <ul className="ul-product-list-cart">
-            {products.map((product) => (
-              <li key={product.itemId}>
-                <CardProductIntoCart
-                  productDetail={product}
-                  onQuantityChange={(newQuantity) =>
-                    handleQuantityChange(product.itemId, newQuantity)
-                  }
-                  onRemoveProduct={() => handleRemoveProduct(product.itemId)}
-                  onAddToCart={(item) =>
-                    handleAddToCart(item, product.selectedVersion)
-                  }
-                />
-                <hr className="cart-devider-separator-smaller" />
-              </li>
-            ))}
-          </ul> */
 }

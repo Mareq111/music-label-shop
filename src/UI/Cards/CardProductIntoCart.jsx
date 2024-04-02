@@ -7,6 +7,7 @@ export default function CardProductIntoCart({
   productDetail,
   onQuantityChange,
   onRemoveProduct,
+  selectedVersion,
 }) {
   //all props in one spot
   const {
@@ -17,7 +18,7 @@ export default function CardProductIntoCart({
     initialQuantity,
     addedProductPrice,
   } = productDetail;
-
+  console.log("Selected version:", selectedVersion);
   return (
     <div className="card-product-into-cart">
       <div className="div-img-of-added-product">
@@ -37,6 +38,7 @@ export default function CardProductIntoCart({
           initialQuantity={initialQuantity}
           onQuantityChange={onQuantityChange}
           onRemoveProduct={onRemoveProduct}
+          selectedVersion={selectedVersion}
         />
       </div>
     </div>

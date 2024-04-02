@@ -4,8 +4,12 @@ import "./BtnAddToCart.scss";
 import IconCircleFilled from "../Icons/IconCircleFilled";
 import { useDispatch } from "react-redux";
 import { addItemToCart } from "../../store/cartSlice";
+import DialogAddToCart from "../Dialog/DialogAddToCart";
+import { useState } from "react";
 export default function BtnAddToCart({ item, selectedVersion, onAddToCart }) {
   const dispatch = useDispatch();
+  //dialog
+  const [isItemAdded, setIsItemAdded] = useState(false);
 
   const handleAddToCart = () => {
     if (selectedVersion) {
@@ -15,6 +19,7 @@ export default function BtnAddToCart({ item, selectedVersion, onAddToCart }) {
           .toLowerCase()}__${item.radioId}) to cart for $${item.itemPrice}`
       );
       dispatch(addItemToCart({ ...item, selectedVersion }));
+      setIsItemAdded(true);
       if (onAddToCart) {
         onAddToCart(item);
       }
@@ -24,8 +29,11 @@ export default function BtnAddToCart({ item, selectedVersion, onAddToCart }) {
   };
 
   return (
-    <button onClick={handleAddToCart} className="btnAddToCart" type="button">
-      Add to cart <IconCircleFilled /> {item.itemPrice}€
-    </button>
+    <>
+      <button onClick={handleAddToCart} className="btnAddToCart" type="button">
+        Add to cart <IconCircleFilled /> {item.itemPrice}€
+      </button>
+      <DialogAddToCart isFill={isItemAdded} />
+    </>
   );
 }

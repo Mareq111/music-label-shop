@@ -6,12 +6,14 @@ import { useDispatch } from "react-redux";
 import { addItemToCart } from "../../store/cartSlice";
 import DialogAddToCart from "../Dialog/DialogAddToCart";
 import { useState } from "react";
+
 export default function BtnAddToCart({ item, selectedVersion, onAddToCart }) {
   const dispatch = useDispatch();
-  //dialog
   const [isItemAdded, setIsItemAdded] = useState(false);
+  const [isVersionSelected, setIsVersionSelected] = useState(true);
 
   const handleAddToCart = () => {
+    // show item added dialog
     if (selectedVersion) {
       console.log(
         `Adding ${selectedVersion} of ${item.itemTitle} (ID: ${item.itemTitle
@@ -20,20 +22,41 @@ export default function BtnAddToCart({ item, selectedVersion, onAddToCart }) {
       );
       dispatch(addItemToCart({ ...item, selectedVersion }));
       setIsItemAdded(true);
+
+      setTimeout(() => {
+        setIsItemAdded(false);
+      }, 2000);
+
       if (onAddToCart) {
         onAddToCart(item);
       }
     } else {
+      // show no item added dialog
       console.error("No version selected.");
+      setIsVersionSelected(false);
+      setTimeout(() => {
+        setIsVersionSelected(true);
+      }, 2000);
     }
   };
 
   return (
     <>
-      <button onClick={handleAddToCart} className="btnAddToCart" type="button">
+      {/* btn with reset isVersionSelected after any click */}
+      <button
+        onClick={() => {
+          setIsItemAdded(false);
+          setIsVersionSelected(true);
+          handleAddToCart();
+        }}
+        className="btnAddToCart"
+        type="button"
+      >
         Add to cart <IconCircleFilled /> {item.itemPrice}€
       </button>
-      <DialogAddToCart isFill={isItemAdded} />
+      {/* show a dialog of choosen item was added or not */}
+      {isItemAdded && <DialogAddToCart isFill={isItemAdded} />}
+      {!isVersionSelected && <DialogAddToCart isFill={false} />}
     </>
   );
 }

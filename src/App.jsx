@@ -17,8 +17,18 @@ import ProductsGadgets from "./pages/ProductsGadgets.jsx";
 import ProductsPosters from "./pages/ProductsPosters.jsx";
 import ProductsPuzzles from "./pages/ProductsPuzzles.jsx";
 import Checkout from "./pages/Checkout.jsx";
+/* firebase */
+import { useEffect } from "react";
+import firebase from "firebase/app";
+import "firebase/database";
+import firebaseConfig from "./firebaseConfig.js";
 
 function App() {
+  //firebase
+  useEffect(() => {
+    firebase.initializeApp(firebaseConfig);
+  }, []);
+
   // retrieve redux state from ui and check if cartIsVisible is set to true
   const showCart = useSelector((state) => state.ui.cartIsVisible);
 

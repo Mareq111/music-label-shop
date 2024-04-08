@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+/* /* eslint-disable react/prop-types */
 
 import "./BtnAddToCart.scss";
 import IconCircleFilled from "../Icons/IconCircleFilled";
@@ -28,7 +29,8 @@ export default function BtnAddToCart({ item, selectedVersion, onAddToCart }) {
       }, 2000);
 
       if (onAddToCart) {
-        onAddToCart(item);
+        /* onAddToCart(item); */
+        onAddToCart({...item, selectedVersion})
       }
     } else {
       // show no item added dialog
@@ -42,7 +44,7 @@ export default function BtnAddToCart({ item, selectedVersion, onAddToCart }) {
 
   return (
     <>
-      {/* btn with reset isVersionSelected after any click */}
+     {/*  btn with reset isVersionSelected after any click */}
       <button
         onClick={() => {
           setIsItemAdded(false);
@@ -54,7 +56,6 @@ export default function BtnAddToCart({ item, selectedVersion, onAddToCart }) {
       >
         Add to cart <IconCircleFilled /> {item.itemPrice}€
       </button>
-      {/* show a dialog of choosen item was added or not */}
       {isItemAdded && <DialogAddToCart isFill={isItemAdded} />}
       {!isVersionSelected && <DialogAddToCart isFill={false} />}
     </>

@@ -44,8 +44,8 @@ export default function ContentProductDetails() {
       />
       <BtnAddToCart
         item={{ ...prodData, radioId: radioId }}
-        selectedVersion={selectedVersion}
-        onClick={handleAddToCart}
+       selectedVersion={selectedVersion}
+       onClick={handleAddToCart}
       />
       <BadgesProductDetails />
       <TextProductDescription />

@@ -9,6 +9,7 @@ import ImgDreamChaser3 from "../assets/img/coversMini/albums-collectors/dream-ch
 import ImgArenaOfAutumnnEp from "../assets/img/coversMini/albums/arena_of_autumnn_EP-mini.jpg";
 import ImgInitialConfusion from "../assets/img/coversMini/albums/initial-confusion-mini.jpg";
 import BadgePreciseAlbums from "../UI/Badge/BadgePreciseAlbums.jsx";
+import { Link } from "react-router-dom";
 
 export default function ProductsAlbums() {
   const [layoutView, setLayoutView] = useState("grid");
@@ -68,11 +69,13 @@ export default function ProductsAlbums() {
         >
           {productsData.map((item, index) => (
             <li className="li-productsMain" key={index}>
-              {layoutView === "grid" ? (
-                <CardProductMain {...item} layout="grid" />
-              ) : (
-                <CardProductMain {...item} layout="list" />
-              )}
+             {/*  <Link to='products/:productId' > */}
+                {layoutView === "grid" ? (
+                  <CardProductMain {...item} layout="grid" />
+                ) : (
+                  <CardProductMain {...item} layout="list" />
+                )}
+           {/*    </Link> */}
             </li>
           ))}
         </ul>

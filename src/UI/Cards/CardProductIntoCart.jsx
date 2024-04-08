@@ -26,7 +26,7 @@ export default function CardProductIntoCart({
       </div>
       <div className="div-all-content-product-into-cart">
         <div className="div-all-text-product-info">
-          <h3 className="name-of-added-product">{addedProductName}</h3>
+          <h3 className="name-of-added-product">{selectedVersion}{addedProductName}</h3>
           <p className="p-info-added-product">{addedProductInfo}</p>
           <p className="p-info-added-product">ID: {addedProductId}</p>
         </div>
@@ -45,11 +45,3 @@ export default function CardProductIntoCart({
   );
 }
 
-/* //old code */
-{
-  /* <img
-          className="img-of-added-product"
-          src={addedProductImg}
-          alt={`Added Product image: ${addedProductName}`}
-        />  */
-}

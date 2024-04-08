@@ -19,8 +19,9 @@ import ProductsPuzzles from "./pages/ProductsPuzzles.jsx";
 import Checkout from "./pages/Checkout.jsx";
 /* firebase */
 import { useEffect } from "react";
-import firebase from "firebase/app";
-import "firebase/database";
+import firebase from "firebase/compat/app";
+import "firebase/compat/database";
+
 import firebaseConfig from "./firebaseConfig.js";
 
 function App() {

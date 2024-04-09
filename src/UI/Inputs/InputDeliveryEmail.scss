@@ -1,10 +1,10 @@
 @import "../../styles/global/global.scss";
 
-.input-fullname-container {
+.input-email-container {
   display: flex;
   flex-direction: column;
 }
-#input-fullname {
+#input-email {
   background-color: transparent;
   outline: 0;
   width: 100%;
@@ -14,10 +14,21 @@
   padding: 0.5rem;
   color: $white;
 }
-#input-fullname:focus {
+#input-email:focus {
   border-color: $ming-blue;
 }
 
-#input-fullname:focus-visible {
+#input-email:focus-visible {
   border-color: $ming-blue;
+}
+
+//div help
+#div-emailHelp {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+#emailHelp {
+  color: $red-300;
 }

@@ -1,10 +1,10 @@
 @import "../../styles/global/global.scss";
 
-.input-fullname-container {
+.input-phonenumber-container {
   display: flex;
   flex-direction: column;
 }
-#input-fullname {
+#input-phone-number {
   background-color: transparent;
   outline: 0;
   width: 100%;
@@ -14,10 +14,10 @@
   padding: 0.5rem;
   color: $white;
 }
-#input-fullname:focus {
+#input-phone-number:focus {
   border-color: $ming-blue;
 }
 
-#input-fullname:focus-visible {
+#input-phone-number:focus-visible {
   border-color: $ming-blue;
 }

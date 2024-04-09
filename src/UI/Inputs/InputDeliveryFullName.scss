@@ -1,0 +1,23 @@
+@import "../../styles/global/global.scss";
+
+.input-fullname-container {
+  display: flex;
+  flex-direction: column;
+}
+.input-fullname {
+  background-color: transparent;
+  outline: 0;
+  width: 100%;
+  height: auto;
+  border: 0.1rem solid $grey-700;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  color: $white;
+}
+.input-fullname:focus {
+  border-color: $ming-blue;
+}
+
+.input-fullname:focus-visible {
+  border-color: $ming-blue;
+}

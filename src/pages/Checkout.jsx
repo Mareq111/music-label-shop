@@ -16,22 +16,10 @@ export default function Checkout() {
         <AccordionCheckout />
         <FormDeliveryDetails />
 
-        <div className="all-text-cart">
-          {/* <p className="p-text-cart">
-            Your cart contains {cartQuantity}{" "}
-            {cartQuantity === 1 ? "item" : "items"}.
-          </p> */}
-        </div>
-        <h3 className="h-cart">
-          Subtotal Price : {/* {calculateTotalPrice().toFixed(2)} */}22.99€
-        </h3>
-        <h3 className="h-cart">
-          Subtotal Price : {/* {calculateTotalPrice().toFixed(2)} */}22.99€
-        </h3>
-
+        <p>delivery chooser</p>
         <div>
           <Link className="btn-continue-div-wrapper" to={"/checkout"}>
-            <BtnContinue continueBtnText={"Continue to checkout"} />
+            <BtnContinue continueBtnText={"Proceed to pay"} />
           </Link>
         </div>
       </div>

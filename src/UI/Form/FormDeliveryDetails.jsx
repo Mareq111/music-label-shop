@@ -1,3 +1,4 @@
+import BadgeFormRequired from "../Badge/BadgeFormRequired";
 import InputDeliveryAddress from "../Inputs/InputDeliveryAddress";
 import InputDeliveryCity from "../Inputs/InputDeliveryCity";
 import InputDeliveryCountrySelect from "../Inputs/InputDeliveryCountrySelect";
@@ -23,6 +24,7 @@ export default function FormDeliveryDetails() {
         </div>
         <InputDeliveryAddress />
       </fieldset>
+      <BadgeFormRequired />
     </form>
   );
 }

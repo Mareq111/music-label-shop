@@ -13,7 +13,7 @@ export default function InputDeliveryCountrySelect() {
   );
   return (
     <div className="div-delivery-country-select">
-      <label htmlFor="select-delivery-country-select">Select a country *</label>
+      <label htmlFor="select-delivery-country-select">Select a country </label>
       <select  required
         id="select-delivery-country-select"
         value={selectedCountry}

@@ -4,7 +4,7 @@ import "./InputDeliveryZipCode.scss";
 export default function InputDeliveryZipCode() {
   return (
     <div className="input-zip-code-container">
-      <label htmlFor="input-zip-code">Zip Code *</label>
+      <label htmlFor="input-zip-code">Zip Code</label>
       <input
         type="text"
         id="input-zip-code"

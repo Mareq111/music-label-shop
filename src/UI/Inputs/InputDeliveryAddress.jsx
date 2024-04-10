@@ -3,7 +3,7 @@ import "./InputDeliveryAddress.scss";
 export default function InputDeliveryAddress() {
   return (
     <div className="input-address-container">
-      <label htmlFor="input-address">Address *</label>
+      <label htmlFor="input-address">Address </label>
       <input
         type="text"
         id="input-address"

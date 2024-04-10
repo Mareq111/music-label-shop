@@ -2,7 +2,7 @@ import "./InputDeliveryEmail.scss";
 export default function InputDeliveryEmail() {
   return (
     <div className="input-email-container">
-      <label htmlFor="input-email">Email address *</label>
+      <label htmlFor="input-email">Email address </label>
       <input
         type="email"
         id="input-email"

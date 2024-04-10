@@ -21,3 +21,11 @@
 #input-fullname:focus-visible {
   border-color: $ming-blue;
 }
+.invalid {
+  border-color: $red-300;
+}
+.invalid-message {
+  color: $red-300;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}

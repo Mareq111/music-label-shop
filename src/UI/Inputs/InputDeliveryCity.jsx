@@ -4,7 +4,7 @@ import "./InputDeliveryCity.scss";
 export default function InputDeliveryCity() {
   return (
     <div className="input-city-container">
-      <label htmlFor="input-city">City *</label>
+      <label htmlFor="input-city">City </label>
       <input
         type="text"
         id="input-city"

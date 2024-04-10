@@ -3,7 +3,7 @@ import "./InputDeliveryPhoneNumber.scss";
 export default function InputDeliveryPhoneNumber() {
   return (
     <div className="input-phonenumber-container">
-      <label htmlFor="phone-number">Phone number *</label>
+      <label htmlFor="input-phone-number">Phone number *</label>
       <input
         type="tel"
         id="input-phone-number"

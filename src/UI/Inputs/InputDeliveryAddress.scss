@@ -1,0 +1,39 @@
+@import '../../styles/global/global.scss';
+
+
+
+.input-address-container {
+    display: flex;
+    flex-direction: column;
+  }
+  #input-address {
+    background-color: transparent;
+    outline: 0;
+    width: 100%;
+    height: auto;
+    border: 0.1rem solid $grey-700;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    color: $white;
+  }
+  #input-address:focus {
+    border-color: $ming-blue;
+  }
+  
+  #input-address:focus-visible {
+    border-color: $ming-blue;
+  }
+  
+  //div help
+  #div-addressHelp {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #addressHelp {
+    color: $red-300;
+  }
+  
+
+  

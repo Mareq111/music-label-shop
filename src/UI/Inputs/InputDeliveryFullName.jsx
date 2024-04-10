@@ -2,7 +2,7 @@ import "./InputDeliveryFullName.scss";
 export default function InputDeliveryFullName() {
   return (
     <div className="input-fullname-container">
-      <label htmlFor="full-name">Full name *</label>
+      <label htmlFor="input-fullname">Full name *</label>
       <input
         required
         type="text"

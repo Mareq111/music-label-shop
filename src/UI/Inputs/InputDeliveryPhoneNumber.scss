@@ -1,9 +1,10 @@
 @import "../../styles/global/global.scss";
 
-.input-phonenumber-container {
+.input-phone-number-container {
   display: flex;
   flex-direction: column;
 }
+
 #input-phone-number {
   background-color: transparent;
   outline: 0;
@@ -14,10 +15,21 @@
   padding: 0.5rem;
   color: $white;
 }
+
 #input-phone-number:focus {
   border-color: $ming-blue;
 }
 
 #input-phone-number:focus-visible {
   border-color: $ming-blue;
+}
+
+.invalid-phone-number {
+  border-color: 0.2rem solid $red-300;
+}
+
+.invalid-message-phone-number {
+  color: $red-300;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
 }

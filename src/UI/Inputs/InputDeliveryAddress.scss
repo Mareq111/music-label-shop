@@ -1,12 +1,12 @@
+// InputDeliveryAddress.scss
 @import '../../styles/global/global.scss';
-
-
 
 .input-address-container {
     display: flex;
     flex-direction: column;
-  }
-  #input-address {
+}
+
+#input-address {
     background-color: transparent;
     outline: 0;
     width: 100%;
@@ -15,25 +15,22 @@
     border-radius: 0.5rem;
     padding: 0.5rem;
     color: $white;
-  }
-  #input-address:focus {
-    border-color: $ming-blue;
-  }
-  
-  #input-address:focus-visible {
-    border-color: $ming-blue;
-  }
-  
-  //div help
-  #div-addressHelp {
-    margin-top: 0.5rem;
-    display: flex;
-    flex-direction: row;
-  }
-  
-  #addressHelp {
-    color: $red-300;
-  }
-  
+}
 
-  
+#input-address:focus {
+    border-color: $ming-blue;
+}
+
+#input-address:focus-visible {
+    border-color: $ming-blue;
+}
+
+.invalid-address {
+    border-color: $red-300;
+}
+
+.invalid-message-address {
+    color: $red-300;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}

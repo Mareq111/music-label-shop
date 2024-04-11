@@ -14,17 +14,22 @@ export default function InputDeliveryCountrySelect() {
   return (
     <div className="div-delivery-country-select">
       <label htmlFor="select-delivery-country-select">Select a country </label>
-      <select  required
+      <select
+        required
         id="select-delivery-country-select"
         value={selectedCountry}
         aria-label="choose country"
-        onChange={handleChange} 
+        onChange={handleChange}
       >
         <option id="option-delivery-country-select" value="">
           Choose country
         </option>
         {sortedCountries.map((country) => (
-          <option className="option-delivery-country-select" key={country.code} value={country.code}>
+          <option
+            className="option-delivery-country-select"
+            key={country.code}
+            value={country.code}
+          >
             {country.name}
           </option>
         ))}

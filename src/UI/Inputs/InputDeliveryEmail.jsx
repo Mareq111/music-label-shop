@@ -1,8 +1,21 @@
+import { useState } from "react";
 import "./InputDeliveryEmail.scss";
+
 export default function InputDeliveryEmail() {
+  const [isValid, setIsValid] = useState(true);
+  const [email, setEmail] = useState("");
+
+  const handleChange = (event) => {
+    const value = event.target.value;
+    setEmail(value);
+    // checking if entered value is a valid email address
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    setIsValid(emailRegex.test(value));
+  };
+
   return (
     <div className="input-email-container">
-      <label htmlFor="input-email">Email address </label>
+      <label htmlFor="input-email">Email address</label>
       <input
         type="email"
         id="input-email"
@@ -10,14 +23,18 @@ export default function InputDeliveryEmail() {
         aria-label="email"
         autoComplete="email"
         placeholder="example@example.com"
-        aria-describedby="emailHelp"
+        value={email}
+        onChange={handleChange}
+        className={!isValid ? "invalid-email" : ""}
+        aria-describedby={!isValid ? "emailHelp" : ""}
         required
       />
-      {/*  <div id="div-emailHelp">
-        <p id="emailHelp">
-          Please enter your email in the format: name@example.com
-        </p>
-      </div> */}
+      {/* error text */}
+      {!isValid && (
+        <div id="emailHelp" className="email-help">
+          Please enter a valid email address.
+        </div>
+      )}
     </div>
   );
 }

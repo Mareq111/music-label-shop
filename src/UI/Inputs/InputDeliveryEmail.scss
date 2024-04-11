@@ -1,9 +1,11 @@
 @import "../../styles/global/global.scss";
 
+
 .input-email-container {
   display: flex;
   flex-direction: column;
 }
+
 #input-email {
   background-color: transparent;
   outline: 0;
@@ -14,6 +16,7 @@
   padding: 0.5rem;
   color: $white;
 }
+
 #input-email:focus {
   border-color: $ming-blue;
 }
@@ -22,13 +25,12 @@
   border-color: $ming-blue;
 }
 
-//div help
-#div-emailHelp {
-  margin-top: 0.5rem;
-  display: flex;
-  flex-direction: row;
+.invalid-email {
+  border-color: $red-300;
 }
 
-#emailHelp {
+.email-help {
   color: $red-300;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
 }

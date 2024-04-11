@@ -1,6 +1,20 @@
+// InputDeliveryAddress.jsx
+import { useState } from "react";
 import "./InputDeliveryAddress.scss";
 
 export default function InputDeliveryAddress() {
+  const [isValid, setIsValid] = useState(true);
+  const [address, setAddress] = useState("");
+
+  const handleChange = (event) => {
+    const value = event.target.value;
+    setAddress(value);
+
+    // checking that address  contains at least one digit and one space
+    const addressRegex = /^(?=.*\d)(?=.*\s).+$/;
+    setIsValid(addressRegex.test(value));
+  };
+
   return (
     <div className="input-address-container">
       <label htmlFor="input-address">Address </label>
@@ -11,12 +25,18 @@ export default function InputDeliveryAddress() {
         aria-label="address"
         autoComplete="address-line1"
         placeholder="123 Main Street"
-        aria-describedby="addressHelp"
+        value={address}
+        onChange={handleChange}
+        className={!isValid ? "invalid-address" : ""}
+        aria-describedby={!isValid ? "invalid-message-address" : ""}
         required
       />
-      {/* <div id="div-addressHelp">
-        <p id="addressHelp">Please enter your address.</p>
-      </div> */}
+      {/* error*/}
+      {!isValid && (
+        <div id="invalid-message-address" className="invalid-message-address">
+          Address must contain at least one digit and one space.
+        </div>
+      )}
     </div>
   );
 }

@@ -1,40 +1,35 @@
 @import "../../styles/global/global.scss";
 
-
-
-
 .input-city-container {
-    display: flex;
-    flex-direction: column;
-  }
-  #input-city {
-    background-color: transparent;
-    outline: 0;
-    width: 100%;
-    height: auto;
-    border: 0.1rem solid $grey-700;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    color: $white;
-  }
-  #input-city:focus {
-    border-color: $ming-blue;
-  }
-  
-  #input-city:focus-visible {
-    border-color: $ming-blue;
-  }
-  
-  //div help
-  #div-cityHelp {
-    margin-top: 0.5rem;
-    display: flex;
-    flex-direction: row;
-  }
-  
-  #cityHelp {
-    color: $red-300;
-  }
-  
+  display: flex;
+  flex-direction: column;
+}
 
-  
+#input-city {
+  background-color: transparent;
+  outline: 0;
+  width: 100%;
+  height: auto;
+  border: 0.1rem solid $grey-700;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  color: $white;
+}
+
+#input-city:focus {
+  border-color: $ming-blue;
+}
+
+#input-city:focus-visible {
+  border-color: $ming-blue;
+}
+
+.invalid-city {
+  border-color: $red-300;
+}
+
+.invalid-message-city {
+  color: $red-300;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}

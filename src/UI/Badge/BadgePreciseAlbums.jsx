@@ -12,8 +12,8 @@ export default function BadgePreciseAlbums() {
         </li>
         <li className="list">
           <BtnGoToCategories
-            categoryPath="el-double-m"
-            nameOfCategory={"El Double M"}
+            categoryPath="el-dm"
+            nameOfCategory={"El DM"}
           />
         </li>
         <li className="list">

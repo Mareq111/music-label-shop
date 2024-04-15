@@ -1,23 +1,22 @@
-import CardProductMain from "../UI/Cards/CardProductMain.jsx";
-import BtnToggleView from "../UI/Buttons/BtnToggleView.jsx";
-import "./ProductsAllPages.scss";
-import BadgePreciseAlbums from "../UI/Badge/BadgePreciseAlbums.jsx";
 import { useState, useEffect } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
-import firebaseConfig from "../firebaseConfig.js";
+import firebaseConfig from "../firebaseConfig";
+import BadgePreciseAlbums from "../UI/Badge/BadgePreciseAlbums.jsx";
+import CardProductMain from "../UI/Cards/CardProductMain.jsx";
+import BtnToggleView from "../UI/Buttons/BtnToggleView.jsx";
 
 export default function ProductsAlbums() {
   const [layoutView, setLayoutView] = useState("grid");
   const [productsData, setProductsData] = useState([]);
 
   useEffect(() => {
-    // init Firebase
+    // init firebase
     if (!firebase.apps.length) {
       firebase.initializeApp(firebaseConfig);
     }
 
-    // download data
+    //download data
     const fetchProductsData = async () => {
       try {
         const snapshot = await firebase
@@ -25,10 +24,10 @@ export default function ProductsAlbums() {
           .ref("categories/albums/products")
           .once("value");
         const data = snapshot.val();
+        //change object into array
         if (data) {
-          // change object into array
           const productsArray = Object.entries(data).map(([key, value]) => ({
-            id: key,
+            key: key,
             ...value,
           }));
           setProductsData(productsArray);
@@ -51,7 +50,7 @@ export default function ProductsAlbums() {
           <h4 className="h-products-page">Albums</h4>
           <BtnToggleView onLayoutChange={handleProductsLayout} />
         </div>
-        {/* choose precise whos something you looking for */}
+        {/*  choose precise whos something you looking for  */}
         <div className="div-badge-precise-something">
           <BadgePreciseAlbums />
         </div>
@@ -60,13 +59,9 @@ export default function ProductsAlbums() {
             layoutView === "grid" ? "ul-list-productsMain--grid" : ""
           } ${layoutView === "list" ? "ul-list-productsMain--list" : ""}`}
         >
-          {productsData.map((item, index) => (
-            <li className="li-productsMain" key={index}>
-              {layoutView === "grid" ? (
-                <CardProductMain product={item} layout="grid" />
-              ) : (
-                <CardProductMain product={item} layout="list" />
-              )}
+          {productsData.map((item) => (
+            <li className="li-productsMain" key={item.key}>
+              <CardProductMain product={item} layout={layoutView} />
             </li>
           ))}
         </ul>

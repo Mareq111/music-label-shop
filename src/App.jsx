@@ -50,8 +50,10 @@ function App() {
           element: <HomePage />,
         },
         {
-          path: "albums",
-          element: <ProductsAlbums />,
+          path: "albums/all-strimz-empire",
+          element: <ProductsAlbums />, 
+    
+
         },
         //!subpages for albums
         {

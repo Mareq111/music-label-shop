@@ -8,7 +8,7 @@ export default function HomePage() {
     navigate("products/:productId");
   }
   function navToProducts() {
-    navigate("albums");
+    navigate("albums/all-strimz-empire");
   }
   return (
     <div className="home-content">

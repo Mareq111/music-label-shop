@@ -12,7 +12,7 @@ import BadgeTopOfAsideNav from "../UI/Badge/BadgeTopOfAsideNav.jsx";
 export default function MenuHamburger() {
   //array with main  menu buttons to pages
   const mainNavPages = [
-    { link: "/albums", img: arenaCover, title: "Albums" },
+    { link: "/albums/all-strimz-empire", img: arenaCover, title: "Albums" },
     { link: "/tickets", img: arenaCover, title: "Tickets" },
     { link: "/t-shirts", img: arenaCover, title: "T-shirts" },
     { link: "/gadgets", img: arenaCover, title: "Gadgets" },

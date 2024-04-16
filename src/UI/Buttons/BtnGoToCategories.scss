@@ -48,6 +48,7 @@
   &:focus {
     color: $black-700;
     border: 0.1rem solid $grey-600;
+
     &:before,
     &:after {
       background-color: $white;
@@ -62,6 +63,10 @@
       top: -25%;
       transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
     }
+  }
+  &.active {
+    background-color: $white;
+    color: $black-700;
   }
 }
 

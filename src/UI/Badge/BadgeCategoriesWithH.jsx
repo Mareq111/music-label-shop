@@ -7,7 +7,7 @@ export default function BadgeCategoriesWithH() {
       <h4 className="h-popular-categories">Categories</h4>
       <ul className="ul-list-of-pages">
         <li className="li-list-of-pages">
-          <BtnGoToCategories categoryPath="/albums" nameOfCategory={"Albums"} />
+          <BtnGoToCategories categoryPath="/albums/all-strimz-empire" nameOfCategory={"Albums"} />
         </li>
         <li className="li-list-of-pages">
           <BtnGoToCategories

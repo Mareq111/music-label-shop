@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
-
- import BtnGoToCategories from "../Buttons/BtnGoToCategories";
+import BtnGoToCategories from "../Buttons/BtnGoToCategories";
 import "./BadgePreciseAllPages.scss";
 
 export default function BadgePreciseAlbums({ onArtistSelect }) {
@@ -15,35 +14,35 @@ export default function BadgePreciseAlbums({ onArtistSelect }) {
       <ul className="ul-choose-precise-albums">
         <li className="list-choose-precise-albums">
           <BtnGoToCategories
-            categoryPath="" 
+            categoryPath="/albums/all-strimz-empire"
             nameOfCategory={"All Strimz Empire"}
             onClick={() => handleArtistClick("All Strimz Empire")}
           />
         </li>
         <li className="list">
           <BtnGoToCategories
-            categoryPath="el-dm"
+            categoryPath="/albums/el-dm"
             nameOfCategory={"El DM"}
             onClick={() => handleArtistClick("El DM")}
           />
         </li>
         <li className="list">
           <BtnGoToCategories
-             categoryPath="jackie-ras" 
+            categoryPath="/albums/jackie-ras"
             nameOfCategory={"Jackie Ras"}
             onClick={() => handleArtistClick("Jackie Ras")}
           />
         </li>
         <li className="list">
           <BtnGoToCategories
-              categoryPath="molly-granoli" 
+            categoryPath="/albums/molly-granoli"
             nameOfCategory={"Molly Granoli"}
             onClick={() => handleArtistClick("Molly Granoli")}
           />
         </li>
         <li className="list">
           <BtnGoToCategories
-              categoryPath="el-kaptn" 
+            categoryPath="/albums/el-kaptn"
             nameOfCategory={"El Kaptn"}
             onClick={() => handleArtistClick("El Kaptn")}
           />
@@ -52,4 +51,3 @@ export default function BadgePreciseAlbums({ onArtistSelect }) {
     </div>
   );
 }
-

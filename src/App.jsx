@@ -21,8 +21,12 @@ import Checkout from "./pages/Checkout.jsx";
 import { useEffect } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
-
 import firebaseConfig from "./firebaseConfig.js";
+//subpages for albums
+import ProductsAlbumsElDM from "./pages/subpages/product-albums/ProductsAlbumsElDM.jsx";
+import ProductsAlbumsJackieRas from "./pages/subpages/product-albums/ProductsAlbumsJackieRas.jsx";
+import ProductsAlbumsMollyGranoli from "./pages/subpages/product-albums/ProductsAlbumsMollyGranoli.jsx";
+import ProductsAlbumsElKaptn from "./pages/subpages/product-albums/ProductsAlbumsElKaptn.jsx";
 
 function App() {
   //firebase
@@ -49,6 +53,24 @@ function App() {
           path: "albums",
           element: <ProductsAlbums />,
         },
+        //!subpages for albums
+        {
+          path: "albums/el-dm",
+          element: <ProductsAlbumsElDM />,
+        },
+        {
+          path: "albums/jackie-ras",
+          element: <ProductsAlbumsJackieRas />,
+        },
+        {
+          path: "albums/molly-granoli",
+          element: <ProductsAlbumsMollyGranoli />,
+        },
+        {
+          path: "albums/el-kaptn",
+          element: <ProductsAlbumsElKaptn />,
+        },
+        //! end of album subpages
         {
           path: "tickets",
           element: <ProductsTickets />,

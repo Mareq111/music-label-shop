@@ -1,16 +1,17 @@
+
 import { useState, useEffect } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
-import firebaseConfig from "../firebaseConfig";
-import BadgePreciseAlbums from "../UI/Badge/BadgePreciseAlbums.jsx";
-import CardProductMain from "../UI/Cards/CardProductMain.jsx";
-import BtnToggleView from "../UI/Buttons/BtnToggleView.jsx";
+import firebaseConfig from "../../../firebaseConfig.js";
+import BadgePreciseAlbums from "../../../UI/Badge/BadgePreciseAlbums.jsx";
+import CardProductMain from "../../../UI/Cards/CardProductMain.jsx";
+import BtnToggleView from "../../../UI/Buttons/BtnToggleView.jsx";
 
-export default function ProductsAlbums() {
+export default function ProductsAlbumsJackieRas() {
   const [layoutView, setLayoutView] = useState("grid");
   const [productsData, setProductsData] = useState([]);
-  //!state for selected artist  set = all
-  const [selectedArtist, setSelectedArtist] = useState("");
+   //!state for selected artist set = jackie ras
+  const [selectedArtist, setSelectedArtist] = useState("Jackie Ras");
 
   useEffect(() => {
     // init firebase
@@ -76,4 +77,4 @@ export default function ProductsAlbums() {
       </div>
     </section>
   );
-}
+} 

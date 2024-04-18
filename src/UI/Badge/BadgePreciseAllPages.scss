@@ -1,4 +1,7 @@
-.ul-choose-precise-albums{
+
+@import '../../styles/global/global.scss';
+
+.ul-choose-precise{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -7,6 +10,6 @@
     padding: 0;
     gap: 1rem;
   }
-  .li-choose-precise-albums {
+  .li-choose-precise {
     padding: 0.2rem;
   }

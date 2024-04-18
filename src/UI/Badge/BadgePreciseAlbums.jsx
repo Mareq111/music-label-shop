@@ -11,8 +11,8 @@ export default function BadgePreciseAlbums({ onArtistSelect }) {
 
   return (
     <div>
-      <ul className="ul-choose-precise-albums">
-        <li className="list-choose-precise-albums">
+      <ul className="ul-choose-precise">
+        <li className="list-choose-precise">
           <BtnGoToCategories
             categoryPath="/albums/all-strimz-empire"
             nameOfCategory={"All Strimz Empire"}

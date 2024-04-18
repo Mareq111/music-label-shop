@@ -11,7 +11,7 @@ export default function BadgeCategoriesTop() {
         </li>
         <li className="li-list-of-pages-top">
           <BtnGoToCategories
-            categoryPath="tickets"
+            categoryPath="tickets/all-locations"
             nameOfCategory={"Tickets"}
           />
         </li>

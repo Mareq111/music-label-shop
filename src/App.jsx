@@ -77,7 +77,7 @@ function App() {
         },
         //! end of album subpages
         {
-          path: "tickets",
+          path: "tickets/all-locations",
           element: <ProductsTickets />,
         },
         {

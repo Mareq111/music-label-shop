@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import firebaseConfig from "../firebaseConfig";
-import BadgePreciseAlbums from "../UI/Badge/BadgePreciseAlbums.jsx";
 import CardProductMain from "../UI/Cards/CardProductMain.jsx";
 import BtnToggleView from "../UI/Buttons/BtnToggleView.jsx";
+import BadgePreciseTickets from "../UI/Badge/BadgePreciseTickets.jsx";
 
 export default function ProductsAlbums() {
   const [layoutView, setLayoutView] = useState("grid");
@@ -59,9 +59,9 @@ export default function ProductsAlbums() {
           <h4 className="h-products-page">Tickets</h4>
           <BtnToggleView onLayoutChange={handleProductsLayout} />
         </div>
-       {/*  Choose precise artist   */}
+        {/*  Choose precise artist   */}
         <div className="div-badge-precise-something">
-          <BadgePreciseAlbums onSelectArtist={handleArtistSelection} />
+          <BadgePreciseTickets onSelectArtist={handleArtistSelection} />
         </div>
         <ul
           className={`ul-list-productsMain ${
@@ -77,5 +77,4 @@ export default function ProductsAlbums() {
       </div>
     </section>
   );
-}  
-
+}

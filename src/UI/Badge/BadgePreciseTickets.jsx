@@ -23,63 +23,63 @@ export default function BadgePreciseAlbums({ onArtistSelect }) {
           <BtnGoToCategories
             categoryPath="/tickets/poland"
             nameOfCategory={"Poland"}
-            onClick={() => handleArtistClick("PL")}
+            onClick={() => handleArtistClick("Poland")}
           />
         </li>
         <li className="list">
           <BtnGoToCategories
             categoryPath="/tickets/czechia"
             nameOfCategory={"Czechia"}
-            onClick={() => handleArtistClick("CZ")}
+            onClick={() => handleArtistClick("Czechia")}
           />
         </li>
         <li className="list">
           <BtnGoToCategories
             categoryPath="/tickets/austria"
             nameOfCategory={"Austria"}
-            onClick={() => handleArtistClick("Vienna, AT")}
+            onClick={() => handleArtistClick("Austria")}
           />
         </li>
         <li className="list">
           <BtnGoToCategories
             categoryPath="/tickets/germany"
             nameOfCategory={"Germany"}
-            onClick={() => handleArtistClick("DE")}
+            onClick={() => handleArtistClick("Germany")}
           />
         </li>
         <li className="list">
           <BtnGoToCategories
             categoryPath="/tickets/netherlands"
             nameOfCategory={"Netherlands"}
-            onClick={() => handleArtistClick("NL")}
+            onClick={() => handleArtistClick("Netherlands")}
           />
         </li>
         <li className="list">
           <BtnGoToCategories
             categoryPath="/tickets/belgium"
             nameOfCategory={"Belgium"}
-            onClick={() => handleArtistClick("BE")}
+            onClick={() => handleArtistClick("Belgium")}
           />
         </li>
         <li className="list">
           <BtnGoToCategories
             categoryPath="/tickets/france"
             nameOfCategory={"France"}
-            onClick={() => handleArtistClick("FR")}
+            onClick={() => handleArtistClick("France")}
           />
         </li>
         <li className="list">
           <BtnGoToCategories
             categoryPath="/tickets/spain"
             nameOfCategory={"Spain"}
-            onClick={() => handleArtistClick("ES")}
+            onClick={() => handleArtistClick("Spain")}
           />
         </li>
         <li className="list">
           <BtnGoToCategories
             categoryPath="/tickets/italy"
             nameOfCategory={"Italy"}
-            onClick={() => handleArtistClick("IT")}
+            onClick={() => handleArtistClick("Italy")}
           />
         </li>
         <li className="list">
@@ -93,14 +93,14 @@ export default function BadgePreciseAlbums({ onArtistSelect }) {
           <BtnGoToCategories
             categoryPath="/tickets/hungary"
             nameOfCategory={"Hungary"}
-            onClick={() => handleArtistClick("HU")}
+            onClick={() => handleArtistClick("Hungary")}
           />
         </li>
         <li className="list">
           <BtnGoToCategories
             categoryPath="/tickets/slovakia"
             nameOfCategory={"Slovakia"}
-            onClick={() => handleArtistClick("SK")}
+            onClick={() => handleArtistClick("Slovakia")}
           />
         </li>
       </ul>

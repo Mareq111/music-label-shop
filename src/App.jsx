@@ -27,9 +27,19 @@ import ProductsAlbumsElDM from "./pages/subpages/product-albums/ProductsAlbumsEl
 import ProductsAlbumsJackieRas from "./pages/subpages/product-albums/ProductsAlbumsJackieRas.jsx";
 import ProductsAlbumsMollyGranoli from "./pages/subpages/product-albums/ProductsAlbumsMollyGranoli.jsx";
 import ProductsAlbumsElKaptn from "./pages/subpages/product-albums/ProductsAlbumsElKaptn.jsx";
-//redux
-/* import { Provider } from "react-redux";
-import store from "./store/index.js"; */
+//subpages for tickets
+import ProductsTicketsPoland from "./pages/subpages/product-tickets/ProductsTicketsPoland.jsx";
+import ProductsTicketsCzechia from "./pages/subpages/product-tickets/ProductsTicketsCzechia.jsx";
+import ProductsTicketsAustria from "./pages/subpages/product-tickets/ProductsTicketsAustria.jsx";
+import ProductsTicketsGermany from "./pages/subpages/product-tickets/ProductsTicketsGermany.jsx";
+import ProductsTicketsNetherlands from "./pages/subpages/product-tickets/ProductsTicketsNetherlands.jsx";
+import ProductsTicketsBelgium from "./pages/subpages/product-tickets/ProductsTicketsBelgium.jsx";
+import ProductsTicketsFrance from "./pages/subpages/product-tickets/ProductsTicketsFrance.jsx";
+import ProductsTicketsSpain from "./pages/subpages/product-tickets/ProductsTicketsSpain.jsx";
+import ProductsTicketsItaly from "./pages/subpages/product-tickets/ProductsTicketsItaly.jsx";
+import ProductsTicketsCroatia from "./pages/subpages/product-tickets/ProductsTicketsCroatia.jsx";
+import ProductsTicketsHungary from "./pages/subpages/product-tickets/ProductsTicketsHungary.jsx";
+import ProductsTicketsSlovakia from "./pages/subpages/product-tickets/ProductsTicketsSlovakia.jsx";
 
 function App() {
   //firebase
@@ -54,11 +64,9 @@ function App() {
         },
         {
           path: "albums/all-strimz-empire",
-          element: <ProductsAlbums />, 
-    
-
+          element: <ProductsAlbums />,
         },
-        //!subpages for albums
+        //subpages for albums
         {
           path: "albums/el-dm",
           element: <ProductsAlbumsElDM />,
@@ -75,11 +83,61 @@ function App() {
           path: "albums/el-kaptn",
           element: <ProductsAlbumsElKaptn />,
         },
-        //! end of album subpages
+        // end of album subpages
         {
           path: "tickets/all-locations",
           element: <ProductsTickets />,
         },
+        //subpages for tickets
+        {
+          path: "tickets/poland",
+          element: <ProductsTicketsPoland />,
+        },
+        {
+          path: "tickets/czechia",
+          element: <ProductsTicketsCzechia />,
+        },
+        {
+          path: "tickets/austria",
+          element: <ProductsTicketsAustria />,
+        },
+        {
+          path: "tickets/germany",
+          element: <ProductsTicketsGermany />,
+        },
+        {
+          path: "tickets/netherlands",
+          element: <ProductsTicketsNetherlands />,
+        },
+        {
+          path: "tickets/belgium",
+          element: <ProductsTicketsBelgium />,
+        },
+        {
+          path: "tickets/france",
+          element: <ProductsTicketsFrance />,
+        },
+        {
+          path: "tickets/spain",
+          element: <ProductsTicketsSpain />,
+        },
+        {
+          path: "tickets/italy",
+          element: <ProductsTicketsItaly />,
+        },
+        {
+          path: "tickets/croatia",
+          element: <ProductsTicketsCroatia />,
+        },
+        {
+          path: "tickets/hungary",
+          element: <ProductsTicketsHungary />,
+        },
+        {
+          path: "tickets/slovakia",
+          element: <ProductsTicketsSlovakia />,
+        },
+        // end of tickets subpages
         {
           path: "t-shirts",
           element: <ProductsTshirts />,
@@ -110,7 +168,7 @@ function App() {
   ]);
 
   return (
-   <RouterProvider router={router}>{showCart && <Cart />}</RouterProvider>
+    <RouterProvider router={router}>{showCart && <Cart />}</RouterProvider>
   );
 }
 

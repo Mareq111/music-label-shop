@@ -27,6 +27,9 @@ import ProductsAlbumsElDM from "./pages/subpages/product-albums/ProductsAlbumsEl
 import ProductsAlbumsJackieRas from "./pages/subpages/product-albums/ProductsAlbumsJackieRas.jsx";
 import ProductsAlbumsMollyGranoli from "./pages/subpages/product-albums/ProductsAlbumsMollyGranoli.jsx";
 import ProductsAlbumsElKaptn from "./pages/subpages/product-albums/ProductsAlbumsElKaptn.jsx";
+//redux
+/* import { Provider } from "react-redux";
+import store from "./store/index.js"; */
 
 function App() {
   //firebase
@@ -107,7 +110,7 @@ function App() {
   ]);
 
   return (
-    <RouterProvider router={router}>{showCart && <Cart />}</RouterProvider>
+   <RouterProvider router={router}>{showCart && <Cart />}</RouterProvider>
   );
 }
 

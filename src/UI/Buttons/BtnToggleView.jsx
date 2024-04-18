@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import { useState, useEffect } from "react";
+ import { useState, useEffect } from "react";
 import IconGridView from "../Icons/IconGridView";
 import IconListView from "../Icons/IconListView";
 import "./BtnToggleView.scss";
@@ -34,4 +34,38 @@ export default function BtnToggleView({ onLayoutChange }) {
       </button>
     </div>
   );
-}
+}  
+
+/* import { useSelector, useDispatch } from "react-redux";
+import { setLayoutView } from "../../store/layoutSlice";
+import IconGridView from "../Icons/IconGridView";
+import IconListView from "../Icons/IconListView";
+import "./BtnToggleView.scss";
+
+export default function BtnToggleView() {
+  const dispatch = useDispatch();
+  const layoutView = useSelector((state) => state.layout.layoutView);
+
+  const handleLayoutChange = () => {
+    const newLayout = layoutView === "grid" ? "list" : "grid";
+    dispatch(setLayoutView(newLayout));
+  };
+
+  function getActiveIcon() {
+    return layoutView === "grid" ? <IconGridView /> : <IconListView />;
+  }
+
+  return (
+    <div className="icons-view-chooser">
+      <button
+        title="Change view of products"
+        onClick={handleLayoutChange}
+        className={`btn-toggle-view ${
+          layoutView === "grid" ? "grid-view" : "list-view"
+        } active`}
+      >
+        {getActiveIcon()}
+      </button>
+    </div>
+  );
+} */

@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
-import firebaseConfig from "../firebaseConfig";
-import CardProductMain from "../UI/Cards/CardProductMain.jsx";
-import BtnToggleView from "../UI/Buttons/BtnToggleView.jsx";
-import BadgePrecisePosters from "../UI/Badge/BadgePrecisePosters.jsx";
+import firebaseConfig from "../../../firebaseConfig";
+import CardProductMain from "../../../UI/Cards/CardProductMain.jsx";
+import BtnToggleView from "../../../UI/Buttons/BtnToggleView.jsx";
+import BadgePrecisePosters from "../../../UI/Badge/BadgePrecisePosters.jsx";
 
-export default function ProductsPosters() {
+export default function ProductsPostersJackieRas() {
   const [layoutView, setLayoutView] = useState("grid");
   const [productsData, setProductsData] = useState([]);
-  //!state for selected artist  set = all
-  const [selectedArtist, setSelectedArtist] = useState("");
+  //!state for selected artist  set EL DM
+  const [selectedArtist, setSelectedArtist] = useState("Jackie Ras");
 
   useEffect(() => {
     // init firebase

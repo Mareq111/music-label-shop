@@ -40,6 +40,14 @@ import ProductsTicketsItaly from "./pages/subpages/product-tickets/ProductsTicke
 import ProductsTicketsCroatia from "./pages/subpages/product-tickets/ProductsTicketsCroatia.jsx";
 import ProductsTicketsHungary from "./pages/subpages/product-tickets/ProductsTicketsHungary.jsx";
 import ProductsTicketsSlovakia from "./pages/subpages/product-tickets/ProductsTicketsSlovakia.jsx";
+//subpages for posters
+import ProductsPostersElDM from './pages/subpages/product-posters/ProductsPostersElDM.jsx';
+import ProductsPostersJackieRas from './pages/subpages/product-posters/ProductsPostersJackieRas.jsx';
+import ProductsPostersMollyGranoli from './pages/subpages/product-posters/ProductsPostersMollyGranoli.jsx';
+import ProductsPostersElKaptn from "./pages/subpages/product-posters/ProductsPostersElKaptn.jsx";
+
+
+
 
 function App() {
   //firebase
@@ -66,7 +74,7 @@ function App() {
           path: "albums/all-strimz-empire",
           element: <ProductsAlbums />,
         },
-        //subpages for albums
+        //!subpages for albums
         {
           path: "albums/el-dm",
           element: <ProductsAlbumsElDM />,
@@ -88,7 +96,7 @@ function App() {
           path: "tickets/all-locations",
           element: <ProductsTickets />,
         },
-        //subpages for tickets
+        //!subpages for tickets
         {
           path: "tickets/poland",
           element: <ProductsTicketsPoland />,
@@ -146,10 +154,28 @@ function App() {
           path: "gadgets",
           element: <ProductsGadgets />,
         },
+        //!subpages for tickets
         {
-          path: "posters",
+          path: "posters/all-strimz-empire",
           element: <ProductsPosters />,
         },
+        {
+          path: "posters/el-dm",
+          element: <ProductsPostersElDM />,
+        },
+        {
+          path: "posters/jackie-ras",
+          element: <ProductsPostersJackieRas />,
+        },
+        {
+          path: "posters/molly-granoli",
+          element: <ProductsPostersMollyGranoli />,
+        },
+        {
+          path: "posters/el-kaptn",
+          element: <ProductsPostersElKaptn />,
+        },
+        // end of tickets subpages
         {
           path: "puzzles",
           element: <ProductsPuzzles />,

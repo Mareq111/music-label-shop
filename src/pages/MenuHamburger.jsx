@@ -16,7 +16,7 @@ export default function MenuHamburger() {
     { link: "/tickets/all-locations", img: arenaCover, title: "Tickets" },
     { link: "/t-shirts", img: arenaCover, title: "T-shirts" },
     { link: "/gadgets", img: arenaCover, title: "Gadgets" },
-    { link: "/posters", img: arenaCover, title: "Posters" },
+    { link: "/posters/all-strimz-empire", img: arenaCover, title: "Posters" },
     { link: "/puzzles", img: arenaCover, title: "Puzzles" },
   ];
 

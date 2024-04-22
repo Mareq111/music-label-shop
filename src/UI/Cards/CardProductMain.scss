@@ -65,7 +65,7 @@
   justify-content: center;
   align-items: flex-start;
   background-color: $black-700;
-  padding: 1rem 0.5rem;
+  padding: 0.5rem;
   width: 10rem;
   overflow: hidden;
 }
@@ -76,9 +76,12 @@
   height: 6rem;
 }
 .div-title-card__Product-list {
+  /*  height: auto; */
   height: 3rem;
   /*  width: 100%; */
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .title-card__Product-list,
@@ -89,9 +92,12 @@
   font-size: 0.9rem;
   width: auto;
   height: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .titleArtist-card__Product-list {
   color: $grey-600;
+  margin-top: 0.5rem;
 }
 .price-card__Product-list {
   font-weight: 700;
@@ -150,18 +156,22 @@ min-height: 12rem;  */
   //card -text inside
   .div-bottom-of-card-Product-list {
     padding-block: 1rem;
-    padding-inline: clamp(0.5rem, 2vw, 2rem);
+    /* padding-inline: clamp(0.5rem, 2vw, 2rem); */
     overflow: hidden;
     width: 100%;
     min-width: 40vw;
+    /*  gap: 0.5rem; */
   }
   .title-card__Product-list,
   .titleArtist-card__Product-list {
-    font-size: clamp(1rem, 1vw + 0.75rem, 1.3rem);
+    /*  font-size: clamp(1rem, 1vw + 0.75rem, 1.3rem); */
+    font-size: 1.1rem;
+
     /*    width: 14rem; */
   }
   .price-card__Product-list {
-    font-size: clamp(1.1rem, 1.25vw + 0.75rem, 1.4rem);
+    /* font-size: clamp(1.1rem, 1.25vw + 0.75rem, 1.4rem) */
+    font-size: 1.2rem;
   }
 }
 

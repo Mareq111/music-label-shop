@@ -18,7 +18,7 @@ export default function CardProductMain({ product, layout }) {
           <div className="div-top-of-card-Product-list">
             <div className="div-img-card__Product-list">
               <img
-                className="product-image"
+                className="product-image-list"
                 src={imgURL}
                 alt={`${titleItem} by ${titleArtist}`}
               />
@@ -45,7 +45,7 @@ export default function CardProductMain({ product, layout }) {
           <div className="div-top-of-card-Product-grid">
             <div className="div-img-card__Product-grid">
               <img
-                className="product-image"
+                className="product-image-grid"
                 src={imgURL}
                 alt={`${titleItem} by ${titleArtist}`}
               />

@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
-import firebaseConfig from "../firebaseConfig";
-import CardProductMain from "../UI/Cards/CardProductMain.jsx";
-import BtnToggleView from "../UI/Buttons/BtnToggleView.jsx";
-import BadgePreciseTshirts from "../UI/Badge/BadgePreciseTshirts.jsx";
+import firebaseConfig from "../../../firebaseConfig";
+import CardProductMain from "../../../UI/Cards/CardProductMain.jsx";
+import BtnToggleView from "../../../UI/Buttons/BtnToggleView.jsx";
+import BadgePreciseTshirts from "../../../UI/Badge/BadgePreciseTshirts.jsx";
 
-export default function ProductsTshirts() {
+export default function ProductsTshirtsBlack() {
   const [layoutView, setLayoutView] = useState("grid");
   const [productsData, setProductsData] = useState([]);
-  //!state for selected color  set = all
-  const [selectedcolor, setSelectedcolor] = useState("");
+  //!state for selected color  set = Black
+  const [selectedcolor, setSelectedcolor] = useState("Black");
 
   useEffect(() => {
     // init firebase

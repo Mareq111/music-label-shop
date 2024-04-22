@@ -7,7 +7,10 @@ export default function BadgeCategoriesTop() {
       {/* <h4 className="h-popular-categories">Categories</h4> */}
       <ul className="ul-list-of-pages-top">
         <li className="li-list-of-pages-top">
-          <BtnGoToCategories categoryPath="albums/all-strimz-empire" nameOfCategory={"Albums"} />
+          <BtnGoToCategories
+            categoryPath="albums/all-strimz-empire"
+            nameOfCategory={"Albums"}
+          />
         </li>
         <li className="li-list-of-pages-top">
           <BtnGoToCategories
@@ -17,7 +20,7 @@ export default function BadgeCategoriesTop() {
         </li>
         <li className="li-list-of-pages-top">
           <BtnGoToCategories
-            categoryPath="t-shirts"
+            categoryPath="t-shirts/all-colors"
             nameOfCategory={"T-shirts"}
           />
         </li>
@@ -29,7 +32,7 @@ export default function BadgeCategoriesTop() {
         </li>
         <li className="li-list-of-pages-top">
           <BtnGoToCategories
-            categoryPath="posters"
+            categoryPath="posters/all-strimz-empire"
             nameOfCategory={"Posters"}
           />
         </li>

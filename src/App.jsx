@@ -41,13 +41,17 @@ import ProductsTicketsCroatia from "./pages/subpages/product-tickets/ProductsTic
 import ProductsTicketsHungary from "./pages/subpages/product-tickets/ProductsTicketsHungary.jsx";
 import ProductsTicketsSlovakia from "./pages/subpages/product-tickets/ProductsTicketsSlovakia.jsx";
 //subpages for posters
-import ProductsPostersElDM from './pages/subpages/product-posters/ProductsPostersElDM.jsx';
-import ProductsPostersJackieRas from './pages/subpages/product-posters/ProductsPostersJackieRas.jsx';
-import ProductsPostersMollyGranoli from './pages/subpages/product-posters/ProductsPostersMollyGranoli.jsx';
+import ProductsPostersElDM from "./pages/subpages/product-posters/ProductsPostersElDM.jsx";
+import ProductsPostersJackieRas from "./pages/subpages/product-posters/ProductsPostersJackieRas.jsx";
+import ProductsPostersMollyGranoli from "./pages/subpages/product-posters/ProductsPostersMollyGranoli.jsx";
 import ProductsPostersElKaptn from "./pages/subpages/product-posters/ProductsPostersElKaptn.jsx";
-
-
-
+// subpages for tshirts
+import ProductsTshirtsBeige from "./pages/subpages/product-tshirts/ProductsTshirtsBeige.jsx";
+import ProductsTshirtsWhite from "./pages/subpages/product-tshirts/ProductsTshirtsWhite.jsx";
+import ProductsTshirtsBlack from "./pages/subpages/product-tshirts/ProductsTshirtsBlack.jsx";
+import ProductsTshirtsBlue from "./pages/subpages/product-tshirts/ProductsTshirtsBlue.jsx";
+import ProductsTshirtsGreen from "./pages/subpages/product-tshirts/ProductsTshirtsGreen.jsx";
+import ProductsTshirtsColorful from "./pages/subpages/product-tshirts/ProductsTshirtsColorful.jsx";
 
 function App() {
   //firebase
@@ -146,10 +150,37 @@ function App() {
           element: <ProductsTicketsSlovakia />,
         },
         // end of tickets subpages
+
+        //!subpages for tshirts
         {
-          path: "t-shirts",
+          path: "t-shirts/all-colors",
           element: <ProductsTshirts />,
         },
+        {
+          path: "t-shirts/beige",
+          element: <ProductsTshirtsBeige />,
+        },
+        {
+          path: "t-shirts/black",
+          element: <ProductsTshirtsBlack />,
+        },
+        {
+          path: "t-shirts/blue",
+          element: <ProductsTshirtsBlue />,
+        },
+        {
+          path: "t-shirts/green",
+          element: <ProductsTshirtsGreen />,
+        },
+        {
+          path: "t-shirts/white",
+          element: <ProductsTshirtsWhite />,
+        },
+        {
+          path: "t-shirts/colorful",
+          element: <ProductsTshirtsColorful />,
+        },
+
         {
           path: "gadgets",
           element: <ProductsGadgets />,

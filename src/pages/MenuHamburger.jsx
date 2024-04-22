@@ -14,7 +14,7 @@ export default function MenuHamburger() {
   const mainNavPages = [
     { link: "/albums/all-strimz-empire", img: arenaCover, title: "Albums" },
     { link: "/tickets/all-locations", img: arenaCover, title: "Tickets" },
-    { link: "/t-shirts", img: arenaCover, title: "T-shirts" },
+    { link: "/t-shirts/all-colors", img: arenaCover, title: "T-shirts" },
     { link: "/gadgets", img: arenaCover, title: "Gadgets" },
     { link: "/posters/all-strimz-empire", img: arenaCover, title: "Posters" },
     { link: "/puzzles", img: arenaCover, title: "Puzzles" },

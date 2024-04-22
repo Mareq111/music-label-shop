@@ -4,7 +4,12 @@ import "./CardProductMain.scss";
 
 export default function CardProductMain({ product, layout }) {
   //descruturing the product object of location if its not an album
-  const { titleItem, titleArtist = product.location, priceItem, imgURL } = product;
+  const {
+    titleItem,
+    titleArtist = product.location,
+    priceItem,
+    imgURL,
+  } = product;
 
   const renderCardContent = () => {
     if (layout === "grid") {

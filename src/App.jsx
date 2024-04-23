@@ -57,6 +57,10 @@ import ProductsGadgetsMugs from "./pages/subpages/product-gadgets/ProductsGadget
 import ProductsGadgetsBags from "./pages/subpages/product-gadgets/ProductsGadgetsBags.jsx";
 import ProductsGadgetsBackpacks from "./pages/subpages/product-gadgets/ProductsGadgetsBackpacks.jsx";
 import ProductsGadgetsStickers from "./pages/subpages/product-gadgets/ProductsGadgetsStickers.jsx";
+//subpages for puzzles
+import ProductsPuzzlesEasy from "./pages/subpages/products-puzzles/ProductsPuzzlesEasy.jsx";
+import ProductsPuzzlesMedium from "./pages/subpages/products-puzzles/ProductsPuzzlesMedium.jsx";
+import ProductsPuzzlesHard from "./pages/subpages/products-puzzles/ProductsPuzzlesHard.jsx";
 
 function App() {
   //firebase
@@ -231,9 +235,23 @@ function App() {
           element: <ProductsPostersElKaptn />,
         },
         // end of tickets subpages
+
+        //!subpages for puzzles
         {
-          path: "puzzles",
+          path: "puzzles/all-levels",
           element: <ProductsPuzzles />,
+        },
+        {
+          path: "puzzles/easy",
+          element: <ProductsPuzzlesEasy />,
+        },
+        {
+          path: "puzzles/medium",
+          element: <ProductsPuzzlesMedium />,
+        },
+        {
+          path: "puzzles/hard",
+          element: <ProductsPuzzlesHard />,
         },
         // Dynamic path do showing any products page with their details
         { path: "products/:productId", element: <ProductDetails /> },

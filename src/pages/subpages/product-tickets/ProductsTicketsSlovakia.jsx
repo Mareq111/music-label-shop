@@ -5,6 +5,8 @@ import firebaseConfig from "../../../firebaseConfig.js";
 import CardProductMain from "../../../UI/Cards/CardProductMain.jsx";
 import BtnToggleView from "../../../UI/Buttons/BtnToggleView.jsx";
 import BadgePreciseTickets from "../../../UI/Badge/BadgePreciseTickets.jsx";
+import "../../ProductsAllPages.scss";
+
 
 export default function ProductsTicketsSlovakia() {
   const [layoutView, setLayoutView] = useState("grid");

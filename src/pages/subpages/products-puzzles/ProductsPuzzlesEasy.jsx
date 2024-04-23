@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
-import firebaseConfig from "../../../firebaseConfig.js";
-import BadgePreciseAlbums from "../../../UI/Badge/BadgePreciseAlbums.jsx";
+import firebaseConfig from "../../../firebaseConfig";
 import CardProductMain from "../../../UI/Cards/CardProductMain.jsx";
 import BtnToggleView from "../../../UI/Buttons/BtnToggleView.jsx";
 import "../../ProductsAllPages.scss";
+import BadgePrecisePuzzles from "../../../UI/Badge/BadgePrecisePuzzles.jsx";
 
-export default function ProductsAlbumsMollyGranoli() {
+export default function ProductsPuzzlesEasy() {
   const [layoutView, setLayoutView] = useState("grid");
   const [productsData, setProductsData] = useState([]);
-  //!state for selected artist set = Molly Granoli
-  const [selectedArtist, setSelectedArtist] = useState("Molly Granoli");
+  //!state for selected itemLevel  set = Easy
+  const [selectedItemLevel, setSelectedItemLevel] = useState("Easy");
 
   useEffect(() => {
     // init firebase
@@ -19,12 +19,13 @@ export default function ProductsAlbumsMollyGranoli() {
       firebase.initializeApp(firebaseConfig);
     }
 
-    // download data for the selected artist
+    // download data for the selected ItemLevel
     const fetchProductsData = async () => {
       try {
-        let ref = firebase.database().ref("categories/albums/products");
-        if (selectedArtist) {
-          ref = ref.orderByChild("titleArtist").equalTo(selectedArtist);
+        //! only tickets items
+        let ref = firebase.database().ref("categories/puzzles/products");
+        if (selectedItemLevel) {
+          ref = ref.orderByChild("itemLevel").equalTo(selectedItemLevel);
         }
         const snapshot = await ref.once("value");
         const data = snapshot.val();
@@ -40,28 +41,28 @@ export default function ProductsAlbumsMollyGranoli() {
         console.error("Error fetching products data:", error);
       }
     };
-    // Fetch data whenever selectedArtist changes
+    // Fetch data whenever selectedItemLevel changes
     fetchProductsData();
-  }, [selectedArtist]); // Dependency array
+  }, [selectedItemLevel]); // Dependency array
 
   const handleProductsLayout = (newLayout) => {
     setLayoutView(newLayout);
   };
 
-  const handleArtistSelection = (artist) => {
-    setSelectedArtist(artist);
+  const handleItemLevelSelection = (itemLevel) => {
+    setSelectedItemLevel(itemLevel);
   };
 
   return (
     <section className="section-product-page">
       <div className="products-page-container">
         <div className="h-and-change-view-products">
-          <h4 className="h-products-page">Albums</h4>
+          <h4 className="h-products-page">Puzzles</h4>
           <BtnToggleView onLayoutChange={handleProductsLayout} />
         </div>
-        {/*  Choose precise artist  */}
+        {/*  Choose precise itemLevel   */}
         <div className="div-badge-precise-something">
-          <BadgePreciseAlbums onSelectArtist={handleArtistSelection} />
+          <BadgePrecisePuzzles onSelectItemLevel={handleItemLevelSelection} />
         </div>
         <ul
           className={`ul-list-productsMain ${

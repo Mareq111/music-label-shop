@@ -1,53 +1,56 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import firebase from "firebase/compat/app";
+import "firebase/compat/database";
+import firebaseConfig from "../firebaseConfig";
 import CardProductMain from "../UI/Cards/CardProductMain.jsx";
 import BtnToggleView from "../UI/Buttons/BtnToggleView.jsx";
 import "./ProductsAllPages.scss";
-//import album covers
-import ImgDreamChaser from "../assets/img/coversMini/albums-collectors/dream-chaser-1-mini.jpg";
-import ImgDreamChaser2 from "../assets/img/coversMini/albums-collectors/dream-chaser-2-mini.jpg";
-import ImgDreamChaser3 from "../assets/img/coversMini/albums-collectors/dream-chaser-3-mini.jpg";
-import ImgArenaOfAutumnnEp from "../assets/img/coversMini/albums/arena_of_autumnn_EP-mini.jpg";
-import ImgInitialConfusion from "../assets/img/coversMini/albums/initial-confusion-mini.jpg";
 import BadgePrecisePuzzles from "../UI/Badge/BadgePrecisePuzzles.jsx";
 
 export default function ProductsPuzzles() {
   const [layoutView, setLayoutView] = useState("grid");
+  const [productsData, setProductsData] = useState([]);
+  //!state for selected itemLevel  set = all
+  const [selectedItemLevel, setSelectedItemLevel] = useState("");
 
-  const productsData = [
-    {
-      imgItem: ImgDreamChaser,
-      titleItem: "Album Dream Chaser",
-      titleArtist: "El Double M",
-      priceItem: 19.99,
-    },
-    {
-      imgItem: ImgDreamChaser2,
-      titleItem: "Album Dream Chaser 2",
-      titleArtist: "El Double M",
-      priceItem: 24.59,
-    },
-    {
-      imgItem: ImgDreamChaser3,
-      titleItem: "Album Dream Chaser 3",
-      titleArtist: "El Double M",
-      priceItem: 34.59,
-    },
-    {
-      imgItem: ImgArenaOfAutumnnEp,
-      titleItem: "Album Arena Of Autumnn EP",
-      titleArtist: "El Double M",
-      priceItem: 14.99,
-    },
-    {
-      imgItem: ImgInitialConfusion,
-      titleItem: "Album Initial Confusion",
-      titleArtist: "El Double M",
-      priceItem: 12.99,
-    },
-  ];
+  useEffect(() => {
+    // init firebase
+    if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+    }
+
+    // download data for the selected ItemLevel
+    const fetchProductsData = async () => {
+      try {
+        //! only tickets items
+        let ref = firebase.database().ref("categories/puzzles/products");
+        if (selectedItemLevel) {
+          ref = ref.orderByChild("itemLevel").equalTo(selectedItemLevel);
+        }
+        const snapshot = await ref.once("value");
+        const data = snapshot.val();
+        // change object into array
+        if (data) {
+          const productsArray = Object.entries(data).map(([key, value]) => ({
+            key: key,
+            ...value,
+          }));
+          setProductsData(productsArray);
+        }
+      } catch (error) {
+        console.error("Error fetching products data:", error);
+      }
+    };
+    // Fetch data whenever selectedItemLevel changes
+    fetchProductsData();
+  }, [selectedItemLevel]); // Dependency array
 
   const handleProductsLayout = (newLayout) => {
     setLayoutView(newLayout);
+  };
+
+  const handleItemLevelSelection = (itemLevel) => {
+    setSelectedItemLevel(itemLevel);
   };
 
   return (
@@ -57,22 +60,18 @@ export default function ProductsPuzzles() {
           <h4 className="h-products-page">Puzzles</h4>
           <BtnToggleView onLayoutChange={handleProductsLayout} />
         </div>
-        {/* choose precise whos something you looking for */}
+        {/*  Choose precise itemLevel   */}
         <div className="div-badge-precise-something">
-          <BadgePrecisePuzzles />
+          <BadgePrecisePuzzles onSelectItemLevel={handleItemLevelSelection} />
         </div>
         <ul
           className={`ul-list-productsMain ${
             layoutView === "grid" ? "ul-list-productsMain--grid" : ""
           } ${layoutView === "list" ? "ul-list-productsMain--list" : ""}`}
         >
-          {productsData.map((item, index) => (
-            <li className="li-productsMain" key={index}>
-              {layoutView === "grid" ? (
-                <CardProductMain {...item} layout="grid" />
-              ) : (
-                <CardProductMain {...item} layout="list" />
-              )}
+          {productsData.map((item) => (
+            <li className="li-productsMain" key={item.key}>
+              <CardProductMain product={item} layout={layoutView} />
             </li>
           ))}
         </ul>

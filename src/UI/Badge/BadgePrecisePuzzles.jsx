@@ -1,31 +1,43 @@
+/* eslint-disable react/prop-types */
 import BtnGoToCategories from "../Buttons/BtnGoToCategories";
 import "./BadgePreciseAllPages.scss";
-export default function BadgePrecisePuzzles() {
+
+export default function BadgePrecisePuzzles({ onArtistSelect }) {
+  const handleArtistClick = (artistName) => {
+    if (onArtistSelect) {
+      onArtistSelect(artistName);
+    }
+  };
+
   return (
     <div>
-      <ul className="ul-choose-precise-albums">
-        <li className="list-choose-precise-albums">
+      <ul className="ul-choose-precise">
+        <li className="list-choose-precise">
           <BtnGoToCategories
-            categoryPath="all-brain-games"
-            nameOfCategory={"All brain games"}
+            categoryPath="/puzzles/all-levels"
+            nameOfCategory={"All Levels"}
+            onClick={() => handleArtistClick("All Levels")}
           />
         </li>
         <li className="list">
           <BtnGoToCategories
-            categoryPath="el-double-m-puzzles"
-            nameOfCategory={"El Double M"}
+            categoryPath="/puzzles/easy"
+            nameOfCategory={"Easy"}
+            onClick={() => handleArtistClick("Easy")}
           />
         </li>
         <li className="list">
           <BtnGoToCategories
-            categoryPath="jackie-ras-puzzles"
-            nameOfCategory={"Jackie Ras"}
+            categoryPath="/puzzles/medium"
+            nameOfCategory={"Medium"}
+            onClick={() => handleArtistClick("Medium")}
           />
         </li>
         <li className="list">
           <BtnGoToCategories
-            categoryPath="molly-granoli-puzzles"
-            nameOfCategory={"Molly Granoli"}
+            categoryPath="/puzzles/hard"
+            nameOfCategory={"Hard"}
+            onClick={() => handleArtistClick("Hard")}
           />
         </li>
       </ul>

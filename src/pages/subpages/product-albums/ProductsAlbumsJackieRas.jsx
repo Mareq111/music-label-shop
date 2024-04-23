@@ -6,6 +6,8 @@ import firebaseConfig from "../../../firebaseConfig.js";
 import BadgePreciseAlbums from "../../../UI/Badge/BadgePreciseAlbums.jsx";
 import CardProductMain from "../../../UI/Cards/CardProductMain.jsx";
 import BtnToggleView from "../../../UI/Buttons/BtnToggleView.jsx";
+import "../../ProductsAllPages.scss";
+
 
 export default function ProductsAlbumsJackieRas() {
   const [layoutView, setLayoutView] = useState("grid");

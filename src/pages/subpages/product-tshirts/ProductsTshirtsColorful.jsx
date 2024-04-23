@@ -5,6 +5,7 @@ import firebaseConfig from "../../../firebaseConfig";
 import CardProductMain from "../../../UI/Cards/CardProductMain.jsx";
 import BtnToggleView from "../../../UI/Buttons/BtnToggleView.jsx";
 import BadgePreciseTshirts from "../../../UI/Badge/BadgePreciseTshirts.jsx";
+import "../../ProductsAllPages.scss";
 
 export default function ProductsTshirtsColorful() {
   const [layoutView, setLayoutView] = useState("grid");

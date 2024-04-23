@@ -26,7 +26,7 @@ export default function BadgeCategoriesTop() {
         </li>
         <li className="li-list-of-pages-top">
           <BtnGoToCategories
-            categoryPath="gadgets"
+            categoryPath="gadgets/all-items"
             nameOfCategory={"Gadgets"}
           />
         </li>
@@ -38,7 +38,7 @@ export default function BadgeCategoriesTop() {
         </li>
         <li className="li-list-of-pages-top">
           <BtnGoToCategories
-            categoryPath="puzzles"
+            categoryPath="puzzles/all-levels"
             nameOfCategory={"Puzzles"}
           />
         </li>

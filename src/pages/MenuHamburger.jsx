@@ -15,9 +15,9 @@ export default function MenuHamburger() {
     { link: "/albums/all-strimz-empire", img: arenaCover, title: "Albums" },
     { link: "/tickets/all-locations", img: arenaCover, title: "Tickets" },
     { link: "/t-shirts/all-colors", img: arenaCover, title: "T-shirts" },
-    { link: "/gadgets", img: arenaCover, title: "Gadgets" },
+    { link: "/gadgets/all-items", img: arenaCover, title: "Gadgets" },
     { link: "/posters/all-strimz-empire", img: arenaCover, title: "Posters" },
-    { link: "/puzzles", img: arenaCover, title: "Puzzles" },
+    { link: "/puzzles/all-levels", img: arenaCover, title: "Puzzles" },
   ];
 
   return (

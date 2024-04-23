@@ -2,7 +2,7 @@
 import BtnGoToCategories from "../Buttons/BtnGoToCategories";
 import "./BadgePreciseAllPages.scss";
 
-export default function BadgePreciseAlbums({ onArtistSelect }) {
+export default function BadgePreciseTickets({ onArtistSelect }) {
   const handleArtistClick = (artistName) => {
     if (onArtistSelect) {
       onArtistSelect(artistName);

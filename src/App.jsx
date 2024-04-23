@@ -52,6 +52,11 @@ import ProductsTshirtsBlack from "./pages/subpages/product-tshirts/ProductsTshir
 import ProductsTshirtsBlue from "./pages/subpages/product-tshirts/ProductsTshirtsBlue.jsx";
 import ProductsTshirtsGreen from "./pages/subpages/product-tshirts/ProductsTshirtsGreen.jsx";
 import ProductsTshirtsColorful from "./pages/subpages/product-tshirts/ProductsTshirtsColorful.jsx";
+//subpages for gadgets
+import ProductsGadgetsMugs from "./pages/subpages/product-gadgets/ProductsGadgetsMugs.jsx";
+import ProductsGadgetsBags from "./pages/subpages/product-gadgets/ProductsGadgetsBags.jsx";
+import ProductsGadgetsBackpacks from "./pages/subpages/product-gadgets/ProductsGadgetsBackpacks.jsx";
+import ProductsGadgetsStickers from "./pages/subpages/product-gadgets/ProductsGadgetsStickers.jsx";
 
 function App() {
   //firebase
@@ -180,11 +185,30 @@ function App() {
           path: "t-shirts/colorful",
           element: <ProductsTshirtsColorful />,
         },
-
+        //!subpages for gadgets
         {
-          path: "gadgets",
+          path: "gadgets/all-items",
           element: <ProductsGadgets />,
         },
+        {
+          path: "gadgets/mugs",
+          element: <ProductsGadgetsMugs />,
+        },
+        {
+          path: "gadgets/bags",
+          element: <ProductsGadgetsBags />,
+        },
+        {
+          path: "gadgets/stickers",
+          element: <ProductsGadgetsStickers />,
+        },
+        {
+          path: "gadgets/backpacks",
+          element: <ProductsGadgetsBackpacks />,
+        },
+
+        // end of tickets subpages
+
         //!subpages for tickets
         {
           path: "posters/all-strimz-empire",

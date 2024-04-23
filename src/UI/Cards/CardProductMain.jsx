@@ -3,11 +3,10 @@
 import "./CardProductMain.scss";
 
 export default function CardProductMain({ product, layout }) {
-
-  //!descruturing the product object of location or color if its not an album which has titleArtist
+  //!descruturing the product object of location or color or itemTitle if its not an album which has titleArtist
   const {
     titleItem,
-    titleArtist = product.location || product.color,
+    titleArtist = product.location || product.color || product.itemTitle,
     priceItem,
     imgURL,
   } = product;

@@ -1,19 +1,24 @@
+/* eslint-disable react/prop-types */
 
-import { useParams, Link } from "react-router-dom";
-import BtnArrow from "../Buttons/BtnArrow.jsx";
 import "./BadgeIdAndArrowBack.scss";
-export default function BadgeIdAndArrowBack() {
-  const params = useParams();
+import BtnArrow from "../Buttons/BtnArrow.jsx";
+
+export default function BadgeIdAndArrowBack({ productId }) {
+  // Function to handle going back in history so when you click arrow you return to spot when you move for this product page
+  const handleGoBack = () => {
+    window.history.back();
+  };
+
   return (
     <div>
       <div className="badge-id-and-arrow-back">
         <div className="div-id-and-text">
-          <p className="text-id">Product ID: {params.productId}</p>
+          <p className="text-id">Product ID: {productId}</p>
         </div>
         <div className="div-link-btn-comeback">
-          <Link className="link-arrow-back" to=".." relative="path">
+          <span className="link-arrow-back" onClick={handleGoBack}>
             <BtnArrow />
-          </Link>
+          </span>
         </div>
       </div>
     </div>

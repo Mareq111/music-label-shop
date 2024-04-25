@@ -87,6 +87,7 @@ function App() {
           path: "albums/all-strimz-empire",
           element: <ProductsAlbums />,
         },
+
         //!subpages for albums
         {
           path: "albums/el-dm",
@@ -254,7 +255,8 @@ function App() {
           element: <ProductsPuzzlesHard />,
         },
         // Dynamic path do showing any products page with their details
-        { path: "products/:productId", element: <ProductDetails /> },
+        { path: "/:productId", element: <ProductDetails /> },
+        /*  { path: "/:productId", element: <ProductDetails /> }, */
         // Other sections of the page
         { path: "favorites", element: <Favorites /> },
         { path: "user-profile", element: <UserProfile /> },

@@ -12,11 +12,3 @@ export default function SecondImgProdDetails() {
     
   );
 }
-
-/* export default function SecondImgProdDetails({ src }) {
-  return (
-    <>
-      <img src={src} alt="second img" className="bottom-images" />
-    </>
-  );
-} */

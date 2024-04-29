@@ -110,6 +110,7 @@ import { useParams } from "react-router-dom"; // Importuj useParams
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import BadgeTitlePriceAuthor from "../UI/Badge/BadgeTitlePriceAuthor";
+import BadgeIdAndArrowBack from "../UI/Badge/BadgeIdAndArrowBack";
 
 export default function ProductDetails() {
   const [productData, setProductData] = useState(null);
@@ -135,6 +136,8 @@ export default function ProductDetails() {
 
   return (
     <div>
+       {/* bagde with id of product and arrow back btn  */} 
+        <BadgeIdAndArrowBack productId={productId} />
       {/*show data */}
       {productData && (
         <>

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
@@ -7,12 +6,12 @@ import BadgePreciseAlbums from "../../../UI/Badge/BadgePreciseAlbums.jsx";
 import CardProductMain from "../../../UI/Cards/CardProductMain.jsx";
 import BtnToggleView from "../../../UI/Buttons/BtnToggleView.jsx";
 import "../../ProductsAllPages.scss";
-
+import { Link } from "react-router-dom";
 
 export default function ProductsAlbumsJackieRas() {
   const [layoutView, setLayoutView] = useState("grid");
   const [productsData, setProductsData] = useState([]);
-   //!state for selected artist set = jackie ras
+  //!state for selected artist set = jackie ras
   const [selectedArtist, setSelectedArtist] = useState("Jackie Ras");
 
   useEffect(() => {
@@ -72,11 +71,13 @@ export default function ProductsAlbumsJackieRas() {
         >
           {productsData.map((item) => (
             <li className="li-productsMain" key={item.key}>
-              <CardProductMain product={item} layout={layoutView} />
+              <Link to={`/${item.key}`}>
+                <CardProductMain product={item} layout={layoutView} />
+              </Link>
             </li>
           ))}
         </ul>
       </div>
     </section>
   );
-} 
+}

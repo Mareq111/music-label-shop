@@ -106,11 +106,11 @@ export default function ProductDetails() {
  */
 
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom"; // Importuj useParams
+import { useParams } from "react-router-dom";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
-import BadgeTitlePriceAuthor from "../UI/Badge/BadgeTitlePriceAuthor";
 import BadgeIdAndArrowBack from "../UI/Badge/BadgeIdAndArrowBack";
+import ContentProductDetails from "../components/ContentProductDetails";
 
 export default function ProductDetails() {
   const [productData, setProductData] = useState(null);
@@ -121,7 +121,6 @@ export default function ProductDetails() {
       try {
         const snapshot = await firebase
           .database()
-          //download dynamic data from firebase for albums
           .ref(`categories/albums/products/${productId}`)
           .once("value");
         const dataFromFirebase = snapshot.val();
@@ -136,14 +135,10 @@ export default function ProductDetails() {
 
   return (
     <div>
-       {/* bagde with id of product and arrow back btn  */} 
-        <BadgeIdAndArrowBack productId={productId} />
-      {/*show data */}
-      {productData && (
-        <>
-          <BadgeTitlePriceAuthor {...productData} />
-        </>
-      )}
+      {/* badge with id of product and arrow back btn  */}
+      <BadgeIdAndArrowBack productId={productId} />
+      {/* show data */}
+      {productData && <ContentProductDetails productData={productData} />}
     </div>
   );
 }

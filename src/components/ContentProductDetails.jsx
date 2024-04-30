@@ -221,17 +221,36 @@ export default function ContentProductDetails() {
 }
 */
 
-/* import "firebase/compat/database";
+/* eslint-disable react/prop-types */
+import "./ContentProductDetails.scss";
 import BadgeTitlePriceAuthor from "../UI/Badge/BadgeTitlePriceAuthor";
-export default function ContentProductDetails({  }) {
-  
-  
+import BadgeRatingProductInfo from "../UI/Badge/BadgeRatingProductInfo";
+import BadgesProductDetails from "./BadgesProductDetails.jsx";
+import ChooserVersionRadio from "./ChooserVersionRadio.jsx";
+
+export default function ContentProductDetails({ productData }) {
   return (
-    
-    <div className="div-content-text-all">
-      
-   tertget
-    </div>
+    console.log("Data in content product details component:", productData),
+    (
+      <div className="div-content-text-all">
+        {/* show data */}
+        {productData && (
+          <>
+            <BadgeTitlePriceAuthor {...productData} />
+            {/* show rating and reviews */}
+            <BadgeRatingProductInfo
+              overallRating={productData?.overallRating}
+              numberOfReviews={productData?.numberOfReviews}
+            />
+
+            <ChooserVersionRadio
+              productData={productData}
+              itemVersions={productData.itemVersions || []}
+            />
+            <BadgesProductDetails />
+          </>
+        )}
+      </div>
+    )
   );
 }
- */

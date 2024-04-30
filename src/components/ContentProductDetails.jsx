@@ -227,6 +227,7 @@ import BadgeTitlePriceAuthor from "../UI/Badge/BadgeTitlePriceAuthor";
 import BadgeRatingProductInfo from "../UI/Badge/BadgeRatingProductInfo";
 import BadgesProductDetails from "./BadgesProductDetails.jsx";
 import ChooserVersionRadio from "./ChooserVersionRadio.jsx";
+import TextProductDescription from "../UI/Text/TextProductDescription.jsx";
 
 export default function ContentProductDetails({ productData }) {
   return (
@@ -242,12 +243,17 @@ export default function ContentProductDetails({ productData }) {
               overallRating={productData?.overallRating}
               numberOfReviews={productData?.numberOfReviews}
             />
-
+            {/* chooser for any version of item */}
             <ChooserVersionRadio
               productData={productData}
               itemVersions={productData.itemVersions || []}
             />
+            {/* bedge delivery and return text */}
             <BadgesProductDetails />
+            {/* product description  */}
+            <TextProductDescription
+              productDescription={productData.productDescription}
+            />
           </>
         )}
       </div>

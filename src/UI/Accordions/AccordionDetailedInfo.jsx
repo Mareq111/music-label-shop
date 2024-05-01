@@ -32,33 +32,6 @@ export default function AccordionDetailedInfo() {
   );
 } */
 
-/* import "./AccordionDetailedInfo.scss";
-import TextDistributorDetails from "../Text/TextDistributorDetails";
-import TextSongDuration from "../Text/TextSongDuration";
-import TextProductID from "../Text/TextProductID";
-import TextReleaseDate from "../Text/TextReleaseDate";
-import TextProdTitle from "../Text/TextProdTitle";
-import TextColorItem from "../Text/TextColorItem";
-import TextCompositionItem from "../Text/TextCompositionItem";
-
-export default function AccordionDetailedInfo({ productData }) {
-  const { titleItem, titleArtist, releaseDate, productID, songDuration, composition, color, distributor } = productData;
-
-  //for title combie together a title item plus title artist or item
-  const combinedTitle = `${titleItem} - ${titleArtist}`;
-
-  return (
-    <div className="parameters-div">
-      <TextProdTitle title={combinedTitle} />
-      <TextReleaseDate releaseDate={releaseDate} />
-      <TextProductID productID={productID} />
-      <TextSongDuration songDuration={songDuration} />
-      <TextCompositionItem composition={composition} />
-      <TextColorItem color={color} />
-      <TextDistributorDetails distributor={distributor} />
-    </div>
-  );
-} */
 /* eslint-disable react/prop-types */
 import "./AccordionDetailedInfo.scss";
 import TextDistributorDetails from "../Text/TextDistributorDetails";

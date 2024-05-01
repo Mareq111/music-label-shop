@@ -292,8 +292,7 @@ export default function ContentProductDetails({
             titleArtist={productData.titleArtist}
           />
           <BadgeRatingProductInfo
-            overallRating={productData.overallRating}
-            numberOfReviews={productData.numberOfReviews}
+            commentsData={productData.commentsData}
           />
           <ChooserVersionRadio
             productData={productData}

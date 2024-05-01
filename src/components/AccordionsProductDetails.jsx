@@ -8,6 +8,7 @@ import AccordionRatingComments from "../UI/Accordions/AccordionRatingComments";
 export default function AccordionsProductDetails({ productData }) {
   return (
     <div className="div-all-accordions">
+      {/* data from json of any item */}
       <Accordion
         titleAccordion={"Detailed information"}
         answerAccordion={<AccordionDetailedInfo productData={productData} />}
@@ -20,9 +21,17 @@ export default function AccordionsProductDetails({ productData }) {
         titleAccordion={"Listen for free"}
         answerAccordion={<AccordionListenFree />}
       />
+      {/* data from json of any item */}
+
+      {/* <Accordion
+        titleAccordion={"Ratings and reviews"}
+        answerAccordion={<AccordionRatingComments productData={productData} />}
+      /> */}
       <Accordion
         titleAccordion={"Ratings and reviews"}
-        answerAccordion={<AccordionRatingComments />}
+        answerAccordion={
+          <AccordionRatingComments commentsData={productData.commentsData} />
+        }
       />
     </div>
   );

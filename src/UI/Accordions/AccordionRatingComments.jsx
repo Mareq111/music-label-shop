@@ -1,4 +1,4 @@
-
+/* 
 import RadioStarRating from "../Inputs/RadioStarRating.jsx";
 import TextAreaComment from "../Text/TextAreaComment.jsx";
 import TextAddedComments from "../Text/TextAddedComments.jsx";
@@ -6,9 +6,27 @@ import BadgeAddedComments from "../Badge/BadgeAddedComments.jsx";
 import RadioDropdown from "../Inputs/RadioDropdown.jsx";
 
 export default function AccordionRatingComments() {
-  //test data comments
 
-  const commentsData = [
+
+  return (
+    <div id="rating-review-component" className="rating-div">
+      <form>
+        <RadioStarRating />
+        <TextAreaComment />
+      </form>
+      <BadgeAddedComments />
+      <RadioDropdown/>
+      Mapping 'added' comments from array to show them dynamically 
+      {commentsData.map((comment, index) => (
+        <TextAddedComments key={index} {...comment} />
+      ))}
+    </div>
+  );
+} */
+
+//test data comments
+
+/*  const commentsData = [
     {
       userName: "Heniox",
       rating: 5,
@@ -35,8 +53,15 @@ export default function AccordionRatingComments() {
       commentText:
         "Wczoraj wieczorem, spacerując po malowniczej dzielnicy miasta, napotkałem niezwykłą kawiarnię z przytulnym wystrojem i aromatem świeżo mielonej kawy unoszącym się w powietrzu, co sprawiło, że chwilę zatrzymałem się, by zanurzyć w tej magicznej atmosferze.",
     },
-  ];
+  ]; */
+/* eslint-disable react/prop-types */
+ import RadioStarRating from "../Inputs/RadioStarRating.jsx";
+import TextAreaComment from "../Text/TextAreaComment.jsx";
+import TextAddedComments from "../Text/TextAddedComments.jsx";
+import BadgeAddedComments from "../Badge/BadgeAddedComments.jsx";
+import RadioDropdown from "../Inputs/RadioDropdown.jsx";
 
+export default function AccordionRatingComments({ commentsData }) {
   return (
     <div id="rating-review-component" className="rating-div">
       <form>
@@ -44,11 +69,11 @@ export default function AccordionRatingComments() {
         <TextAreaComment />
       </form>
       <BadgeAddedComments />
-      <RadioDropdown/>
-      {/* Mapping 'added' comments from array to show them dynamically */}
+      <RadioDropdown />
+      
       {commentsData.map((comment, index) => (
         <TextAddedComments key={index} {...comment} />
       ))}
     </div>
   );
-}
+} 

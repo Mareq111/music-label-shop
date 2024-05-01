@@ -228,6 +228,7 @@ import BadgeRatingProductInfo from "../UI/Badge/BadgeRatingProductInfo";
 import BadgesProductDetails from "./BadgesProductDetails.jsx";
 import ChooserVersionRadio from "./ChooserVersionRadio.jsx";
 import TextProductDescription from "../UI/Text/TextProductDescription.jsx";
+import BtnAddToCart from "./../UI/Buttons/BtnAddToCart.jsx";
 
 export default function ContentProductDetails({ productData }) {
   return (
@@ -247,6 +248,12 @@ export default function ContentProductDetails({ productData }) {
             <ChooserVersionRadio
               productData={productData}
               itemVersions={productData.itemVersions || []}
+            />
+            {/* btn add to cart with price */}
+            <BtnAddToCart
+              item={{ ...productData }}
+              priceItem={productData.priceItem}
+              /*  selectedVersion={selectedVersion} */
             />
             {/* bedge delivery and return text */}
             <BadgesProductDetails />

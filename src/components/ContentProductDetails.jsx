@@ -222,7 +222,7 @@ export default function ContentProductDetails() {
 */
 
 /* eslint-disable react/prop-types */
-import "./ContentProductDetails.scss";
+/* import "./ContentProductDetails.scss";
 import BadgeTitlePriceAuthor from "../UI/Badge/BadgeTitlePriceAuthor";
 import BadgeRatingProductInfo from "../UI/Badge/BadgeRatingProductInfo";
 import BadgesProductDetails from "./BadgesProductDetails.jsx";
@@ -233,37 +233,93 @@ import BtnAddToCart from "./../UI/Buttons/BtnAddToCart.jsx";
 export default function ContentProductDetails({ productData }) {
   return (
     console.log("Data in content product details component:", productData),
-    (
-      <div className="div-content-text-all">
-        {/* show data */}
+    
+  )} */
+
+/* <div className="div-content-text-all">
+         show data 
         {productData && (
           <>
             <BadgeTitlePriceAuthor {...productData} />
-            {/* show rating and reviews */}
+             show rating and reviews 
             <BadgeRatingProductInfo
               overallRating={productData?.overallRating}
               numberOfReviews={productData?.numberOfReviews}
             />
-            {/* chooser for any version of item */}
+             chooser for any version of item 
             <ChooserVersionRadio
               productData={productData}
               itemVersions={productData.itemVersions || []}
             />
-            {/* btn add to cart with price */}
+             btn add to cart with price 
             <BtnAddToCart
               item={{ ...productData }}
               priceItem={productData.priceItem}
-              /*  selectedVersion={selectedVersion} */
+              /*  selectedVersion={selectedVersion} 
             />
-            {/* bedge delivery and return text */}
+             bedge delivery and return text 
             <BadgesProductDetails />
-            {/* product description  */}
+             product description  
             <TextProductDescription
               productDescription={productData.productDescription}
             />
           </>
         )}
-      </div>
-    )
+      </div> */
+import "./ContentProductDetails.scss";
+import BadgeTitlePriceAuthor from "../UI/Badge/BadgeTitlePriceAuthor";
+import BadgeRatingProductInfo from "../UI/Badge/BadgeRatingProductInfo";
+import BadgesProductDetails from "./BadgesProductDetails";
+import ChooserVersionRadio from "./ChooserVersionRadio";
+import BtnAddToCart from "../UI/Buttons/BtnAddToCart";
+import TextProductDescription from "../UI/Text/TextProductDescription";
+import AccordionsProductDetails from "./AccordionsProductDetails.jsx";
+
+
+export default function ContentProductDetails({
+  productData,
+  selectedVersion,
+  radioId,
+  onAddToCart,
+}) {
+  return (
+    <div className="div-content-text-all">
+      {productData && (
+        <div>
+          <BadgeTitlePriceAuthor
+            titleItem={productData.titleItem}
+            priceItem={productData.priceItem}
+            titleArtist={productData.titleArtist}
+          />
+          <BadgeRatingProductInfo
+            overallRating={productData.overallRating}
+            numberOfReviews={productData.numberOfReviews}
+          />
+          <ChooserVersionRadio
+            productData={productData}
+            itemVersions={productData.itemVersions || []}
+            selectedVersion={selectedVersion}
+            onVersionChange={(version, id) => console.log(version, id)}
+          />
+          <BtnAddToCart
+            item={{ ...productData, radioId }}
+            selectedVersion={selectedVersion}
+            priceItem={productData.priceItem}
+            onAddToCart={onAddToCart}
+          />
+          <BadgesProductDetails />
+          <TextProductDescription
+            productDescription={productData.productDescription}
+          />
+        
+      <AccordionsProductDetails productData={productData}  />
+        </div>
+      )}
+    </div>
   );
 }
+
+//przed accordion dac
+ {/*   <span className="hidden-textSongs-560px">
+        {productData && <TextSongsOnAlbum albumKey={productData.key} />}
+      </span> */}

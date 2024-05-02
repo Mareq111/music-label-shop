@@ -65,46 +65,6 @@ export default function ProductDetails() {
 } 
  */
 
-/* import { useState, useEffect } from "react";
-import firebase from "firebase/compat/app";
-import "firebase/compat/database";
-import BadgeTitlePriceAuthor from "../UI/Badge/BadgeTitlePriceAuthor";
-
-export default function ProductDetails() {
-  const [productData, setProductData] = useState(null);
-
-  useEffect(() => {
-    const fetchDataFromFirebase = async () => {
-      try {
-        const snapshot = await firebase
-          .database()
-           .ref(`categories/albums/products/album01`) 
-         
-
-          .once("value");
-        const dataFromFirebase = snapshot.val();
-        setProductData(dataFromFirebase);
-      } catch (error) {
-        console.error("Error fetching data from Firebase:", error);
-      }
-    };
-
-    fetchDataFromFirebase();
-  }, []);
-
-  return (
-    <div>
-
-      {productData && (
-        <>
-          <BadgeTitlePriceAuthor {...productData} />
-        </>
-      )}
-    </div>
-  );
-}
- */
-
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import firebase from "firebase/compat/app";
@@ -112,6 +72,10 @@ import "firebase/compat/database";
 import BadgeIdAndArrowBack from "../UI/Badge/BadgeIdAndArrowBack";
 import ContentProductDetails from "../components/ContentProductDetails";
 import ContentProductDetailsLeftSide from "../components/ContentProductDetailsLeftSide";
+import "./ProductDetails.scss";
+import YouMightLike from "../components/YouMightLike";
+/* import { useParams, useLocation } from "react-router-dom"; */
+
 
 export default function ProductDetails() {
   const [productData, setProductData] = useState(null);
@@ -135,17 +99,28 @@ export default function ProductDetails() {
   }, [productId]);
 
   return (
-    <div>
-      {/* badge with id of product and arrow back btn  */}
-      <BadgeIdAndArrowBack productId={productId} />
-      {/* show data for details page which is devided for 2 huge components*/}
+    <section className="all_sections__product">
       {productData && (
         <>
-       
-          <ContentProductDetailsLeftSide productData={productData} />
-          <ContentProductDetails productData={productData} />
-        </>
-      )}
-    </div>
+      <section className="section-1__left-side">
+        <BadgeIdAndArrowBack productId={productId} />
+
+        <ContentProductDetailsLeftSide productData={productData} />
+      </section>
+
+      <section className="section-2__right-side">
+      <ContentProductDetails productData={productData} />
+      </section>
+
+      <section className="section-youMightLike">
+        <YouMightLike/>
+      </section>
+      </>
+       )}
+    </section>
   );
+}
+
+{
+
 }

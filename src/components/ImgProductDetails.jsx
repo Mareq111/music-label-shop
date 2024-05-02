@@ -10,15 +10,15 @@ export default function ImgProductDetails({ productData }) {
     <>
       <div className="div-img-all">
         <div className="div-img-main">
-          <MainImgProdDetails {...productData} />
+          <MainImgProdDetails imgURL={productData.imgURL} />
         </div>
         <div className="badge">
           <BtnHeart />
         </div>
         <div className="div-img-bottom-all">
           <div className="div-img-bottom">
-            <SecondImgProdDetails {...productData} />
-            <ThirdImgProdDetails {...productData} />
+            <SecondImgProdDetails imgSecondURL={productData.imgSecondURL} />
+            <ThirdImgProdDetails imgThirdURL={productData.imgThirdURL} />
           </div>
         </div>
       </div>

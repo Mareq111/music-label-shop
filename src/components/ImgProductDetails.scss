@@ -19,6 +19,7 @@
   block-size: auto;
   min-height: 8rem;
   min-width: 8rem;
+  border-radius: 0.2rem;
 }
 
 /* .main-img {
@@ -27,7 +28,7 @@
   min-height: 8rem;
   min-width: 8rem;
 } */
-.bottom-images {
+.bottom-images {  border-radius: 0.2rem;
   max-inline-size: 30%;
   block-size: auto;
   aspect-ratio: 1/1;
@@ -37,6 +38,7 @@
   justify-content: flex-start;
   align-items: center;
   gap: 10%;
+
 }
  
  .star-icon path {

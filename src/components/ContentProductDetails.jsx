@@ -266,7 +266,7 @@ export default function ContentProductDetails({ productData }) {
           </>
         )}
       </div> */
-import "./ContentProductDetails.scss";
+import './ContentProductDetails.scss';
 import BadgeTitlePriceAuthor from "../UI/Badge/BadgeTitlePriceAuthor";
 import BadgeRatingProductInfo from "../UI/Badge/BadgeRatingProductInfo";
 import BadgesProductDetails from "./BadgesProductDetails";
@@ -287,7 +287,7 @@ export default function ContentProductDetails({
   return (
     <div className="div-content-text-all">
       {productData && (
-        <div>
+        <>
           <BadgeTitlePriceAuthor
             titleItem={productData.titleItem}
             priceItem={productData.priceItem}
@@ -314,7 +314,7 @@ export default function ContentProductDetails({
             <TextSongsOnAlbum albumKey={productData.key} />
           </span>
           <AccordionsProductDetails productData={productData} />
-        </div>
+        </>
       )}
     </div>
   );

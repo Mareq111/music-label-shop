@@ -1,8 +1,12 @@
 /* eslint-disable react/prop-types */
 
-import firstImgProdDetails from "../../assets/img/coversMini/albums-collectors/dream-chaser-1-mini.jpg";
-export default function ThirdImgProdDetails() {
-  return (
-    <img src={firstImgProdDetails} alt="third img" className="bottom-images" />
-  );
+export default function ThirdImgProdDetails({
+  imgThirdURL,
+  titleArtist,
+  titleItem,
+}) {
+  //dynamic alt text with titles
+  const dynamicALT = `Third image of product: ${titleItem} - ${titleArtist}`;
+
+  return <img src={imgThirdURL} alt={dynamicALT} className="bottom-images" />;
 }

@@ -1,10 +1,8 @@
 /* eslint-disable react/prop-types */
 
-import mainImg from "../../assets/img/coversMini/cd-all-album-covers/cd-flashback-normal.jpg";
-export default function MainImgProdDetails() {
-  return <img src={mainImg} alt="main img" className="main-img" />;
-}
+export default function MainImgProdDetails({ imgURL, titleItem, titleArtist }) {
+  //dynamic alt text with titles
+  const dynamicALT = `Main image of product: ${titleItem} - ${titleArtist}`;
 
-/* export default function MainImgProdDetails({ src }) {
-  return <img src={src} alt="main img" className="main-img" />;
-} */
+  return <img src={imgURL} alt={dynamicALT} className="main-img" />;
+}

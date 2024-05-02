@@ -29,7 +29,7 @@ export default function ContentProductDetailsLeftSide({ productData }) {
       {productData && (
         <>
           <div className="images-of-product-div">
-            <ImgProductDetails />
+            <ImgProductDetails productData={productData} />
           </div>
           {/*  text hidden if  screen is less than 560px    */}
           <div className="content-left-side-text-hidden">

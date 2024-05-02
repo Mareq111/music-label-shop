@@ -111,6 +111,7 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import BadgeIdAndArrowBack from "../UI/Badge/BadgeIdAndArrowBack";
 import ContentProductDetails from "../components/ContentProductDetails";
+import ContentProductDetailsLeftSide from "../components/ContentProductDetailsLeftSide";
 
 export default function ProductDetails() {
   const [productData, setProductData] = useState(null);
@@ -137,8 +138,14 @@ export default function ProductDetails() {
     <div>
       {/* badge with id of product and arrow back btn  */}
       <BadgeIdAndArrowBack productId={productId} />
-      {/* show data */}
-      {productData && <ContentProductDetails productData={productData} />}
+      {/* show data for details page which is devided for 2 huge components*/}
+      {productData && (
+        <>
+       
+          <ContentProductDetailsLeftSide productData={productData} />
+          <ContentProductDetails productData={productData} />
+        </>
+      )}
     </div>
   );
 }

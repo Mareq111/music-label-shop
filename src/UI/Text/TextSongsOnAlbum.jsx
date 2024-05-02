@@ -23,6 +23,7 @@ export default function TextSongsOnAlbum({ songs }) {
   );
 }  */
 
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
@@ -79,7 +80,5 @@ export default function TextSongsOnAlbum({ albumKey }) {
     </article>
   );
 }
- 
-
 
 /* do poprawy cale to */

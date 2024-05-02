@@ -274,7 +274,9 @@ import ChooserVersionRadio from "./ChooserVersionRadio";
 import BtnAddToCart from "../UI/Buttons/BtnAddToCart";
 import TextProductDescription from "../UI/Text/TextProductDescription";
 import AccordionsProductDetails from "./AccordionsProductDetails.jsx";
-
+import TextSongsOnAlbum from "../UI/Text/TextSongsOnAlbum.jsx";
+/* import { useDispatch } from "react-redux";
+import { addItemToCart } from "../store/cartSlice.js"; */
 
 export default function ContentProductDetails({
   productData,
@@ -291,9 +293,7 @@ export default function ContentProductDetails({
             priceItem={productData.priceItem}
             titleArtist={productData.titleArtist}
           />
-          <BadgeRatingProductInfo
-            commentsData={productData.commentsData}
-          />
+          <BadgeRatingProductInfo commentsData={productData.commentsData} />
           <ChooserVersionRadio
             productData={productData}
             itemVersions={productData.itemVersions || []}
@@ -310,15 +310,12 @@ export default function ContentProductDetails({
           <TextProductDescription
             productDescription={productData.productDescription}
           />
-        
-      <AccordionsProductDetails productData={productData}  />
+          <span className="hidden-textSongs-560px">
+            <TextSongsOnAlbum albumKey={productData.key} />
+          </span>
+          <AccordionsProductDetails productData={productData} />
         </div>
       )}
     </div>
   );
 }
-
-//przed accordion dac
- {/*   <span className="hidden-textSongs-560px">
-        {productData && <TextSongsOnAlbum albumKey={productData.key} />}
-      </span> */}

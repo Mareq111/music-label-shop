@@ -5,8 +5,8 @@ import firebaseConfig from "../firebaseConfig";
 import CardProductMain from "../UI/Cards/CardProductMain.jsx";
 import BtnToggleView from "../UI/Buttons/BtnToggleView.jsx";
 import BadgePreciseGadgets from "../UI/Badge/BadgePreciseGadgets.jsx";
-import './ProductsAllPages.scss';
-
+import "./ProductsAllPages.scss";
+import { Link } from "react-router-dom";
 
 export default function ProductsGadgets() {
   const [layoutView, setLayoutView] = useState("grid");
@@ -72,7 +72,9 @@ export default function ProductsGadgets() {
         >
           {productsData.map((item) => (
             <li className="li-productsMain" key={item.key}>
-              <CardProductMain product={item} layout={layoutView} />
+              <Link to={`/${item.key}`}>
+                <CardProductMain product={item} layout={layoutView} />
+              </Link>
             </li>
           ))}
         </ul>

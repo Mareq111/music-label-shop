@@ -6,7 +6,7 @@ import CardProductMain from "../../../UI/Cards/CardProductMain.jsx";
 import BtnToggleView from "../../../UI/Buttons/BtnToggleView.jsx";
 import BadgePreciseTickets from "../../../UI/Badge/BadgePreciseTickets.jsx";
 import "../../ProductsAllPages.scss";
-
+import { Link } from "react-router-dom";
 
 export default function ProductsTicketsCroatia() {
   const [layoutView, setLayoutView] = useState("grid");
@@ -72,7 +72,10 @@ export default function ProductsTicketsCroatia() {
         >
           {productsData.map((item) => (
             <li className="li-productsMain" key={item.key}>
+              <Link to={`/${item.key}`}>
+
               <CardProductMain product={item} layout={layoutView} />
+              </Link>
             </li>
           ))}
         </ul>

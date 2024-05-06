@@ -6,6 +6,7 @@ import CardProductMain from "../../../UI/Cards/CardProductMain.jsx";
 import BtnToggleView from "../../../UI/Buttons/BtnToggleView.jsx";
 import BadgePreciseTshirts from "../../../UI/Badge/BadgePreciseTshirts.jsx";
 import "../../ProductsAllPages.scss";
+import { Link } from "react-router-dom";
 
 export default function ProductsTshirtsColorful() {
   const [layoutView, setLayoutView] = useState("grid");
@@ -71,7 +72,9 @@ export default function ProductsTshirtsColorful() {
         >
           {productsData.map((item) => (
             <li className="li-productsMain" key={item.key}>
-              <CardProductMain product={item} layout={layoutView} />
+              <Link to={`/${item.key}`}>
+                <CardProductMain product={item} layout={layoutView} />
+              </Link>
             </li>
           ))}
         </ul>

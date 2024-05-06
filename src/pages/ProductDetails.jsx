@@ -76,7 +76,6 @@ import "./ProductDetails.scss";
 import YouMightLike from "../components/YouMightLike";
 /* import { useParams, useLocation } from "react-router-dom"; */
 
-
 export default function ProductDetails() {
   const [productData, setProductData] = useState(null);
   const { productId } = useParams();
@@ -102,25 +101,21 @@ export default function ProductDetails() {
     <section className="all_sections__product">
       {productData && (
         <>
-      <section className="section-1__left-side">
-        <BadgeIdAndArrowBack productId={productId} />
+          <section className="section-1__left-side">
+            <BadgeIdAndArrowBack productId={productId} />
 
-        <ContentProductDetailsLeftSide productData={productData} />
-      </section>
+            <ContentProductDetailsLeftSide productData={productData} />
+          </section>
 
-      <section className="section-2__right-side">
-      <ContentProductDetails productData={productData} />
-      </section>
+          <section className="section-2__right-side">
+            <ContentProductDetails productData={productData} />
+          </section>
 
-      <section className="section-youMightLike">
-        <YouMightLike/>
-      </section>
-      </>
-       )}
+          <section className="section-youMightLike">
+            <YouMightLike />
+          </section>
+        </>
+      )}
     </section>
   );
-}
-
-{
-
 }

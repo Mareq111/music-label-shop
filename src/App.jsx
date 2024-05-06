@@ -1,7 +1,7 @@
 import "./App.scss";
 import HomePage from "./pages/HomePage.jsx";
 import RootLayout from "./pages/RootLayout.jsx";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import ProductDetails from "./pages/ProductDetails.jsx";
@@ -71,8 +71,9 @@ function App() {
   // retrieve redux state from ui and check if cartIsVisible is set to true
   const showCart = useSelector((state) => state.ui.cartIsVisible);
 
+  //!BEFORE I USE BROWSERROUTER but now hash router
   //configure, routing and main layout,initially page index: true is HomePage,
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: "/",
       element: <RootLayout />,
@@ -80,7 +81,7 @@ function App() {
       // children for main path, various pages
       children: [
         {
-          index: true,
+          index: "/",
           element: <HomePage />,
         },
         {

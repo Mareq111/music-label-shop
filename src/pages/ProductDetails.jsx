@@ -81,22 +81,31 @@ export default function ProductDetails() {
   const { productId } = useParams();
 
   useEffect(() => {
-    const fetchDataFromFirebase = async () => {
+    const fetchDataFromFirebase = async (category) => {
       try {
         const snapshot = await firebase
           .database()
-          .ref(`categories/albums/products/${productId}`)
+          /* dynamic category paths */
+          .ref(`categories/${category}/products/${productId}`)
           .once("value");
         const dataFromFirebase = snapshot.val();
-        setProductData(dataFromFirebase);
+        setProductData((prevData) => prevData || dataFromFirebase);
       } catch (error) {
         console.error("Error fetching data from Firebase:", error);
       }
     };
 
-    fetchDataFromFirebase();
-  }, [productId]);
+    /*   fetchDataFromFirebase();
+  }, [productId]); */
 
+    //!calling a function for any 'page'
+    fetchDataFromFirebase("tickets");
+    fetchDataFromFirebase("albums");
+    fetchDataFromFirebase("gadgets");
+    fetchDataFromFirebase("posters");
+    fetchDataFromFirebase("puzzles");
+    fetchDataFromFirebase("t-shirts");
+  }, [productId]);
   return (
     <section className="all_sections__product">
       {productData && (

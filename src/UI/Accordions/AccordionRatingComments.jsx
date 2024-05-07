@@ -36,7 +36,11 @@ export default function AccordionRatingComments({ commentsData }) {
   if (!commentsData) {
     return (
       <div>
-        <div><p className="p-no-comments">Unusually quiet... Add the first comment!</p></div>
+        <div>
+          <p className="p-no-comments">
+            Unusually quiet... Add the first comment!
+          </p>
+        </div>
         <form>
           <RadioStarRating />
           <TextAreaComment />

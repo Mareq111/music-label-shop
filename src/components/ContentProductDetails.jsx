@@ -291,7 +291,14 @@ export default function ContentProductDetails({
           <BadgeTitlePriceAuthor
             titleItem={productData.titleItem}
             priceItem={productData.priceItem}
-            titleArtist={productData.titleArtist || productData.location}
+            //dynamic title depends on which product are choosen
+            titleArtist={
+              productData.titleArtist ||
+              productData.location ||
+              productData.color ||
+              productData.itemTitle ||
+              productData.itemLevel
+            }
           />
           <BadgeRatingProductInfo commentsData={productData.commentsData} />
           <ChooserVersionRadio

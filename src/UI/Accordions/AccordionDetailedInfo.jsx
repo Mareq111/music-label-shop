@@ -24,7 +24,14 @@ export default function AccordionDetailedInfo({ productData }) {
   const isAlbum = songs && releaseDate;
 
   //for title combie together a title item plus title artist or item
-  const dynamicName = productData.titleArtist || productData.location;
+  const dynamicName =
+    //dynamic title depends on which product are choosen
+    productData.titleArtist ||
+    productData.titleArtist ||
+    productData.location ||
+    productData.color ||
+    productData.itemTitle ||
+    productData.itemLevel;
   const combinedTitle = `${titleItem} - ${dynamicName}`;
 
   // Check if neither album nor item details are available

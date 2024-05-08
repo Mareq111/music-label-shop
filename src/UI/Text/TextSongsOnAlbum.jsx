@@ -59,7 +59,8 @@ export default function TextSongsOnAlbum({ albumKey }) {
 
     fetchSongsFromFirebase();
   }, [albumKey]);
-
+  //if product doeasnt have songs = not render a component
+  if (songs.length === 0) return null;
   return (
     <article className="songs-on-album-article">
       <div className="title-songs-all-div">
@@ -80,5 +81,3 @@ export default function TextSongsOnAlbum({ albumKey }) {
     </article>
   );
 }
-
-/* do poprawy cale to */

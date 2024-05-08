@@ -1,37 +1,3 @@
-/* 
-import "./AccordionDetailedInfo.scss";
-import TextDistributorDetails from "../Text/TextDistributorDetails";
-import TextSongDuration from "../Text/TextSongDuration";
-import TextProductID from "../Text/TextProductID";
-import TextReleaseDate from "../Text/TextReleaseDate";
-import TextProdTitle from "../Text/TextProdTitle";
-import TextColorItem from "../Text/TextColorItem";
-import TextCompositionItem from "../Text/TextCompositionItem";
-export default function AccordionDetailedInfo() {
-  //test item before firebase
-  const item = {
-    title: "Album Wave - El Double M",
-    releaseDate: "July 7, 2021",
-    productID: "AB12345",
-    songDuration: "00:05:30",
-    composition: "100% cotton",
-    color: "black",
-    distributor: "Strimz Empire",
-  };
-
-  return (
-    <div className="parameters-div">
-      <TextProdTitle title={item.title} />
-      <TextReleaseDate releaseDate={item.releaseDate} />
-      <TextProductID productID={item.productID} />
-      <TextSongDuration songDuration={item.songDuration} />
-      <TextCompositionItem composition={item.composition} />
-      <TextColorItem color={item.color} />
-      <TextDistributorDetails distributor={item.distributor} />
-    </div>
-  );
-} */
-
 /* eslint-disable react/prop-types */
 import "./AccordionDetailedInfo.scss";
 import TextDistributorDetails from "../Text/TextDistributorDetails";
@@ -45,7 +11,6 @@ import TextCompositionItem from "../Text/TextCompositionItem";
 export default function AccordionDetailedInfo({ productData }) {
   const {
     titleItem,
-    titleArtist,
     releaseDate,
     songs,
     distributor,
@@ -59,25 +24,38 @@ export default function AccordionDetailedInfo({ productData }) {
   const isAlbum = songs && releaseDate;
 
   //for title combie together a title item plus title artist or item
-  const combinedTitle = `${titleItem} - ${titleArtist}`;
+  const dynamicName = productData.titleArtist || productData.location;
+  const combinedTitle = `${titleItem} - ${dynamicName}`;
+
+  // Check if neither album nor item details are available
+  const hideDetails = !isAlbum && (!composition || !color);
   return (
     <div className="parameters-div">
+      {/* Render product title */}
       <TextProdTitle title={combinedTitle} />
 
-      {/* checking if its album show relase date and song duration but if isnt show color, composition for item */}
-      {isAlbum ? (
+      {/* Conditional rendering based on product type */}
+      {!hideDetails && (
         <>
-          <TextReleaseDate releaseDate={releaseDate} />
-          <TextAlbumDuration albumDuration={albumDuration} />
-        </>
-      ) : (
-        <>
-          <TextCompositionItem composition={composition} />
-          <TextColorItem color={color} />
+          {isAlbum ? ( // If it's an album, show release date and album duration
+            <>
+              <TextReleaseDate releaseDate={releaseDate} />
+              <TextAlbumDuration albumDuration={albumDuration} />
+            </>
+          ) : (
+            // If it's not an album, show composition and color
+            <>
+              <TextCompositionItem composition={composition} />
+              <TextColorItem color={color} />
+            </>
+          )}
         </>
       )}
-      {/* i dont have id so i use key for it */}
+
+      {/* Render product ID */}
       <TextProductID productID={key} />
+
+      {/* Render distributor details */}
       <TextDistributorDetails distributor={distributor} />
     </div>
   );

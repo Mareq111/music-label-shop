@@ -266,7 +266,7 @@ export default function ContentProductDetails({ productData }) {
           </>
         )}
       </div> */
-import './ContentProductDetails.scss';
+import "./ContentProductDetails.scss";
 import BadgeTitlePriceAuthor from "../UI/Badge/BadgeTitlePriceAuthor";
 import BadgeRatingProductInfo from "../UI/Badge/BadgeRatingProductInfo";
 import BadgesProductDetails from "./BadgesProductDetails";
@@ -291,7 +291,7 @@ export default function ContentProductDetails({
           <BadgeTitlePriceAuthor
             titleItem={productData.titleItem}
             priceItem={productData.priceItem}
-            titleArtist={productData.titleArtist}
+            titleArtist={productData.titleArtist || productData.location}
           />
           <BadgeRatingProductInfo commentsData={productData.commentsData} />
           <ChooserVersionRadio

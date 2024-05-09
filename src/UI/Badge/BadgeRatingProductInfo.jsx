@@ -100,7 +100,8 @@ export default function BadgeRatingProductInfo({ commentsData }) {
           className="number-of-reviews"
           onClick={scrollToRatingReviews}
         >
-          {numberOfReviews} reviews
+          {/* conditionally render "reviews" or "review" based on the number of reviews */}
+          {numberOfReviews === 1 ? "1 review" : `${numberOfReviews} reviews`}
         </button>
       </div>
     </div>

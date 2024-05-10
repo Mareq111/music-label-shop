@@ -106,6 +106,7 @@ export default function ProductDetails() {
     fetchDataFromFirebase("puzzles");
     fetchDataFromFirebase("t-shirts");
   }, [productId]);
+  console.log("productData:", productData);
   return (
     <section className="all_sections__product">
       {productData && (
@@ -115,7 +116,6 @@ export default function ProductDetails() {
 
             <ContentProductDetailsLeftSide productData={productData} />
           </section>
-
           <section className="section-2__right-side">
             <ContentProductDetails productData={productData} />
           </section>

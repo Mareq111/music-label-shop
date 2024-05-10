@@ -29,7 +29,10 @@
   max-width: 100%;
   height: auto;
 }
-
+/* .link-you-migh-like {
+  width: 100%;
+  height: auto;
+} */
 @media (min-width: 360px) {
   .li-youMightLike {
     //change width for 100% when screen > 360px
@@ -39,6 +42,19 @@
 @media (min-width: 425px) {
   .ul-list-youMightLike {
     grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  }
+  .li-youMightLike {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .ul-list-youMightLike {
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
   }
   .li-youMightLike {
     display: flex;

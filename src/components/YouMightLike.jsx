@@ -142,7 +142,6 @@ import "firebase/compat/database";
 import "./YouMightLike.scss";
 import { Link } from "react-router-dom";
 import CardProductMain from "../UI/Cards/CardProductMain";
-
 export default function YouMightLike() {
   const [isGrid, setIsGrid] = useState(true);
   const [products, setProducts] = useState([]);

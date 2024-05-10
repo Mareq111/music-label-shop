@@ -3,7 +3,8 @@
 import "./BadgeIdAndArrowBack.scss";
 import BtnArrow from "../Buttons/BtnArrow.jsx";
 
-export default function BadgeIdAndArrowBack({ productId }) {
+export default function BadgeIdAndArrowBack() {
+  /* productId */
   // Function to handle going back in history so when you click arrow you return to spot when you move for this product page
   const handleGoBack = () => {
     window.history.back();
@@ -12,9 +13,9 @@ export default function BadgeIdAndArrowBack({ productId }) {
   return (
     <div>
       <div className="badge-id-and-arrow-back">
-        <div className="div-id-and-text">
+        {/* <div className="div-id-and-text">
           <p className="text-id">Product ID: {productId}</p>
-        </div>
+        </div> */}
         <div className="div-link-btn-comeback">
           <span className="link-arrow-back" onClick={handleGoBack}>
             <BtnArrow />

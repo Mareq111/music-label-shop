@@ -3,6 +3,9 @@
 .badge-id-and-arrow-back {
   width: auto;
   height: 5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .div-id-and-text {
   width: auto;

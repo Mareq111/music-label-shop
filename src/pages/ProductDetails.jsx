@@ -95,8 +95,8 @@ export default function ProductDetails() {
       }
     };
 
-    /*   fetchDataFromFirebase();
-  }, [productId]); */
+    /*    fetchDataFromFirebase();
+  }, [productId]);  */
 
     //!calling a function for any 'page'
     fetchDataFromFirebase("tickets");
@@ -105,6 +105,10 @@ export default function ProductDetails() {
     fetchDataFromFirebase("posters");
     fetchDataFromFirebase("puzzles");
     fetchDataFromFirebase("t-shirts");
+  }, [productId]);
+  useEffect(() => {
+    // scroll to top if change product
+    window.scrollTo(0, 0);
   }, [productId]);
   console.log("productData:", productData);
   return (

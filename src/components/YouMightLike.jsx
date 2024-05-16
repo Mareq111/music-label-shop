@@ -140,11 +140,13 @@ import { useState, useEffect } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import "./YouMightLike.scss";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import CardProductMain from "../UI/Cards/CardProductMain";
+
 export default function YouMightLike() {
   const [isGrid, setIsGrid] = useState(true);
   const [products, setProducts] = useState([]);
+  const { productId } = useParams();
 
   useEffect(() => {
     const fetchRandomProducts = async () => {
@@ -158,22 +160,24 @@ export default function YouMightLike() {
           "tickets",
         ];
         const productsPromises = categories.map((category) => {
-          return firebase
-            .database()
-            .ref(`categories/${category}/products`)
-            .limitToLast(6)
-            .once("value")
-            .then((snapshot) => {
-              const productsData = snapshot.val();
-              if (productsData) {
-                const productKeys = Object.keys(productsData);
-                //random choosen one product of any category
-                const randomProductKey =
-                  productKeys[Math.floor(Math.random() * productKeys.length)];
-                return productsData[randomProductKey];
-              }
-              return null;
-            });
+          return (
+            firebase
+              .database()
+              .ref(`categories/${category}/products`)
+              /*  .limitToLast(100) */
+              .once("value")
+              .then((snapshot) => {
+                const productsData = snapshot.val();
+                if (productsData) {
+                  const productKeys = Object.keys(productsData);
+                  // random choosen one product of any category
+                  const randomProductKey =
+                    productKeys[Math.floor(Math.random() * productKeys.length)];
+                  return productsData[randomProductKey];
+                }
+                return null;
+              })
+          );
         });
         const productsArray = await Promise.all(productsPromises);
         setProducts(productsArray.filter((product) => product !== null));
@@ -183,9 +187,8 @@ export default function YouMightLike() {
     };
 
     fetchRandomProducts();
-  }, []);
+  }, [productId]);
 
-  //card with may like item layout depends on screen width
   useEffect(() => {
     const handleResize = () => {
       setIsGrid(window.innerWidth >= 425);
@@ -196,9 +199,10 @@ export default function YouMightLike() {
     // set initial view
     handleResize();
 
-    // delete listener
+    // cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   return (
     <article className="you-might-like">
       <div className="div-youMightLike">

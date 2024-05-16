@@ -220,17 +220,3 @@ export default function YouMightLike() {
     </article>
   );
 }
-{
-  /*  <CardYouMightLike
-                  imgItem={product.imgURL}
-                  titleItem={product.titleItem}
-                  titleArtist={
-                    product.titleArtist ||
-                    product.location ||
-                    product.color ||
-                    product.itemTitle ||
-                    product.itemLevel
-                  }
-                  priceItem={product.priceItem}
-                /> */
-}

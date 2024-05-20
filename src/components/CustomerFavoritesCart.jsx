@@ -175,11 +175,11 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import "./CustomerFavoritesCart.scss";
 import CardProductMain from "../UI/Cards/CardProductMain";
+import { Link } from "react-router-dom";
 
 export default function CustomerFavoritesCart() {
   const [favoritesData, setFavoritesData] = useState([]);
   const [isGrid, setIsGrid] = useState(window.innerWidth >= 425);
-
   useEffect(() => {
     const fetchFavoritesFromFirebase = async () => {
       try {
@@ -246,18 +246,15 @@ export default function CustomerFavoritesCart() {
         <h3 className="h-youMightLike-cart">Customer favorites</h3>
         <ul className="ul-list-youMightLike-cart">
           {favoritesData.length > 0 ? (
-            favoritesData.map((item, index) => (
+            favoritesData.map((product, index) => (
               <li className="li-youMightLike-cart" key={index}>
-                {/*   {isGrid ? (
-                  <CardProductMain product={item} layout={"list"} />
-                ) : (
-                  <CardProductMain product={item} layout={"grid"} />
-                )} */}
-                <CardProductMain
-                  product={item}
-                  layout={isGrid ? "list" : "grid"}
-                  customClass={window.innerWidth >= 768 ? "custom-width" : ""}
-                />
+                <Link className="link-you-might-like" to={`/${product.key}`}>
+                  <CardProductMain
+                    product={product}
+                    layout={isGrid ? "list" : "grid"}
+                    customClass={window.innerWidth >= 768 ? "custom-width" : ""}
+                  />
+                </Link>
               </li>
             ))
           ) : (

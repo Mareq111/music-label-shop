@@ -322,10 +322,11 @@ min-height: 12rem;  */
     height: 10rem;
     width: 12rem;
     overflow: hidden;
+   
   }
 }
 
-@media (min-width: 868px) {
+ @media (min-width: 868px) {
   .card__Product-grid {
     display: flex;
     flex-direction: column;
@@ -333,7 +334,7 @@ min-height: 12rem;  */
     height: 20rem;
     // custom witdh for customer favorites card 868px
     &.custom-width {
-      width: 12rem;
+      width: auto;
     }
   }
   .div-bottom-of-card-Product-grid {
@@ -342,4 +343,4 @@ min-height: 12rem;  */
     width: 12rem;
     overflow: hidden;
   }
-}
+} 

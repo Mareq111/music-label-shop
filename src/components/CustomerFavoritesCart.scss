@@ -66,3 +66,15 @@
     height: auto;
   }
 }
+@media (min-width: 768px) {
+  .ul-list-youMightLike {
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  }
+  .li-youMightLike {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+}

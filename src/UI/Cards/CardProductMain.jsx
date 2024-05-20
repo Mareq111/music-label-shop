@@ -2,7 +2,7 @@
 
 import "./CardProductMain.scss";
 
-export default function CardProductMain({ product, layout }) {
+export default function CardProductMain({ product, layout, customClass }) {
   //!descruturing the product object of location or color or itemTitle or itemLevel if its not an album which has titleArtist
   const {
     titleItem,
@@ -17,7 +17,7 @@ export default function CardProductMain({ product, layout }) {
   const renderCardContent = () => {
     if (layout === "grid") {
       return (
-        <div className="card__Product-list">
+        <div className={`card__Product-list ${customClass}`}>
           <div className="div-top-of-card-Product-list">
             <div className="div-img-card__Product-list">
               <img
@@ -44,7 +44,7 @@ export default function CardProductMain({ product, layout }) {
       );
     } else if (layout === "list") {
       return (
-        <div className="card__Product-grid">
+        <div className={`card__Product-grid ${customClass}`}>
           <div className="div-top-of-card-Product-grid">
             <div className="div-img-card__Product-grid">
               <img

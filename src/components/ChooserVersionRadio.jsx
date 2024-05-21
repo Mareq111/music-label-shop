@@ -117,7 +117,6 @@ import RadioInput from "../UI/Inputs/RadioInput";
 
 export default function ChooserVersionRadio({ onVersionChange, productData }) {
   const [selectedVersion, setSelectedVersion] = useState(null);
-  const [radioId, setRadioId] = useState(null);
 
   const generateProductId = (productData, version) => {
     return `${productData.titleItem}_${version}`;
@@ -126,17 +125,13 @@ export default function ChooserVersionRadio({ onVersionChange, productData }) {
   const handleVersionChange = (event, version) => {
     const id = generateProductId(productData, version);
     setSelectedVersion(version);
-    setRadioId(id);
     onVersionChange(version, id);
   };
-
-  console.log("Item version in chooser component:", productData);
 
   return (
     <div className="div-chooser-text-all">
       <h2 className="h2-radio-chooser">Choose Your Version</h2>
       <div className="div-radio-chooser">
-        {/* mapping json data for versions, if they are or not  */}
         {productData.itemVersions && productData.itemVersions.length > 0 ? (
           productData.itemVersions.map(({ numberOfVersion, id, version }) => (
             <RadioInput

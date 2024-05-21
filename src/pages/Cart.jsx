@@ -71,16 +71,24 @@ export default function Cart() {
             {products.map((product) => (
               <li key={`${product.name}__${product.version}`}>
                 <CardProductIntoCart
-                  productDetail={product}
+                  product={product}
                   onQuantityChange={(newQuantity) =>
                     handleQuantityChange(product.itemId, newQuantity)
                   }
                   onRemoveProduct={() => handleRemoveProduct(product.itemId)}
-                  /*   onAddToCart={(item) =>
-                    handleAddToCart(item, product.selectedVersion)
-                  } */
                   onAddToCart={(item) => handleAddToCart(item)}
+                  productId={product.key}
+                  productPrice={product.productPrice}
+                  title={
+                    product.titleArtist ||
+                    product.location ||
+                    product.color ||
+                    product.itemTitle ||
+                    product.itemLevel
+                  }
+                  titleItem={product.titleItem}
                 />
+
                 <hr className="cart-devider-separator-smaller" />
               </li>
             ))}
@@ -108,7 +116,6 @@ export default function Cart() {
         <div className="customer-favorities-cart">
           {/* <CustomerFavoritesCart/> */}
           <CustomerFavoritesCart />
-
         </div>
       </div>
     </aside>

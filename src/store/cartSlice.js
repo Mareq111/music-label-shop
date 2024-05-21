@@ -1,4 +1,3 @@
-
 import { createSlice } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice({
@@ -15,11 +14,21 @@ const cartSlice = createSlice({
       );
       if (!existingItem) {
         state.items.push({
-          itemId: newItem.itemId,
+          itemId: newItem.key,
           price: newItem.price,
           quantity: 1,
           totalPrice: newItem.price,
-          name: newItem.name,
+          title:
+            newItem.titleArtist ||
+            newItem.location ||
+            newItem.color ||
+            newItem.itemTitle ||
+            newItem.itemLevel,
+          imgURL: newItem.imgURL,
+          productId: newItem.productId,
+          priceItem: newItem.priceItem,
+          titleItem: newItem.titleItem,
+          selectedVersion: newItem.selectedVersion,
         });
       } else {
         existingItem.quantity++;

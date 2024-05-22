@@ -77,15 +77,27 @@
 @media (min-width: 1260px) {
   .div-all-content-product-into-cart {
     display: flex;
+
     flex-direction: row;
     width: auto;
     height: auto;
-  /*   gap: 1rem; */
+
+    /*   gap: 1rem; */
   }
   .name-of-added-product {
     width: 15rem;
   }
-  .h-price-of-item {
-   margin-right: 1rem;
+  .div-price-product {
+    display: flex;
+    justify-content: center;
+    width: 6rem;
+    margin: 0;
+  }
+
+  .card-product-into-cart {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0;
   }
 }

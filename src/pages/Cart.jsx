@@ -26,7 +26,7 @@ export default function Cart() {
 
   const calculateTotalPrice = () => {
     return products.reduce((total, product) => {
-      return total + product.price * product.quantity;
+      return total + product.priceItem * product.quantity;
     }, 0);
   };
 

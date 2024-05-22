@@ -34,9 +34,7 @@ export default function Cart() {
   const isEmptyCart = products.length === 0;
 
   // Function to add item to cart
-  /*  const handleAddToCart = (item, selectedVersion) => {
-    dispatch(addItemToCart({ ...item, selectedVersion }));
-  }; */ const handleAddToCart = (item) => {
+  const handleAddToCart = (item) => {
     dispatch(addItemToCart(item));
   };
 
@@ -114,7 +112,6 @@ export default function Cart() {
       <hr className="cart-devider-separator-smaller" />
       <div className="all-content-of-cart">
         <div className="customer-favorities-cart">
-          {/* <CustomerFavoritesCart/> */}
           <CustomerFavoritesCart />
         </div>
       </div>

@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 /* /* eslint-disable react/prop-types */
+//nie dziala
 import { useState } from "react";
 import "./BtnQuantitySelector.scss";
 import IconPlus from "../Icons/IconPlus";

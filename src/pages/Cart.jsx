@@ -1,13 +1,12 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 
-
-import React from 'react';
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import BtnContinue from "../UI/Buttons/BtnContinue";
 import CustomerFavoritesCart from "../components/CustomerFavoritesCart";
-import "./Cart.scss";
+import "./CartCheckoutPayment.scss";
 import CardProductIntoCart from "../UI/Cards/CardProductIntoCart.jsx";
 import BadgeTopOfAsideNav from "../UI/Badge/BadgeTopOfAsideNav";
 import {

@@ -1,8 +1,14 @@
+/* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
 import Accordion from "../Accordions/Accordion.jsx";
-export default function AccordionCheckout() {
+export default function AccordionCheckout({ totalPrice }) {
   return (
     <div>
-      <Accordion titleAccordion={'Show order summary ' + '22.44'}/>
+      <Link to="/cart">
+        <Accordion
+          titleAccordion={`Check order in cart: ${totalPrice.toFixed(2)}€`}
+        />
+      </Link>
     </div>
   );
 }

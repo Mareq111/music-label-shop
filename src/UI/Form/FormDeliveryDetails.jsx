@@ -1,3 +1,4 @@
+import ChooserDeliveryOptions from "../../components/ChooserDeliveryOptions";
 import BadgeFormRequired from "../Badge/BadgeFormRequired";
 import InputDeliveryAddress from "../Inputs/InputDeliveryAddress";
 import InputDeliveryCity from "../Inputs/InputDeliveryCity";
@@ -23,6 +24,7 @@ export default function FormDeliveryDetails() {
           <InputDeliveryCity />
         </div>
         <InputDeliveryAddress />
+        <ChooserDeliveryOptions />
       </fieldset>
       <BadgeFormRequired />
     </form>

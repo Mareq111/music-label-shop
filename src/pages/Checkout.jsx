@@ -18,7 +18,7 @@ export default function Checkout() {
         <AccordionCheckout totalPrice={totalPrice} />
         <FormDeliveryDetails />
 
-        <p>delivery chooser</p>
+       {/*  <ChooserDeliveryPage /> */}
         <div>
           <Link className="btn-continue-div-wrapper" to={"/checkout"}>
             <BtnContinue continueBtnText={"Proceed to pay"} />

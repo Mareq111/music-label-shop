@@ -1,0 +1,112 @@
+@import "../../styles/global/global.scss";
+
+ .options-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.radio-tile-delivery {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  border: 2px solid $grey-700;
+  background-color: $black-700;
+  transition: 0.1s ease;
+  cursor: pointer;
+  position: relative;
+  padding: 1rem;
+  margin-block: 0.5rem;
+
+  // styles for dot inside the radio tile
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 0.1rem solid $grey-600;
+    background-color: transparent;
+    border-radius: 50%;
+    top: 0.25rem;
+    left: 0.25rem;
+    opacity: 0;
+    transition: 0.25s ease;
+  }
+
+  &.selected {
+    border-color: $eastern-blue;
+    &:before {
+      transform: scale(1);
+      opacity: 1;
+      background-color: $eastern-blue;
+      border-color: $eastern-blue;
+    }
+  }
+
+  &:hover {
+    border-color: $eastern-blue;
+
+    &:before {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+.delivery-name {
+  color: $white;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.delivery-info {
+  font-size: 1rem;
+  color: $grey-600;
+}
+
+// styling for radio label
+.radio-label {
+  color: $white;
+  transition: 0.3s ease;
+  text-align: center;
+  font-size: 1rem;
+}
+// Styling for radio input (hidden)
+.radio-input-delivery {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+// Stylizacja dot inside the radio tile when input is checked
+.radio-input-delivery:checked + .radio-label-delivery:before {
+  transform: scale(1);
+  opacity: 1;
+  background-color: $eastern-blue;
+  border-color: $eastern-blue;
+}
+
+// styling for radio label when input is checked
+.radio-input-delivery:checked + .radio-label-delivery .radio-label {
+  color: $white;
+  font-weight: 700;
+}
+
+.radio-label-delivery {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}

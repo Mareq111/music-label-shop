@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import BtnContinue from "../UI/Buttons/BtnContinue";
-import CustomerFavoritesCart from "../components/CustomerFavoritesCart";
 import "./CartCheckoutPayment.scss";
 import BadgeTopOfAsideNav from "../UI/Badge/BadgeTopOfAsideNav";
 import { useSelector } from "react-redux";
@@ -11,12 +10,13 @@ export default function Payment() {
   const totalPrice = useSelector((state) => state.cart.totalPrice);
   return (
     <aside className="aside-cart">
-      <BadgeTopOfAsideNav nameOfNavPage={"Payment"} />
+      <BadgeTopOfAsideNav nameOfNavPage={"Payment"} showCloseButton={true} />
       <hr className="cart-devider-separator" />
       <div className="content-fill-cart">
         <h1>Cart / Informartion / PAYMENT</h1>
         <AccordionCheckoutCart totalPrice={totalPrice} />
         <AccordionCheckoutDetails />
+
         <div>
           <Link className="btn-continue-div-wrapper" to={"/payment-greetings"}>
             <BtnContinue continueBtnText={"Payment"} />
@@ -26,8 +26,11 @@ export default function Payment() {
 
       <hr className="cart-devider-separator-smaller" />
       <div className="all-content-of-cart">
-        <div className="customer-favorities-cart">
-          <CustomerFavoritesCart />
+        <div className="payment-disclaimer">
+          <p className="p-text-cart-disclaimer">
+            This page is part of a portfolio project. Please remember that it is
+            not a real transaction.
+          </p>
         </div>
       </div>
     </aside>

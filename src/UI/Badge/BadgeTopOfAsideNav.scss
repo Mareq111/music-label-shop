@@ -1,22 +1,21 @@
-@import '../../styles/global/global.scss';
-
+@import "../../styles/global/global.scss";
 
 .h-top-aside-nav {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-  }
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
 
 .top-of-aside-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  min-height: 72px;
+}
+
+@media (min-width: 425px) {
+  .top-of-aside-nav {
+    padding: 1.5rem;
+    min-height: 88px;
   }
-
-
-
-  @media (min-width: 425px) {
-    .top-of-aside-nav {
-      padding: 1.5rem;
-    }
-  }
+}

@@ -33,7 +33,7 @@ export default function Cart() {
 
   return (
     <aside className="aside-cart">
-      <BadgeTopOfAsideNav nameOfNavPage={"Cart"} />
+      <BadgeTopOfAsideNav nameOfNavPage={"Cart"} showCloseButton={true} />
       <hr className="cart-devider-separator" />
 
       {isEmptyCart ? (

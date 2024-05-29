@@ -7,35 +7,38 @@ export default function BadgeCategoriesWithH() {
       <h4 className="h-popular-categories">Categories</h4>
       <ul className="ul-list-of-pages">
         <li className="li-list-of-pages">
-          <BtnGoToCategories categoryPath="/albums/all-strimz-empire" nameOfCategory={"Albums"} />
+          <BtnGoToCategories
+            categoryPath="/albums/all-strimz-empire"
+            nameOfCategory={"Albums"}
+          />
         </li>
         <li className="li-list-of-pages">
           <BtnGoToCategories
-            categoryPath="/tickets"
+            categoryPath="tickets/all-locations"
             nameOfCategory={"Tickets"}
           />
         </li>
         <li className="li-list-of-pages">
           <BtnGoToCategories
-            categoryPath="/t-shirts"
+            categoryPath="t-shirts/all-colors"
             nameOfCategory={"T-shirts"}
           />
         </li>
         <li className="li-list-of-pages">
           <BtnGoToCategories
-            categoryPath="/gadgets"
+            categoryPath="gadgets/all-items"
             nameOfCategory={"Gadgets"}
           />
         </li>
         <li className="li-list-of-pages">
           <BtnGoToCategories
-            categoryPath="/posters"
+            categoryPath="posters/all-strimz-empire"
             nameOfCategory={"Posters"}
           />
         </li>
         <li className="li-list-of-pages">
           <BtnGoToCategories
-            categoryPath="/puzzles"
+            categoryPath="puzzles/all-levels"
             nameOfCategory={"Puzzles"}
           />
         </li>

@@ -22,7 +22,7 @@ export default function RadioDeliveryOptions({
       <div className="options-list">
         {deliveryOptions.map((option) => (
           <div key={option.id} className={`radio-tile-delivery ${selectedOption?.id === option.id ? 'selected' : ''}`}>
-            <input
+            <input required
               className="radio-input-delivery"
               type="radio"
               id={`option-${option.id}`}

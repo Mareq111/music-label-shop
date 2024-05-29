@@ -61,6 +61,8 @@ import ProductsGadgetsStickers from "./pages/subpages/product-gadgets/ProductsGa
 import ProductsPuzzlesEasy from "./pages/subpages/products-puzzles/ProductsPuzzlesEasy.jsx";
 import ProductsPuzzlesMedium from "./pages/subpages/products-puzzles/ProductsPuzzlesMedium.jsx";
 import ProductsPuzzlesHard from "./pages/subpages/products-puzzles/ProductsPuzzlesHard.jsx";
+import Payment from "./pages/Payment.jsx";
+import PaymentAfterGreetings from "./pages/PaymentAfterGreetings.jsx";
 
 function App() {
   //firebase
@@ -265,6 +267,8 @@ function App() {
         { path: "search", element: <SearchResult /> },
         { path: "menu", element: <MenuHamburger /> },
         { path: "checkout", element: <Checkout /> },
+        { path: "payment", element: <Payment /> },
+        { path: "payment-greetings", element: <PaymentAfterGreetings /> },
       ],
     },
   ]);

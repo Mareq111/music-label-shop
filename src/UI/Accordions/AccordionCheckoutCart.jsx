@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-import Accordion from "../Accordions/Accordion.jsx";
-export default function AccordionCheckout({ totalPrice }) {
+import Accordion from "./Accordion.jsx";
+export default function AccordionCheckoutCart({ totalPrice }) {
   return (
     <div>
       <Link to="/cart">

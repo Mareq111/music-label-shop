@@ -232,11 +232,11 @@ export default function FormDeliveryDetails({ onValidationChange }) {
     deliveryOption: { value: "", isValid: false },
   });
 
-  const handleInputChange = (field, value, isValid) => {
+  const handleInputChange = (field, value) => {
     console.log("Updating state for field:", field);
     setFormData((prevState) => ({
       ...prevState,
-      [field]: { value, isValid },
+      [field]: { value, isValid: true },
     }));
   };
 

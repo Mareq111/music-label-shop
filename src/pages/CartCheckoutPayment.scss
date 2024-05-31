@@ -73,6 +73,12 @@
   margin-inline: 1rem;
 }
 
+//checkout
+.btn-continue-div-wrapper.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 //customer favorites
 
 .customer-favorities-cart {

@@ -69,7 +69,7 @@ export default function Favorites() {
 
   return (
     <aside className="aside-favorites">
-      <BadgeTopOfAsideNav nameOfNavPage={"Favorites"} />
+      <BadgeTopOfAsideNav nameOfNavPage={"Favorites"} showCloseButton={true} />
       <hr className="favorites-devider-separator" />
 
       {isEmptyFavorite ? (

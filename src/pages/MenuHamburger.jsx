@@ -23,7 +23,7 @@ export default function MenuHamburger() {
   return (
     <aside className="aside-menu">
       {/* bagde with name of page and x to return */}
-      <BadgeTopOfAsideNav nameOfNavPage={"Menu"} />
+      <BadgeTopOfAsideNav nameOfNavPage={"Menu"} showCloseButton={true} />
       <hr className="menu-devider-separator" />
       <div className="all-content-of-menu">
         {/* Main mapping elements from array to separate all BtnNavTo */}

@@ -1,7 +1,11 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+
+
+/*  import { useState } from "react";
 import countriesData from "../../data/countriesData.js";
 import "./InputDeliveryCountrySelect.scss";
-export default function InputDeliveryCountrySelect() {
+export default function InputDeliveryCountrySelect({ onChange }) {
   const [selectedCountry, setSelectedCountry] = useState("");
 
   const handleChange = (e) => {
@@ -11,6 +15,51 @@ export default function InputDeliveryCountrySelect() {
   const sortedCountries = countriesData.sort((a, b) =>
     a.name.localeCompare(b.name)
   );
+  return (
+    <div className="div-delivery-country-select">
+      <label htmlFor="select-delivery-country-select">Select a country </label>
+      <select
+        required
+        id="select-delivery-country-select"
+        value={selectedCountry}
+        aria-label="choose country"
+        onChange={handleChange}
+      >
+        <option id="option-delivery-country-select" value="">
+          Choose country
+        </option>
+        {sortedCountries.map((country) => (
+          <option
+            className="option-delivery-country-select"
+            key={country.code}
+            value={country.code}
+          >
+            {country.name}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+} */
+ 
+import { useState } from "react";
+import countriesData from "../../data/countriesData.js";
+import "./InputDeliveryCountrySelect.scss";
+
+export default function InputDeliveryCountrySelect({ onChange }) {
+  const [selectedCountry, setSelectedCountry] = useState("");
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setSelectedCountry(value);
+    onChange(value); 
+  };
+
+  //sort data from countries data to alphabetically state
+  const sortedCountries = countriesData.sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
+
   return (
     <div className="div-delivery-country-select">
       <label htmlFor="select-delivery-country-select">Select a country </label>

@@ -6,7 +6,7 @@ export default function UserPage() {
   return (
     <aside className="aside-user-profile">
       {/* bagde with name of page and x to return */}
-      <BadgeTopOfAsideNav nameOfNavPage={"Profile"} />
+      <BadgeTopOfAsideNav nameOfNavPage={"Profile"} showCloseButton={true} />
       <hr className="user-profile-devider-separator" />
       <div className="all-content-of-user-profile">
         <div className="content-empty-user-profile">

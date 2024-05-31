@@ -1,7 +1,9 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+/*  import { useState } from "react";
 import "./InputDeliveryFullName.scss";
 
-export default function InputDeliveryFullName() {
+export default function InputDeliveryFullName({ onChange }) {
   const [isValid, setIsValid] = useState(true);
   const [fullName, setFullName] = useState("");
 
@@ -31,9 +33,57 @@ export default function InputDeliveryFullName() {
         className={!isValid ? "invalid-full-name" : ""}
         aria-describedby={!isValid ? "invalid-message-full-name" : ""}
       />
-      {/* error text */}
+      {/* error text 
       {!isValid && (
         <div id="invalid-message-full-name" className="invalid-message-full-name">
+          Please enter a valid full name (letters and space only).
+        </div>
+      )}
+    </div>
+  );
+} */
+
+import { useState } from "react";
+import "./InputDeliveryFullName.scss";
+
+export default function InputDeliveryFullName({ onChange }) {
+  const [isValid, setIsValid] = useState(true);
+  const [fullName, setFullName] = useState("");
+
+  const handleChange = (event) => {
+    const value = event.target.value;
+    setFullName(value);
+    //checking that are letters and space only in input  field
+    const nameRegex = /^[A-Za-z\s]*$/;
+    const isValid = nameRegex.test(value);
+    setIsValid(isValid);
+    onChange(value, isValid);
+  };
+
+  return (
+    <div className="input-fullname-container">
+      <label title="Full name required" htmlFor="input-fullname">
+        Full name
+      </label>
+      <input
+        required
+        type="text"
+        id="input-fullname"
+        name="full-name"
+        autoComplete="on"
+        aria-label="full name"
+        placeholder="John Kowalsky"
+        value={fullName}
+        onChange={handleChange}
+        className={!isValid ? "invalid-full-name" : ""}
+        aria-describedby={!isValid ? "invalid-message-full-name" : ""}
+      />
+      {/* error text */}
+      {!isValid && (
+        <div
+          id="invalid-message-full-name"
+          className="invalid-message-full-name"
+        >
           Please enter a valid full name (letters and space only).
         </div>
       )}

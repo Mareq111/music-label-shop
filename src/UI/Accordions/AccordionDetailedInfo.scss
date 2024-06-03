@@ -14,3 +14,24 @@
 .detailedInfo-p {
   color: $white;
 }
+
+//payment
+.edit-data-div-payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-edit-entered-data {
+  color: $grey-600;
+  font-weight: 700;
+  background-color: transparent;
+  overflow: hidden;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    color: $white;
+  }
+}

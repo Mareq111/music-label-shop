@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
+import BtnEditEnteredData from "../Buttons/BtnEditEnteredData";
 import "./AccordionDetailedInfo.scss";
 
 export default function AccordionCheckoutDetailsAnswer({ formData }) {
@@ -42,6 +44,11 @@ export default function AccordionCheckoutDetailsAnswer({ formData }) {
         Delivery Price:{" "}
         <p className="detailedInfo-p">{formData.deliveryOption.value.price}€</p>
       </h3>
+      <div className="edit-data-div-payment">
+        <Link to={"/checkout"}>
+          <BtnEditEnteredData />
+        </Link>
+      </div>
     </div>
   );
 }

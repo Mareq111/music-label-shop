@@ -1,20 +1,47 @@
 /* eslint-disable react/prop-types */
+import "./AccordionDetailedInfo.scss";
+
 export default function AccordionCheckoutDetailsAnswer({ formData }) {
   return (
-    <div>
-      <p>Full Name: {formData.fullName.value}</p>
-      <p>Phone Number: {formData.phoneNumber.value}</p>
-      <p>Email: {formData.email.value}</p>
-      <p>Country: {formData.country.value}</p>
-      <p>Zip Code: {formData.zipCode.value}</p>
-      <p>Address: {formData.address.value}</p>
-      <p>City: {formData.city.value}</p>
-      <p>Delivery Option:</p>
-      <ul>
-        <li>Carrier: {formData.deliveryOption.value.carrier}</li>
-        <li>Delivery Time: {formData.deliveryOption.value.deliveryTime}</li>
-        <li>Price: {formData.deliveryOption.value.price}</li>
-      </ul>
+    <div className="parameters-div">
+      <h3 className="detailedInfo-h">
+        Full Name: <p className="detailedInfo-p">{formData.fullName.value}</p>
+      </h3>
+      <h3 className="detailedInfo-h">
+        Phone Number:{" "}
+        <p className="detailedInfo-p">{formData.phoneNumber.value}</p>
+      </h3>
+      <h3 className="detailedInfo-h">
+        Email: <p className="detailedInfo-p">{formData.email.value}</p>
+      </h3>
+      <h3 className="detailedInfo-h">
+        Country: <p className="detailedInfo-p">{formData.country.value}</p>
+      </h3>
+      <h3 className="detailedInfo-h">
+        Zip Code: <p className="detailedInfo-p">{formData.zipCode.value}</p>
+      </h3>
+      <h3 className="detailedInfo-h">
+        Address: <p className="detailedInfo-p">{formData.address.value}</p>
+      </h3>
+      <h3 className="detailedInfo-h">
+        City: <p className="detailedInfo-p">{formData.city.value}</p>
+      </h3>
+      <h3 className="detailedInfo-h">
+        Delivery Carrier:{" "}
+        <p className="detailedInfo-p">
+          {formData.deliveryOption.value.carrier}
+        </p>{" "}
+      </h3>
+      <h3 className="detailedInfo-h">
+        Delivery Time:{" "}
+        <p className="detailedInfo-p">
+          {formData.deliveryOption.value.deliveryTime} days
+        </p>{" "}
+      </h3>
+      <h3 className="detailedInfo-h">
+        Delivery Price:{" "}
+        <p className="detailedInfo-p">{formData.deliveryOption.value.price}€</p>
+      </h3>
     </div>
   );
 }

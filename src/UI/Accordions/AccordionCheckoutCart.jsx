@@ -1,14 +1,20 @@
 /* eslint-disable react/prop-types */
-import { Link } from "react-router-dom";
+
+
+import { useSelector } from "react-redux";
 import Accordion from "./Accordion.jsx";
-export default function AccordionCheckoutCart({ totalPrice }) {
+import AccordionCartDetailsAnswer from "./AccordionCartDetailsAnswer.jsx";
+
+export default function AccordionCheckoutCart() {
+  const cartData = useSelector((state) => state.cart);
+  const totalPrice = cartData.totalPrice;
+
   return (
     <div>
-      <Link to="/cart">
-        <Accordion
-          titleAccordion={`Check order in cart: ${totalPrice.toFixed(2)}€`}
-        />
-      </Link>
+      <Accordion
+        titleAccordion={`Check order in cart: ${totalPrice.toFixed(2)}€`}
+        answerAccordion={<AccordionCartDetailsAnswer cartData={cartData} />}
+      />
     </div>
   );
 }

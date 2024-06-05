@@ -90,9 +90,9 @@ export default function FormDeliveryDetails({ onValidationChange }) {
         />
       </fieldset>
       <BadgeFormRequired />
-      <button type="button" onClick={handleShowData}>
+     {/*  <button type="button" onClick={handleShowData}>
         Show Data
-      </button>
+      </button> */}
     </form>
   );
 }

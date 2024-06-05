@@ -1,13 +1,13 @@
 @import "../../styles/global/global.scss";
 
-.options-list {
+ .options-list-payment {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.radio-tile-delivery {
+.radio-tile-payment {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -59,13 +59,13 @@
   }
 }
 
-.delivery-name {
+.payment-name {
   color: $white;
   font-weight: 700;
   font-size: 1rem;
 }
 
-.delivery-info {
+.payment-info {
   font-size: 1rem;
   color: $grey-600;
 }
@@ -78,7 +78,7 @@
   font-size: 1rem;
 }
 // Styling for radio input (hidden)
-.radio-input-delivery {
+.radio-input-payment {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -90,7 +90,7 @@
 }
 
 // Stylizacja dot inside the radio tile when input is checked
-.radio-input-delivery:checked + .radio-label-delivery:before {
+.radio-input-payment:checked + .radio-label-payment:before {
   transform: scale(1);
   opacity: 1;
   background-color: $eastern-blue;
@@ -98,12 +98,12 @@
 }
 
 // styling for radio label when input is checked
-.radio-input-delivery:checked + .radio-label-delivery .radio-label {
+.radio-input-payment:checked + .radio-label-payment .radio-label {
   color: $white;
   font-weight: 700;
 }
 
-.radio-label-delivery {
+.radio-label-payment {
   display: flex;
   flex-direction: column;
   width: 100%;

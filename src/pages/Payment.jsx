@@ -5,6 +5,7 @@ import BadgeTopOfAsideNav from "../UI/Badge/BadgeTopOfAsideNav";
 import { useSelector } from "react-redux";
 import AccordionCheckoutCart from "../UI/Accordions/AccordionCheckoutCart";
 import AccordionCheckoutDetails from "../UI/Accordions/AccordionCheckoutDetails";
+import FormPayment from "../UI/Form/FormPayment";
 
 export default function Payment() {
   const totalPrice = useSelector((state) => state.cart.totalPrice);
@@ -16,6 +17,8 @@ export default function Payment() {
         <h1>Cart / Informartion / PAYMENT</h1>
         <AccordionCheckoutCart totalPrice={totalPrice} />
         <AccordionCheckoutDetails />
+       {/* payment form */}
+<FormPayment/>
 
         <div>
           <Link className="btn-continue-div-wrapper" to={"/payment-greetings"}>

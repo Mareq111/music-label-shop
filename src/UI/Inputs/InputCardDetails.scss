@@ -1,0 +1,86 @@
+@import '../../styles/global/global.scss';
+
+
+
+/* .card-details {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin-bottom: 1rem;
+    color: $white;
+
+    input {
+      background-color: transparent;
+      outline: 0;
+      width: 100%;
+      height: auto;
+      border: 0.1rem solid $grey-700;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      color: $white;
+
+      &:focus, &:focus-visible {
+        border-color: $ming-blue;
+      }
+    }
+  }
+
+  .expiry-cvv {
+    display: flex;
+    justify-content: space-between;
+
+    label {
+      flex: 1;
+      &:first-child {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+ */
+
+ @import '../../styles/global/global.scss';
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin-bottom: 1rem;
+    color: $white;
+
+    input {
+      background-color: transparent;
+      outline: 0;
+      width: 100%;
+      height: auto;
+      border: 0.1rem solid $grey-700;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      color: $white;
+
+      &:focus, &:focus-visible {
+        border-color: $ming-blue;
+      }
+    }
+  }
+
+  .expiry-cvv {
+    display: flex;
+    justify-content: space-between;
+
+    label {
+      flex: 1;
+      &:first-child {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .invalid-message {
+    color: $red-300;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+  }
+}

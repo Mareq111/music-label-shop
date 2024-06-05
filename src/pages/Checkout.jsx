@@ -1,4 +1,3 @@
-
 import { Link, useLocation } from "react-router-dom";
 import BtnContinue from "../UI/Buttons/BtnContinue";
 import CustomerFavoritesCart from "../components/CustomerFavoritesCart";
@@ -11,12 +10,12 @@ import { useEffect, useState } from "react";
 
 export default function Checkout() {
   const totalPrice = useSelector((state) => state.cart.totalPrice);
-  const formDataRedux = useSelector((state) => state.form); 
+  const formDataRedux = useSelector((state) => state.form);
   const [isFormValid, setIsFormValid] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
-    const formData = location.state || formDataRedux; 
+    const formData = location.state || formDataRedux;
     const isValid = Object.values(formData).every((field) => field.isValid);
     setIsFormValid(isValid);
   }, [location.state, formDataRedux]);
@@ -28,9 +27,9 @@ export default function Checkout() {
       <div className="content-fill-cart">
         <h1>Cart / INFORMATION / payment</h1>
         <AccordionCheckoutCart totalPrice={totalPrice} />
-        <FormDeliveryDetails 
-          formData={location.state || formDataRedux} 
-          onValidationChange={setIsFormValid} 
+        <FormDeliveryDetails
+          formData={location.state || formDataRedux}
+          onValidationChange={setIsFormValid}
         />
 
         <div>

@@ -1,10 +1,13 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
+
 import { useState } from "react";
 import "./FormPayment.scss";
 import RadioPayMethod from "../Inputs/RadioPayMethod";
 import BadgeIconsPayment from "../Badge/BadgeIconsPayment";
+import InputCardDetails from "../Inputs/InputCardDetails";
 
-export default function FormPayment() {
+export default function FormPayment({ onValidationChange }) {
   const [formValues, setFormValues] = useState({
     cardNumber: "",
     cardName: "",
@@ -33,6 +36,10 @@ export default function FormPayment() {
     });
   };
 
+  const handleValidationChange = (isValid) => {
+    onValidationChange(isValid);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission
@@ -55,51 +62,12 @@ export default function FormPayment() {
           selectedOption={formValues.paymentMethod}
         />
         {formValues.paymentMethod === "card" && (
-          <div className="card-details">
-            <label>
-              Card number
-              <input
-                type="text"
-                name="cardNumber"
-                value={formValues.cardNumber}
-                onChange={handleInputChange}
-                placeholder="Card number"
-              />
-            </label>
-            <label>
-              Name on card
-              <input
-                type="text"
-                name="cardName"
-                value={formValues.cardName}
-                onChange={handleInputChange}
-                placeholder="Name on card"
-              />
-            </label>
-            <div className="expiry-cvv">
-              <label>
-                Expiration date (MM / YY)
-                <input
-                  type="text"
-                  name="expiryDate"
-                  value={formValues.expiryDate}
-                  onChange={handleInputChange}
-                  placeholder="MM / YY"
-                />
-              </label>
-              <label>
-                Security code
-                <input
-                  type="text"
-                  name="cvv"
-                  value={formValues.cvv}
-                  onChange={handleInputChange}
-                  placeholder="CVV"
-                />
-              </label>
-            </div>
-          </div>
-        )}{" "}
+          <InputCardDetails 
+            formValues={formValues} 
+            handleInputChange={handleInputChange} 
+            onValidationChange={handleValidationChange} 
+          />
+        )}
         {formValues.paymentMethod === "paypal" && (
           <div className="card-details">
             <p>

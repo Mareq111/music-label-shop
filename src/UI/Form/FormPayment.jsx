@@ -1,6 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 import "./FormPayment.scss";
 import RadioPayMethod from "../Inputs/RadioPayMethod";
+import BadgeIconsPayment from "../Badge/BadgeIconsPayment";
 
 export default function FormPayment() {
   const [formValues, setFormValues] = useState({
@@ -40,7 +42,10 @@ export default function FormPayment() {
   return (
     <form className="form-payment-details" onSubmit={handleSubmit}>
       <fieldset className="fieldset-form--payment-details">
-        <legend className="legend-payment-details">Payment</legend>
+        <div className="legend-badge-payment">
+          <legend className="legend-payment-details">Payment</legend>
+          <BadgeIconsPayment />
+        </div>
         <p className="payment-description">
           All transactions are secure and encrypted.
         </p>
@@ -98,8 +103,8 @@ export default function FormPayment() {
         {formValues.paymentMethod === "paypal" && (
           <div className="card-details">
             <p>
-              After clicking Payment button, you will be redirected to PayPal to
-              complete your purchase securely.
+              After clicking "Pay now" button, you will be redirected to PayPal
+              to complete your purchase securely.
             </p>
           </div>
         )}

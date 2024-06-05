@@ -1,0 +1,16 @@
+@import "../../styles/global/global.scss";
+
+.icons-inside-badge {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: row;
+  padding: 0;
+}
+
+.li-icons-inside-payment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 0.2rem;
+}

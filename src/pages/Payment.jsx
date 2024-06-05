@@ -12,17 +12,20 @@ export default function Payment() {
   return (
     <aside className="aside-cart">
       <BadgeTopOfAsideNav nameOfNavPage={"Payment"} showCloseButton={true} />
+      
       <hr className="cart-devider-separator" />
       <div className="content-fill-cart">
         <h1>Cart / Informartion / PAYMENT</h1>
+        
         <AccordionCheckoutCart totalPrice={totalPrice} />
         <AccordionCheckoutDetails />
-       {/* payment form */}
-<FormPayment/>
+        {/* payment form */}
+        
+        <FormPayment />
 
         <div>
           <Link className="btn-continue-div-wrapper" to={"/payment-greetings"}>
-            <BtnContinue continueBtnText={"Payment"} />
+            <BtnContinue continueBtnText={"Pay now"} />
           </Link>
         </div>
       </div>

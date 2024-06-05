@@ -2,10 +2,16 @@
 
 import "./RadioPayMethod.scss";
 
-export default function RadioPayMethod({ onOptionChange, paymentMethods, selectedOption }) {
+export default function RadioPayMethod({
+  onOptionChange,
+  paymentMethods,
+  selectedOption,
+}) {
   const handleOptionChange = (event) => {
     const selectedValue = event.target.value;
-    const selectedOption = paymentMethods.find(option => option.id === selectedValue);
+    const selectedOption = paymentMethods.find(
+      (option) => option.id === selectedValue
+    );
     onOptionChange(selectedOption);
   };
 

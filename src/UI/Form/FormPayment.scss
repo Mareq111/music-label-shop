@@ -24,3 +24,14 @@
   font-weight: 700;
   margin-block: 1rem;
 }
+.legend-badge-payment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.payment-description {
+  color: $grey-600;
+  font-size: 0.9rem;
+}

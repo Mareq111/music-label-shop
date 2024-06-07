@@ -60,7 +60,7 @@ export default function InputDeliveryAddress({ onChange }) {
     const isValid = addressRegex.test(value);
     setIsValid(isValid);
 
-    onChange(value, isValid); 
+    onChange(value, isValid);
   };
 
   return (

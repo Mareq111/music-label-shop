@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Link, useLocation } from "react-router-dom";
 import BtnContinue from "../UI/Buttons/BtnContinue";
 import CustomerFavoritesCart from "../components/CustomerFavoritesCart";
@@ -7,6 +8,7 @@ import FormDeliveryDetails from "../UI/Form/FormDeliveryDetails";
 import { useSelector } from "react-redux";
 import AccordionCheckoutCart from "../UI/Accordions/AccordionCheckoutCart";
 import { useEffect, useState } from "react";
+import StepCircle from "./StepCircle";
 
 export default function Checkout() {
   const totalPrice = useSelector((state) => state.cart.totalPrice);
@@ -19,13 +21,14 @@ export default function Checkout() {
     const isValid = Object.values(formData).every((field) => field.isValid);
     setIsFormValid(isValid);
   }, [location.state, formDataRedux]);
+  const [completedSteps, setCompletedSteps] = useState([1]);
 
   return (
     <aside className="aside-cart">
       <BadgeTopOfAsideNav nameOfNavPage={"Checkout"} showCloseButton={true} />
       <hr className="cart-devider-separator" />
       <div className="content-fill-cart">
-        <h1>Cart / INFORMATION / payment</h1>
+        <StepCircle stepsCompleted={completedSteps} />
         <AccordionCheckoutCart totalPrice={totalPrice} />
         <FormDeliveryDetails
           formData={location.state || formDataRedux}

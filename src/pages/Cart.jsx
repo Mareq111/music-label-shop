@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 
-import React from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import BtnContinue from "../UI/Buttons/BtnContinue";
@@ -14,12 +14,14 @@ import {
   removeItemFromCart,
   updateItemQuantity,
 } from "../store/cartSlice.js";
+import StepCircle from "./StepCircle.jsx";
 
 export default function Cart() {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.cart.items);
   const cartQuantity = useSelector((state) => state.cart.totalQuantity);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
+  const [completedSteps, setCompletedSteps] = useState([0]);
 
   const handleQuantityChange = (itemId, newQuantity) => {
     dispatch(updateItemQuantity({ itemId, quantity: newQuantity }));
@@ -57,6 +59,8 @@ export default function Cart() {
         </div>
       ) : (
         <div className="content-fill-cart">
+          <StepCircle stepsCompleted={completedSteps} />
+
           <ul className="ul-product-list-cart">
             {products.map((product) => (
               <li key={`${product.itemId}__${product.selectedVersion}`}>

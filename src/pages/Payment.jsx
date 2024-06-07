@@ -1,4 +1,4 @@
-
+/* eslint-disable no-unused-vars */
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -9,10 +9,12 @@ import AccordionCheckoutCart from "../UI/Accordions/AccordionCheckoutCart";
 import AccordionCheckoutDetails from "../UI/Accordions/AccordionCheckoutDetails";
 import FormPayment from "../UI/Form/FormPayment";
 import BtnContinue from "../UI/Buttons/BtnContinue";
+import StepCircle from "./StepCircle";
 
 export default function Payment() {
   const totalPrice = useSelector((state) => state.cart.totalPrice);
   const [isFormValid, setIsFormValid] = useState(false);
+  const [completedSteps, setCompletedSteps] = useState([1, 2]);
 
   const handleValidationChange = (isValid) => {
     setIsFormValid(isValid);
@@ -24,8 +26,7 @@ export default function Payment() {
 
       <hr className="cart-devider-separator" />
       <div className="content-fill-cart">
-        <h1>Cart / Information / PAYMENT</h1>
-
+        <StepCircle stepsCompleted={completedSteps} />
         <AccordionCheckoutCart totalPrice={totalPrice} />
         <AccordionCheckoutDetails />
 

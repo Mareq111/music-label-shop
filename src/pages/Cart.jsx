@@ -34,69 +34,75 @@ export default function Cart() {
   const isEmptyCart = products.length === 0;
 
   return (
-    <aside className="aside-cart">
-      <BadgeTopOfAsideNav nameOfNavPage={"Cart"} showCloseButton={true} />
-      <hr className="cart-devider-separator" />
+    <>
+      <div className="backdrop"></div>
 
-      {isEmptyCart ? (
-        <div className="content-empty-cart">
-          <div className="all-text-cart">
-            <p className="p-text-cart">
-              It looks like you're starting with a clean slate.
-            </p>
-            <h3 className="h-cart">Let's explore!</h3>
+      <aside className="aside-cart">
+        <BadgeTopOfAsideNav nameOfNavPage={"Cart"} showCloseButton={true} />
+        <hr className="cart-devider-separator" />
+
+        {isEmptyCart ? (
+          <div className="content-empty-cart">
+            <div className="all-text-cart">
+              <p className="p-text-cart">
+                It looks like you're starting with a clean slate.
+              </p>
+              <h3 className="h-cart">Let's explore!</h3>
+            </div>
+
+            <div>
+              <Link
+                className="btn-continue-div-wrapper"
+                to={".."}
+                relative="path"
+              >
+                <BtnContinue continueBtnText={"Continue Shopping"} />
+              </Link>
+            </div>
           </div>
+        ) : (
+          <div className="content-fill-cart">
+            <StepCircle stepsCompleted={completedSteps} />
 
-          <div>
-            <Link
-              className="btn-continue-div-wrapper"
-              to={".."}
-              relative="path"
-            >
-              <BtnContinue continueBtnText={"Continue Shopping"} />
-            </Link>
+            <ul className="ul-product-list-cart">
+              {products.map((product) => (
+                <li key={`${product.itemId}__${product.selectedVersion}`}>
+                  <CardProductIntoCart
+                    product={product}
+                    onQuantityChange={(newQuantity) =>
+                      handleQuantityChange(product.itemId, newQuantity)
+                    }
+                    onRemoveProduct={() => handleRemoveProduct(product.itemId)}
+                  />
+                  <hr className="cart-devider-separator-smaller" />
+                </li>
+              ))}
+            </ul>
+            <div className="all-text-cart">
+              <p className="p-text-cart">
+                Your cart contains {cartQuantity}{" "}
+                {cartQuantity === 1 ? "item" : "items"}.
+              </p>
+            </div>
+            <h3 className="h-cart">
+              Subtotal Price : {totalPrice.toFixed(2)}€
+            </h3>
+
+            <div>
+              <Link className="btn-continue-div-wrapper" to={"/checkout"}>
+                <BtnContinue continueBtnText={"Continue to checkout"} />
+              </Link>
+            </div>
+          </div>
+        )}
+
+        <hr className="cart-devider-separator-smaller" />
+        <div className="all-content-of-cart">
+          <div className="customer-favorities-cart">
+            <CustomerFavoritesCart />
           </div>
         </div>
-      ) : (
-        <div className="content-fill-cart">
-          <StepCircle stepsCompleted={completedSteps} />
-
-          <ul className="ul-product-list-cart">
-            {products.map((product) => (
-              <li key={`${product.itemId}__${product.selectedVersion}`}>
-                <CardProductIntoCart
-                  product={product}
-                  onQuantityChange={(newQuantity) =>
-                    handleQuantityChange(product.itemId, newQuantity)
-                  }
-                  onRemoveProduct={() => handleRemoveProduct(product.itemId)}
-                />
-                <hr className="cart-devider-separator-smaller" />
-              </li>
-            ))}
-          </ul>
-          <div className="all-text-cart">
-            <p className="p-text-cart">
-              Your cart contains {cartQuantity}{" "}
-              {cartQuantity === 1 ? "item" : "items"}.
-            </p>
-          </div>
-          <h3 className="h-cart">Subtotal Price : {totalPrice.toFixed(2)}€</h3>
-
-          <div>
-            <Link className="btn-continue-div-wrapper" to={"/checkout"}>
-              <BtnContinue continueBtnText={"Continue to checkout"} />
-            </Link>
-          </div>
-        </div>
-      )}
-
-      <hr className="cart-devider-separator-smaller" />
-      <div className="all-content-of-cart">
-        <div className="customer-favorities-cart">
-          <CustomerFavoritesCart />
-        </div>
-      </div>
-    </aside>
+      </aside>
+    </>
   );
 }

@@ -21,38 +21,41 @@ export default function Payment() {
   };
 
   return (
-    <aside className="aside-cart">
-      <BadgeTopOfAsideNav nameOfNavPage={"Payment"} showCloseButton={true} />
+    <>
+      <div className="backdrop"></div>
+      <aside className="aside-cart">
+        <BadgeTopOfAsideNav nameOfNavPage={"Payment"} showCloseButton={true} />
 
-      <hr className="cart-devider-separator" />
-      <div className="content-fill-cart">
-        <StepCircle stepsCompleted={completedSteps} />
-        <AccordionCheckoutCart totalPrice={totalPrice} />
-        <AccordionCheckoutDetails />
+        <hr className="cart-devider-separator" />
+        <div className="content-fill-cart">
+          <StepCircle stepsCompleted={completedSteps} />
+          <AccordionCheckoutCart totalPrice={totalPrice} />
+          <AccordionCheckoutDetails />
 
-        <FormPayment onValidationChange={handleValidationChange} />
+          <FormPayment onValidationChange={handleValidationChange} />
 
-        <div className="btn-continue-div-wrapper">
-          <Link
-            className={`btn-continue-div-wrapper ${
-              !isFormValid ? "disabled" : ""
-            }`}
-            to={isFormValid ? "/payment-greetings" : ""}
-          >
-            <BtnContinue continueBtnText={"Proceed to pay"} />
-          </Link>
+          <div className="btn-continue-div-wrapper">
+            <Link
+              className={`btn-continue-div-wrapper ${
+                !isFormValid ? "disabled" : ""
+              }`}
+              to={isFormValid ? "/payment-greetings" : ""}
+            >
+              <BtnContinue continueBtnText={"Proceed to pay"} />
+            </Link>
+          </div>
         </div>
-      </div>
 
-      <hr className="cart-devider-separator-smaller" />
-      <div className="all-content-of-cart">
-        <div className="payment-disclaimer">
-          <p className="p-text-cart-disclaimer">
-            This page is part of a portfolio project. Please remember that it is
-            not a real transaction.
-          </p>
+        <hr className="cart-devider-separator-smaller" />
+        <div className="all-content-of-cart">
+          <div className="payment-disclaimer">
+            <p className="p-text-cart-disclaimer">
+              This page is part of a portfolio project. Please remember that it
+              is not a real transaction.
+            </p>
+          </div>
         </div>
-      </div>
-    </aside>
+      </aside>
+    </>
   );
 }

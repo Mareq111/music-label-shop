@@ -16,22 +16,25 @@ export default function PaymentAfterGreetings() {
   }, []);
 
   return (
-    <aside className="aside-cart">
-      <BadgeTopOfAsideNav
-        nameOfNavPage={"Order summary "}
-        showCloseButton={showCloseButton}
-      />
-      <hr className="cart-devider-separator" />
-      <div className="content-fill-cart">
-        <PaymentSuccess />
-        {showCloseButton && (
-          <div>
-            <Link className="btn-continue-div-wrapper" to={"/"}>
-              <BtnContinue continueBtnText={"Back to Home"} />
-            </Link>
-          </div>
-        )}
-      </div>
-    </aside>
+    <>
+      <div className="backdrop"></div>
+      <aside className="aside-cart">
+        <BadgeTopOfAsideNav
+          nameOfNavPage={"Order summary "}
+          showCloseButton={showCloseButton}
+        />
+        <hr className="cart-devider-separator" />
+        <div className="content-fill-cart">
+          <PaymentSuccess />
+          {showCloseButton && (
+            <div>
+              <Link className="btn-continue-div-wrapper" to={"/"}>
+                <BtnContinue continueBtnText={"Back to Home"} />
+              </Link>
+            </div>
+          )}
+        </div>
+      </aside>
+    </>
   );
 }

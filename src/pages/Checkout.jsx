@@ -24,35 +24,38 @@ export default function Checkout() {
   const [completedSteps, setCompletedSteps] = useState([1]);
 
   return (
-    <aside className="aside-cart">
-      <BadgeTopOfAsideNav nameOfNavPage={"Checkout"} showCloseButton={true} />
-      <hr className="cart-devider-separator" />
-      <div className="content-fill-cart">
-        <StepCircle stepsCompleted={completedSteps} />
-        <AccordionCheckoutCart totalPrice={totalPrice} />
-        <FormDeliveryDetails
-          formData={location.state || formDataRedux}
-          onValidationChange={setIsFormValid}
-        />
+    <>
+      <div className="backdrop"></div>
+      <aside className="aside-cart">
+        <BadgeTopOfAsideNav nameOfNavPage={"Checkout"} showCloseButton={true} />
+        <hr className="cart-devider-separator" />
+        <div className="content-fill-cart">
+          <StepCircle stepsCompleted={completedSteps} />
+          <AccordionCheckoutCart totalPrice={totalPrice} />
+          <FormDeliveryDetails
+            formData={location.state || formDataRedux}
+            onValidationChange={setIsFormValid}
+          />
 
-        <div>
-          <Link
-            className={`btn-continue-div-wrapper ${
-              !isFormValid ? "disabled" : ""
-            }`}
-            to={isFormValid ? "/payment" : ""}
-          >
-            <BtnContinue continueBtnText={"Proceed to pay"} />
-          </Link>
+          <div>
+            <Link
+              className={`btn-continue-div-wrapper ${
+                !isFormValid ? "disabled" : ""
+              }`}
+              to={isFormValid ? "/payment" : ""}
+            >
+              <BtnContinue continueBtnText={"Proceed to pay"} />
+            </Link>
+          </div>
         </div>
-      </div>
 
-      <hr className="cart-devider-separator-smaller" />
-      <div className="all-content-of-cart">
-        <div className="customer-favorities-cart">
-          <CustomerFavoritesCart />
+        <hr className="cart-devider-separator-smaller" />
+        <div className="all-content-of-cart">
+          <div className="customer-favorities-cart">
+            <CustomerFavoritesCart />
+          </div>
         </div>
-      </div>
-    </aside>
+      </aside>
+    </>
   );
 }

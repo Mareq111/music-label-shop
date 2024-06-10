@@ -9,6 +9,7 @@ import AccordionAuthorAnswer from "../UI/Accordions/AccordionAuthorAnswer.jsx";
 import BadgeAnimatedStrimz from "../UI/Badge/BadgeAnimatedStrimz.jsx";
 import BadgeAllSocials from "../UI/Badge/BadgeAllSocials.jsx";
 import BadgeTopOfAsideNav from "../UI/Badge/BadgeTopOfAsideNav.jsx";
+
 export default function MenuHamburger() {
   //array with main  menu buttons to pages
   const mainNavPages = [
@@ -45,10 +46,12 @@ export default function MenuHamburger() {
 
         <ul className="list-of-pages">
           <li>
+     
             <AccordionWithNav
               titleAccordion={"Information"}
               answerAccordion={<AccordionInformationAnswer />}
             />
+      
           </li>
           <li>
             <AccordionWithNav

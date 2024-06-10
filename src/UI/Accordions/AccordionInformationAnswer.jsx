@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import BtnAccordionAnswerFooter from "../Buttons/BtnAccordionAnswerFooter";
+
 export default function AccordionInformationAnswer() {
   return (
     <div className="accordion-footer-answer-div">
@@ -8,9 +9,9 @@ export default function AccordionInformationAnswer() {
         <li>
           <Link
             role="button"
-            aria-label="Go to Contact page"
+            aria-label="Go to Contact section into information page"
             className="link-footer-big-card-answer"
-            to="contact"
+            to="/information#information-contact"
           >
             <BtnAccordionAnswerFooter label={"Contact"} />
           </Link>
@@ -18,9 +19,9 @@ export default function AccordionInformationAnswer() {
         <li>
           <Link
             role="button"
-            aria-label="Go to About Us page"
+            aria-label="Go to About Us section into information page"
             className="link-footer-big-card-answer"
-            to="about-us"
+            to="/information#information-about-us"
           >
             <BtnAccordionAnswerFooter label={"About us"} />
           </Link>
@@ -28,9 +29,9 @@ export default function AccordionInformationAnswer() {
         <li>
           <Link
             role="button"
-            aria-label="Go to FAQ page"
+            aria-label="Go to FAQ section into information page"
             className="link-footer-big-card-answer"
-            to="faq"
+            to="/information#information-faq"
           >
             <BtnAccordionAnswerFooter label={"FAQ"} />
           </Link>
@@ -38,9 +39,9 @@ export default function AccordionInformationAnswer() {
         <li>
           <Link
             role="button"
-            aria-label="Go to Privacy policy page"
+            aria-label="Go to Privacy policy section into information page"
             className="link-footer-big-card-answer"
-            to="privacy-policy"
+            to="/information#information-privacy-policy"
           >
             <BtnAccordionAnswerFooter label={"Privacy policy"} />
           </Link>

@@ -63,6 +63,7 @@ import ProductsPuzzlesMedium from "./pages/subpages/products-puzzles/ProductsPuz
 import ProductsPuzzlesHard from "./pages/subpages/products-puzzles/ProductsPuzzlesHard.jsx";
 import Payment from "./pages/Payment.jsx";
 import PaymentAfterGreetings from "./pages/PaymentAfterGreetings.jsx";
+import Information from "./pages/Information.jsx";
 
 function App() {
   //firebase
@@ -269,6 +270,8 @@ function App() {
         { path: "checkout", element: <Checkout /> },
         { path: "payment", element: <Payment /> },
         { path: "payment-greetings", element: <PaymentAfterGreetings /> },
+        // Other subpages into menu
+        { path: "information", element: <Information /> },
       ],
     },
   ]);

@@ -1,0 +1,41 @@
+@import "../styles/global/global.scss";
+
+.head-of-subpage {
+  border-bottom: 0.1rem solid $amulet-green;
+}
+
+.h-text-subpage {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: $amulet-green;
+  margin: 1rem 0;
+}
+.p-subpage-description {
+  font-size: 1rem;
+  color: $grey-600;
+  margin-block: 1rem;
+}
+//content
+
+.h-inside-content-section-subpage {
+  font-size: 1.1rem;
+  color: $eastern-blue;
+  margin: 1rem 0;
+}
+
+.content-into-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.div-h5-p-into-subpage {
+  padding-bottom: 1rem;
+}
+.h5-into-subpage {
+  color: $white;
+}
+
+.p-into-subpage {
+  color: $grey-600;
+}

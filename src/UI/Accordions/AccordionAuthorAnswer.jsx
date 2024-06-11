@@ -11,7 +11,7 @@ export default function AccordionAuthorAnswer() {
             className="link-footer-big-card-answer"
             to="about-author"
           >
-            <BtnAccordionAnswerFooter label={"About author"} />
+            <BtnAccordionAnswerFooter label={"About Author"} />
           </Link>
         </li>
         <li>
@@ -31,7 +31,7 @@ export default function AccordionAuthorAnswer() {
             className="link-footer-big-card-answer"
             to="my-socials"
           >
-            <BtnAccordionAnswerFooter label={"My socials"} />
+            <BtnAccordionAnswerFooter label={"My Socials"} />
           </Link>
         </li>
         <li>
@@ -41,7 +41,7 @@ export default function AccordionAuthorAnswer() {
             className="link-footer-big-card-answer"
             to="payments"
           >
-            <BtnAccordionAnswerFooter label={"Contact to me"} />
+            <BtnAccordionAnswerFooter label={"Contact To Me"} />
           </Link>
         </li>
       </ul>

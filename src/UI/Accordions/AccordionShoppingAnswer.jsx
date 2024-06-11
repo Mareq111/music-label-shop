@@ -11,7 +11,7 @@ export default function AccordionShoppingAnswer() {
             role="button"
             aria-label="Go to return policy page"
             className="link-footer-big-card-answer"
-            to="return-policy"
+            to="/shopping#return-policy"
           >
             <BtnAccordionAnswerFooter label={"Return Policy"} />
           </Link>
@@ -21,7 +21,7 @@ export default function AccordionShoppingAnswer() {
             role="button"
             aria-label="Go to delivery page"
             className="link-footer-big-card-answer"
-            to="delivery"
+            to="/shopping#delivery"
           >
             <BtnAccordionAnswerFooter label={"Delivery"} />
           </Link>
@@ -31,7 +31,7 @@ export default function AccordionShoppingAnswer() {
             role="button"
             aria-label="Go to payments page"
             className="link-footer-big-card-answer"
-            to="payments"
+            to="/shopping#payments"
           >
             <BtnAccordionAnswerFooter label={"Payments"} />
           </Link>

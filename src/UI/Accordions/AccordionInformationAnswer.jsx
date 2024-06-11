@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import BtnAccordionAnswerFooter from "../Buttons/BtnAccordionAnswerFooter";
 
@@ -23,7 +22,7 @@ export default function AccordionInformationAnswer() {
             className="link-footer-big-card-answer"
             to="/information#information-about-us"
           >
-            <BtnAccordionAnswerFooter label={"About us"} />
+            <BtnAccordionAnswerFooter label={"About Us"} />
           </Link>
         </li>
         <li>
@@ -43,7 +42,7 @@ export default function AccordionInformationAnswer() {
             className="link-footer-big-card-answer"
             to="/information#information-privacy-policy"
           >
-            <BtnAccordionAnswerFooter label={"Privacy policy"} />
+            <BtnAccordionAnswerFooter label={"Privacy Policy"} />
           </Link>
         </li>
       </ul>

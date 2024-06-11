@@ -65,6 +65,7 @@ import Payment from "./pages/Payment.jsx";
 import PaymentAfterGreetings from "./pages/PaymentAfterGreetings.jsx";
 import Information from "./pages/Information.jsx";
 import Shopping from "./pages/Shopping.jsx";
+import Author from "./pages/Author.jsx";
 
 function App() {
   //firebase
@@ -274,6 +275,7 @@ function App() {
         // Other subpages into menu
         { path: "information", element: <Information /> },
         { path: "shopping", element: <Shopping /> },
+        { path: "author", element: <Author /> },
       ],
     },
   ]);

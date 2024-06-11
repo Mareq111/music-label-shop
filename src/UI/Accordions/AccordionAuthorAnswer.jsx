@@ -9,7 +9,7 @@ export default function AccordionAuthorAnswer() {
             role="button"
             aria-label="Go to about author page"
             className="link-footer-big-card-answer"
-            to="about-author"
+            to="/author#about-author"
           >
             <BtnAccordionAnswerFooter label={"About Author"} />
           </Link>
@@ -19,7 +19,7 @@ export default function AccordionAuthorAnswer() {
             role="button"
             aria-label="Go to project info page"
             className="link-footer-big-card-answer"
-            to="project-info"
+            to="/author#project-info"
           >
             <BtnAccordionAnswerFooter label={"Project Info "} />
           </Link>
@@ -29,7 +29,7 @@ export default function AccordionAuthorAnswer() {
             role="button"
             aria-label="Go to my socials page"
             className="link-footer-big-card-answer"
-            to="my-socials"
+            to="/author#my-socials"
           >
             <BtnAccordionAnswerFooter label={"My Socials"} />
           </Link>
@@ -39,7 +39,7 @@ export default function AccordionAuthorAnswer() {
             role="button"
             aria-label="Go to contact to me page"
             className="link-footer-big-card-answer"
-            to="payments"
+            to="/author#contact-to-me"
           >
             <BtnAccordionAnswerFooter label={"Contact To Me"} />
           </Link>

@@ -153,7 +153,51 @@ export default function Information() {
           className="content-section-subpage"
           id="information-privacy-policy"
         >
-          Privacy Policy
+          <div className="inside-content-section-subpage">
+            <h4 className="h-inside-content-section-subpage">Privacy Policy</h4>
+            <div className="content-into-section">
+              <div className="div-h5-p-into-subpage">
+                <h5 className="h5-into-subpage ">Introduction</h5>
+                <p className="p-into-subpage">
+                  Your privacy is important to us. This privacy policy explains
+                  how we collect, use, and protect your personal information.
+                </p>
+              </div>
+              <div className="div-h5-p-into-subpage">
+                <h5 className="h5-into-subpage">Data Collection</h5>
+                <p className="p-into-subpage">
+                  We collect personal information that you provide to us
+                  directly when you register on our site, place an order,
+                  subscribe to our newsletter, or contact us. This information
+                  may include your name, email address, mailing address, phone
+                  number, and payment information.
+                </p>
+              </div>
+
+              <div className="div-h5-p-into-subpage">
+                <h5 className="h5-into-subpage">Data Sharing</h5>
+                <p className="p-into-subpage">
+                  We do not sell, trade, or otherwise transfer your personal
+                  information to outside parties except to trusted third parties
+                  who assist us in operating our website, conducting our
+                  business, or servicing you, so long as those parties agree to
+                  keep this information confidential. We may also release your
+                  information when we believe release is appropriate to comply
+                  with the law, enforce our site policies, or protect ours or
+                  others' rights, property, or safety.XD
+                </p>
+              </div>
+              <div className="div-h5-p-into-subpage">
+                <h5 className="h5-into-subpage">Data Protection</h5>
+                <p className="p-into-subpage">
+                  We take the security of your personal information seriously.
+                  We implement a variety of security measures to maintain the
+                  safety of your personal information when you place an order or
+                  enter, submit, or access your personal information.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </div>

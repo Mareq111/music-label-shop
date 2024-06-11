@@ -1,5 +1,9 @@
 @import "../styles/global/global.scss";
 
+.subpage {
+  width: 100%;
+}
+
 .head-of-subpage {
   border-bottom: 0.1rem solid $amulet-green;
 }
@@ -14,6 +18,7 @@
   font-size: 1rem;
   color: $grey-600;
   margin-block: 1rem;
+  max-width: 60ch;
 }
 //content
 
@@ -31,6 +36,7 @@
 }
 .div-h5-p-into-subpage {
   padding-bottom: 1rem;
+  max-width: 60ch;
 }
 
 .h5-into-subpage {
@@ -41,17 +47,24 @@
 
 .p-into-subpage {
   color: $grey-600;
+  max-width: 60ch;
 }
 
 .btn-checkwebsite-div {
   margin-top: 1rem;
 }
 
-
 .ul-accordions-into-subpage {
   padding: 0;
-  margin-bottom: 1rem
+  margin-bottom: 1rem;
 }
 .li-accoridon-subpages {
   padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .subpage {
+    width: 60%;
+    padding: 1rem;
+  }
 }

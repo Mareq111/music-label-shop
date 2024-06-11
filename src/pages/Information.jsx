@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "./SubpagesInfoShoppingAuthorAccount.scss";
 import BtnCheckWebsite from "../UI/Buttons/BtnCheckWebsite";
+import Accordion from "../UI/Accordions/Accordion";
 export default function Information() {
   const location = useLocation();
   const margin = 32; // 32px = 2rem
@@ -85,7 +86,68 @@ export default function Information() {
           </div>
         </section>
         <section className="content-section-subpage" id="information-faq">
-          FAQ
+          <div className="inside-content-section-subpage">
+            <h4 className="h-inside-content-section-subpage">FAQ</h4>
+            <div className="content-into-section">
+              <div className="div-h5-p-into-subpage">
+                <h5 className="h5-into-subpage">Frequently Asked Questions</h5>
+                <p className="p-into-subpage">
+                  In this section, we answer the most common questions you may
+                  have.
+                </p>
+              </div>
+              <ul className="ul-accordions-into-subpage">
+                <li className="li-accoridon-subpages">
+                  <Accordion
+                    titleAccordion={"Order wait time?"}
+                    answerAccordion={
+                      "The order wait time varies depending on the selected delivery option. Our express delivery ensures delivery within 2 days from the date of product packaging. Alternatively, our standard delivery option typically takes 4 days, while our economy option may take up to 6 days for delivery after product packaging."
+                    }
+                  />
+                </li>
+                <li className="li-accoridon-subpages">
+                  <Accordion
+                    titleAccordion={"Need to register?"}
+                    answerAccordion={
+                      "Registration is not mandatory. However, by creating an account, you gain access to your order history and user profile. In the future, members will also receive discounts on their purchases."
+                    }
+                  />
+                </li>
+                <li className="li-accoridon-subpages">
+                  <Accordion
+                    titleAccordion={"Can I change/cancel order?"}
+                    answerAccordion={
+                      "Yes, please send us an email from the address used to place the order within 12 hours of payment. Our Email: [office@strimz-empire.com] "
+                    }
+                  />
+                </li>
+                <li className="li-accoridon-subpages">
+                  <Accordion
+                    titleAccordion={"Return policy?"}
+                    answerAccordion={
+                      "We offer a 30-day window for free exchanges and returns, excluding opened or used sets with records and individual records."
+                    }
+                  />
+                </li>
+                <li className="li-accoridon-subpages">
+                  <Accordion
+                    titleAccordion={"Contact support? "}
+                    answerAccordion={
+                      "For any inquiries or assistance, please feel free to reach out to our support team via email at [support@strimz-empire.com] or by phone at [+48 133 552 7500]. We're here to help!"
+                    }
+                  />
+                </li>
+                <li className="li-accoridon-subpages">
+                  <Accordion
+                    titleAccordion={"Payment methods?"}
+                    answerAccordion={
+                      "We accept debit and credit card payments, as well as PayPal for your convenience."
+                    }
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
         <section
           className="content-section-subpage"

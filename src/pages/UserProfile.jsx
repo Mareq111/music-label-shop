@@ -11,10 +11,16 @@ export default function UserPage() {
       <div className="all-content-of-user-profile">
         <div className="content-empty-user-profile">
           <div className="all-text-user-profile">
-            <p className="p-text-user-profile">Are you already a member?</p>
-            <h3 className="h-user-profile">Sign in</h3>
-            <p className="p-text-user-profile">First time here?</p>
-            <h3 className="h-user-profile">Join Us</h3>
+            {/* log in */}
+            <div id="log-in">
+              <p className="p-text-user-profile">Are you already a member?</p>
+              <h3 className="h-user-profile">Sign in</h3>
+            </div>
+            {/* register */}
+            <div id="register">
+              <p className="p-text-user-profile">First time here?</p>
+              <h3 className="h-user-profile">Join Us</h3>
+            </div>
           </div>
         </div>
       </div>

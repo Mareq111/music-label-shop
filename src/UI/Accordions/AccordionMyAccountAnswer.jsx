@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import BtnAccordionAnswerFooter from "../Buttons/BtnAccordionAnswerFooter";
 
@@ -11,7 +10,7 @@ export default function AccordionMyAccountAnswer() {
             role="button"
             aria-label="Go to log In page"
             className="link-footer-big-card-answer"
-            to="log-in"
+            to="/user-profile#log-in"
           >
             <BtnAccordionAnswerFooter label={"Log in"} />
           </Link>
@@ -21,7 +20,7 @@ export default function AccordionMyAccountAnswer() {
             role="button"
             aria-label="Go to register page"
             className="link-footer-big-card-answer"
-            to="register"
+            to="/user-profile#register"
           >
             <BtnAccordionAnswerFooter label={"Register"} />
           </Link>
@@ -31,7 +30,7 @@ export default function AccordionMyAccountAnswer() {
             role="button"
             aria-label="Go to cart page"
             className="link-footer-big-card-answer"
-            to="cart"
+            to="/cart"
           >
             <BtnAccordionAnswerFooter label={"Cart"} />
           </Link>
@@ -41,7 +40,7 @@ export default function AccordionMyAccountAnswer() {
             role="button"
             aria-label="Go to favorites page"
             className="link-footer-big-card-answer"
-            to="favorites"
+            to="/favorites"
           >
             <BtnAccordionAnswerFooter label={"Favorites"} />
           </Link>

@@ -4,7 +4,7 @@ import "./BtnIconFavoritesMenu.scss";
 export default function BtnIconFavoritesMenu({ itemCountFav }) {
   return (
     <button
-      title="Cart"
+      title="Favorites"
       className="btn-favorites-menu"
       type="button"
       aria-label="Go to favorites"

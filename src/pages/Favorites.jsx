@@ -24,7 +24,6 @@ export default function Favorites() {
   };
 
   const handleAddToCart = (product) => {};
-  console.log("Favorite Products in Favorites component:", favoriteProducts);
 
   return (
     <aside className="aside-favorites">
@@ -39,7 +38,6 @@ export default function Favorites() {
               Explore and add amazing items to your list.
             </h3>
           </div>
-
           <div>
             <Link
               className="btn-continue-div-wrapper"
@@ -52,18 +50,20 @@ export default function Favorites() {
         </div>
       ) : (
         <div className="content-fill-favorites">
-          {favoriteProducts.map((product) => (
-            <div key={product.itemId}>
-              <CardProductIntoFavorites
-                product={product}
-                onRemoveProduct={() =>
-                  handleRemoveFavoriteProduct(product.itemId)
-                }
-                onAddToCart={() => handleAddToCart(product)}
-              />
-              <hr className="favorites-devider-separator-smaller" />
-            </div>
-          ))}
+          <ul className="ul-product-list-fav">
+            {favoriteProducts.map((product) => (
+              <li key={product.titleItem}>
+                <CardProductIntoFavorites
+                  product={product}
+                  onRemoveProduct={() =>
+                    handleRemoveFavoriteProduct(product.itemId)
+                  }
+                  onAddToCart={() => handleAddToCart(product)}
+                />
+                <hr className="favorites-devider-separator-smaller" />
+              </li>
+            ))}
+          </ul>
 
           <div className="all-text-favorites">
             <p className="p-text-favorites" id="summary-p-text-favorites">
@@ -71,7 +71,6 @@ export default function Favorites() {
               {favoriteQuantity === 1 ? "item" : "items"}.
             </p>
           </div>
-
           <div>
             <Link className="btn-continue-div-wrapper" to={"/cart"}>
               <BtnContinue continueBtnText={"Inspect cart"} />

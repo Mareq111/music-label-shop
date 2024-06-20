@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 
-
 import { useState } from "react";
 import "./ContentProductDetails.scss";
 import BadgeTitlePriceAuthor from "../UI/Badge/BadgeTitlePriceAuthor";

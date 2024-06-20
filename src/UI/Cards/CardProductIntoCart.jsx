@@ -3,6 +3,7 @@
 import "./CardProductIntoCart.scss";
 import MainImgProdDetails from "../Images/MainImgProdDetails";
 import CartProductActions from "../../components/CartProductActions";
+import { Link } from "react-router-dom";
 
 export default function CardProductIntoCart({
   product,
@@ -27,9 +28,16 @@ export default function CardProductIntoCart({
       </div>
       <div className="div-all-content-product-into-cart">
         <div className="div-all-text-product-info">
-          <h3 className="name-of-added-product">
-            {titleItem} - {title}
-          </h3>
+          <Link
+            to={`/${product.key}`}
+            aria-label="go to this product page"
+            title="Go to this product page"
+          >
+            <h3 className="name-of-added-product">
+              {titleItem} - {title}
+            </h3>
+          </Link>
+
           <p className="p-info-added-product">Version: {selectedVersion}</p>
           <p className="p-info-added-product">
             ID: {itemId}-{selectedVersion}

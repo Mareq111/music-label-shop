@@ -25,13 +25,13 @@ export default function DialogAddToFav({ isFavorite }) {
       {isFavorite ? (
         <div className="dialog-content">
           <p className="p-dialog-cart" id="p-add-to-fav">
-            You added an item to the favorites!
+            Item added to favorites!
           </p>
         </div>
       ) : (
         <div className="dialog-content">
           <p className="p-dialog-cart" id="p-dialog-fav-red">
-            You removed an item from the favorites.
+            Item removed from favorites.
           </p>
         </div>
       )}

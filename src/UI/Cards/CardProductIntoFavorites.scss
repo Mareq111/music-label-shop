@@ -1,11 +1,10 @@
-@import '../../styles/global/global.scss';
-
-
+@import "../../styles/global/global.scss";
 
 .card-product-into-cart {
   display: flex;
   width: 100%;
   margin-bottom: 1rem;
+  color: $white;
 }
 .img-container-and-price-info {
   display: flex;
@@ -66,7 +65,12 @@
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-  /* max-width: 12rem;  */
+  color: $white;
+
+  &:hover {
+    transition: 0.2s ease-in-out;
+    color: $grey-600;
+  }
 }
 
 .wrapper-cart-product-actions {
@@ -82,12 +86,12 @@
     flex-direction: row;
     width: auto;
     height: auto;
-  /*   gap: 1rem; */
+    /*   gap: 1rem; */
   }
   .name-of-added-product {
     width: 15rem;
   }
   .h-price-of-item {
-   margin-right: 1rem;
+    margin-right: 1rem;
   }
 }

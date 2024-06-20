@@ -17,23 +17,20 @@ const favoritesSlice = createSlice({
       if (!existingItem) {
         state.items.push({
           ...newItem,
-          itemId: newItem.itemId,
-          quantity: 1,
+          quantity: 1, // Assuming quantity is needed for your use case
         });
         state.totalQuantity += 1;
       }
     },
     removeItemFromFavorites: (state, action) => {
-      const itemIdToRemove = action.payload;
-      const existingItem = state.items.find(
-        (item) => item.itemId === itemIdToRemove
+      const titleItemToRemove = action.payload;
+      const existingItemIndex = state.items.findIndex(
+        (item) => item.titleItem === titleItemToRemove
       );
-      if (!existingItem) return;
-
-      state.items = state.items.filter(
-        (item) => item.itemId !== itemIdToRemove
-      );
-      state.totalQuantity -= 1;
+      if (existingItemIndex !== -1) {
+        state.items.splice(existingItemIndex, 1);
+        state.totalQuantity -= 1;
+      }
     },
   },
 });

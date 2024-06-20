@@ -27,7 +27,7 @@ export default function BtnHeart({ product }) {
     if (!isProductInFavorites) {
       dispatch(addItemToFavorites(product));
     } else {
-      dispatch(removeItemFromFavorites(product.itemId));
+      dispatch(removeItemFromFavorites(product.titleItem));
     }
     setShowDialog(true);
     setTimeout(() => {

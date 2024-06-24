@@ -2,9 +2,24 @@
 
 .home-content {
   color: $white;
+ 
 }
-a {
-  text-decoration: none;
-  color: $red-300;
-  font-weight: 700;
+
+
+.product-big-section-homepage {
+  background-color: $eastern-blue;
+  height: auto;
+  width: 100%;
+  top: 1rem;
+
+  /* top: 0; */
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: -1;
 }
+/* .product-big-section-homepage { 
+  width: 100%;
+}
+ */

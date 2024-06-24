@@ -1,0 +1,25 @@
+@import "../../styles/global/global.scss";
+
+.big-card-homepage {
+  display: flex;
+  justify-content: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+
+.btn-img-center-big-card-homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+
+.big-card-homepage-img-shape {
+  width: 16rem;
+  height: 14rem;
+  overflow: hidden;
+}

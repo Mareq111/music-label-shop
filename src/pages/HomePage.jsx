@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+/* import { useNavigate } from "react-router-dom";
 import "./HomePage.scss";
 export default function HomePage() {
   const navigate = useNavigate();
@@ -16,6 +16,21 @@ export default function HomePage() {
 
       <button onClick={navToProducts}>Albums</button>
       <button onClick={navToProductsDetailsHandler}>Product Details</button>
+    </div>
+  );
+}
+ */
+
+import CardProductHomepage from "../UI/Cards/CardProductHomepage";
+import "./HomePage.scss";
+export default function HomePage() {
+  return (
+    <div className="home-content">
+      <h1>My home page</h1>
+
+      <section className="product-big-section-homepage">
+        <CardProductHomepage />
+      </section>
     </div>
   );
 }

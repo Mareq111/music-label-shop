@@ -26,7 +26,7 @@ import "./HomePage.scss";
 export default function HomePage() {
   return (
     <div className="home-content">
-      <h1>My home page</h1>
+    
 
       <section className="product-big-section-homepage">
         <CardProductHomepage />

@@ -1,24 +1,26 @@
-
+/* eslint-disable react/no-unescaped-entities */
 import arenaCover from "../../assets/img/coversMini/albums/arena_of_autumnn_EP-mini.jpg";
-import './CardProductHomepage.scss';
+import BtnContinue from "../Buttons/BtnContinue";
+import "./CardProductHomepage.scss";
 export default function CardProductHomepage() {
   return (
     <div className="big-card-homepage">
-        <h2 className="big-card-homepage-pre-head">
-            Our  albums collections
-        </h2>
-        <h3 className="big-card-homepage-h">Explore Our Entire Music Collection!</h3>
-        <p className="big-card-homepage-p">Discover the full range of albums from our music label. From iconic classics to the hottest new releases, our collection has something for every music lover. Click here to explore and find your next favorite album!</p>
-        <div className="btn-img-center-big-card-homepage">
-        <button>Albums</button>
+      <h2 className="big-card-homepage-pre-head">Our albums collections</h2>
+      <h3 className="big-card-homepage-h">Unleash the Music</h3>
+      <p className="big-card-homepage-p">
+        Dive into a world of sound with our complete album collection. From
+        iconic classics to fresh new releases, there's a perfect tune for every
+        listener. Click to explore and start your musical journey now!
+      </p>
+      <div className="btn-img-center-big-card-homepage">
+        <BtnContinue continueBtnText={"Albums"} />
 
-      
         <div className="big-card-homepage-div-img">
-            <div className="big-card-homepage-img-shape">
-                <img src={arenaCover} alt="" />
-            </div>
+          <div className="big-card-homepage-img-shape">
+            <img className="big-card-img" src={arenaCover} alt="" />
+          </div>
         </div>
-        </div>
+      </div>
     </div>
-  )
+  );
 }

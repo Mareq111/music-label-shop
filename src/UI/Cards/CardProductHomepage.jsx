@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
-import ourCDS from "../../assets/img/others/our-shop-cds.jpg";
+/* import ourCDS from "../../assets/img/others/our-shop-cds.jpg";
 import BtnContinue from "../Buttons/BtnContinue";
 import { Link } from "react-router-dom";
 import "./CardProductHomepage.scss";
@@ -8,7 +9,7 @@ export default function CardProductHomepage() {
     <section className="product-big-section-homepage">
       <div className="big-card-homepage">
         <h2 className="big-card-homepage-pre-head">Our albums collections</h2>
-        {/* together img and h for 660px+ */}
+        together img and h for 660px+ 
         <div className="row-for-img-h-card-homepage">
           <div className="big-card-homepage-div-img">
             <div className="big-card-homepage-img-shape">
@@ -33,6 +34,50 @@ export default function CardProductHomepage() {
             to={"/albums/all-strimz-empire"}
           >
             <BtnContinue continueBtnText={"Albums"} />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+} */
+
+import BtnContinue from "../Buttons/BtnContinue";
+import { Link } from "react-router-dom";
+import "./CardProductHomepage.scss";
+
+export default function CardProductHomepage({ data }) {
+  const {
+    title,
+    headline,
+    description,
+    buttonText,
+    link,
+    backgroundColor,
+    img
+  } = data;
+
+  return (
+    <section
+      className="product-big-section-homepage"
+      style={{ backgroundColor }}
+    >
+      <div className="big-card-homepage">
+        <h2 className="big-card-homepage-pre-head">{title}</h2>
+        {/* together img and h for 660px+ */}
+        <div className="row-for-img-h-card-homepage">
+          <div className="big-card-homepage-div-img">
+            <div className="big-card-homepage-img-shape">
+              <img className="big-card-img"  src={img}
+            alt={`Go to ${title} page`} />
+            </div>
+          </div>
+
+          <h3 className="big-card-homepage-h">{headline}</h3>
+        </div>
+        <p className="big-card-homepage-p">{description}</p>
+        <div className="btn-img-center-big-card-homepage">
+          <Link className="link-to-into-big-card-homepage" to={link}>
+            <BtnContinue continueBtnText={buttonText} />
           </Link>
         </div>
       </div>

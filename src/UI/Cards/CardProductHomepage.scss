@@ -1,5 +1,24 @@
 @import "../../styles/global/global.scss";
 
+.product-big-section-homepage {
+  max-width: 56rem;
+  height: auto;
+  width: 100%;
+  background-color: #3a0606;
+  /* background-color: #2b0000; */
+  /*  background-color: #3a0606; ALBUMS */
+  /* background-color: #35063a; ALBUMS OR TICKETS*/
+  /* background-color: #17063a;  TICKETS*/
+  /* background-color: #06133a; */
+  /* background-color: #06273a;  tshirts*/
+  /* background-color: #063a36;  gadgets*/
+  /* background-color: #063a20;  POSTERS*/
+  /* background-color: #3a2906;  puzzles*/
+  /* background-color: #3a1906; */
+  color: $eastern-blue;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
 .big-card-homepage {
   display: flex;
   justify-content: flex;
@@ -20,6 +39,7 @@
 .big-card-homepage-p {
   max-width: 60ch;
   margin-block: 1rem;
+  font-size: 1rem;
 }
 .btn-img-center-big-card-homepage {
   display: flex;
@@ -42,6 +62,10 @@
 }
 
 .big-card-homepage-div-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   margin-block: 2rem;
 }
 
@@ -61,4 +85,41 @@
   height: 16rem;
   max-width: 16rem;
   max-height: 16rem;
+}
+
+//media query
+@media (min-width: 360px) {
+  .product-big-section-homepage {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 660px) {
+  .big-card-homepage {
+    display: grid;
+    grid-template-rows: (2, 2fr);
+    width: 100%;
+    height: auto;
+  }
+
+  .big-card-homepage-h {
+    width: 50%;
+  }
+  .row-for-img-h-card-homepage {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .big-card-homepage-div-img {
+    margin-block: 2rem;
+    width: 50%;
+  }
+}
+/* 778px */
+@media (min-width: 1024px) {
+  .product-big-section-homepage {
+    padding: 2rem;
+  }
 }

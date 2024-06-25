@@ -1,25 +1,11 @@
 @import ".././styles/global/global.scss";
 
 .home-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
   color: $white;
 }
 
-.product-big-section-homepage {
-  /*  background-color: $eastern-blue; */
-  height: auto;
-  width: 100%;
-  background-color: #3a0606;
-  /* background-color: #2b0000; */
-  /*  background-color: #3a0606; ALBUMS */
-  /* background-color: #35063a; ALBUMS OR TICKETS*/
-  /* background-color: #17063a;  TICKETS*/
-  /* background-color: #06133a; */
-  /* background-color: #06273a;  tshirts*/
-  /* background-color: #063a36;  gadgets*/
-  /* background-color: #063a20;  POSTERS*/
-  /* background-color: #3a2906;  puzzles*/
-  /* background-color: #3a1906; */
-  color: $eastern-blue;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-}

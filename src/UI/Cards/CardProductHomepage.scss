@@ -10,10 +10,16 @@
 }
 .big-card-homepage-pre-head {
   font-size: 0.8rem;
+  margin-top: 1rem;
 }
 
 .big-card-homepage-h {
   font-size: 2.5rem;
+}
+
+.big-card-homepage-p {
+  max-width: 60ch;
+  margin-block: 1rem;
 }
 .btn-img-center-big-card-homepage {
   display: flex;
@@ -23,7 +29,12 @@
   width: 100%;
   height: auto;
 }
-
+.link-to-into-big-card-homepage {
+  width: 100%;
+  height: auto;
+  text-decoration: none;
+  margin-block: 1rem;
+}
 .big-card-homepage-img-shape {
   width: 16rem;
   height: 14rem;
@@ -31,7 +42,7 @@
 }
 
 .big-card-homepage-div-img {
-  margin-top: 2rem;
+  margin-block: 2rem;
 }
 
 //img
@@ -42,7 +53,7 @@
   width: 16rem;
   height: 16rem;
   object-fit: cover;
-  border-radius: 0.5rem 4rem;
+  border-radius: 0.5rem 4rem 1rem 4rem;
 }
 
 .big-card-img {

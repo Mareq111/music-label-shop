@@ -13,3 +13,13 @@
 .card-homepage-div {
   margin: 1rem;
 }
+
+@media (min-width: 1024px) {
+  .home-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Three columns */
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+  }
+}

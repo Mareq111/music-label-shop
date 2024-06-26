@@ -31,7 +31,7 @@ const cardData = [
     title: "Our albums collections",
     headline: "Unleash the Music.",
     description:
-      "Dive into a world of sound with our complete album collection. From iconic classics to fresh new releases, there's a perfect tune for every listener. Click to explore and start your musical journey now!",
+      "Dive into a world of sound with our complete album collection. From iconic classics to fresh new releases, there's a perfect tune for every listener!",
     buttonText: "Albums",
     link: "/albums/all-strimz-empire",
     backgroundColor: "#3a0606",
@@ -41,7 +41,7 @@ const cardData = [
     title: "Upcoming Concerts",
     headline: "Feel the Beat.",
     description:
-      "Join us for unforgettable live performances. Get your tickets now and be part of the excitement!",
+      "Join us for unforgettable live performances. Get your tickets now and feel the thrill of live music with friends and family!",
     buttonText: "Tickets",
     link: "/tickets/all-locations",
     backgroundColor: "#17063a",
@@ -71,7 +71,7 @@ const cardData = [
     title: "Artist Posters",
     headline: "Decorate Your Space.",
     description:
-      "Check out our collection of artist posters. Perfect for any fan, these posters feature cover art from your favorite albums. Click to see all available posters and make your walls come alive!",
+      "Check out our collection of artist posters. Perfect for any fan, these posters feature cover art from your favorite albums. See all available posters and make your walls come alive!",
     buttonText: "Posters",
     link: "/posters/all-strimz-empire",
     backgroundColor: "#063a20",
@@ -79,7 +79,7 @@ const cardData = [
   },
   {
     title: "Album Puzzles",
-    headline: "Piece Together the Music.",
+    headline: "Piece Together Music.",
     description:
       "Challenge yourself with our album cover puzzles. Available in various sizes, these puzzles are perfect for music lovers. Click to start your puzzle adventure now!",
     buttonText: "Puzzles",

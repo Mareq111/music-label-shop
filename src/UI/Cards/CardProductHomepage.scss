@@ -56,6 +56,15 @@
   text-decoration: none;
   margin-block: 1rem;
 }
+.link-to-into-big-card-homepage-Text {
+  color: inherit;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    color: $grey-600;
+  }
+}
+
 .big-card-homepage-img-shape {
   width: 16rem;
   height: 14rem;

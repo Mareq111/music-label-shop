@@ -53,7 +53,7 @@ export default function CardProductHomepage({ data }) {
     buttonText,
     link,
     backgroundColor,
-    img
+    img,
   } = data;
 
   return (
@@ -62,21 +62,39 @@ export default function CardProductHomepage({ data }) {
       style={{ backgroundColor }}
     >
       <div className="big-card-homepage">
-        <h2 className="big-card-homepage-pre-head">{title}</h2>
+        <Link
+          className="link-to-into-big-card-homepage-Text"
+          to={link}
+          aria-label={`Check out ${title} page`}
+        >
+          <h2 className="big-card-homepage-pre-head">{title}</h2>
+        </Link>
         {/* together img and h for 660px+ */}
         <div className="row-for-img-h-card-homepage">
           <div className="big-card-homepage-div-img">
             <div className="big-card-homepage-img-shape">
-              <img className="big-card-img"  src={img}
-            alt={`Go to ${title} page`} />
+              <img
+                className="big-card-img"
+                src={img}
+                alt={`Go to ${title} page`}
+              />
             </div>
           </div>
-
-          <h3 className="big-card-homepage-h">{headline}</h3>
+          <Link
+            aria-label={`Check out ${title} page`}
+            className="link-to-into-big-card-homepage-Text"
+            to={link}
+          >
+            <h3 className="big-card-homepage-h">{headline}</h3>
+          </Link>
         </div>
         <p className="big-card-homepage-p">{description}</p>
         <div className="btn-img-center-big-card-homepage">
-          <Link className="link-to-into-big-card-homepage" to={link}>
+          <Link
+            aria-label={`Go to ${title} page`}
+            className="link-to-into-big-card-homepage"
+            to={link}
+          >
             <BtnContinue continueBtnText={buttonText} />
           </Link>
         </div>

@@ -26,6 +26,7 @@ import "./HomePage.scss";
 import ourCDS from "../assets/img/others/our-shop-cds.jpg";
 import ourTickets from "../assets/img/others/Ticket-slider1.jpg";
 import CardHomepageSocialLinks from "../UI/Cards/CardHomepageSocialLinks";
+import CardHomepageWebsiteLink from "../UI/Cards/CardHomepageWebsiteLink";
 
 const cardData = [
   {
@@ -99,6 +100,7 @@ export default function Homepage() {
       {/* grid for other cards */}
       <div className="home-content-grid-cards">
         <CardHomepageSocialLinks />
+        <CardHomepageWebsiteLink />
       </div>
     </div>
   );

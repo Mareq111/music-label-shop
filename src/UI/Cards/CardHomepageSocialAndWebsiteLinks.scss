@@ -1,10 +1,10 @@
 @import "../../styles/global/global.scss";
 
 .homepage-social-links-section-homepage {
-  margin-block: 1rem;
-  max-width: 18rem;
+  /*  margin-block: 1rem; */
+  max-width: 56rem;
   min-width: 18rem;
-
+  min-height: 9.5rem;
   height: auto;
   width: 100%;
   background-color: $black-700;
@@ -20,4 +20,9 @@
 
 .h-streaming-logos-homepage {
   margin-block: 1rem;
+  font-size: 1.1rem;
+  color: $white;
+}
+.btn-homepage-website {
+  padding-block: 1rem;
 }

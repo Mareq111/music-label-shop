@@ -1,5 +1,5 @@
 import BadgeAllSocials from "../../UI/Badge/BadgeAllSocials.jsx";
-import "./CardHomepageSocialLinks.scss";
+import "./CardHomepageSocialAndWebsiteLinks.scss";
 export default function CardHomepageSocialLinks() {
   return (
     <section className="homepage-social-links-section-homepage">

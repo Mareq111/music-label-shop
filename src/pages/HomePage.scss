@@ -8,6 +8,7 @@
   width: 100%;
   height: auto;
   color: $white;
+  gap: 1rem;
 }
 
 .card-homepage-div {
@@ -27,14 +28,13 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
-    gap: 1rem;
   }
 }
 
 @media (min-width: 1024px) {
   .home-content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     width: 100%;
     height: auto;
     gap: 1rem;

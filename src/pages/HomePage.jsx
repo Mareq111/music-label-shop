@@ -27,6 +27,7 @@ import ourCDS from "../assets/img/others/our-shop-cds.jpg";
 import ourTickets from "../assets/img/others/Ticket-slider1.jpg";
 import CardHomepageSocialLinks from "../UI/Cards/CardHomepageSocialLinks";
 import CardHomepageWebsiteLink from "../UI/Cards/CardHomepageWebsiteLink";
+import CardPreorderHomepage from "../UI/Cards/CardPreorderHomepage";
 
 const cardData = [
   {
@@ -94,13 +95,20 @@ const cardData = [
 export default function Homepage() {
   return (
     <div className="home-content">
+      {/* dynamic cards with sections */}
       {cardData.map((card, index) => (
         <CardProductHomepage key={index} data={card} />
       ))}
+      {/* other content */}
       {/* grid for other cards */}
+
       <div className="home-content-grid-cards">
         <CardHomepageSocialLinks />
         <CardHomepageWebsiteLink />
+      </div>
+      <div className="home-content-grid-cards">
+        <CardPreorderHomepage />
+        <CardPreorderHomepage />
       </div>
     </div>
   );

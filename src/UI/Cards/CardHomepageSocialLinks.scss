@@ -1,0 +1,23 @@
+@import "../../styles/global/global.scss";
+
+.homepage-social-links-section-homepage {
+  margin-block: 1rem;
+  max-width: 18rem;
+  min-width: 18rem;
+
+  height: auto;
+  width: 100%;
+  background-color: $black-700;
+  color: $white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.icon-wrapper-homepage {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.h-streaming-logos-homepage {
+  margin-block: 1rem;
+}

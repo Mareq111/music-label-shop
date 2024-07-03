@@ -16,11 +16,23 @@
 }
 
 //grid
-.home-content-grid-cards {
+
+.wrap-cards-homepage {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 1rem;
+  max-width: 56rem;
+
+}
+
+.home-content-grid-cards {
+  display: flex;
+
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+ 
 }
 
 @media (min-width: 630px) {
@@ -28,7 +40,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
+  
   }
+
 }
 
 @media (min-width: 1024px) {
@@ -46,4 +60,5 @@
     width: 100%;
     gap: 1rem;
   }
+
 }

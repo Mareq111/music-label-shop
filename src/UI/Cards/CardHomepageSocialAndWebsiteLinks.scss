@@ -2,7 +2,9 @@
 
 .homepage-social-links-section-homepage {
   /*  margin-block: 1rem; */
-  max-width: 56rem;
+ max-width: 56rem;
+  /* max-width: 27.5rem; */
+
   min-width: 18rem;
   min-height: 9.5rem;
   height: auto;
@@ -26,3 +28,10 @@
 .btn-homepage-website {
   padding-block: 1rem;
 }
+
+/* @media (min-width: 630px) {
+  .homepage-social-links-section-homepage {
+    max-width: 27.5rem;
+   
+  }
+} */

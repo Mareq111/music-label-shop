@@ -101,14 +101,15 @@ export default function Homepage() {
       ))}
       {/* other content */}
       {/* grid for other cards */}
-
-      <div className="home-content-grid-cards">
-        <CardHomepageSocialLinks />
-        <CardHomepageWebsiteLink />
-      </div>
-      <div className="home-content-grid-cards">
-        <CardPreorderHomepage />
-        <CardPreorderHomepage />
+      <div className="wrap-cards-homepage">
+        <div className="home-content-grid-cards">
+          <CardHomepageSocialLinks />
+          <CardHomepageWebsiteLink />
+        </div>
+        <div className="home-content-grid-cards">
+          <CardPreorderHomepage />
+          <CardPreorderHomepage />
+        </div>
       </div>
     </div>
   );

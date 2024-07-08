@@ -16,7 +16,7 @@
 }
 ///seting hiding and showing nav when scrolling
 .all-top-nav.hidden {
-  top: -128px;
+  top: -200px;
 }
 .all-top-nav.visible {
   top: 0;
@@ -121,10 +121,18 @@ path {
     width: 100%;
     padding: 1rem 2.5rem;
   }
+  //adjusting margin
+  .content-margin {
+    margin-bottom: 160px;
+  }
 }
 //media query for 768screens
 
 @media (min-width: 768px) {
+  //adjusting margin
+  .content-margin {
+    margin-bottom: 192px;
+  }
   .div-logo {
     width: 2.5rem;
     height: 2.5rem;

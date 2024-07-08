@@ -6,9 +6,24 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: fixed;
+  top: 0;
   width: 100vw;
   height: auto;
   background-color: $black-700;
+  transition: top 0.3s;
+  z-index: 1;
+}
+///seting hiding and showing nav when scrolling
+.all-top-nav.hidden {
+  top: -128px;
+}
+.all-top-nav.visible {
+  top: 0;
+}
+// Adjust based on your nav height margin
+.content-margin {
+  margin-bottom: 128px;
 }
 
 .up-nav {
@@ -87,7 +102,7 @@ path {
   text-decoration: none;
 }
 //badge categories
-.badge-categories-div-top-nav { 
+.badge-categories-div-top-nav {
   display: none;
 }
 //media query for 425screens

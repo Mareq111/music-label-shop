@@ -54,7 +54,7 @@ const cardData = [
     title: "Exclusive Merchandise",
     headline: "Wear the Vibe.",
     description:
-      "Discover our exclusive collection of t-shirts. Show off your favorite tunes in style with unique designs that speak to your musical soul. Find your perfect fit and express your passion!",
+      "Discover our exclusive collection of t-shirts. Show off your favorite tunes in style with unique designs that speak to your musical soul.",
     buttonText: "T-Shirts",
     link: "/t-shirts/all-colors",
     backgroundColor: "#06273a",

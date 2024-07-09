@@ -28,6 +28,7 @@ import ourTickets from "../assets/img/others/Ticket-slider1.jpg";
 import CardHomepageSocialLinks from "../UI/Cards/CardHomepageSocialLinks";
 import CardHomepageWebsiteLink from "../UI/Cards/CardHomepageWebsiteLink";
 import CardPreorderHomepage from "../UI/Cards/CardPreorderHomepage";
+import CardCustomerFavHomepage from "../UI/Cards/CardCustomerFavHomepage";
 
 const cardData = [
   {
@@ -101,7 +102,7 @@ export default function Homepage() {
       ))}
       {/* other content */}
       {/* grid for other cards */}
-      <div className="wrap-cards-homepage">
+      <div className="wrap-cards-homepage-left">
         <div className="home-content-grid-cards">
           <CardHomepageSocialLinks />
           <CardHomepageWebsiteLink />
@@ -110,6 +111,9 @@ export default function Homepage() {
           <CardPreorderHomepage />
           <CardPreorderHomepage />
         </div>
+      </div>
+      <div className="wrap-cards-homepage-right">
+        <CardCustomerFavHomepage />
       </div>
     </div>
   );

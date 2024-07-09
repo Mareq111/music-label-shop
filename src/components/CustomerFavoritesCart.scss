@@ -1,5 +1,4 @@
 @import "../styles/global/global.scss";
-@import ".././styles/global/global.scss";
 
 .you-might-like-cart {
   display: flex;
@@ -8,7 +7,6 @@
   width: 100%;
   height: auto;
   padding: 1rem;
-
 }
 
 .h-youMightLike-cart {
@@ -19,11 +17,11 @@
 }
 
 .ul-list-youMightLike-cart {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
- /*  display: grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /*  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); */
   gap: 1rem;
   list-style: none;
@@ -48,12 +46,11 @@
   }
 }
 @media (min-width: 425px) {
-    .you-might-like-cart {
-        display: block;
-        width: 100%;
-        height: auto;
-        
-      }
+  .you-might-like-cart {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
   .ul-list-youMightLike-cart {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));

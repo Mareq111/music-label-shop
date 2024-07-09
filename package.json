@@ -19,7 +19,9 @@
     "react-router-dom": "^6.21.3",
     "react-select": "^5.8.0",
     "react-select-country-list": "^2.2.3",
-    "react-svg": "^16.1.32"
+    "react-slick": "^0.30.2",
+    "react-svg": "^16.1.32",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

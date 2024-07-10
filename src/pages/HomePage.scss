@@ -23,16 +23,16 @@
   flex-direction: column;
   width: 100%;
   gap: 1rem;
-  max-width: 56rem;
+  /*   max-width: 56rem; */
 }
-.wrap-cards-homepage-right {
+/* .wrap-cards-homepage-right {
   display: flex;
 
   flex-direction: column;
   width: 100%;
   gap: 1rem;
   max-width: 56rem;
-}
+} */
 
 .home-content-grid-cards {
   display: flex;
@@ -48,8 +48,7 @@
     width: 100%;
   }
 }
-
-@media (min-width: 1024px) {
+/*  @media (min-width: 1024px) {
   .home-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -64,8 +63,43 @@
     width: 100%;
     gap: 1rem;
   }
-}
+}  */
+/* Styles for screens 1024px and above */
+@media (min-width: 1024px) {
+  .home-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+  }
 
+  .wrap-cards-homepage-left {
+    grid-column: 1 / -1;
+  }
+
+  .home-content-grid-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .home-content-fav-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+  }
+  .home-content-fav-section-reverse {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+  }
+}
 @media (min-width: 1390px) {
   .home-content {
     display: grid;
@@ -75,10 +109,10 @@
     gap: 1rem;
   }
   //comeback to flex
-  .home-content-grid-cards {
+  /*  .home-content-grid-cards {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 1rem;
-  }
+  } */
 }

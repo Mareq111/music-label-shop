@@ -1,0 +1,37 @@
+@import "../../styles/global/global.scss";
+
+.card-info-homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: $amulet-green;
+/* max-width: 56rem; */
+  width: 100%;
+  height: auto;
+  min-height: 16.25rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  color: $white;
+  padding: 0;
+  border: 0.1rem solid $black-700;
+  overflow: hidden;
+
+  &:hover {
+    border: 0.1rem solid $grey-600;
+  }
+}
+
+.h-card-info-homepage {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.div-card-info-homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+}

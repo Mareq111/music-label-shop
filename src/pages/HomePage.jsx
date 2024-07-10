@@ -1,26 +1,3 @@
-/* import { useNavigate } from "react-router-dom";
-import "./HomePage.scss";
-export default function HomePage() {
-  const navigate = useNavigate();
-
-  // handler functions to products details and products pages
-  function navToProductsDetailsHandler() {
-    navigate("products/:productId");
-  }
-  function navToProducts() {
-    navigate("albums/all-strimz-empire");
-  }
-  return (
-    <div className="home-content">
-      <h1>My home page</h1>
-
-      <button onClick={navToProducts}>Albums</button>
-      <button onClick={navToProductsDetailsHandler}>Product Details</button>
-    </div>
-  );
-}
- */
-
 import CardProductHomepage from "../UI/Cards/CardProductHomepage";
 import "./HomePage.scss";
 import ourCDS from "../assets/img/others/our-shop-cds.jpg";
@@ -29,6 +6,7 @@ import CardHomepageSocialLinks from "../UI/Cards/CardHomepageSocialLinks";
 import CardHomepageWebsiteLink from "../UI/Cards/CardHomepageWebsiteLink";
 import CardPreorderHomepage from "../UI/Cards/CardPreorderHomepage";
 import CardCustomerFavHomepage from "../UI/Cards/CardCustomerFavHomepage";
+import CardInfoHomepage from "../UI/Cards/CardInfoHomepage";
 
 const cardData = [
   {
@@ -100,10 +78,13 @@ export default function Homepage() {
       {cardData.map((card, index) => (
         <CardProductHomepage key={index} data={card} />
       ))}
-      {/* other content */}
       {/* grid for other cards */}
       <div className="wrap-cards-homepage-left">
-        <CardCustomerFavHomepage titleSection={"Customer Favorites"} />
+        {/* div with slider and card  */}
+        <div className="home-content-fav-section">
+          <CardCustomerFavHomepage titleSection={"Customer Favorites"} />
+          <CardInfoHomepage />
+        </div>
 
         <div className="home-content-grid-cards">
           <CardHomepageSocialLinks />
@@ -113,8 +94,12 @@ export default function Homepage() {
           <CardPreorderHomepage />
           <CardPreorderHomepage />
         </div>
+        {/* div with slider and card  */}
+        <div className="home-content-fav-section-reverse">
+          <CardInfoHomepage />
+          <CardCustomerFavHomepage titleSection={"Customer Favorites"} />
+        </div>
       </div>
-      <div className="wrap-cards-homepage-right"></div>
     </div>
   );
 }

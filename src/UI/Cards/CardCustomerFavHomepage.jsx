@@ -204,9 +204,9 @@ export default function CardCustomerFavHomepage() {
       <div className="div-youMightLike-homepage">
         <h3 className="h-youMightLike-homepage">Customer favorites</h3>
         {favoritesData.length > 0 ? (
-          <Slider {...settings}>
+          <Slider className="slider-homepage" {...settings}>
             {favoritesData.map((product, index) => (
-              <div className="li-youMightLike-homepage" key={index}>
+              <li className="li-youMightLike-homepage" key={index}>
                 <Link className="link-you-might-like-homepage" to={`/${product.key}`}>
                   <CardProductMain
                     product={product}
@@ -214,7 +214,7 @@ export default function CardCustomerFavHomepage() {
                     customClass={window.innerWidth >= 768 ? "custom-width" : ""}
                   />
                 </Link>
-              </div>
+              </li>
             ))}
           </Slider>
         ) : (

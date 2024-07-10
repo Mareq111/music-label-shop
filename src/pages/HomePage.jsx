@@ -103,6 +103,8 @@ export default function Homepage() {
       {/* other content */}
       {/* grid for other cards */}
       <div className="wrap-cards-homepage-left">
+        <CardCustomerFavHomepage titleSection={"Customer Favorites"} />
+
         <div className="home-content-grid-cards">
           <CardHomepageSocialLinks />
           <CardHomepageWebsiteLink />
@@ -112,9 +114,7 @@ export default function Homepage() {
           <CardPreorderHomepage />
         </div>
       </div>
-      <div className="wrap-cards-homepage-right">
-        <CardCustomerFavHomepage />
-      </div>
+      <div className="wrap-cards-homepage-right"></div>
     </div>
   );
 }

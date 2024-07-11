@@ -16,7 +16,7 @@ const cardData = [
       "Dive into a world of sound with our complete album collection. From iconic classics to fresh new releases, there's a perfect tune for every listener!",
     buttonText: "Albums",
     link: "/albums/all-strimz-empire",
-    backgroundColor: "#3a0606",
+    backgroundColor:  "#3a0606"  /* "#120f10" */,
     img: ourCDS,
   },
   {
@@ -97,7 +97,7 @@ export default function Homepage() {
         {/* div with slider and card  */}
         <div className="home-content-fav-section-reverse">
           <CardInfoHomepage />
-          <CardCustomerFavHomepage titleSection={"Customer Favorites"} />
+          <CardCustomerFavHomepage titleSection={"Recommended for You "} />
         </div>
       </div>
     </div>

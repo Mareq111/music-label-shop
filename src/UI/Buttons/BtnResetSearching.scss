@@ -1,4 +1,4 @@
-@import '../../styles/global/global.scss';
+/* @import '../../styles/global/global.scss';
 
 
 .btn-reset-searching {
@@ -11,8 +11,18 @@
     width: auto;
     height: auto;
     cursor: pointer;
-}
-//change this color also for accordions
-/* .icon-circleX path {
-    fill: $red-500
+   
 } */
+@import "../../styles/global/global.scss";
+
+.btn-reset-searching {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+}

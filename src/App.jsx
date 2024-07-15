@@ -1,4 +1,5 @@
 import "./App.scss";
+
 import HomePage from "./pages/HomePage.jsx";
 import RootLayout from "./pages/RootLayout.jsx";
 import { createHashRouter, RouterProvider } from "react-router-dom";
@@ -18,7 +19,7 @@ import ProductsPosters from "./pages/ProductsPosters.jsx";
 import ProductsPuzzles from "./pages/ProductsPuzzles.jsx";
 import Checkout from "./pages/Checkout.jsx";
 /* firebase */
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import firebaseConfig from "./firebaseConfig.js";
@@ -66,15 +67,22 @@ import PaymentAfterGreetings from "./pages/PaymentAfterGreetings.jsx";
 import Information from "./pages/Information.jsx";
 import Shopping from "./pages/Shopping.jsx";
 import Author from "./pages/Author.jsx";
+import TopNav from "./components/TopNav.jsx";
+//search bar
 
 function App() {
   //firebase
   useEffect(() => {
     firebase.initializeApp(firebaseConfig);
   }, []);
-
+  if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+  }
   // retrieve redux state from ui and check if cartIsVisible is set to true
   const showCart = useSelector((state) => state.ui.cartIsVisible);
+
+  //search input bar
+  const [searchResults, setSearchResults] = useState([]);
 
   //!BEFORE I USE BROWSERROUTER but now hash router
   //configure, routing and main layout,initially page index: true is HomePage,
@@ -88,6 +96,10 @@ function App() {
         {
           index: "/",
           element: <HomePage />,
+        },
+        {
+          path: "search",
+          element: <SearchResult searchResults={searchResults} />,
         },
         {
           path: "albums/all-strimz-empire",
@@ -281,7 +293,10 @@ function App() {
   ]);
 
   return (
-    <RouterProvider router={router}>{showCart && <Cart />}</RouterProvider>
+    <RouterProvider router={router}>
+      <TopNav setSearchResults={setSearchResults} />
+      {showCart && <Cart />}
+    </RouterProvider>
   );
 }
 

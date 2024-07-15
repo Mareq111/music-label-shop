@@ -67,7 +67,8 @@ import PaymentAfterGreetings from "./pages/PaymentAfterGreetings.jsx";
 import Information from "./pages/Information.jsx";
 import Shopping from "./pages/Shopping.jsx";
 import Author from "./pages/Author.jsx";
-import TopNav from "./components/TopNav.jsx";
+/* import TopNav from "./components/TopNav.jsx"; */
+import InputSearch from "./UI/Inputs/InputSearch.jsx";
 //search bar
 
 function App() {
@@ -97,8 +98,13 @@ function App() {
           index: "/",
           element: <HomePage />,
         },
+        //search pages
         {
           path: "search",
+          element: <SearchResult searchResults={searchResults} />,
+        },
+        {
+          path: "search/q",
           element: <SearchResult searchResults={searchResults} />,
         },
         {
@@ -294,7 +300,9 @@ function App() {
 
   return (
     <RouterProvider router={router}>
-      <TopNav setSearchResults={setSearchResults} />
+      {/*  <TopNav setSearchResults={setSearchResults} /> */}
+      <InputSearch setSearchResults={setSearchResults} />
+      <SearchResult searchResults={searchResults} />
       {showCart && <Cart />}
     </RouterProvider>
   );

@@ -228,7 +228,7 @@ export default function SearchResults() {
           }
         }
 
-        console.log("Fetched search results:", results); // Add debug log
+        console.log("Fetched search results:", results); 
         setSearchResults(results);
       } else {
         setSearchResults([]);
@@ -244,9 +244,9 @@ export default function SearchResults() {
         <div className="div"></div>
       </div>
       <div className="search-results">
-        <ul>
+        <ul className="ul-search-page">
           {searchResults.map((item) => {
-            console.log("Rendering item:", item); // Add this line
+            console.log("Rendering item:", item); 
             return (
               <li className="li-productsMain" key={item.key}>
                 <Link to={`/${item.key}`}>
@@ -254,8 +254,8 @@ export default function SearchResults() {
                     product={item}
                     layout="grid"
                     customClass=""
-                  />{" "}
-                  {/* Pass props */}
+                  />
+             
                 </Link>
               </li>
             );

@@ -29,7 +29,6 @@
 
 .ul-search-page {
   background-color: $black-900;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,4 +39,20 @@
   flex-direction: column;
   width: 100%;
   height: auto;
+}
+
+.addictional-content-search-result {
+  margin-top: 2rem;
+}
+
+.error-message-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-block: 1rem;
+}
+
+.p-error-message {
+  color: $white;
+  font-size: 1.1rem;
 }

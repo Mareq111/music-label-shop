@@ -1,13 +1,14 @@
 /* eslint-disable react/prop-types */
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import IconSearch from "../Icons/IconSearch";
 import BtnResetSearching from "../Buttons/BtnResetSearching";
 import "./InputSearch.scss";
 import firebaseConfig from "../../firebaseConfig.js";
+import BtnSearchIcon from "../Buttons/BtnSearchIcon.jsx";
 
 // Initialize Firebase if it hasn't been initialized yet
 if (!firebase.apps.length) {
@@ -16,7 +17,6 @@ if (!firebase.apps.length) {
 
 export default function InputSearch({
   onFocus,
-  onBlur,
   searchTerm,
   setSearchResults = () => {},
 }) {
@@ -27,13 +27,6 @@ export default function InputSearch({
   const handleInputFocus = () => {
     setInputFocused(true);
     onFocus && onFocus();
-  };
-
-  const handleInputBlur = () => {
-    setTimeout(() => {
-      setInputFocused(false);
-      onBlur && onBlur();
-    }, 100);
   };
 
   const handleInputChange = async (e) => {
@@ -91,9 +84,16 @@ export default function InputSearch({
     setInputFocused(false);
   };
 
+  const handleSearch = () => {
+    console.log("Navigating to search with query:", inputValue);
+    if (inputValue.trim() !== "") {
+      navigate(`/search?q=${inputValue}`);
+    }
+  };
+
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
-      navigate(`/search?q=${inputValue}`);
+      handleSearch();
     }
   };
 
@@ -103,7 +103,7 @@ export default function InputSearch({
         className={`icon-starts-search-div ${
           !isInputFocused ? "visible" : "hidden"
         }`}
-        onClick={() => navigate(`/search?q=${inputValue}`)}
+        onClick={handleSearch}
       >
         <IconSearch />
       </div>
@@ -113,7 +113,7 @@ export default function InputSearch({
           type="text"
           placeholder="Search for products..."
           onFocus={handleInputFocus}
-          onBlur={handleInputBlur}
+          /* onBlur={handleInputBlur} */
           value={inputValue}
           onChange={handleInputChange}
           onKeyPress={handleKeyPress}
@@ -126,7 +126,9 @@ export default function InputSearch({
       >
         <BtnResetSearching handleBtnReset={handleBtnReset} />
         <hr className="hr-searching-divider" />
-        <IconSearch />
+        <Link to={`/search?q=${inputValue}`}>
+          <BtnSearchIcon handleSearch={handleSearch} />
+        </Link>
       </div>
     </div>
   );

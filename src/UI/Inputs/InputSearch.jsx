@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
@@ -10,7 +10,6 @@ import "./InputSearch.scss";
 import firebaseConfig from "../../firebaseConfig.js";
 import BtnSearchIcon from "../Buttons/BtnSearchIcon.jsx";
 
-// Initialize Firebase if it hasn't been initialized yet
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
@@ -22,6 +21,7 @@ export default function InputSearch({
 }) {
   const [isInputFocused, setInputFocused] = useState(false);
   const [inputValue, setInputValue] = useState(searchTerm || "");
+  const inputRef = useRef(null);
   const navigate = useNavigate();
 
   const handleInputFocus = () => {
@@ -94,6 +94,7 @@ export default function InputSearch({
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       handleSearch();
+      inputRef.current.blur(); // Force the input to lose focus
     }
   };
 
@@ -109,11 +110,11 @@ export default function InputSearch({
       </div>
       <div className="input-wrapper">
         <input
+          ref={inputRef}
           className={`search-input ${isInputFocused ? "focused" : ""}`}
           type="text"
           placeholder="Search for products..."
           onFocus={handleInputFocus}
-          /* onBlur={handleInputBlur} */
           value={inputValue}
           onChange={handleInputChange}
           onKeyPress={handleKeyPress}

@@ -13,7 +13,11 @@ export default function ProductsTicketsItaly() {
   const [productsData, setProductsData] = useState([]);
   //!state for selected country  set = Italy
   const [selectedCountry, setSelectedCountry] = useState("Italy");
-
+ 
+  //always looking for page starts on their top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   useEffect(() => {
     // init firebase
     if (!firebase.apps.length) {

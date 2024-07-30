@@ -13,6 +13,11 @@ export default function ProductsPuzzlesMedium() {
   //!state for selected itemLevel  set = Medium
   const [selectedItemLevel, setSelectedItemLevel] = useState("Medium");
 
+  //always looking for page starts on their top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     // init firebase
     if (!firebase.apps.length) {

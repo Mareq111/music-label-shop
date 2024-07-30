@@ -14,6 +14,12 @@ export default function ProductsTshirtsBeige() {
   //!state for selected color  set = beige
   const [selectedcolor, setSelectedcolor] = useState("Beige");
 
+
+  //always looking for page starts on their top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     // init firebase
     if (!firebase.apps.length) {

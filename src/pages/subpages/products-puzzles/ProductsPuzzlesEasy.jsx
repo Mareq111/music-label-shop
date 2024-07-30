@@ -13,6 +13,12 @@ export default function ProductsPuzzlesEasy() {
   //!state for selected itemLevel  set = Easy
   const [selectedItemLevel, setSelectedItemLevel] = useState("Easy");
 
+
+  //always looking for page starts on their top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     // init firebase
     if (!firebase.apps.length) {

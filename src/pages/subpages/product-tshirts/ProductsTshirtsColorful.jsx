@@ -14,6 +14,12 @@ export default function ProductsTshirtsColorful() {
   //!state for selected color  set = Colorful
   const [selectedcolor, setSelectedcolor] = useState("Colorful");
 
+
+  //always looking for page starts on their top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     // init firebase
     if (!firebase.apps.length) {

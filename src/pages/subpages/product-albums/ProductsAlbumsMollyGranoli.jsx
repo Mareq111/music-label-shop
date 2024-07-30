@@ -14,6 +14,11 @@ export default function ProductsAlbumsMollyGranoli() {
   //!state for selected artist set = Molly Granoli
   const [selectedArtist, setSelectedArtist] = useState("Molly Granoli");
 
+  //always looking for page starts on their top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     // init firebase
     if (!firebase.apps.length) {

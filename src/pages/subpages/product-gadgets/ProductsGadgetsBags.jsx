@@ -14,6 +14,11 @@ export default function ProductsGadgetsBags() {
   //!state for selected item  set = Bags
   const [selectedItem, setSelectedItem] = useState("Bags");
 
+  //always looking for page starts on their top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     // init firebase
     if (!firebase.apps.length) {

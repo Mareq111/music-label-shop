@@ -7,6 +7,7 @@ import CardHomepageWebsiteLink from "../UI/Cards/CardHomepageWebsiteLink";
 import CardPreorderHomepage from "../UI/Cards/CardPreorderHomepage";
 import CardCustomerFavHomepage from "../UI/Cards/CardCustomerFavHomepage";
 import CardInfoHomepage from "../UI/Cards/CardInfoHomepage";
+import { useEffect } from "react";
 
 const cardData = [
   {
@@ -16,7 +17,7 @@ const cardData = [
       "Dive into a world of sound with our complete album collection. From iconic classics to fresh new releases, there's a perfect tune for every listener!",
     buttonText: "Albums",
     link: "/albums/all-strimz-empire",
-    backgroundColor:  "#3a0606"  /* "#120f10" */,
+    backgroundColor: "#3a0606",
     img: ourCDS,
   },
   {
@@ -72,6 +73,12 @@ const cardData = [
 ];
 
 export default function Homepage() {
+
+  //always looking for page starts on their top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="home-content">
       {/* dynamic cards with sections */}
@@ -94,7 +101,7 @@ export default function Homepage() {
           <CardPreorderHomepage />
           <CardPreorderHomepage />
         </div>
-        {/* div with slider and card  */}
+        {/* div with slider and card */}
         <div className="home-content-fav-section-reverse">
           <CardInfoHomepage />
           <CardCustomerFavHomepage titleSection={"Recommended for You "} />

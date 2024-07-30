@@ -14,6 +14,13 @@ export default function ProductsAlbumsElDM() {
   //!state for selected artist set = el dm
   const [selectedArtist, setSelectedArtist] = useState("El DM");
 
+  //always looking for page starts on their top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
+
   useEffect(() => {
     // init firebase
     if (!firebase.apps.length) {

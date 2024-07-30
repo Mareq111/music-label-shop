@@ -336,6 +336,11 @@ export default function SearchResults() {
   const location = useLocation();
   const query = new URLSearchParams(location.search).get("q");
 
+  //always looking for page starts on their top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     const fetchSearchResults = async () => {
       if (query) {

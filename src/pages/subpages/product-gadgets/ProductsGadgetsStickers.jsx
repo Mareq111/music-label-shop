@@ -14,6 +14,11 @@ export default function ProductsGadgetsStickers() {
   //!state for selected item  set = Stickers
   const [selectedItem, setSelectedItem] = useState("Stickers");
 
+  //always looking for page starts on their top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     // init firebase
     if (!firebase.apps.length) {

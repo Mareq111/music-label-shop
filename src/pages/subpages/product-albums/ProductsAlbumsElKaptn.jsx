@@ -14,6 +14,11 @@ export default function ProductsAlbumsElKaptn() {
   //!state for selected artist set = el kaptn
   const [selectedArtist, setSelectedArtist] = useState("El Kaptn");
 
+  //always looking for page starts on their top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     // init firebase
     if (!firebase.apps.length) {

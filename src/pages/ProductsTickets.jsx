@@ -14,6 +14,11 @@ export default function ProductsTickets() {
   //!state for selected country  set = all
   const [selectedCountry, setSelectedCountry] = useState("");
 
+  //always looking for page starts on their top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     // init firebase
     if (!firebase.apps.length) {

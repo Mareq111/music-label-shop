@@ -14,6 +14,12 @@ export default function ProductsPostersJackieRas() {
   //!state for selected artist  set EL DM
   const [selectedArtist, setSelectedArtist] = useState("Jackie Ras");
 
+
+  //always looking for page starts on their top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     // init firebase
     if (!firebase.apps.length) {

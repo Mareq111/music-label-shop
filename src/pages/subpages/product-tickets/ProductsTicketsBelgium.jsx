@@ -14,6 +14,12 @@ export default function ProductsTicketsBelgium() {
   //!state for selected country  set = Belgium
   const [selectedCountry, setSelectedCountry] = useState("Belgium");
 
+
+  //always looking for page starts on their top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     // init firebase
     if (!firebase.apps.length) {

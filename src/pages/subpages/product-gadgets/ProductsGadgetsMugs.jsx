@@ -14,6 +14,11 @@ export default function ProductsGadgetsMugs() {
   //!state for selected item  set = Mugs
   const [selectedItem, setSelectedItem] = useState("Mugs");
 
+  //always looking for page starts on their top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     // init firebase
     if (!firebase.apps.length) {

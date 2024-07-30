@@ -14,31 +14,31 @@ export default function BadgeCategoriesWithH() {
         </li>
         <li className="li-list-of-pages">
           <BtnGoToCategories
-            categoryPath="tickets/all-locations"
+            categoryPath="/tickets/all-locations"
             nameOfCategory={"Tickets"}
           />
         </li>
         <li className="li-list-of-pages">
           <BtnGoToCategories
-            categoryPath="t-shirts/all-colors"
+            categoryPath="/t-shirts/all-colors"
             nameOfCategory={"T-shirts"}
           />
         </li>
         <li className="li-list-of-pages">
           <BtnGoToCategories
-            categoryPath="gadgets/all-items"
+            categoryPath="/gadgets/all-items"
             nameOfCategory={"Gadgets"}
           />
         </li>
         <li className="li-list-of-pages">
           <BtnGoToCategories
-            categoryPath="posters/all-strimz-empire"
+            categoryPath="/posters/all-strimz-empire"
             nameOfCategory={"Posters"}
           />
         </li>
         <li className="li-list-of-pages">
           <BtnGoToCategories
-            categoryPath="puzzles/all-levels"
+            categoryPath="/puzzles/all-levels"
             nameOfCategory={"Puzzles"}
           />
         </li>

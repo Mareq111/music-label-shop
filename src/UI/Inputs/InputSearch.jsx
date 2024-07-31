@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import { useState, useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import IconSearch from "../Icons/IconSearch";
@@ -69,7 +69,6 @@ export default function InputSearch({
 
         Promise.all(promises).then((results) => {
           const flattenedResults = results.flat();
-          console.log("Search results:", flattenedResults);
           setSearchResults(flattenedResults);
         });
       } else {
@@ -85,7 +84,6 @@ export default function InputSearch({
   };
 
   const handleSearch = () => {
-    console.log("Navigating to search with query:", inputValue);
     if (inputValue.trim() !== "") {
       navigate(`/search?q=${inputValue}`);
     }
@@ -127,9 +125,7 @@ export default function InputSearch({
       >
         <BtnResetSearching handleBtnReset={handleBtnReset} />
         <hr className="hr-searching-divider" />
-        <Link to={`/search?q=${inputValue}`}>
-          <BtnSearchIcon handleSearch={handleSearch} />
-        </Link>
+        <BtnSearchIcon handleSearch={handleSearch} />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import CardProductHomepage from "../UI/Cards/CardProductHomepage";
+/* import CardProductHomepage from "../UI/Cards/CardProductHomepage";
 import "./HomePage.scss";
 import ourCDS from "../assets/img/others/our-shop-cds.jpg";
 import ourTickets from "../assets/img/others/Ticket-slider1.jpg";
@@ -81,13 +81,13 @@ export default function Homepage() {
 
   return (
     <div className="home-content">
-      {/* dynamic cards with sections */}
+      {/* dynamic cards with sections 
       {cardData.map((card, index) => (
         <CardProductHomepage key={index} data={card} />
       ))}
-      {/* grid for other cards */}
+      {/* grid for other cards *
       <div className="wrap-cards-homepage-left">
-        {/* div with slider and card  */}
+        {/* div with slider and card  *
         <div className="home-content-fav-section">
           <CardCustomerFavHomepage titleSection={"Customer Favorites"} />
           <CardInfoHomepage />
@@ -101,7 +101,76 @@ export default function Homepage() {
           <CardPreorderHomepage />
           <CardPreorderHomepage />
         </div>
-        {/* div with slider and card */}
+        {/* div with slider and card *
+        <div className="home-content-fav-section-reverse">
+          <CardInfoHomepage />
+          <CardCustomerFavHomepage titleSection={"Recommended for You "} />
+        </div>
+      </div>
+    </div>
+  );
+}
+ */
+
+import { useEffect, useRef } from "react";
+import CardProductHomepage from "../UI/Cards/CardProductHomepage";
+import "./HomePage.scss";
+import "./HomePage.scss";
+import CardHomepageSocialLinks from "../UI/Cards/CardHomepageSocialLinks";
+import CardHomepageWebsiteLink from "../UI/Cards/CardHomepageWebsiteLink";
+import CardPreorderHomepage from "../UI/Cards/CardPreorderHomepage";
+import CardCustomerFavHomepage from "../UI/Cards/CardCustomerFavHomepage";
+import CardInfoHomepage from "../UI/Cards/CardInfoHomepage";
+import homepageData from "../data/homepageData";
+
+export default function Homepage() {
+  const cardsRef = useRef([]);
+
+  // animation for cards - intersection OBSERVER
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("card-show");
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    cardsRef.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
+    // Cleanup observer on component unmount
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="home-content">
+      {homepageData.map((card, index) => (
+        <div
+          key={index}
+          ref={(el) => (cardsRef.current[index] = el)}
+          className="card-hidden"
+        >
+          <CardProductHomepage data={card} />
+        </div>
+      ))}
+      <div className="wrap-cards-homepage-left">
+        <div className="home-content-fav-section">
+          <CardCustomerFavHomepage titleSection={"Customer Favorites"} />
+          <CardInfoHomepage />
+        </div>
+
+        <div className="home-content-grid-cards">
+          <CardHomepageSocialLinks />
+          <CardHomepageWebsiteLink />
+        </div>
+        <div className="home-content-grid-cards">
+          <CardPreorderHomepage />
+          <CardPreorderHomepage />
+        </div>
         <div className="home-content-fav-section-reverse">
           <CardInfoHomepage />
           <CardCustomerFavHomepage titleSection={"Recommended for You "} />

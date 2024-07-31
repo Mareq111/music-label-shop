@@ -1,118 +1,4 @@
-/* import CardProductHomepage from "../UI/Cards/CardProductHomepage";
-import "./HomePage.scss";
-import ourCDS from "../assets/img/others/our-shop-cds.jpg";
-import ourTickets from "../assets/img/others/Ticket-slider1.jpg";
-import CardHomepageSocialLinks from "../UI/Cards/CardHomepageSocialLinks";
-import CardHomepageWebsiteLink from "../UI/Cards/CardHomepageWebsiteLink";
-import CardPreorderHomepage from "../UI/Cards/CardPreorderHomepage";
-import CardCustomerFavHomepage from "../UI/Cards/CardCustomerFavHomepage";
-import CardInfoHomepage from "../UI/Cards/CardInfoHomepage";
-import { useEffect } from "react";
-
-const cardData = [
-  {
-    title: "Our albums collections",
-    headline: "Unleash the Music.",
-    description:
-      "Dive into a world of sound with our complete album collection. From iconic classics to fresh new releases, there's a perfect tune for every listener!",
-    buttonText: "Albums",
-    link: "/albums/all-strimz-empire",
-    backgroundColor: "#3a0606",
-    img: ourCDS,
-  },
-  {
-    title: "Upcoming Concerts",
-    headline: "Feel the Beat.",
-    description:
-      "Join us for unforgettable live performances. Get your tickets now and feel the thrill of live music with friends and family!",
-    buttonText: "Tickets",
-    link: "/tickets/all-locations",
-    backgroundColor: "#17063a",
-    img: ourTickets,
-  },
-  {
-    title: "Exclusive Merchandise",
-    headline: "Wear the Vibe.",
-    description:
-      "Discover our exclusive collection of t-shirts. Show off your favorite tunes in style with unique designs that speak to your musical soul.",
-    buttonText: "T-Shirts",
-    link: "/t-shirts/all-colors",
-    backgroundColor: "#06273a",
-    img: ourCDS,
-  },
-  {
-    title: "Cool Gadgets",
-    headline: "Get the Coolest Gear.",
-    description:
-      "Explore our range of gadgets. From mugs to stickers, find unique items that show off your style. Click to browse our selection and grab your favorites!",
-    buttonText: "Gadgets",
-    link: "/gadgets/all-items",
-    backgroundColor: "#063a36",
-    img: ourCDS,
-  },
-  {
-    title: "Artist Posters",
-    headline: "Decorate Your Space.",
-    description:
-      "Check out our collection of artist posters. Perfect for any fan, these posters feature cover art from your favorite albums. See all available posters and make your walls come alive!",
-    buttonText: "Posters",
-    link: "/posters/all-strimz-empire",
-    backgroundColor: "#063a20",
-    img: ourCDS,
-  },
-  {
-    title: "Album Puzzles",
-    headline: "Piece Together Music.",
-    description:
-      "Challenge yourself with our album cover puzzles. Available in various sizes, these puzzles are perfect for music lovers. Click to start your puzzle adventure now!",
-    buttonText: "Puzzles",
-    link: "/puzzles/all-levels",
-    backgroundColor: "#3a1906",
-    img: ourCDS,
-  },
-];
-
-export default function Homepage() {
-
-  //always looking for page starts on their top
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  return (
-    <div className="home-content">
-      {/* dynamic cards with sections 
-      {cardData.map((card, index) => (
-        <CardProductHomepage key={index} data={card} />
-      ))}
-      {/* grid for other cards *
-      <div className="wrap-cards-homepage-left">
-        {/* div with slider and card  *
-        <div className="home-content-fav-section">
-          <CardCustomerFavHomepage titleSection={"Customer Favorites"} />
-          <CardInfoHomepage />
-        </div>
-
-        <div className="home-content-grid-cards">
-          <CardHomepageSocialLinks />
-          <CardHomepageWebsiteLink />
-        </div>
-        <div className="home-content-grid-cards">
-          <CardPreorderHomepage />
-          <CardPreorderHomepage />
-        </div>
-        {/* div with slider and card *
-        <div className="home-content-fav-section-reverse">
-          <CardInfoHomepage />
-          <CardCustomerFavHomepage titleSection={"Recommended for You "} />
-        </div>
-      </div>
-    </div>
-  );
-}
- */
-
-import { useEffect, useRef } from "react";
+/* import { useEffect, useRef } from "react";
 import CardProductHomepage from "../UI/Cards/CardProductHomepage";
 import "./HomePage.scss";
 import "./HomePage.scss";
@@ -124,9 +10,9 @@ import CardInfoHomepage from "../UI/Cards/CardInfoHomepage";
 import homepageData from "../data/homepageData";
 
 export default function Homepage() {
-  const cardsRef = useRef([]);
-
   // animation for cards - intersection OBSERVER
+  const cardsRef = useRef([]);
+  const preorderCardsRef = useRef([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) => {
@@ -146,6 +32,24 @@ export default function Homepage() {
     return () => observer.disconnect();
   }, []);
 
+  // animation for CardPreorderHomepage - intersection OBSERVER
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("card-preorder-show");
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    preorderCardsRef.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="home-content">
       {homepageData.map((card, index) => (
@@ -158,6 +62,90 @@ export default function Homepage() {
         </div>
       ))}
       <div className="wrap-cards-homepage-left">
+        <div className="home-content-fav-section">
+          <CardCustomerFavHomepage titleSection={"Customer Favorites"} />
+          <CardInfoHomepage />
+        </div>
+
+        <div className="home-content-grid-cards">
+          <CardHomepageSocialLinks />
+          <CardHomepageWebsiteLink />
+        </div>
+        <div className="home-content-grid-cards">
+          <CardPreorderHomepage />
+          <CardPreorderHomepage />
+        </div>
+        <div className="home-content-fav-section-reverse">
+          <CardInfoHomepage />
+          <CardCustomerFavHomepage titleSection={"Recommended for You "} />
+        </div>
+      </div>
+    </div>
+  );
+}
+ */
+
+import { useEffect, useRef } from "react";
+import CardProductHomepage from "../UI/Cards/CardProductHomepage";
+import "./HomePage.scss";
+import CardHomepageSocialLinks from "../UI/Cards/CardHomepageSocialLinks";
+import CardHomepageWebsiteLink from "../UI/Cards/CardHomepageWebsiteLink";
+import CardPreorderHomepage from "../UI/Cards/CardPreorderHomepage";
+import CardCustomerFavHomepage from "../UI/Cards/CardCustomerFavHomepage";
+import CardInfoHomepage from "../UI/Cards/CardInfoHomepage";
+import homepageData from "../data/homepageData";
+
+export default function Homepage() {
+  const cardsRefs = useRef([]);
+  const otherCardsRef = useRef(null);
+
+  // animation for CardProductHomepage - intersection OBSERVER
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("card-show");
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    cardsRefs.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  // animation for wrap-cards-homepage-left - intersection OBSERVER
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("wrap-cards-show");
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    const container = otherCardsRef.current;
+    if (container) observer.observe(container);
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="home-content">
+      {homepageData.map((card, index) => (
+        <div
+          key={index}
+          ref={(el) => (cardsRefs.current[index] = el)}
+          className="card-hidden"
+        >
+          <CardProductHomepage data={card} />
+        </div>
+      ))}
+      <div ref={otherCardsRef} className="wrap-cards-homepage-left card-hidden">
         <div className="home-content-fav-section">
           <CardCustomerFavHomepage titleSection={"Customer Favorites"} />
           <CardInfoHomepage />

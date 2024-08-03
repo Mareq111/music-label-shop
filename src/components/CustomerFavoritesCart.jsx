@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 
 import { useState, useEffect } from "react";
@@ -7,7 +8,7 @@ import "./CustomerFavoritesCart.scss";
 import CardProductMain from "../UI/Cards/CardProductMain";
 import { Link } from "react-router-dom";
 
-export default function CustomerFavoritesCart() {
+export default function CustomerFavoritesCart({titleCard}) {
   const [favoritesData, setFavoritesData] = useState([]);
   const [isGrid, setIsGrid] = useState(window.innerWidth >= 425);
   useEffect(() => {
@@ -73,7 +74,7 @@ export default function CustomerFavoritesCart() {
   return (
     <article className="you-might-like-cart">
       <div className="div-youMightLike-cart">
-        <h3 className="h-youMightLike-cart">Customer favorites</h3>
+        <h3 className="h-youMightLike-cart">{titleCard}</h3>
         <ul className="ul-list-youMightLike-cart">
           {favoritesData.length > 0 ? (
             favoritesData.map((product, index) => (

@@ -47,12 +47,34 @@
 
 .error-message-div {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  /*  justify-content: flex-start;
+  align-items: center; */
+  flex-direction: column;
   margin-block: 1rem;
+  width: 100%;
+  height: auto;
+}
+
+.div-p-error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
 }
 
 .p-error-message {
   color: $white;
   font-size: 1.1rem;
+}
+
+//customer favorites
+
+.customer-favorities-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }

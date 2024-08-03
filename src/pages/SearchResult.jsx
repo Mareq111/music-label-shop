@@ -4,10 +4,11 @@ import { useEffect, useState } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import { Link, useLocation } from "react-router-dom";
-import BadgeCategoriesWithH from "../UI/Badge/BadgeCategoriesWithH";
+/* import BadgeCategoriesWithH from "../UI/Badge/BadgeCategoriesWithH"; */
 import "./SearchResult.scss";
 import firebaseConfig from "../firebaseConfig.js";
 import CardProductMain from "../UI/Cards/CardProductMain.jsx";
+import CustomerFavoritesCart from "../components/CustomerFavoritesCart.jsx";
 
 // Initialize Firebase if it hasn't been initialized yet
 if (!firebase.apps.length) {
@@ -85,13 +86,23 @@ export default function SearchResults() {
   return (
     <div className="all-search-page">
       <div className="categories-search-div">
-        <div className="div"></div>
+        <div className="div">
+          <p>Find whfdfdf</p>
+        </div>
       </div>
       <div className="search-results">
-        {/* error message */}
+        {/* Error message */}
         {errorMessage && (
           <div className="error-message-div">
-            <p className="p-error-message">{errorMessage}</p>
+            <div className="div-p-error-message">
+              <p className="p-error-message">{errorMessage}</p>
+            </div>
+
+            <div className="customer-favorites-search">
+              <CustomerFavoritesCart
+                titleCard={"Suggestions Based on Your Search"}
+              />
+            </div>
           </div>
         )}
         <ul className="ul-search-page">
@@ -110,9 +121,10 @@ export default function SearchResults() {
             );
           })}
         </ul>
-        <div className="addictional-content-search-result">
+        {/* <div className="addictional-content-search-result">
           <BadgeCategoriesWithH />
-        </div>
+
+        </div> */}
       </div>
     </div>
   );

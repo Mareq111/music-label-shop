@@ -99,7 +99,7 @@ export default function Cart() {
         <hr className="cart-devider-separator-smaller" />
         <div className="all-content-of-cart">
           <div className="customer-favorities-cart">
-            <CustomerFavoritesCart />
+            <CustomerFavoritesCart titleCard={'Customer favorites'} />
           </div>
         </div>
       </aside>

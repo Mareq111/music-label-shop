@@ -85,11 +85,17 @@ export default function SearchResults() {
 
   return (
     <div className="all-search-page">
-      <div className="categories-search-div">
-        <div className="div">
-          <p>Find whfdfdf</p>
+      <div className="search-prompt-card">
+        <div className="search-prompt-content">
+          <h2 className="h-search-prompt-content">
+            What will you discover today?
+          </h2>
+          <p className="p-search-prompt-content">
+            Explore top picks and hidden gems
+          </p>
         </div>
       </div>
+
       <div className="search-results">
         {/* Error message */}
         {errorMessage && (
@@ -121,10 +127,6 @@ export default function SearchResults() {
             );
           })}
         </ul>
-        {/* <div className="addictional-content-search-result">
-          <BadgeCategoriesWithH />
-
-        </div> */}
       </div>
     </div>
   );

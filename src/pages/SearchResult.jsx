@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import { Link, useLocation } from "react-router-dom";
-/* import BadgeCategoriesWithH from "../UI/Badge/BadgeCategoriesWithH"; */
 import "./SearchResult.scss";
 import firebaseConfig from "../firebaseConfig.js";
 import CardProductMain from "../UI/Cards/CardProductMain.jsx";
 import CustomerFavoritesCart from "../components/CustomerFavoritesCart.jsx";
+import CardSearchPrompt from "../UI/Cards/CardSearchPrompt.jsx";
 
 // Initialize Firebase if it hasn't been initialized yet
 if (!firebase.apps.length) {
@@ -17,7 +17,7 @@ if (!firebase.apps.length) {
 
 export default function SearchResults() {
   const [searchResults, setSearchResults] = useState([]);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [searchStatus, setSearchStatus] = useState("start"); // start, found, notfound
   const location = useLocation();
   const query = new URLSearchParams(location.search).get("q");
 
@@ -65,50 +65,47 @@ export default function SearchResults() {
 
         console.log("Fetched search results:", results);
         setSearchResults(results);
+        // if we dont found any item
         if (results.length === 0) {
-          /* errorMessage*/
-
-          setErrorMessage(
-            `There are no results for "${query}". Try again using a different spelling or keywords.`
-          );
+          setSearchStatus("notfound");
+          // if we  found any item
         } else {
-          setErrorMessage("");
+          setSearchStatus("found");
         }
+        // initial state
       } else {
         setSearchResults([]);
-        setErrorMessage("");
+        setSearchStatus("start");
       }
     };
 
     fetchSearchResults();
   }, [query]);
 
+  // Dynamic text for CardSearchPrompt
+  let cardTitle, cardParagraph;
+
+  if (searchStatus === "start") {
+    cardTitle = "What will you discover today?";
+    cardParagraph = "Explore top picks and hidden gems.";
+  } else if (searchStatus === "found") {
+    cardTitle = `Results for "${query}"`;
+    cardParagraph = "Here are the best matches based on your search.";
+  } else if (searchStatus === "notfound") {
+    cardTitle = `No results for "${query}"`;
+    cardParagraph = "Try again using a different spelling or keywords.";
+  }
+
   return (
     <div className="all-search-page">
-      <div className="search-prompt-card">
-        <div className="search-prompt-content">
-          <h2 className="h-search-prompt-content">
-            What will you discover today?
-          </h2>
-          <p className="p-search-prompt-content">
-            Explore top picks and hidden gems
-          </p>
-        </div>
-      </div>
+      <CardSearchPrompt titleCard={cardTitle} paragraphText={cardParagraph} />
 
       <div className="search-results">
-        {/* Error message */}
-        {errorMessage && (
-          <div className="error-message-div">
-            <div className="div-p-error-message">
-              <p className="p-error-message">{errorMessage}</p>
-            </div>
-
-            <div className="customer-favorites-search">
-              <CustomerFavoritesCart
-                titleCard={"Suggestions Based on Your Search"}
-              />
-            </div>
+        {searchStatus === "notfound" && (
+          <div className="customer-favorites-search">
+            <CustomerFavoritesCart
+              titleCard={"Suggestions Based on Your Search"}
+            />
           </div>
         )}
         <ul className="ul-search-page">

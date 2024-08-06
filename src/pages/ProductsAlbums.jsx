@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+ import { useState, useEffect } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import firebaseConfig from "../firebaseConfig";
@@ -66,7 +66,7 @@ export default function ProductsAlbums() {
           <h4 className="h-products-page">Albums</h4>
           <BtnToggleView onLayoutChange={handleProductsLayout} />
         </div>
-        {/* Choose precise artist  */}
+      {/*   Choose precise artist  */}
         <div className="div-badge-precise-something">
           <BadgePreciseAlbums onSelectArtist={handleArtistSelection} />
         </div>
@@ -86,4 +86,6 @@ export default function ProductsAlbums() {
       </div>
     </section>
   );
-}
+} 
+
+

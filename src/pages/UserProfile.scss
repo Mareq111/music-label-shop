@@ -1,6 +1,6 @@
 @import "../styles/global/global.scss";
 
-.aside-user-profile {
+/* .aside-user-profile {
   position: fixed;
   top: 0;
   left: 0;
@@ -55,7 +55,34 @@
 }
 @media (min-width: 768px) {
   .aside-user-profile {
-    /* display: none; */
+
     width: 50%;
   }
+}
+ */
+
+.aside-user-profile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  /* background-color: rgba(0, 0, 0, 0.8);  */
+  background-color: $black-900;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
 }

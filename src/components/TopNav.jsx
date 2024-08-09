@@ -224,7 +224,7 @@ export default function TopNav() {
 import { useEffect, useState } from "react";
 import "./TopNav.scss";
 import IconMenu from "./../UI/Icons/IconMenu";
-import IconUser from "./../UI/Icons/IconUser";
+/* import IconUser from "./../UI/Icons/IconUser"; */
 import InputSearch from "./../UI/Inputs/InputSearch";
 import { Link } from "react-router-dom";
 import LogoStrimz from "../UI/Icons/Icon-Logo/LogoStrimz";
@@ -234,6 +234,7 @@ import BtnIconFavoritesMenu from "../UI/Buttons/BtnIconFavoritesMenu";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleUserProfileModal } from "../store/userProfileSlice";
 import UserPage from "../pages/UserProfile";
+import BtnIconUser from "../UI/Buttons/BtnIconUser";
 
 export default function TopNav() {
   const itemCountFav = useSelector((state) => state.favorites.totalQuantity);
@@ -285,7 +286,7 @@ export default function TopNav() {
           </Link>
           <div className="div-right-side-menu">
             <div className="icon-link-to">
-              <button
+              {/*  <button
                 aria-label="User Profile"
                 tabIndex={0}
                 onClick={handleUserProfileClick}
@@ -294,7 +295,8 @@ export default function TopNav() {
                 <IconUser id="mobile-icon-user" />
                 <IconUser id="desktop-icon-user" />
                 <p className="p-icon-user-text">Hi! Log in</p>
-              </button>
+              </button> */}
+              <BtnIconUser handleUserProfileClick={handleUserProfileClick} />
             </div>
             <div className="icon-link-to">
               <Link to="favorites" aria-label="Favorites" tabIndex={0}>
@@ -335,7 +337,6 @@ export default function TopNav() {
         {/*   page content starts here because it's only margin   */}
       </div>
 
-      {/* Render modalu UserProfile, jeśli jest otwarty */}
       {isUserProfileOpen && <UserPage onClose={handleUserProfileClick} />}
     </>
   );

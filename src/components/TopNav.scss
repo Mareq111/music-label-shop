@@ -12,7 +12,7 @@
   height: auto;
   background-color: $black-700;
   transition: top 0.3s;
-   z-index: 2; 
+  z-index: 2;
 }
 ///seting hiding and showing nav when scrolling
 .all-top-nav.hidden {
@@ -162,19 +162,7 @@ path {
   .p-icon-user-text {
     display: block;
   }
-  #icon-user-text-div {
-    display: flex;
-    width: auto;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    color: $white;
-    border-radius: 1rem;
-    background-color: $grey-700;
-    &:hover path {
-      fill: $ming-blue;
-    }
-  }
+
   #menu-mobile {
     display: none;
   }

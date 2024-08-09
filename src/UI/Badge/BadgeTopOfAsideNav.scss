@@ -3,6 +3,15 @@
 .h-top-aside-nav {
   font-size: 1.2rem;
   text-transform: uppercase;
+  margin-right: 0.5rem;
+}
+
+.page-name-and-dynamic-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
 }
 
 .top-of-aside-nav {
@@ -18,4 +27,8 @@
     padding: 1.5rem;
     min-height: 88px;
   }
+}
+
+.btn-not-clickable {
+  pointer-events: none;
 }

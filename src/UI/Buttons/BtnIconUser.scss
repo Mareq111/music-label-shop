@@ -17,8 +17,10 @@
   border-radius: 50%;
 
   &:hover,
+  :focus,
   :active {
     background-color: $grey-700;
+    color: $black-900;
   }
 }
 
@@ -27,7 +29,11 @@
 @media (min-width: 768px) {
   #desktop-icon-user {
     margin-right: 0.5rem;
-    transition: 0.3s ease-in-out;
+    :hover,
+    :active {
+      fill: $white;
+    }
+    /*  transition: 0.3s ease-in-out; */
   }
 
   .btn-icon-user {
@@ -51,6 +57,10 @@
     z-index: 1;
     &:hover path {
       transition: 0.3s ease-in-out;
+      fill: $black-900;
+    }
+    &:focus path {
+      /* transition: 0.3s ease-in-out; */
       fill: $black-900;
     }
 

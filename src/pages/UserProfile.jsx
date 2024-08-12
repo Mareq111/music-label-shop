@@ -28,7 +28,7 @@ export default function UserPage() {
   );
 }
  */
-
+/* 
 import "./UserProfile.scss";
 import ReactDOM from "react-dom";
 
@@ -53,11 +53,71 @@ export default function UserPage({ onClose }) {
           </div>
         </div>
       </div>
-      {/* Button to close the overlay */}
+      
       <button onClick={onClose} className="close-button">
         Close
       </button>
     </aside>,
-    document.body // Renders outside the main DOM hierarchy
+    document.body 
+  );
+} */
+
+/*   import "./UserProfile.scss";
+import BadgeTopOfAsideNav from "../UI/Badge/BadgeTopOfAsideNav.jsx";
+
+export default function UserPage({ onClose }) {
+  return (
+    <aside className="aside-user-profile">
+      {/* Badge with name of page and 'X' to close 
+      <BadgeTopOfAsideNav nameOfNavPage={"Profile"} showCloseButton={true} onClose={onClose} />
+      <hr className="user-profile-devider-separator" />
+      <div className="all-content-of-user-profile">
+        <div className="content-empty-user-profile">
+          <div className="all-text-user-profile">
+            {/* Log in section 
+            <div id="log-in">
+              <p className="p-text-user-profile">Are you already a member?</p>
+              <h3 className="h-user-profile">Sign in</h3>
+            </div>
+            {/* Register section 
+            <div id="register">
+              <p className="p-text-user-profile">First time here?</p>
+              <h3 className="h-user-profile">Join Us</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  );
+}
+ */
+
+import "./UserProfile.scss";
+import BadgeTopOfAsideNav from "../UI/Badge/BadgeTopOfAsideNav.jsx";
+
+export default function UserPage({ onClose }) {
+  return (
+    <aside className="aside-user-profile">
+      <BadgeTopOfAsideNav
+        nameOfNavPage={"Profile"}
+        showCloseButton={true}
+        onClose={onClose}
+      />
+      <hr className="user-profile-devider-separator" />
+      <div className="all-content-of-user-profile">
+        <div className="content-empty-user-profile">
+          <div className="all-text-user-profile">
+            <div id="log-in">
+              <p className="p-text-user-profile">Are you already a member?</p>
+              <h3 className="h-user-profile">Sign in</h3>
+            </div>
+            <div id="register">
+              <p className="p-text-user-profile">First time here?</p>
+              <h3 className="h-user-profile">Join Us</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
   );
 }

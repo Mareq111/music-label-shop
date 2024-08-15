@@ -189,15 +189,8 @@ export default function TopNav() {
               </Link>
             </div>
             <div className="icon-link-to">
-              {/* <button onClick={handleCartClick} aria-label="Cart" tabIndex={0}>
-                <div className="div-icon-into-menu">
-                  <IconCart />
-                </div>
-              </button> */}
               <div className="icon-link-to">
-                {/*   <Link to="cart" aria-label="Cart" > */}
                 <BtnIconCartMenu itemCount={""} tabIndex={0} />
-                {/*     </Link> */}
               </div>
             </div>
             <div className="icon-link-to">

@@ -32,8 +32,6 @@ export default function BadgeTopOfAsideNav({ nameOfNavPage, showCloseButton, }) 
 }
  */
 
-
-
 /* eslint-disable react/prop-types */
 import { useSelector } from "react-redux";
 import "./BadgeTopOfAsideNav.scss";
@@ -41,7 +39,11 @@ import BtnNormalX from "../Buttons/BtnNormalX";
 import BtnIconCartMenu from "../Buttons/BtnIconCartMenu";
 import BtnIconFavoritesMenu from "../Buttons/BtnIconFavoritesMenu";
 
-export default function BadgeTopOfAsideNav({ nameOfNavPage, showCloseButton, onClose }) {
+export default function BadgeTopOfAsideNav({
+  nameOfNavPage,
+  showCloseButton,
+  onClose,
+}) {
   const itemCountFav = useSelector((state) => state.favorites.totalQuantity);
   const itemCountCart = useSelector((state) => state.cart.totalQuantity);
 

@@ -42,7 +42,7 @@ export default function Payment() {
               }`}
               to={isFormValid ? "/payment-greetings" : ""}
             >
-              <BtnContinue continueBtnText={"Proceed to pay"} />
+              <BtnContinue continueBtnText={"Pay now"} />
             </Link>
           </div>
         </div>

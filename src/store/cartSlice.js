@@ -212,7 +212,8 @@ const cartSlice = createSlice({
           quantity: 1,
           itemId: newItem.key,
           totalPrice: newItem.priceItem,
-          title: newItem.titleArtist ||
+          title:
+            newItem.titleArtist ||
             newItem.location ||
             newItem.color ||
             newItem.itemTitle ||
@@ -289,4 +290,3 @@ export const {
 } = cartSlice.actions;
 
 export default cartSlice.reducer;
-

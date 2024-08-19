@@ -10,6 +10,7 @@ import AccordionCheckoutDetails from "../UI/Accordions/AccordionCheckoutDetails"
 import FormPayment from "../UI/Form/FormPayment";
 import BtnContinue from "../UI/Buttons/BtnContinue";
 import StepCircle from "./StepCircle";
+import "./Payment.scss";
 
 export default function Payment() {
   const totalPrice = useSelector((state) => state.cart.totalPrice);
@@ -22,12 +23,12 @@ export default function Payment() {
 
   return (
     <>
-      <div className="backdrop"></div>
-      <aside className="aside-cart">
+      <div className="backdrop-payment"></div>
+      <aside className="aside-payment">
         <BadgeTopOfAsideNav nameOfNavPage={"Payment"} showCloseButton={true} />
 
-        <hr className="cart-devider-separator" />
-        <div className="content-fill-cart">
+        <hr className="payment-devider-separator" />
+        <div className="content-fill-payment">
           <StepCircle stepsCompleted={completedSteps} />
           <AccordionCheckoutCart totalPrice={totalPrice} />
           <AccordionCheckoutDetails />
@@ -46,10 +47,10 @@ export default function Payment() {
           </div>
         </div>
 
-        <hr className="cart-devider-separator-smaller" />
-        <div className="all-content-of-cart">
+        <hr className="payment-devider-separator-smaller" />
+        <div className="all-content-of-payment">
           <div className="payment-disclaimer">
-            <p className="p-text-cart-disclaimer">
+            <p className="p-text-payment-disclaimer">
               This page is part of a portfolio project. Please remember that it
               is not a real transaction.
             </p>

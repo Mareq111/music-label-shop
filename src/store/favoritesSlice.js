@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   items: [],
   totalQuantity: 0,
+  isFavoritesOpen: false,
 };
 
 const favoritesSlice = createSlice({
@@ -14,10 +15,11 @@ const favoritesSlice = createSlice({
       const existingItem = state.items.find(
         (item) => item.titleItem === newItem.titleItem
       );
+      // Assuming quantity is needed for your use case
       if (!existingItem) {
         state.items.push({
           ...newItem,
-          quantity: 1, // Assuming quantity is needed for your use case
+          quantity: 1,
         });
         state.totalQuantity += 1;
       }
@@ -32,9 +34,22 @@ const favoritesSlice = createSlice({
         state.totalQuantity -= 1;
       }
     },
+    //modal toggle
+    toggleFavorites(state) {
+      state.isFavoritesOpen = !state.isFavoritesOpen;
+    },
+    //modal close modal
+
+    closeFavorites(state) {
+      state.isFavoritesOpen = false;
+    },
   },
 });
 
-export const { addItemToFavorites, removeItemFromFavorites } =
-  favoritesSlice.actions;
+export const {
+  addItemToFavorites,
+  removeItemFromFavorites,
+  toggleFavorites,
+  closeFavorites,
+} = favoritesSlice.actions;
 export default favoritesSlice.reducer;

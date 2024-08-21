@@ -19,6 +19,7 @@
   width: 100%;
   height: 100vh;
   background-color: $black-900;
+  color: $white;
 }
 
 .favorites-devider-separator {
@@ -85,7 +86,7 @@
   overflow: hidden;
 }
 
-@media (min-width: 560px) {
+/* @media (min-width: 560px) {
   .aside-favorites {
     width: 80%;
   }
@@ -94,10 +95,10 @@
   .aside-favorites {
     width: 60%;
   }
-}
+} */
 @media (min-width: 768px) {
   .aside-favorites {
-    width: 50%;
+    width: 60%;
     max-width: 40rem;
   }
 }

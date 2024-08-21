@@ -13,6 +13,7 @@ import {
   updateItemQuantity,
   removeItemFromCart,
   openCheckout,
+  toggleCart,
 } from "../store/cartSlice";
 import StepCircle from "./StepCircle.jsx";
 import { Link } from "react-router-dom";
@@ -37,6 +38,11 @@ export default function Cart() {
   const handleProceedToCheckout = () => {
     console.log("Proceeding to checkout...");
     dispatch(openCheckout());
+    dispatch(closeCart());
+  };
+
+  //handling close favorites with btn or moving to inspect cart
+  const handleCloseCartClick = () => {
     dispatch(closeCart());
   };
 
@@ -73,7 +79,10 @@ export default function Cart() {
                 to={".."}
                 relative="path"
               >
-                <BtnContinue continueBtnText={"Continue Shopping"} />
+                <BtnContinue
+                  continueBtnText={"Continue Shopping"}
+                  onClick={handleCloseCartClick}
+                />
               </Link>
             </div>
           </div>

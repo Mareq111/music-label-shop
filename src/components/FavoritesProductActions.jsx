@@ -2,28 +2,35 @@
 /* eslint-disable react/prop-types */
 
 import React from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import BtnContinue from "../UI/Buttons/BtnContinue.jsx";
 import BtnHeart from "../UI/Buttons/BtnHeart.jsx";
 import "./FavoritesProductActions.scss";
-import { Link } from "react-router-dom";
+import { closeFavorites } from "../store/favoritesSlice"; // Import akcji zamykającej Favorites
 
 export default function FavoritesProductActions({
   onRemoveProduct,
   onAddToCart,
   product,
 }) {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  //handling with closing favorites and open product page from favorites
+  const handleSelectOptionClick = () => {
+    dispatch(closeFavorites());
+
+    navigate(`/${product.key}`);
+  };
+
   return (
     <div className="product-actions-fav">
-      <Link
-        to={`/${product.key}`}
-        aria-label="go to this product page and select option"
-        title="Go to this product page and select option"
-      >
-        <BtnContinue
-          className="btn-add-cart"
-          continueBtnText={"Select option"}
-        />
-      </Link>
+      <BtnContinue
+        className="btn-add-cart"
+        continueBtnText={"Select option"}
+        onClick={handleSelectOptionClick}
+      />
       <BtnHeart product={product} />
     </div>
   );

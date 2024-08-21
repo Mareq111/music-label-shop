@@ -41,7 +41,7 @@ export default function Cart() {
     dispatch(closeCart());
   };
 
-  //handling close favorites with btn or moving to inspect cart
+  //handling close cart with btn continue
   const handleCloseCartClick = () => {
     dispatch(closeCart());
   };

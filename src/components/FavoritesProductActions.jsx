@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import BtnContinue from "../UI/Buttons/BtnContinue.jsx";
 import BtnHeart from "../UI/Buttons/BtnHeart.jsx";
 import "./FavoritesProductActions.scss";
-import { closeFavorites } from "../store/favoritesSlice"; // Import akcji zamykającej Favorites
+import { closeFavorites } from "../store/favoritesSlice"; ``
 
 export default function FavoritesProductActions({
   onRemoveProduct,

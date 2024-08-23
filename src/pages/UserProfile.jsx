@@ -6,6 +6,8 @@ import { toggleUserProfileModal } from "../store/userProfileSlice"; // Import th
 import { useNavigate } from "react-router-dom";
 import "./UserProfile.scss";
 import BadgeTopOfAsideNav from "../UI/Badge/BadgeTopOfAsideNav.jsx";
+import BtnOnUserProfile from "../UI/Buttons/BtnOnUserProfile.jsx";
+import BadgeAnimatedStrimz from "../UI/Badge/BadgeAnimatedStrimz.jsx";
 
 export default function UserPage() {
   const dispatch = useDispatch();
@@ -51,13 +53,24 @@ export default function UserPage() {
         <div className="all-content-of-user-profile">
           <div className="content-empty-user-profile">
             <div className="all-text-user-profile">
-              <div id="log-in" onClick={handleSignInClick}>
+              <div id="log-in-userProfile" onClick={handleSignInClick}>
                 <p className="p-text-user-profile">Are you already a member?</p>
-                <h3 className="h-user-profile">Sign in</h3>
+
+                <BtnOnUserProfile
+                  text={"Sign in"}
+                  ariaText={"Go to log in page"}
+                />
               </div>
-              <div id="register" onClick={handleRegisterClick}>
+              <div id="register-userProfile" onClick={handleRegisterClick}>
                 <p className="p-text-user-profile">First time here?</p>
-                <h3 className="h-user-profile">Join Us</h3>
+
+                <BtnOnUserProfile
+                  text={"Join us"}
+                  ariaText={"Go to register page"}
+                />
+              </div>
+              <div className="badge-animated">
+                <BadgeAnimatedStrimz />
               </div>
             </div>
           </div>

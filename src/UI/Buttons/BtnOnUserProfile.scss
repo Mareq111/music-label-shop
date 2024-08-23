@@ -1,0 +1,95 @@
+@import "../../styles/global/global.scss";
+
+.btn-into-user-profile {
+  :hover,
+  :active {
+    fill: $white;
+  }
+}
+
+.btn-into-user-profile {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: $grey-700;
+  min-width: 8rem;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid $grey-600;
+  border-radius: 2rem;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  color: $white;
+  font-weight: 700;
+  z-index: 1;
+  &:hover path {
+    transition: 0.3s ease-in-out;
+    fill: $black-900;
+  }
+  &:focus path {
+    /* transition: 0.3s ease-in-out; */
+    fill: $black-900;
+  }
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  &:before {
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    border-radius: 50%;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  }
+
+  &:after {
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    border-radius: 50%;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  }
+
+  &:hover,
+  &:focus {
+    color: $black-700;
+    border: 0.1rem solid $grey-600;
+
+    &:before,
+    &:after {
+      background-color: $white;
+    }
+
+    &:before {
+      top: -15%;
+      transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+    }
+
+    &:after {
+      top: -25%;
+      transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+    }
+  }
+  &.active {
+    background-color: $white;
+    color: $black-700;
+  }
+}
+
+.link-go-to-categories {
+  outline: none;
+}
+
+.h-user-profile {
+  font-size: 1.2rem;
+}

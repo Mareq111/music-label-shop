@@ -1,7 +1,7 @@
-import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-
-export default function UserRegister() {
+import "./UserForgotPassword.scss";
+import { useEffect } from "react";
+export default function UserForgotPassword() {
   //componet always be on top page
   const location = useLocation();
   const margin = 32; // 32px = 2rem
@@ -26,5 +26,5 @@ export default function UserRegister() {
     }
   }, [location]);
 
-  return <div>UserRegister</div>;
+  return <div>UserForgotPassword</div>;
 }

@@ -3,8 +3,10 @@ import InputDeliveryEmail from "../Inputs/InputDeliveryEmail";
 import "./FormLogin.scss";
 
 import { updateFormField } from "../../store/formSlice";
-import BadgeFormRequired from "../Badge/BadgeFormRequired";
-import InputPassowrd from "../Inputs/InputPassowrd";
+
+import InputPassword from "../Inputs/InputPassword";
+
+import BadgeForgotPassword from "../Badge/BadgeForgotPassword";
 export default function FormLogin() {
   const dispatch = useDispatch();
   const formData = useSelector((state) => state.form);
@@ -29,12 +31,9 @@ export default function FormLogin() {
             handleInputChange("email", value, isValid)
           }
         />
-        <InputPassowrd />
-        <div>
-          <p>You forgot password?</p>
-        </div>
+        <InputPassword />
       </fieldset>
-      <BadgeFormRequired />
+      <BadgeForgotPassword />
     </form>
   );
 }

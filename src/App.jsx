@@ -71,6 +71,7 @@ import Author from "./pages/Author.jsx";
 import InputSearch from "./UI/Inputs/InputSearch.jsx";
 import UserLogIn from "./pages/UserLogIn.jsx";
 import UserRegister from "./pages/UserRegister.jsx";
+import UserForgotPassword from "./pages/UserForgotPassword.jsx";
 //search bar
 
 function App() {
@@ -296,9 +297,11 @@ function App() {
         { path: "information", element: <Information /> },
         { path: "shopping", element: <Shopping /> },
         { path: "author", element: <Author /> },
-        //login and register pages for user profile
+        //login and register and forgotpassword pages for user profile
         { path: "login", element: <UserLogIn /> },
         { path: "register", element: <UserRegister /> },
+        { path: "forgot-password", element: <UserForgotPassword /> },
+
       ],
     },
   ]);

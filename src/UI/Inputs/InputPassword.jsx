@@ -1,5 +1,5 @@
 import "./InputPassword.scss";
-export default function InputPassowrd({ isValid, password, handleChange }) {
+export default function InputPassword({ isValid, password, handleChange }) {
   return (
     <div className="input-password-container">
       <label title="Password required" htmlFor="input-fullname">

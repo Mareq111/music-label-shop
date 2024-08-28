@@ -69,6 +69,8 @@ import Shopping from "./pages/Shopping.jsx";
 import Author from "./pages/Author.jsx";
 /* import TopNav from "./components/TopNav.jsx"; */
 import InputSearch from "./UI/Inputs/InputSearch.jsx";
+import UserLogIn from "./pages/UserLogIn.jsx";
+import UserRegister from "./pages/UserRegister.jsx";
 //search bar
 
 function App() {
@@ -294,6 +296,9 @@ function App() {
         { path: "information", element: <Information /> },
         { path: "shopping", element: <Shopping /> },
         { path: "author", element: <Author /> },
+        //login and register pages for user profile
+        { path: "login", element: <UserLogIn /> },
+        { path: "register", element: <UserRegister /> },
       ],
     },
   ]);

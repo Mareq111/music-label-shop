@@ -21,9 +21,9 @@ export default function FormLogin() {
   }, [formData, onValidationChange]);
  */
   return (
-    <form className="form-delivery-details" action="">
-      <fieldset className="fieldset-form--delivery-details">
-        <legend className="legend-delivery-details">Log In</legend>
+    <form className="form-login" action="">
+      <fieldset className="fieldset-form--login">
+        <legend className="legend-login">Log In</legend>
 
         <InputDeliveryEmail
           value={formData.email.value}

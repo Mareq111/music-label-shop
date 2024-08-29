@@ -63,9 +63,11 @@ export default function UserLogIn() {
   }, [location]);
 
   return (
+    <div className="user-login">
     <div className="login-container">
       <FormLogin />
       <BtnContinue continueBtnText={"Continue log in"} />
+    </div>
     </div>
   );
 }

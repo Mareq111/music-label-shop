@@ -1,1 +1,30 @@
 @import "../../styles/global/global.scss";
+
+.form-login {
+    background-color: $black-700;
+    padding-block: 1rem;
+    width: 100%;
+    height: auto;
+    border: 0.1rem solid $grey-700;
+    border-radius: 0.5rem;
+  }
+  
+  .fieldset-form--login {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 0;
+  }
+  
+  .legend-login {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-block: 1rem;
+  }
+  
+  .postal-code-wth-city {
+    display: grid;
+    grid-template-columns: 30% 65%;
+    gap: 5%;
+  }
+  

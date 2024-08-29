@@ -1,6 +1,8 @@
 import { useLocation } from "react-router-dom";
 import "./UserForgotPassword.scss";
 import { useEffect } from "react";
+import FormForgotPassword from "../UI/Form/FormForgotPassword";
+import BtnContinue from "../UI/Buttons/BtnContinue";
 export default function UserForgotPassword() {
   //componet always be on top page
   const location = useLocation();
@@ -26,5 +28,12 @@ export default function UserForgotPassword() {
     }
   }, [location]);
 
-  return <div>UserForgotPassword</div>;
+  return (
+    <div className="user-forgot-password">
+      <div className="forgot-password-container">
+        <FormForgotPassword />
+        <BtnContinue continueBtnText={"Reset password"} />
+      </div>
+    </div>
+  );
 }

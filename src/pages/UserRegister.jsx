@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import FormRegister from "../UI/Form/FormRegister";
 import BtnContinue from "../UI/Buttons/BtnContinue";
-
+import "./UserRegister.scss";
 export default function UserRegister() {
   //componet always be on top page
   const location = useLocation();
@@ -29,8 +29,8 @@ export default function UserRegister() {
   }, [location]);
 
   return (
-    <div className="user-login">
-      <div className="login-container">
+    <div className="user-register">
+      <div className="register-container">
         <FormRegister />
         <BtnContinue continueBtnText={"Create an account"} />
       </div>

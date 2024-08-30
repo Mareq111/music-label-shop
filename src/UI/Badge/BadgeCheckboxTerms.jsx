@@ -11,7 +11,7 @@ export default function BadgeCheckboxTerms() {
           <span className="span-text-link">Terms and Conditions</span>
         </Link>{" "}
         of the online store, including the data protection rules contained
-        therein.*.
+        therein.
       </p>
     </div>
   );

@@ -1,1 +1,30 @@
 @import "../../styles/global/global.scss";
+
+.badge-checkbox-container {
+  position: relative;
+  margin-block: 1rem;
+}
+
+.p-text-terms {
+  margin: 1rem;
+  font-size: 1rem;
+  color: $white;
+}
+
+.text-terms-register {
+  /* margin: 1rem; */
+  font-size: 0.8rem;
+  color: $white;
+  position: relative;
+}
+
+.span-text-link {
+  color: $amulet-green;
+  border-bottom: 0.1rem solid $amulet-green;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    color: $eastern-blue;
+    border-bottom: 0.1rem solid $eastern-blue;
+  }
+}

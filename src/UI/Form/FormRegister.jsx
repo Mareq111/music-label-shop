@@ -5,7 +5,7 @@ import { updateFormField } from "../../store/formSlice";
 import InputPassword from "../Inputs/InputPassword";
 
 import InputDeliveryFullName from "../Inputs/InputDeliveryFullName";
-import InputCheckoutRegister from "../Inputs/InputCheckboxRegister";
+import BadgeCheckboxTerms from "../Badge/BadgeCheckboxTerms";
 export default function FormRegister() {
   const dispatch = useDispatch();
   const formData = useSelector((state) => state.form);
@@ -37,8 +37,7 @@ export default function FormRegister() {
         />
         <InputPassword />
       </fieldset>
-
-      <InputCheckoutRegister />
+      <BadgeCheckboxTerms />
     </form>
   );
 }

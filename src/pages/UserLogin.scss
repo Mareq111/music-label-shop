@@ -24,3 +24,8 @@
     width: 50%;
   }
 }
+.btn-continue-div-wrapper.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}

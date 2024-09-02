@@ -1,10 +1,9 @@
 /* eslint-disable react/prop-types */
 
-
 import { useDispatch, useSelector } from "react-redux";
 import InputDeliveryEmail from "../Inputs/InputDeliveryEmail";
 import "./FormLogin.scss";
-import { updateFormField } from "../../store/formSlice";
+import { updateLoginFormField } from "../../store/formLoginSlice";
 import InputPassword from "../Inputs/InputPassword";
 import BadgeForgotPassword from "../Badge/BadgeForgotPassword";
 import { useEffect, useState } from "react";
@@ -40,7 +39,7 @@ export default function FormLogin({ onValidationChange }) {
   };
 
   const handleInputChange = (field, value, isValid) => {
-    dispatch(updateFormField({ field, value, isValid }));
+    dispatch(updateLoginFormField({ field, value, isValid }));
   };
 
   return (

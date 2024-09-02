@@ -9,7 +9,7 @@ const initialState = {
   city: { value: "", isValid: false },
   address: { value: "", isValid: false },
   deliveryOption: { value: "", isValid: false },
-  password: { value: "", isValid: false },
+  /*  password: { value: "", isValid: false }, */
 };
 
 const formSlice = createSlice({

@@ -1,0 +1,65 @@
+@import "../styles/global/global.scss";
+
+.background-off-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-image: url("./../assets/img/tlo-checkout3.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.welcome-popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.welcome-popup {
+  background-color: $black-900;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.h-welcome-popup {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.p-welcome-popup {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.logo-welcome-popup {
+  width: 5rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

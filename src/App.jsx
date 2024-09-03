@@ -72,6 +72,8 @@ import InputSearch from "./UI/Inputs/InputSearch.jsx";
 import UserLogIn from "./pages/UserLogIn.jsx";
 import UserRegister from "./pages/UserRegister.jsx";
 import UserForgotPassword from "./pages/UserForgotPassword.jsx";
+
+import WelcomePopup from "./pages/WelcomePopup.jsx";
 //search bar
 
 function App() {
@@ -301,7 +303,8 @@ function App() {
         { path: "login", element: <UserLogIn /> },
         { path: "register", element: <UserRegister /> },
         { path: "forgot-password", element: <UserForgotPassword /> },
-
+        //welcome page
+        { path: "welcome-page", element: <WelcomePopup /> },
       ],
     },
   ]);

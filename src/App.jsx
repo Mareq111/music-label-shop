@@ -74,6 +74,7 @@ import UserRegister from "./pages/UserRegister.jsx";
 import UserForgotPassword from "./pages/UserForgotPassword.jsx";
 
 import WelcomePopup from "./pages/WelcomePopup.jsx";
+import UserProfileAfter from "./pages/UserProfileAfter.jsx";
 //search bar
 
 function App() {
@@ -289,6 +290,7 @@ function App() {
         // Other sections of the page
         { path: "favorites", element: <Favorites /> },
         { path: "user-profile", element: <UserProfile /> },
+        { path: "user-profile-after", element: <UserProfileAfter /> },
         { path: "cart", element: <Cart /> },
         { path: "search", element: <SearchResult /> },
         { path: "menu", element: <MenuHamburger /> },

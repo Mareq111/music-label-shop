@@ -15,7 +15,7 @@ export default function WelcomePopup() {
 
     if (countdown === 0) {
       clearInterval(timer);
-      navigate("/user-profile");
+      navigate("/user-profile-after");
     }
 
     return () => clearInterval(timer);

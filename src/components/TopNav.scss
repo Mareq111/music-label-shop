@@ -156,10 +156,19 @@ path {
   #mobile-icon-user {
     display: none;
   }
+  #mobile-icon-user-after {
+    display: none;
+  }
   #desktop-icon-user {
     display: block;
   }
+  #desktop-icon-user-after {
+    display: block;
+  }
   .p-icon-user-text {
+    display: block;
+  }
+  .p-icon-user-text-after {
     display: block;
   }
 

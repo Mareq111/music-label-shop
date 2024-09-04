@@ -15,8 +15,8 @@ import UserPage from "../pages/UserProfile";
 import Cart from "../pages/Cart";
 import BtnIconUser from "../UI/Buttons/BtnIconUser";
 
-import { toggleFavorites, closeFavorites } from "../store/favoritesSlice.js"; // Import actions
-import Favorites from "../pages/Favorites"; // Import the Favorites component
+import { toggleFavorites, closeFavorites } from "../store/favoritesSlice.js";
+import Favorites from "../pages/Favorites";
 
 export default function TopNav() {
   const itemCountFav = useSelector((state) => state.favorites.totalQuantity);

@@ -5,6 +5,7 @@ import layoutSlice from "./layoutSlice";
 import formReducer from "./formSlice";
 import favoritesReducer from "./favoritesSlice";
 import userProfileSlice from "./userProfileSlice";
+import authReducer from "./authSlice";
 
 const store = configureStore({
   reducer: {
@@ -14,6 +15,7 @@ const store = configureStore({
     form: formReducer,
     favorites: favoritesReducer,
     userProfile: userProfileSlice,
+    auth: authReducer,
   },
 });
 

@@ -1,5 +1,4 @@
 @import "../../styles/global/global.scss";
-//mobile
 
 .btn-icon-user {
   position: relative;
@@ -33,7 +32,6 @@
     :active {
       fill: $white;
     }
-    /*  transition: 0.3s ease-in-out; */
   }
 
   .btn-icon-user {
@@ -60,7 +58,6 @@
       fill: $black-900;
     }
     &:focus path {
-      /* transition: 0.3s ease-in-out; */
       fill: $black-900;
     }
 

@@ -299,7 +299,6 @@ function App() {
         { path: "payment-greetings", element: <PaymentAfterGreetings /> },
         // Other subpages into menu
         { path: "information", element: <Information /> },
-        { path: "shopping", element: <Shopping /> },
         { path: "author", element: <Author /> },
         //login and register and forgotpassword pages for user profile
         { path: "login", element: <UserLogIn /> },

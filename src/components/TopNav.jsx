@@ -14,7 +14,6 @@ import { toggleUserProfileModal } from "../store/userProfileSlice";
 import UserPage from "../pages/UserProfile";
 import Cart from "../pages/Cart";
 import BtnIconUser from "../UI/Buttons/BtnIconUser";
-
 import { toggleFavorites, closeFavorites } from "../store/favoritesSlice.js";
 import Favorites from "../pages/Favorites";
 
@@ -26,7 +25,8 @@ export default function TopNav() {
   const isCartOpen = useSelector((state) => state.cart.isCartOpen);
   const isFavoritesOpen = useSelector(
     (state) => state.favorites.isFavoritesOpen
-  ); // Add this line
+  );
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated); // Add this line
   const dispatch = useDispatch();
 
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -47,7 +47,14 @@ export default function TopNav() {
   }, [scrollPosition]);
 
   const handleUserProfileClick = () => {
-    dispatch(toggleUserProfileModal());
+    if (isAuthenticated) {
+      // Toggle user profile modal
+      dispatch(toggleUserProfileModal());
+    } else {
+      // Redirect to login or perform other action
+      // For example, you could navigate to a login page here
+      // navigate("/login");
+    }
   };
 
   const handleFavoritesClick = () => {

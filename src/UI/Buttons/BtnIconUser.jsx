@@ -84,30 +84,31 @@ export default function BtnIconUser({ handleUserProfileClick }) {
 }
  */
 
-
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import IconUser from "../Icons/IconUser";
 import IconUserAfter from "../Icons/IconUserAfter";
 import "./BtnIconUser.scss";
-import { toggleUserProfileModal, setProfileView } from "../../store/userProfileSlice";
+import {
+  toggleUserProfileModal,
+  setProfileView,
+} from "../../store/userProfileSlice";
 
 export default function BtnIconUser() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  //checking if user is logged or not
   const handleClick = () => {
-    // Set the correct profile view based on authentication status
     if (isAuthenticated) {
       dispatch(setProfileView("after-login"));
       navigate("/user-profile-after");
     } else {
       dispatch(setProfileView("login"));
+      dispatch(toggleUserProfileModal());
       navigate("/user-profile");
     }
-    // Toggle modal visibility
-    dispatch(toggleUserProfileModal());
   };
 
   return (

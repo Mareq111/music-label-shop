@@ -52,7 +52,7 @@ import "./WelcomePopup.scss";
 export default function WelcomePopup() {
   const navigate = useNavigate();
   const dispatch = useDispatch(); // Initialize useDispatch
-  const [countdown, setCountdown] = useState(5);
+  const [countdown, setCountdown] = useState(3);
 
   useEffect(() => {
     const timer = setInterval(() => {

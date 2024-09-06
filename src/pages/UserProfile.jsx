@@ -41,9 +41,7 @@ export default function UserPage() {
         onClick={handleBackdropClick}
       ></div>
 
-      {/* User Profile Sidebar */}
       <aside className="aside-user-profile">
-        {/* Name of page with close button */}
         <BadgeTopOfAsideNav
           nameOfNavPage={"Profile"}
           showCloseButton={true}

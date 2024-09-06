@@ -15,9 +15,13 @@ const userProfileSlice = createSlice({
     setProfileView(state, action) {
       state.profileView = action.payload;
     },
+    logout(state) {
+      state.isUserProfileOpen = false;
+      state.profileView = "login";
+    },
   },
 });
 
-export const { toggleUserProfileModal, setProfileView } =
+export const { toggleUserProfileModal, setProfileView, logout } =
   userProfileSlice.actions;
 export default userProfileSlice.reducer;

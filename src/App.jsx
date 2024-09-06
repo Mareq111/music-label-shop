@@ -65,7 +65,6 @@ import ProductsPuzzlesHard from "./pages/subpages/products-puzzles/ProductsPuzzl
 import Payment from "./pages/Payment.jsx";
 import PaymentAfterGreetings from "./pages/PaymentAfterGreetings.jsx";
 import Information from "./pages/Information.jsx";
-import Shopping from "./pages/Shopping.jsx";
 import Author from "./pages/Author.jsx";
 /* import TopNav from "./components/TopNav.jsx"; */
 import InputSearch from "./UI/Inputs/InputSearch.jsx";
@@ -75,6 +74,7 @@ import UserForgotPassword from "./pages/UserForgotPassword.jsx";
 
 import WelcomePopup from "./pages/WelcomePopup.jsx";
 import UserProfileAfter from "./pages/UserProfileAfter.jsx";
+import LogOutPopup from "./pages/LogOutPopup.jsx";
 //search bar
 
 function App() {
@@ -304,8 +304,9 @@ function App() {
         { path: "login", element: <UserLogIn /> },
         { path: "register", element: <UserRegister /> },
         { path: "forgot-password", element: <UserForgotPassword /> },
-        //welcome page
+        //welcome page or log out
         { path: "welcome-page", element: <WelcomePopup /> },
+        { path: "logout", element: <LogOutPopup /> },
       ],
     },
   ]);

@@ -76,6 +76,8 @@ import WelcomePopup from "./pages/WelcomePopup.jsx";
 import UserProfileAfter from "./pages/UserProfileAfter.jsx";
 import LogOutPopup from "./pages/LogOutPopup.jsx";
 import PurchaseHistory from "./pages/PurchaseHistory.jsx";
+import MyCoupons from "./pages/MyCoupons.jsx";
+import Shopping from "./pages/Shopping.jsx";
 //search bar
 
 function App() {
@@ -301,6 +303,7 @@ function App() {
         // Other subpages into menu
         { path: "information", element: <Information /> },
         { path: "author", element: <Author /> },
+        { path: "shopping", element: <Shopping /> },
         //login and register and forgotpassword pages for user profile
         { path: "login", element: <UserLogIn /> },
         { path: "register", element: <UserRegister /> },
@@ -309,6 +312,7 @@ function App() {
         { path: "welcome-page", element: <WelcomePopup /> },
         { path: "logout", element: <LogOutPopup /> },
         { path: "purchase-history", element: <PurchaseHistory /> },
+        { path: "my-coupons", element: <MyCoupons /> },
       ],
     },
   ]);

@@ -28,21 +28,21 @@ export default function AccordionMyAccountAnswer() {
         <li>
           <Link
             role="button"
-            aria-label="Go to cart page"
+            aria-label="Go to purchase history page"
             className="link-footer-big-card-answer"
-            to="/cart"
+            to="/purchase-history"
           >
-            <BtnAccordionAnswerFooter label={"Cart"} />
+            <BtnAccordionAnswerFooter label={"Purchase History"} />
           </Link>
         </li>
         <li>
           <Link
             role="button"
-            aria-label="Go to favorites page"
+            aria-label="Go to my coupons page"
             className="link-footer-big-card-answer"
-            to="/favorites"
+            to="/my-coupons"
           >
-            <BtnAccordionAnswerFooter label={"Favorites"} />
+            <BtnAccordionAnswerFooter label={"My Coupons"} />
           </Link>
         </li>
       </ul>

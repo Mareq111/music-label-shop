@@ -40,6 +40,16 @@ export default function UserProfileAfter() {
                   <BtnAccordionAnswerFooter label={"Purchase History"} />
                 </Link>
               </li>
+              <li>
+                <Link
+                  role="button"
+                  aria-label="Go to my coupons page"
+                  className="link-footer-big-card-answer"
+                  to="/my-coupons"
+                >
+                  <BtnAccordionAnswerFooter label={"My Coupons"} />
+                </Link>
+              </li>
             </ul>
             <div id="log-in-userProfile-after">
               <p className="p-text-user-profile-after">Ready to leave?</p>

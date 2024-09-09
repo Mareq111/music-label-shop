@@ -75,6 +75,7 @@ import UserForgotPassword from "./pages/UserForgotPassword.jsx";
 import WelcomePopup from "./pages/WelcomePopup.jsx";
 import UserProfileAfter from "./pages/UserProfileAfter.jsx";
 import LogOutPopup from "./pages/LogOutPopup.jsx";
+import PurchaseHistory from "./pages/PurchaseHistory.jsx";
 //search bar
 
 function App() {
@@ -307,6 +308,7 @@ function App() {
         //welcome page or log out
         { path: "welcome-page", element: <WelcomePopup /> },
         { path: "logout", element: <LogOutPopup /> },
+        { path: "purchase-history", element: <PurchaseHistory /> },
       ],
     },
   ]);

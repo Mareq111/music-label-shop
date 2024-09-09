@@ -1,12 +1,14 @@
 @import "../../styles/global/global.scss";
 
 .btn-accordionAnswerFooter {
-   display: inline-block; 
+  display: inline-block;
   background-color: transparent;
   color: $white;
   outline: none;
   border: 0;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
+  padding-block: 0.5rem;
+  padding-inline: 0;
   height: auto;
   width: auto;
   font-weight: 700;

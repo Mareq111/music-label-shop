@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import { useDispatch, useSelector } from "react-redux";
-import { toggleUserProfileModal } from "../store/userProfileSlice"; // Import the toggleUserProfileModal action
+import { toggleUserProfileModal } from "../store/userProfileSlice";
 import { useNavigate } from "react-router-dom";
 import "./UserProfile.scss";
 import BadgeTopOfAsideNav from "../UI/Badge/BadgeTopOfAsideNav.jsx";

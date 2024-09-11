@@ -78,6 +78,7 @@ import LogOutPopup from "./pages/LogOutPopup.jsx";
 import PurchaseHistory from "./pages/PurchaseHistory.jsx";
 import MyCoupons from "./pages/MyCoupons.jsx";
 import Shopping from "./pages/Shopping.jsx";
+import Terms from "./pages/Terms.jsx";
 //search bar
 
 function App() {
@@ -313,6 +314,7 @@ function App() {
         { path: "logout", element: <LogOutPopup /> },
         { path: "purchase-history", element: <PurchaseHistory /> },
         { path: "my-coupons", element: <MyCoupons /> },
+        { path: "terms", element: <Terms/> },
       ],
     },
   ]);

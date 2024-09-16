@@ -16,10 +16,13 @@
   border-radius: 50%;
 
   &:hover,
-  :focus,
+
   :active {
     background-color: $grey-700;
     color: $black-900;
+  }
+  &:focus {
+    background-color: $grey-700;
   }
 }
 

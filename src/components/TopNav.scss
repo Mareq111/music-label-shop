@@ -64,6 +64,9 @@
   :active {
     background-color: $grey-700;
   }
+  &:focus {
+    background-color: $grey-700;
+  }
 }
 .icon-into-menu {
   background-color: transparent;

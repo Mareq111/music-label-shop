@@ -16,6 +16,7 @@ import Cart from "../pages/Cart";
 import BtnIconUser from "../UI/Buttons/BtnIconUser";
 import { toggleFavorites, closeFavorites } from "../store/favoritesSlice.js";
 import Favorites from "../pages/Favorites";
+import BtnIconMenu from "../UI/Buttons/BtnIconMenu.jsx";
 
 export default function TopNav() {
   const itemCountFav = useSelector((state) => state.favorites.totalQuantity);
@@ -82,14 +83,20 @@ export default function TopNav() {
           </Link>
           <div className="div-right-side-menu">
             <div className="icon-link-to">
-              <BtnIconUser handleUserProfileClick={handleUserProfileClick} />
+              <BtnIconUser
+                handleUserProfileClick={handleUserProfileClick}
+                tabIndex={0}
+              />
             </div>
             <div className="icon-link-to">
               <div
                 className="div-icon-into-menu"
                 onClick={handleFavoritesClick} // Toggle favorites when clicked
               >
-                <BtnIconFavoritesMenu itemCountFav={itemCountFav} />
+                <BtnIconFavoritesMenu
+                  itemCountFav={itemCountFav}
+                  tabIndex={0}
+                />
               </div>
             </div>
             <div className="icon-link-to">
@@ -100,7 +107,8 @@ export default function TopNav() {
             <div className="icon-link-to">
               <Link to="menu" aria-label="Menu" tabIndex={0}>
                 <div id="menu-mobile" className="div-icon-into-menu">
-                  <IconMenu />
+                  {/*  <IconMenu /> */}
+                  <BtnIconMenu />
                 </div>
               </Link>
             </div>

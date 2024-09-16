@@ -22,13 +22,13 @@ export default function CardProductHomepage({ data }) {
       style={{ backgroundColor }}
     >
       <div className="big-card-homepage">
-        <Link
+        {/*  <Link
           className="link-to-into-big-card-homepage-Text"
           to={link}
           aria-label={`Check out ${title} page`}
-        >
-          <h2 className="big-card-homepage-pre-head">{title}</h2>
-        </Link>
+        > */}
+        <h2 className="big-card-homepage-pre-head">{title}</h2>
+        {/*  </Link> */}
         {/* together img and h for 660px+ */}
         <div className="row-for-img-h-card-homepage">
           <div className="big-card-homepage-div-img">

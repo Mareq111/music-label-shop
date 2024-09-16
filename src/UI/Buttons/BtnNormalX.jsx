@@ -4,10 +4,15 @@ import IconNormalX from "../Icons/IconNormalX.jsx";
 import "./BtnNormalX.scss";
 export default function BtnNormalX({ onClick }) {
   return (
-    <Link to=".." relative="path">
-      <button title="Close" className="btn-normal-x" onClick={onClick}>
-        <IconNormalX />
-      </button>
-    </Link>
+    /*  <Link to=".." relative="path"> */
+    <button
+      title="Close"
+      className="btn-normal-x"
+      onClick={onClick}
+      tabIndex={0}
+    >
+      <IconNormalX />
+    </button>
+    /*  </Link> */
   );
 }

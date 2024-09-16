@@ -23,11 +23,11 @@ export default function MenuHamburger() {
 
   return (
     <aside className="aside-menu">
-      {/* bagde with name of page and x to return */}
+      {/* bagde with name of page and x to return  */}
       <BadgeTopOfAsideNav nameOfNavPage={"Menu"} showCloseButton={true} />
       <hr className="menu-devider-separator" />
       <div className="all-content-of-menu">
-        {/* Main mapping elements from array to separate all BtnNavTo */}
+        {/*  Main mapping elements from array to separate all BtnNavTo */}
         <h3 className="h-categories-menu">Categories</h3>
         <ul className="ul-nav-menu">
           <li>
@@ -42,16 +42,13 @@ export default function MenuHamburger() {
           </li>
         </ul>
         <hr className="menu-devider-separator-smaller" />
-        {/* accordions with sub paths*/}
-
+        {/* accordions with sub paths */}
         <ul className="list-of-pages">
           <li>
-     
             <AccordionWithNav
               titleAccordion={"Information"}
               answerAccordion={<AccordionInformationAnswer />}
             />
-      
           </li>
           <li>
             <AccordionWithNav
@@ -72,12 +69,12 @@ export default function MenuHamburger() {
             />
           </li>
         </ul>
-        {/* badge with logo */}
+        {/* badge with logo  */}
         <hr className="menu-devider-separator-smaller" />
         <div className="badge-strimz-menu">
           <BadgeAnimatedStrimz />
         </div>
-        {/* socials and rights */}
+        {/* socials and rights  */}
         <div className="menu-socials-badges-rights-div">
           <BadgeAllSocials />
           <p className="menu-text-rights">

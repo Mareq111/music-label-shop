@@ -209,26 +209,22 @@ export default function UserProfile() {
   const isUserProfileOpen = useSelector(
     (state) => state.userProfile.isUserProfileOpen
   );
-  const modalRef = useRef(null); // Ref do modalu
+  const modalRef = useRef(null);
 
-  // Nawigacja do strony logowania
   const handleSignInClick = () => {
     dispatch(toggleUserProfileModal());
     navigate("/login");
   };
 
-  // Nawigacja do strony rejestracji
   const handleRegisterClick = () => {
     dispatch(toggleUserProfileModal());
     navigate("/register");
   };
 
-  // Zamknięcie modalu po kliknięciu w tło
   const handleBackdropClick = () => {
     dispatch(toggleUserProfileModal());
   };
 
-  // Pułapka fokusowa w modalu
   useEffect(() => {
     if (isUserProfileOpen) {
       const focusableElements = modalRef.current.querySelectorAll(
@@ -240,13 +236,13 @@ export default function UserProfile() {
       const handleKeyDown = (e) => {
         if (e.key === "Tab") {
           if (e.shiftKey) {
-            // Shift + Tab (wstecz)
+            // Shift + Tab
             if (document.activeElement === firstElement) {
               e.preventDefault();
               lastElement.focus();
             }
           } else {
-            // Tab (do przodu)
+            // Tab
             if (document.activeElement === lastElement) {
               e.preventDefault();
               firstElement.focus();
@@ -257,7 +253,6 @@ export default function UserProfile() {
 
       document.addEventListener("keydown", handleKeyDown);
 
-      // Skieruj fokus na pierwszy element focusowalny po otwarciu modalu
       firstElement?.focus();
 
       return () => {

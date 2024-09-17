@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import BtnNavTo from "../UI/Buttons/BtnNavTo.jsx";
 import "./MenuHamburger.scss";
 import arenaCover from "../assets/img/coversMini/albums/arena_of_autumnn_EP-mini.jpg";
@@ -11,7 +12,9 @@ import BadgeAllSocials from "../UI/Badge/BadgeAllSocials.jsx";
 import BadgeTopOfAsideNav from "../UI/Badge/BadgeTopOfAsideNav.jsx";
 
 export default function MenuHamburger() {
-  //array with main  menu buttons to pages
+  const menuRef = useRef(null);
+
+  // Array with main menu buttons to pages
   const mainNavPages = [
     { link: "/albums/all-strimz-empire", img: arenaCover, title: "Albums" },
     { link: "/tickets/all-locations", img: arenaCover, title: "Tickets" },
@@ -21,13 +24,55 @@ export default function MenuHamburger() {
     { link: "/puzzles/all-levels", img: arenaCover, title: "Puzzles" },
   ];
 
+  useEffect(() => {
+    const menuElement = menuRef.current;
+    if (menuElement) {
+      const focusableElements = menuElement.querySelectorAll(
+        "button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])"
+      );
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements[focusableElements.length - 1];
+
+      const handleKeyDown = (e) => {
+        if (e.key === "Tab") {
+          if (e.shiftKey) {
+            // Shift + Tab (backward)
+            if (document.activeElement === firstElement) {
+              e.preventDefault();
+              lastElement.focus();
+            }
+          } else {
+            // Tab (forward)
+            if (document.activeElement === lastElement) {
+              e.preventDefault();
+              firstElement.focus();
+            }
+          }
+        }
+      };
+
+      document.addEventListener("keydown", handleKeyDown);
+
+      // Focus on the first focusable element when the menu opens
+      firstElement?.focus();
+
+      return () => {
+        document.removeEventListener("keydown", handleKeyDown);
+      };
+    }
+  }, []);
+
   return (
-    <aside className="aside-menu">
-      {/* bagde with name of page and x to return  */}
-      <BadgeTopOfAsideNav nameOfNavPage={"Menu"} showCloseButton={true} />
+    <aside className="aside-menu" ref={menuRef}>
+      {/* Badge with name of page and x to return */}
+      <BadgeTopOfAsideNav
+        nameOfNavPage={"Menu"}
+        showCloseButton={true}
+        linkTo={"/.."}
+      />
       <hr className="menu-devider-separator" />
       <div className="all-content-of-menu">
-        {/*  Main mapping elements from array to separate all BtnNavTo */}
+        {/* Main mapping elements from array to separate all BtnNavTo */}
         <h3 className="h-categories-menu">Categories</h3>
         <ul className="ul-nav-menu">
           <li>
@@ -42,7 +87,7 @@ export default function MenuHamburger() {
           </li>
         </ul>
         <hr className="menu-devider-separator-smaller" />
-        {/* accordions with sub paths */}
+        {/* Accordions with sub paths */}
         <ul className="list-of-pages">
           <li>
             <AccordionWithNav
@@ -69,12 +114,12 @@ export default function MenuHamburger() {
             />
           </li>
         </ul>
-        {/* badge with logo  */}
+        {/* Badge with logo */}
         <hr className="menu-devider-separator-smaller" />
         <div className="badge-strimz-menu">
           <BadgeAnimatedStrimz />
         </div>
-        {/* socials and rights  */}
+        {/* Socials and rights */}
         <div className="menu-socials-badges-rights-div">
           <BadgeAllSocials />
           <p className="menu-text-rights">

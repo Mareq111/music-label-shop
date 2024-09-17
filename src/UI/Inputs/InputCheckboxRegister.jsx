@@ -8,7 +8,7 @@ export default function InputCheckboxRegister({ onChange }) {
   const handleCheckboxChange = () => {
     const newCheckedState = !isChecked;
     setIsChecked(newCheckedState);
-    onChange(newCheckedState); // Notify parent of the new state
+    onChange(newCheckedState); 
   };
 
   return (
@@ -18,6 +18,7 @@ export default function InputCheckboxRegister({ onChange }) {
         type="checkbox"
         checked={isChecked}
         onChange={handleCheckboxChange}
+        tabIndex={0}
       />
       <span className="checkmark"></span>
     </label>

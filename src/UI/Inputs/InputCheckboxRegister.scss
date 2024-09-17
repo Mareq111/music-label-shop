@@ -1,22 +1,93 @@
-@import "../../styles/global/global.scss";
+/* @import "../../styles/global/global.scss";
 
-/* .checkbox-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    margin: 1rem;
-} */
+
 
 .checkbox-container {
-  /*   display: flex;
-   align-items: center;
-   justify-content: center; */
+
   position: relative;
   cursor: pointer;
   font-size: 16px;
   user-select: none;
   margin: 1rem;
+ 
+}
+
+.register-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: $grey-500;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid $white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  
+}
+
+.register-checkbox:checked ~ .checkmark {
+  background-color: $amulet-green;
+
+}
+
+.register-checkbox:checked ~ .checkmark:after {
+  display: block;
+  
+}
+
+@keyframes checkAnim {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 10px;
+  }
+}
+
+.register-checkbox:checked ~ .checkmark:after {
+  animation: checkAnim 0.2s forwards;
+}
+ */
+
+@import "../../styles/global/global.scss";
+
+.checkbox-container {
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+  margin: 1rem;
+
+  // Add a focus outline for accessibility
+  &:focus-within {
+    outline: 0.2rem solid $amulet-green;
+    display: block;
+    height: 25px;
+    width: 25px;
+  }
 }
 
 .register-checkbox {
@@ -55,7 +126,6 @@
 
 .register-checkbox:checked ~ .checkmark {
   background-color: $amulet-green;
-  /*   box-shadow: 0 3px 7px $amulet-green; */
 }
 
 .register-checkbox:checked ~ .checkmark:after {

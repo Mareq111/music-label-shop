@@ -109,7 +109,11 @@ export default function CardCustomerFavHomepage({ titleSection }) {
                   className="link-you-might-like-homepage"
                   to={`/${product.key}`}
                 >
-                  <CardProductMain layout={layoutView} product={product} />
+                  <CardProductMain
+                    layout={layoutView}
+                    product={product}
+                    tabIndex={0}
+                  />
                 </Link>
               </li>
             ))}

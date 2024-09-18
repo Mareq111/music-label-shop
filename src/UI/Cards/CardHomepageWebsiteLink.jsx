@@ -7,7 +7,7 @@ export default function CardHomepageWebsiteLink() {
       Explore more on our website.
       </h3>
       <div className="btn-homepage-website">
-      <BtnCheckWebsite />
+      <BtnCheckWebsite tabIndex={0}/>
 
       </div>
     </section>

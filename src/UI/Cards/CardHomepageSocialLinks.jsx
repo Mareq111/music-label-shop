@@ -6,7 +6,7 @@ export default function CardHomepageSocialLinks() {
       <h3 className="h-streaming-logos-homepage">
         Connect with us on social media.
       </h3>
-      <BadgeAllSocials />
+      < BadgeAllSocials tabIndex={0}/>
     </section>
   );
 }

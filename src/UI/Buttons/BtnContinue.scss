@@ -10,7 +10,7 @@
   font-weight: 700;
   color: $black-700;
   border: 0;
-  outline: 0;
+  outline: none;
   font-size: 1.1rem;
   border-radius: 2rem;
   background-color: $eastern-blue;
@@ -18,13 +18,13 @@
     border 0.3s ease-in-out;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $ming-blue;
     color: $white;
-
-    &:focus {
-      border: 0.2rem solid $eastern-blue;
-    }
+  }
+    &:focus-within {
+      box-shadow: inset 0 0 0 0.2rem $white;
+      outline: none;
+    
   }
 }

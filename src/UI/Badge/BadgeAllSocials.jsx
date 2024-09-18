@@ -9,7 +9,7 @@ export default function BadgeAllSocials() {
   return (
     <section className="badgeAllSocials-all">
       <div className="badgeAllSocials-div">
-        <Link to={"https://www.facebook.com/"} title="Go to Facebook">
+        <Link className="focus-link-icon" to={"https://www.facebook.com/"} title="Go to Facebook">
           <div className="wrapper-div-two-icons">
             <span className="first-logo">
               <IconLogoFacebook />
@@ -19,7 +19,7 @@ export default function BadgeAllSocials() {
             </span>
           </div>
         </Link>
-        <Link title="Go to Instagram" to={"https://www.instagram.com/"}>
+        <Link className="focus-link-icon" title="Go to Instagram" to={"https://www.instagram.com/"}>
           <div className="wrapper-div-two-icons">
             <span className="first-logo">
               <IconLogoInstagram />
@@ -29,7 +29,7 @@ export default function BadgeAllSocials() {
             </span>
           </div>
         </Link>
-        <Link title="Go to Youtube" to={"https://www.youtube.com/"}>
+        <Link className="focus-link-icon" title="Go to Youtube" to={"https://www.youtube.com/"}>
           <div className="wrapper-div-two-icons">
             <span className="first-logo">
               <IconLogoYoutube />
@@ -39,7 +39,7 @@ export default function BadgeAllSocials() {
             </span>
           </div>
         </Link>
-        <Link title="Go to Tik Tok" to={"https://www.tiktok.com/"}>
+        <Link className="focus-link-icon" title="Go to Tik Tok" to={"https://www.tiktok.com/"}>
           <div className="wrapper-div-two-icons">
             <span className="first-logo">
               <IconLogoTikTok />

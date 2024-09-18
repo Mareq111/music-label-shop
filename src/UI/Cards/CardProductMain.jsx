@@ -2,7 +2,7 @@
 import "./CardProductMain.scss";
 
 export default function CardProductMain({ product, layout, customClass }) {
-  console.log("CardProductMain props:", { product, layout, customClass }); // Add console log
+  console.log("CardProductMain props:", { product, layout, customClass });
 
   //! Destructuring the product object of location or color or itemTitle or itemLevel if it's not an album which has titleArtist
   const {
@@ -48,7 +48,7 @@ export default function CardProductMain({ product, layout, customClass }) {
         <div className={`card__Product-grid ${customClass}`}>
           <div className="div-top-of-card-Product-grid">
             <div className="div-img-card__Product-grid">
-              <img 
+              <img
                 className="product-image-grid"
                 src={imgURL}
                 alt={`${titleItem} by ${titleArtist}`}

@@ -46,8 +46,9 @@ export default function CardProductHomepage({ data }) {
         <p className="big-card-homepage-p">{description}</p>
         <div className="btn-center-big-card-homepage">
           <Link
+            /* className="link-focus-btn-card" */
             aria-label={`Go to ${title} page`}
-            className="link-to-into-big-card-homepage"
+            className="link-to-into-big-card-homepage link-focus-btn-card"
             to={link}
           >
             <BtnContinue continueBtnText={buttonText} />

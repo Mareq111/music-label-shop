@@ -14,6 +14,10 @@
   align-items: center;
   flex-direction: row;
   gap: 1rem;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem inset $white;
+  }
 }
 .wrapper-div-two-icons {
   display: flex;
@@ -26,6 +30,9 @@
   height: 2rem;
   cursor: pointer;
 
+ 
+
+  
   .first-logo,
   .second-logo {
     position: absolute;
@@ -52,5 +59,14 @@
     .second-logo {
       transform: translateY(-50%);
     }
+  }
+ 
+}
+
+.focus-link-icon {
+  position: relative;
+  &:focus-within {
+    box-shadow: 0 0 0 0.2rem inset $white;
+    outline: none;
   }
 }

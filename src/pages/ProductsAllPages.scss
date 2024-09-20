@@ -80,3 +80,11 @@
   padding: 1rem;
   margin-bottom: 1rem;
 }
+
+.class-link-focus-pages {
+  position: relative;
+  &:focus-within {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem inset $white;
+  }
+}

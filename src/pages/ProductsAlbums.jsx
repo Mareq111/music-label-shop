@@ -77,7 +77,7 @@ export default function ProductsAlbums() {
         >
           {productsData.map((item) => (
             <li className="li-productsMain" key={item.key}>
-              <Link to={`/${item.key}`}>
+              <Link className="class-link-focus-pages" to={`/${item.key}`}>
                 <CardProductMain product={item} layout={layoutView} />
               </Link>
             </li>

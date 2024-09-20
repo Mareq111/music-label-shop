@@ -33,7 +33,7 @@ export default function CardPreorderpreorder() {
         <div className="btn-center-big-card-preorder">
           <Link
             aria-label={`Go to Pre Order page`}
-            className="link-to-into-big-card-preorder"
+            className="link-to-into-big-card-preorder link-focus-btn-card"
             to="/albumRedPathToZukunft"
           >
             <BtnContinue continueBtnText="Preorder" />

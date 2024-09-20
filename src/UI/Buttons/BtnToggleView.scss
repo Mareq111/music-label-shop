@@ -17,4 +17,8 @@
   &:hover {
     background-color: $grey-700;
   }
+  &:focus-within {
+    background-color: $grey-700;
+
+  }
 }

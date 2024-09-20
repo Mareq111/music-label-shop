@@ -37,6 +37,7 @@ export default function BtnGoToCategories({
         className={`btn-go-to-categories ${active ? "active" : ""}`}
         type="button"
         onClick={handleClick}
+        tabIndex={0}
       >
         {nameOfCategory}
       </button>

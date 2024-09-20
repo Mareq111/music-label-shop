@@ -48,7 +48,10 @@
   &:focus {
     color: $black-700;
     border: 0.1rem solid $grey-600;
-
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.2rem solid $white;
+    }
     &:before,
     &:after {
       background-color: $white;

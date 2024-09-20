@@ -23,7 +23,7 @@ export default function BtnToggleView({ onLayoutChange }) {
 
   return (
     <div className="icons-view-chooser">
-      <button
+      <button tabIndex={0}
         title="Change view of products"
         onClick={handleLayoutChange}
         className={`btn-toggle-view ${

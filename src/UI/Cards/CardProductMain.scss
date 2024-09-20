@@ -17,16 +17,14 @@
   &:hover {
     border: 0.1rem solid $grey-600;
   }
-  &:focus-within {
-    box-shadow: inset 0 0 0 0.2rem $white;
-    outline: none;
-  }
+  
 }
 .div-top-of-card-Product-list {
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  
 }
 //!list card
 .div-img-card__Product-list {
@@ -35,6 +33,7 @@
   overflow-y: hidden;
   width: auto;
   aspect-ratio: 1/1;
+  
 }
 .product-image-list {
   width: 100%;
@@ -44,6 +43,7 @@
   overflow: hidden;
   /*   margin-top: 1rem; */
   object-fit: contain;
+  
 }
 //! grid card
 .div-img-card__Product-grid {
@@ -195,6 +195,11 @@ min-height: 12rem;  */
   border: 0.1rem solid $black-700;
   overflow: hidden;
   &:hover {
+    border: 0.1rem solid $grey-600;
+  }
+  &:focus-within {
+    /*  box-shadow: inset 0 0 0 0.2rem $white;
+    outline: none; */
     border: 0.1rem solid $grey-600;
   }
 }

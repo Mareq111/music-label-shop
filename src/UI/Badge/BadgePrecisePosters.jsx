@@ -13,7 +13,7 @@ export default function BadgePrecisePosters({ onArtistSelect }) {
     <div>
       <ul className="ul-choose-precise">
         <li className="list-choose-precise">
-          <BtnGoToCategories
+          <BtnGoToCategories 
             categoryPath="/posters/all-strimz-empire"
             nameOfCategory={"All Strimz Empire"}
             onClick={() => handleArtistClick("All Strimz Empire")}

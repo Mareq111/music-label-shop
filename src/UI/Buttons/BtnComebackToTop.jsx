@@ -14,7 +14,7 @@ export default function BtnComebackToTop() {
       onClick={handleBtnClick}
       type="button"
       aria-label="Click to comeback to top of page"
-      className="btn-comeback-to-top"
+      className="btn-comeback-to-top" tabIndex={0}
     >
       Comeback to top{" "}
       <span className="change-rotate-of-icon">

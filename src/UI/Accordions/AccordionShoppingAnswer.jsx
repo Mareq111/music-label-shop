@@ -7,7 +7,7 @@ export default function AccordionShoppingAnswer() {
       <ul className="accordion-footer-answer-ul">
         <li>
           <Link
-            role="button"
+          
             aria-label="Go to return policy page"
             className="link-footer-big-card-answer"
             to="/shopping#return-policy"
@@ -17,7 +17,7 @@ export default function AccordionShoppingAnswer() {
         </li>
         <li>
           <Link
-            role="button"
+           
             aria-label="Go to delivery page"
             className="link-footer-big-card-answer"
             to="/shopping#delivery"
@@ -27,7 +27,7 @@ export default function AccordionShoppingAnswer() {
         </li>
         <li>
           <Link
-            role="button"
+            
             aria-label="Go to payments page"
             className="link-footer-big-card-answer"
             to="/shopping#payments"

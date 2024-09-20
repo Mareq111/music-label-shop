@@ -1,4 +1,3 @@
-
 import "./CardFooterBig.scss";
 import AccordionFooter from "../Accordions/AccordionWithNav";
 import AccordionInformationAnswer from "../Accordions/AccordionInformationAnswer";

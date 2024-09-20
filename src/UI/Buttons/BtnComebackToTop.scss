@@ -1,4 +1,4 @@
-@import "../../styles/global/global.scss";
+ @import "../../styles/global/global.scss";
 
 .btn-comeback-to-top {
   display: flex;
@@ -46,6 +46,11 @@
   &:focus {
     color: $black-700;
     border: 0.1rem solid $grey-600;
+
+&:focus-within {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem inset $white;
+}
 
     path {
       transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);

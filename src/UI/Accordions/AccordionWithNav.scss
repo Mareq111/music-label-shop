@@ -26,7 +26,10 @@
     :focus {
       color: $amulet-green;
     }
-
+    &:focus-within {
+      box-shadow: 0 0 0 0.2rem inset $white;
+      outline: none;
+    }
     .title-of-accordion-with-nav {
       font-size: 1.2rem;
     }
@@ -48,5 +51,15 @@
       padding: 2rem 1rem;
       border-top: 0.1rem solid $amulet-green;
     }
+  }
+}
+
+// for all answer accordion to focus link
+
+.link-footer-big-card-answer {
+  position: relative;
+  &:focus-within {
+    outline: none;
+    /*     box-shadow: 0 0 0 0.2rem inset $white; */
   }
 }

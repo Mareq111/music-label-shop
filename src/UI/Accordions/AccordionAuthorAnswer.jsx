@@ -6,7 +6,7 @@ export default function AccordionAuthorAnswer() {
       <ul className="accordion-footer-answer-ul">
         <li>
           <Link
-            role="button"
+          
             aria-label="Go to about author page"
             className="link-footer-big-card-answer"
             to="/author#about-author"
@@ -16,7 +16,7 @@ export default function AccordionAuthorAnswer() {
         </li>
         <li>
           <Link
-            role="button"
+           
             aria-label="Go to project info page"
             className="link-footer-big-card-answer"
             to="/author#project-info"
@@ -26,7 +26,7 @@ export default function AccordionAuthorAnswer() {
         </li>
         <li>
           <Link
-            role="button"
+           
             aria-label="Go to my socials page"
             className="link-footer-big-card-answer"
             to="/author#my-socials"
@@ -36,7 +36,7 @@ export default function AccordionAuthorAnswer() {
         </li>
         <li>
           <Link
-            role="button"
+           
             aria-label="Go to contact to me page"
             className="link-footer-big-card-answer"
             to="/author#contact-to-me"

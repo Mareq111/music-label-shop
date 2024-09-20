@@ -7,7 +7,7 @@ export default function AccordionMyAccountAnswer() {
       <ul className="accordion-footer-answer-ul">
         <li>
           <Link
-            role="button"
+            
             aria-label="Go to log In page"
             className="link-footer-big-card-answer"
             to="/login"
@@ -17,7 +17,7 @@ export default function AccordionMyAccountAnswer() {
         </li>
         <li>
           <Link
-            role="button"
+        
             aria-label="Go to register page"
             className="link-footer-big-card-answer"
             to="/register"
@@ -27,7 +27,7 @@ export default function AccordionMyAccountAnswer() {
         </li>
         <li>
           <Link
-            role="button"
+           
             aria-label="Go to purchase history page"
             className="link-footer-big-card-answer"
             to="/purchase-history"
@@ -37,7 +37,7 @@ export default function AccordionMyAccountAnswer() {
         </li>
         <li>
           <Link
-            role="button"
+         
             aria-label="Go to my coupons page"
             className="link-footer-big-card-answer"
             to="/my-coupons"

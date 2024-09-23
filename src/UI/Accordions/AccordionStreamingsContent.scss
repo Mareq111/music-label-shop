@@ -20,6 +20,9 @@
     align-items: center;
     padding: 0.5rem;
     cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: 0;
 
     // select path inside the .icon-wrapper with the class icon-logos
     &.hovered {
@@ -27,11 +30,15 @@
         fill: $amulet-green;
         transition: 0.1s ease-in-out;
       }
-     
     }
 
     &:hover {
       @extend .hovered;
+    }
+    &:focus-within {
+      outline: none;
+      box-shadow: 0 0 0 0.2rem inset $white;
+      padding: 0.5rem;
     }
   }
 }

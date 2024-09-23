@@ -39,6 +39,7 @@ export default function BtnAddToCart({ item, selectedVersion, priceItem }) {
   return (
     <>
       <button
+        tabIndex={0}
         onClick={() => {
           setIsItemAdded(false);
           setIsVersionSelected(true);

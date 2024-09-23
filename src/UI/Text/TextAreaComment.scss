@@ -31,8 +31,6 @@
   min-height: 6rem;
   margin: 0.5rem;
   resize: none;
-
-
 }
 //buttons
 .btns-comment {
@@ -55,6 +53,10 @@
   &:hover {
     color: $amulet-green;
   }
+  &:focus-within {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem inset $white;
+  }
 }
 .btnComment {
   width: 60%;
@@ -68,5 +70,9 @@
   transition: 0.2s ease-in-out;
   &:hover {
     color: $amulet-green;
+  }
+  &:focus-within {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem inset $white;
   }
 }

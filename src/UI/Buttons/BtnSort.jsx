@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import IconChevronDown from "../Icons/IconChevronDown";
 import IconChevronUp from "../Icons/IconChevronUp";
 import "./BtnSort.scss";
@@ -54,6 +54,7 @@ export default function BtnSort() {
   return (
     <div>
       <button
+        tabIndex={0}
         onClick={toggleIcon}
         type="button"
         aria-label="Toggle sorting order"

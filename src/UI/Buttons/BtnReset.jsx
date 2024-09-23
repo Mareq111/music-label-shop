@@ -1,7 +1,7 @@
-
-
 export default function BtnReset() {
   return (
-    <button className='reset-btn' type='reset'>Reset</button>
-  )
+    <button tabIndex={0} className="reset-btn" type="reset">
+      Reset
+    </button>
+  );
 }

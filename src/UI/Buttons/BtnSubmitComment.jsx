@@ -1,9 +1,9 @@
-
 export default function BtnSubmitComment() {
   return (
     <>
-      <button className="btnComment" type="submit" >Add comment</button>
-
+      <button tabIndex={0} className="btnComment" type="submit">
+        Add comment
+      </button>
     </>
   );
 }

@@ -18,6 +18,12 @@
     border: none;
     cursor: pointer;
 
+    //focus
+    &:focus-within {
+      outline: none;
+      box-shadow: 0 0 0 0.2rem inset $white;
+    }
+
     .title-of-accordion {
       font-size: 1.1rem;
     }

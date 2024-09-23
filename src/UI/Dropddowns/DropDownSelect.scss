@@ -38,7 +38,11 @@
     background-color: $grey-600;
     color: $black-700;
   }
-
+  &:focus-within {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem inset $white;
+    padding: 0.5rem;
+  }
   .radio-label-dropdown {
     font-size: 0.9rem;
   }

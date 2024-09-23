@@ -23,7 +23,7 @@ export default function ChooserVersionRadio({ onVersionChange, productData }) {
       <div className="div-radio-chooser">
         {productData.itemVersions && productData.itemVersions.length > 0 ? (
           productData.itemVersions.map(({ numberOfVersion, id, version }) => (
-            <RadioInput
+            <RadioInput 
               key={id}
               radioLabel={version}
               radioId={id}

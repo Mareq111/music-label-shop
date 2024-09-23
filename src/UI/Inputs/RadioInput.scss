@@ -1,5 +1,13 @@
 @import "../../styles/global/global.scss";
 
+.radio-tile {
+  position: relative;
+  &:focus-within {
+    border-color: $eastern-blue;
+    outline: none;
+  }
+}
+
 // radio tile
 .radio-tile {
   display: flex;

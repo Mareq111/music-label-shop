@@ -14,7 +14,7 @@ export default function RadioInput({
   };
   return (
     <>
-      <label>
+      <label className="focus-label-input-tile">
         <input
           className="radio-input"
           type="radio"
@@ -26,7 +26,9 @@ export default function RadioInput({
           onChange={handleChange}
         />
         <span className="radio-tile">
-          <span className="radio-label">{radioLabel}</span>
+          <span tabIndex={0} className="radio-label ">
+            {radioLabel}
+          </span>
         </span>
       </label>
     </>

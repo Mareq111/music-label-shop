@@ -73,7 +73,7 @@ export default function YouMightLike() {
         <ul className="ul-list-youMightLike">
           {products.map((product, index) => (
             <li className="li-youMightLike" key={index}>
-              <Link className="link-you-might-like" to={`/${product.key}`}>
+              <Link className="link-you-might-like class-link-focus-pages" to={`/${product.key}`}>
                 {window.innerWidth < 425 ? (
                   <CardProductMain product={product} layout={"grid"} />
                 ) : (

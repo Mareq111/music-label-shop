@@ -19,6 +19,13 @@
     transition: 0.3s ease-in-out;
     fill: $white;
   }
+  &:focus {
+    background-color: $grey-700;
+    .icon-trash path {
+      transition: 0.3s ease-in-out;
+      fill: $red-300;
+    }
+  }
   &:hover {
     background-color: $grey-700;
     .icon-trash path {

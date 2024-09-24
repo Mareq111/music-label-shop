@@ -34,6 +34,7 @@ export default function BtnQuantitySelector({
   return (
     <div className="quantity-selector">
       <button
+        tabIndex={0}
         aria-label="Decrease Quantity"
         className="btn-quantity-selector"
         onClick={decreaseQuantity}
@@ -42,6 +43,7 @@ export default function BtnQuantitySelector({
       </button>
       <span className="quantity-selector-value">{quantityItems}</span>
       <button
+        tabIndex={0}
         aria-label="Increase Quantity"
         className="btn-quantity-selector"
         onClick={increaseQuantity}

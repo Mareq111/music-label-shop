@@ -29,6 +29,7 @@ export default function RadioDeliveryOptions({
             }`}
           >
             <input
+              tabIndex={0}
               required
               className="radio-input-delivery"
               type="radio"

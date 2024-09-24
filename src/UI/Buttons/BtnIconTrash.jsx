@@ -12,7 +12,7 @@ export default function BtnIconTrash({ onRemove }) {
   };
 
   return (
-    <button
+    <button tabIndex={0}
       onClick={handleClick}
       title="remove"
       className="btn-trash"

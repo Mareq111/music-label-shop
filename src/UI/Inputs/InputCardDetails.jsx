@@ -48,6 +48,7 @@ export default function InputCardDetails({
         <label>
           Card number
           <input
+            tabIndex={0}
             type="text"
             name="cardNumber"
             value={formValues.cardNumber}
@@ -68,6 +69,7 @@ export default function InputCardDetails({
         <label>
           Name on card
           <input
+            tabIndex={0}
             type="text"
             name="cardName"
             value={formValues.cardName}
@@ -88,6 +90,7 @@ export default function InputCardDetails({
           <label>
             Expiration date (MM / YY)
             <input
+              tabIndex={0}
               type="text"
               name="expiryDate"
               value={formValues.expiryDate}
@@ -107,6 +110,7 @@ export default function InputCardDetails({
           <label>
             Security code (CVV)
             <input
+              tabIndex={0}
               type="text"
               name="cvv"
               value={formValues.cvv}

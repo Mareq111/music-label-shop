@@ -1,6 +1,6 @@
 @import "../../styles/global/global.scss";
 
- .options-list-payment {
+.options-list-payment {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,7 +22,10 @@
   position: relative;
   padding: 1rem;
   margin-block: 0.5rem;
-
+  &:focus-within {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem inset $eastern-blue;
+  }
   // styles for dot inside the radio tile
   &:before {
     content: "";

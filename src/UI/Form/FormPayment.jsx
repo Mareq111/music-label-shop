@@ -62,10 +62,10 @@ export default function FormPayment({ onValidationChange }) {
           selectedOption={formValues.paymentMethod}
         />
         {formValues.paymentMethod === "card" && (
-          <InputCardDetails 
-            formValues={formValues} 
-            handleInputChange={handleInputChange} 
-            onValidationChange={handleValidationChange} 
+          <InputCardDetails
+            formValues={formValues}
+            handleInputChange={handleInputChange}
+            onValidationChange={handleValidationChange}
           />
         )}
         {formValues.paymentMethod === "paypal" && (

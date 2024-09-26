@@ -14,7 +14,6 @@ export default function ProductsTshirtsGreen() {
   //!state for selected color  set = Green
   const [selectedcolor, setSelectedcolor] = useState("Green");
 
-
   //always looking for page starts on their top
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -78,9 +77,8 @@ export default function ProductsTshirtsGreen() {
         >
           {productsData.map((item) => (
             <li className="li-productsMain" key={item.key}>
-              <Link to={`/${item.key}`}>
-
-              <CardProductMain product={item} layout={layoutView} />
+              <Link className="class-link-focus-pages" to={`/${item.key}`}>
+                <CardProductMain product={item} layout={layoutView} />
               </Link>
             </li>
           ))}

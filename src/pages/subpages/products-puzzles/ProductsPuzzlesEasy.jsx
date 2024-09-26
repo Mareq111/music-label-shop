@@ -6,13 +6,13 @@ import CardProductMain from "../../../UI/Cards/CardProductMain.jsx";
 import BtnToggleView from "../../../UI/Buttons/BtnToggleView.jsx";
 import "../../ProductsAllPages.scss";
 import BadgePrecisePuzzles from "../../../UI/Badge/BadgePrecisePuzzles.jsx";
+import { Link } from "react-router-dom";
 
 export default function ProductsPuzzlesEasy() {
   const [layoutView, setLayoutView] = useState("grid");
   const [productsData, setProductsData] = useState([]);
   //!state for selected itemLevel  set = Easy
   const [selectedItemLevel, setSelectedItemLevel] = useState("Easy");
-
 
   //always looking for page starts on their top
   useEffect(() => {
@@ -77,7 +77,9 @@ export default function ProductsPuzzlesEasy() {
         >
           {productsData.map((item) => (
             <li className="li-productsMain" key={item.key}>
-              <CardProductMain product={item} layout={layoutView} />
+              <Link className="class-link-focus-pages" to={`/${item.key}`}>
+                <CardProductMain product={item} layout={layoutView} />
+              </Link>
             </li>
           ))}
         </ul>

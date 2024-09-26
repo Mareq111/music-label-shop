@@ -14,7 +14,6 @@ export default function ProductsTshirtsColorful() {
   //!state for selected color  set = Colorful
   const [selectedcolor, setSelectedcolor] = useState("Colorful");
 
-
   //always looking for page starts on their top
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -78,7 +77,7 @@ export default function ProductsTshirtsColorful() {
         >
           {productsData.map((item) => (
             <li className="li-productsMain" key={item.key}>
-              <Link to={`/${item.key}`}>
+              <Link className="class-link-focus-pages" to={`/${item.key}`}>
                 <CardProductMain product={item} layout={layoutView} />
               </Link>
             </li>

@@ -7,41 +7,47 @@ export default function BadgeMySocials() {
   return (
     <section className="badgeAllSocials-all">
       <div className="badgeAllSocials-div">
-        <Link to={"https://github.com/Mareq111"} title="Go to my Github">
-          <div className="wrapper-div-two-icons">
+        <Link
+          className="focus-link-icon"
+          to={"https://github.com/Mareq111"}
+          title="Go to my Github"
+        >
+          <button className="wrapper-div-two-icons">
             <span className="first-logo">
               <IconLogoGithub />
             </span>
             <span className="second-logo">
               <IconLogoGithub />
             </span>
-          </div>
+          </button>
         </Link>
         <Link
+          className="focus-link-icon"
           title="Go to my Linkedin"
           to={"https://www.linkedin.com/in/marek-szulc-156307247/"}
         >
-          <div className="wrapper-div-two-icons">
+          <button className="wrapper-div-two-icons">
             <span className="first-logo">
               <IconLogoLinkedin />
             </span>
             <span className="second-logo">
               <IconLogoLinkedin />
             </span>
-          </div>
+          </button>
         </Link>
         <Link
+          className="focus-link-icon"
           title="Go to my Instagram"
           to={"https://www.instagram.com/mrq_szulc/"}
         >
-          <div className="wrapper-div-two-icons">
+          <button className="wrapper-div-two-icons">
             <span className="first-logo">
               <IconLogoInstagram />
             </span>
             <span className="second-logo">
               <IconLogoInstagram />
             </span>
-          </div>
+          </button>
         </Link>
       </div>
     </section>

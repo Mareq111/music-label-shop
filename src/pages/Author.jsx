@@ -36,7 +36,11 @@ export default function Author() {
       <div className="all-sections-subpage">
         {/* section contact */}
 
-        <section className="content-section-subpage" id="about-author">
+        <section
+          tabIndex={0}
+          className="content-section-subpage section-focus"
+          id="about-author"
+        >
           <div className="inside-content-section-subpage">
             <h4 className="h-inside-content-section-subpage">About Author</h4>
             <div className="content-into-section">
@@ -50,7 +54,11 @@ export default function Author() {
           </div>
         </section>
 
-        <section className="content-section-subpage" id="project-info">
+        <section
+          tabIndex={0}
+          className="content-section-subpage section-focus"
+          id="project-info"
+        >
           <div className="inside-content-section-subpage">
             <h4 className="h-inside-content-section-subpage">Project Info</h4>
             <div className="content-into-section">
@@ -61,7 +69,11 @@ export default function Author() {
             </div>
           </div>
         </section>
-        <section className="content-section-subpage" id="my-socials">
+        <section
+          tabIndex={0}
+          className="content-section-subpage section-focus"
+          id="my-socials"
+        >
           <div className="inside-content-section-subpage">
             <h4 className="h-inside-content-section-subpage">My Socials</h4>
             <div className="content-into-section">
@@ -79,7 +91,11 @@ export default function Author() {
             </div>
           </div>
         </section>
-        <section className="content-section-subpage" id="contact-to-me">
+        <section
+          tabIndex={0}
+          className="content-section-subpage section-focus"
+          id="contact-to-me"
+        >
           <div className="inside-content-section-subpage">
             <h4 className="h-inside-content-section-subpage">Contact To Me</h4>
             <div className="content-into-section">

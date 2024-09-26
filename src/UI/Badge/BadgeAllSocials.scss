@@ -14,6 +14,10 @@
   align-items: center;
   flex-direction: row;
   gap: 1rem;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+
   &:focus {
     outline: none;
     box-shadow: 0 0 0 0.2rem inset $white;
@@ -29,10 +33,17 @@
   width: 2rem;
   height: 2rem;
   cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
 
- 
+  /*  &:focus-within {
+box-shadow: 0 0 0 0.2rem inset $white;
+outline: none;
+padding: 0.5rem;
+ }
+ */
 
-  
   .first-logo,
   .second-logo {
     position: absolute;
@@ -60,7 +71,6 @@
       transform: translateY(-50%);
     }
   }
- 
 }
 
 .focus-link-icon {
@@ -70,3 +80,7 @@
     outline: none;
   }
 }
+
+/* .link-social-none {
+  outline: none;
+} */

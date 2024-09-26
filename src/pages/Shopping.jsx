@@ -35,7 +35,11 @@ export default function Shopping() {
       <div className="all-sections-subpage">
         {/* section contact */}
 
-        <section className="content-section-subpage" id="return-policy">
+        <section
+          tabIndex={0}
+          className="content-section-subpage section-focus"
+          id="return-policy"
+        >
           <div className="inside-content-section-subpage">
             <h4 className="h-inside-content-section-subpage">Return Policy</h4>
             <div className="content-into-section">
@@ -53,7 +57,11 @@ export default function Shopping() {
           </div>
         </section>
 
-        <section className="content-section-subpage" id="delivery">
+        <section
+          tabIndex={0}
+          className="content-section-subpage section-focus"
+          id="delivery"
+        >
           <div className="inside-content-section-subpage">
             <h4 className="h-inside-content-section-subpage">Delivery</h4>
             <div className="content-into-section">
@@ -70,7 +78,11 @@ export default function Shopping() {
             </div>
           </div>
         </section>
-        <section className="content-section-subpage" id="payments">
+        <section
+          tabIndex={0}
+          className="content-section-subpage section-focus"
+          id="payments"
+        >
           <div className="inside-content-section-subpage">
             <h4 className="h-inside-content-section-subpage">Payments</h4>
             <div className="content-into-section">

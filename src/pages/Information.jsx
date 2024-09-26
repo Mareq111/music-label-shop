@@ -38,7 +38,11 @@ export default function Information() {
       <div className="all-sections-subpage">
         {/* section contact */}
 
-        <section className="content-section-subpage" id="information-contact">
+        <section
+          tabIndex={0}
+          className="content-section-subpage section-focus"
+          id="information-contact"
+        >
           <div className="inside-content-section-subpage">
             <h4 className="h-inside-content-section-subpage">Contact</h4>
             <div className="content-into-section">
@@ -59,7 +63,11 @@ export default function Information() {
           </div>
         </section>
         {/* section about us */}
-        <section className="content-section-subpage" id="information-about-us">
+        <section
+          tabIndex={0}
+          className="content-section-subpage section-focus"
+          id="information-about-us"
+        >
           <div className="inside-content-section-subpage">
             <h4 className="h-inside-content-section-subpage">About Us</h4>
             <div className="content-into-section">
@@ -85,7 +93,11 @@ export default function Information() {
             </div>
           </div>
         </section>
-        <section className="content-section-subpage" id="information-faq">
+        <section
+          tabIndex={0}
+          className="content-section-subpage section-focus"
+          id="information-faq"
+        >
           <div className="inside-content-section-subpage">
             <h4 className="h-inside-content-section-subpage">FAQ</h4>
             <div className="content-into-section">
@@ -150,7 +162,8 @@ export default function Information() {
           </div>
         </section>
         <section
-          className="content-section-subpage"
+          tabIndex={0}
+          className="content-section-subpage section-focus"
           id="information-privacy-policy"
         >
           <div className="inside-content-section-subpage">

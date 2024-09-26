@@ -62,6 +62,15 @@
   padding-bottom: 1rem;
 }
 
+.section-focus {
+  position: relative;
+  &:focus-within {
+    box-shadow: 0 0 0 0.2rem inset $white;
+    outline: none;
+    padding: 0.5rem;
+  }
+}
+
 @media (min-width: 768px) {
   .subpage {
     width: 60%;

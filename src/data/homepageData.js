@@ -3,7 +3,7 @@ import ourTickets from "../assets/img/others/Ticket-slider1.jpg";
 import ourTshirts from "../assets/img/others/black-diff.jpg";
 import ourGadgets from "../assets/img/others/small-kuntry2.jpg";
 import ourPosters from "../assets/img/others/lone1.jpg";
-import ourPuzzle from "../assets/img/others/puzzle-pullup.jpg";
+import ourPuzzle from "../assets/img/others/puzzle-king.jpg";
 
 const homepageData = [
   {

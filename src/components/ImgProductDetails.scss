@@ -12,6 +12,7 @@
 }
 .div-img-main {
   display: flex;
+  /* aspect-ratio: 1/1; */
   justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
@@ -28,7 +29,8 @@
   min-height: 8rem;
   min-width: 8rem;
 } */
-.bottom-images {  border-radius: 0.2rem;
+.bottom-images {
+  border-radius: 0.2rem;
   max-inline-size: 30%;
   block-size: auto;
   aspect-ratio: 1/1;
@@ -38,14 +40,13 @@
   justify-content: flex-start;
   align-items: center;
   gap: 10%;
-
 }
- 
- .star-icon path {
+
+.star-icon path {
   fill: $gold;
   stroke: $gold;
   stroke-width: 0.1rem;
-} 
+}
 //badge with heart icon
 .badge {
   position: absolute;

@@ -1,5 +1,9 @@
 import ourCDS from "../assets/img/others/our-shop-cds.jpg";
 import ourTickets from "../assets/img/others/Ticket-slider1.jpg";
+import ourTshirts from "../assets/img/others/black-diff.jpg";
+import ourGadgets from "../assets/img/others/small-kuntry2.jpg";
+import ourPosters from "../assets/img/others/lone1.jpg";
+import ourPuzzle from "../assets/img/others/puzzle-pullup.jpg";
 
 const homepageData = [
   {
@@ -30,7 +34,7 @@ const homepageData = [
     buttonText: "T-Shirts",
     link: "/t-shirts/all-colors",
     backgroundColor: "#06273a",
-    img: ourCDS,
+    img: ourTshirts,
   },
   {
     title: "Cool Gadgets",
@@ -40,7 +44,7 @@ const homepageData = [
     buttonText: "Gadgets",
     link: "/gadgets/all-items",
     backgroundColor: "#063a36",
-    img: ourCDS,
+    img: ourGadgets,
   },
   {
     title: "Artist Posters",
@@ -50,7 +54,7 @@ const homepageData = [
     buttonText: "Posters",
     link: "/posters/all-strimz-empire",
     backgroundColor: "#063a20",
-    img: ourCDS,
+    img: ourPosters,
   },
   {
     title: "Album Puzzles",
@@ -60,7 +64,7 @@ const homepageData = [
     buttonText: "Puzzles",
     link: "/puzzles/all-levels",
     backgroundColor: "#3a1906",
-    img: ourCDS,
+    img: ourPuzzle,
   },
 ];
 

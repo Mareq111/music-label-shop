@@ -1,19 +1,20 @@
+/* eslint-disable react/prop-types */
 import "./CardInfoHomepage.scss";
-import setElDM from "../../assets/img/others/set-eldm.jpg";
-import setElDMTWO from "../../assets/img/others/set2-eldm.jpg";
-import BtnContinue from "../Buttons/BtnContinue";
 
-export default function CardInfoHomepage() {
+import BtnContinue from "../Buttons/BtnContinue";
+import { Link } from "react-router-dom";
+
+export default function CardInfoHomepage({ imgSrc, buttonText, dynamicLink }) {
   return (
     <article className="card-info-homepage" tabIndex={0}>
-      {/*  <div className="div-card-info-homepage">
-        <h3 className="h-card-info-homepage">TEST INFO</h3>
-      </div> */}
       <div className="div-card-info-homepage">
-        <img src={setElDM} alt="" />
-        {/*    <h3 className="h-card-info-homepage">TEST INFO</h3> */}
+        <img src={imgSrc} alt="Posters Set" />
+
         <div className="wrap-btn-info-homepage">
-          <BtnContinue continueBtnText={"View 3 Posters Set"} />
+          {/* change link for sets */}
+          <Link to={dynamicLink}>
+            <BtnContinue continueBtnText={buttonText} />
+          </Link>
         </div>
       </div>
     </article>

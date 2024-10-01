@@ -7,15 +7,10 @@ export default function CardPreorderpreorder() {
   return (
     <section className="product-big-section-preorder">
       <div className="big-card-preorder">
-        {/* <Link
-          className="link-to-into-big-card-preorder-Text"
-          to="/albumRedPathToZukunft"
-          aria-label={`Check out Pre Order page`}
-        > */}
         <h2 className="big-card-preorder-pre-head">
           Red Path to Zukunft by El DM - Coming Soon in 2025
         </h2>
-        {/*     </Link> */}
+
         {/* together img and h for 660px+ */}
         <div className="row-for-img-h-card-preorder">
           <div className="big-card-preorder-div-img">

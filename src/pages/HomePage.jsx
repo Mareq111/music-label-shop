@@ -7,6 +7,8 @@ import CardPreorderHomepage from "../UI/Cards/CardPreorderHomepage";
 import CardCustomerFavHomepage from "../UI/Cards/CardCustomerFavHomepage";
 import CardInfoHomepage from "../UI/Cards/CardInfoHomepage";
 import homepageData from "../data/homepageData";
+import setElDM from "../assets/img/others/set-eldm.jpg";
+import setElDMTWO from "../assets/img/others/set2-eldm.jpg";
 
 export default function Homepage() {
   const cardsRefs = useRef([]);
@@ -55,13 +57,22 @@ export default function Homepage() {
           ref={(el) => (cardsRefs.current[index] = el)}
           className="card-hidden"
         >
-          <CardProductHomepage data={card}  />
+          <CardProductHomepage data={card} />
         </div>
       ))}
       <div ref={otherCardsRef} className="wrap-cards-homepage-left card-hidden">
         <div className="home-content-fav-section">
-          <CardCustomerFavHomepage titleSection={"Customer Favorites"} tabIndex={0} />
-          <CardInfoHomepage tabIndex={0}/>
+          <CardCustomerFavHomepage
+            titleSection={"Customer Favorites"}
+            tabIndex={0}
+          />
+          {/* change dynamic link for uniqe path with set */}
+          <CardInfoHomepage
+            tabIndex={0}
+            buttonText={"View 3 Posters Set"}
+            imgSrc={setElDM}
+            dynamicLink={"./posters/el-dm"}
+          />
         </div>
 
         <div className="home-content-grid-cards">
@@ -73,7 +84,13 @@ export default function Homepage() {
           <CardPreorderHomepage />
         </div>
         <div className="home-content-fav-section-reverse">
-          <CardInfoHomepage />
+          {/* change dynamic link for uniqe path with set */}
+
+          <CardInfoHomepage
+            buttonText={"See New Posters Trio"}
+            imgSrc={setElDMTWO}
+            dynamicLink={"./posters/el-dm"}
+          />
           <CardCustomerFavHomepage titleSection={"Recommended for You "} />
         </div>
       </div>

@@ -12,7 +12,7 @@ export default function CardInfoHomepage({ imgSrc, buttonText, dynamicLink }) {
 
         <div className="wrap-btn-info-homepage">
           {/* change link for sets */}
-          <Link to={dynamicLink}>
+          <Link to={dynamicLink} className="link-focus-btn-card">
             <BtnContinue continueBtnText={buttonText} />
           </Link>
         </div>

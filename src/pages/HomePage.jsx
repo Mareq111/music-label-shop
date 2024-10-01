@@ -9,6 +9,9 @@ import CardInfoHomepage from "../UI/Cards/CardInfoHomepage";
 import homepageData from "../data/homepageData";
 import setElDM from "../assets/img/others/set-eldm.jpg";
 import setElDMTWO from "../assets/img/others/set2-eldm.jpg";
+//preorder img card
+import preorderAlbum from "../assets/img/coversMini/albums/red-path-to-zukunft-mini.jpg";
+import preorderCardGadget from "../assets/img/others/BAG2-STRIMZ2JPG.jpg";
 
 export default function Homepage() {
   const cardsRefs = useRef([]);
@@ -80,8 +83,22 @@ export default function Homepage() {
           <CardHomepageWebsiteLink />
         </div>
         <div className="home-content-grid-cards">
-          <CardPreorderHomepage />
-          <CardPreorderHomepage />
+          <CardPreorderHomepage
+            srcImg={preorderAlbum}
+            imgAlt={"Go to Preorder Album Page"}
+            hPreorder={"Upcoming Album."}
+            preHead={"Red Path to Zukunft by El DM - Coming Soon in 2025"}
+            dynamicLink={"/albumRedPathToZukunft"}
+            dynamicTextBtn={"Preorder"}
+          />
+          <CardPreorderHomepage
+            srcImg={preorderCardGadget}
+            imgAlt={"Go to page with bags"}
+            hPreorder={"Stylish Bags."}
+            preHead={"When you go shopping, grab our Strimz Empire bag!"}
+            dynamicLink={"/gadgets/bags"}
+            dynamicTextBtn={"Explore Our Collection"}
+          />
         </div>
         <div className="home-content-fav-section-reverse">
           {/* change dynamic link for uniqe path with set */}

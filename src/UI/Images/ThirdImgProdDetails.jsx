@@ -8,5 +8,5 @@ export default function ThirdImgProdDetails({
   //dynamic alt text with titles
   const dynamicALT = `Third image of product: ${titleItem} - ${titleArtist}`;
 
-  return <img src={imgThirdURL} alt={dynamicALT} className="bottom-images" />;
+  return <img loading="eager" src={imgThirdURL} alt={dynamicALT} className="bottom-images" />;
 }

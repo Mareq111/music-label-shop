@@ -8,5 +8,5 @@ export default function SecondImgProdDetails({
   //dynamic alt text with titles
   const dynamicALT = `Second image of product: ${titleItem} - ${titleArtist}`;
 
-  return <img src={imgSecondURL} alt={dynamicALT} className="bottom-images" />;
+  return <img loading="eager"  src={imgSecondURL} alt={dynamicALT} className="bottom-images" />;
 }

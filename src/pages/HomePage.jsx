@@ -94,7 +94,7 @@ export default function Homepage() {
           <CardPreorderHomepage
             srcImg={preorderCardGadget}
             imgAlt={"Go to page with bags"}
-            hPreorder={"Stylish Bags."}
+            hPreorder={"Our stylish Bags."}
             preHead={"When you go shopping, grab our Strimz Empire bag!"}
             dynamicLink={"/gadgets/bags"}
             dynamicTextBtn={"Explore Our Collection"}

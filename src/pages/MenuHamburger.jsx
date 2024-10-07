@@ -1,7 +1,14 @@
 import { useEffect, useRef } from "react";
 import BtnNavTo from "../UI/Buttons/BtnNavTo.jsx";
 import "./MenuHamburger.scss";
-import arenaCover from "../assets/img/coversMini/albums/arena_of_autumnn_EP-mini.jpg";
+
+/* import albums from "../assets/img/others/cd-flashback-normal.jpg"; */
+import albums from "../assets/img/coversMini/albums/flashback_from_2001-mini.jpg";
+import tickets from "../assets/img/ticket compress/august31warsaw.jpg";
+import shirts from "../assets/img/others/shirt-black-rose.jpg";
+import gadget from "../assets/img/others/round-arena2.jpg";
+import poster from "../assets/img/others/kuntry1.jpg";
+import puzzle from "../assets/img/others/puzzle-dream2.jpg";
 import AccordionWithNav from "../UI/Accordions/AccordionWithNav.jsx";
 import AccordionInformationAnswer from "../UI/Accordions/AccordionInformationAnswer.jsx";
 import AccordionMyAccountAnswer from "../UI/Accordions/AccordionMyAccountAnswer.jsx";
@@ -16,12 +23,12 @@ export default function MenuHamburger() {
 
   // Array with main menu buttons to pages
   const mainNavPages = [
-    { link: "/albums/all-strimz-empire", img: arenaCover, title: "Albums" },
-    { link: "/tickets/all-locations", img: arenaCover, title: "Tickets" },
-    { link: "/t-shirts/all-colors", img: arenaCover, title: "T-shirts" },
-    { link: "/gadgets/all-items", img: arenaCover, title: "Gadgets" },
-    { link: "/posters/all-strimz-empire", img: arenaCover, title: "Posters" },
-    { link: "/puzzles/all-levels", img: arenaCover, title: "Puzzles" },
+    { link: "/albums/all-strimz-empire", img: albums, title: "Albums" },
+    { link: "/tickets/all-locations", img: tickets, title: "Tickets" },
+    { link: "/t-shirts/all-colors", img: shirts, title: "T-shirts" },
+    { link: "/gadgets/all-items", img: gadget, title: "Gadgets" },
+    { link: "/posters/all-strimz-empire", img: poster, title: "Posters" },
+    { link: "/puzzles/all-levels", img: puzzle, title: "Puzzles" },
   ];
 
   useEffect(() => {

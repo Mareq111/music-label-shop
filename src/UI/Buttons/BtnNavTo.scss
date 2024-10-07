@@ -1,4 +1,4 @@
-@import "../../styles/global/global.scss";
+/* @import "../../styles/global/global.scss";
 
 .btn-nav-to {
   display: flex;
@@ -17,11 +17,13 @@
   display: flex;
   width: 3rem;
   margin-right: 1rem;
+  border-radius: 20%;
 }
 .img-btn-nav-to {
+  background-size: fill;
   height: 3rem;
   width: 3rem;
-  border-radius: 50%;
+  
 }
 //title
 .title-btn-nav-to {
@@ -36,6 +38,64 @@
 }
 
 //icon arrow
+.icon-arrow-btn-nav-to {
+  transform: rotate(180deg);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 2rem;
+}
+
+.icon-arrow-btn-nav-to path {
+  fill: $white;
+}
+ */
+
+@import "../../styles/global/global.scss";
+
+.btn-nav-to {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+// Kontener na obrazek
+.img-container-btn-nav-to {
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+  border-radius: 20%;
+  overflow: hidden;
+}
+
+// Styl obrazka
+.img-btn-nav-to {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// Tytuł przycisku
+.title-btn-nav-to {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  overflow: hidden;
+  width: 60%;
+  color: $white;
+}
+
+// Ikona strzałki
 .icon-arrow-btn-nav-to {
   transform: rotate(180deg);
   display: flex;

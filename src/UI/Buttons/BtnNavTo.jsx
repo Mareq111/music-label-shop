@@ -9,6 +9,9 @@ export default function BtnNavTo({ link, img, title }) {
       <button className="btn-nav-to">
         <span className="img-container-btn-nav-to">
           <img
+            loading="eager"
+            width={48}
+            height={48}
             className="img-btn-nav-to"
             src={img}
             alt={`Go to ${title} page`}

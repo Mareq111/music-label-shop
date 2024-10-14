@@ -83,7 +83,7 @@
 
 .class-link-focus-pages {
   position: relative;
-  &:focus-within {
+  &:focus-visible {
     outline: none;
     box-shadow: 0 0 0 0.2rem inset $white;
     padding: 0.5rem;

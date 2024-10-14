@@ -2,7 +2,7 @@
 
 .radio-tile {
   position: relative;
-  &:focus-within {
+  &:focus-visible {
     border-color: $eastern-blue;
     outline: none;
   }

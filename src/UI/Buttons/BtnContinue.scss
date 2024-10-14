@@ -23,7 +23,7 @@
     color: $white;
   }
 
-  &:focus-within {
+  &:focus-visible {
     box-shadow: inset 0 0 0 0.2rem $white;
     outline: none;
   }

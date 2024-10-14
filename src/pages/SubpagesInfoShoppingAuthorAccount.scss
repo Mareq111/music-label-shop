@@ -64,7 +64,7 @@
 
 .section-focus {
   position: relative;
-  &:focus-within {
+  &:focus-visible {
     box-shadow: 0 0 0 0.2rem inset $white;
     outline: none;
     padding: 0.5rem;

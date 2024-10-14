@@ -29,10 +29,7 @@
   flex-direction: column;
   width: 100%;
   height: auto;
-  /* &:focus-within {
-    box-shadow: inset 0 0 0 0.2rem $white;
-    outline: none;
-  } */
+
 }
 .big-card-homepage-pre-head {
   font-size: 0.8rem;
@@ -111,7 +108,7 @@
 
 .link-focus-btn-card {
   position: relative;
-  &:focus-within {
+  &:focus-visible {
     box-shadow: inset 0 0 0 0.2rem $white;
     outline: none;
   }

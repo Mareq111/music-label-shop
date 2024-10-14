@@ -82,7 +82,7 @@
   margin: 1rem;
 
   // Add a focus outline for accessibility
-  &:focus-within {
+  &:focus-visible {
     outline: 0.2rem solid $amulet-green;
     display: block;
     height: 25px;

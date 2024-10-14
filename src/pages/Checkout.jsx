@@ -29,7 +29,7 @@ export default function Checkout() {
     <>
       <div className="backdrop-checkout"></div>
       <aside className="aside-checkout">
-        <BadgeTopOfAsideNav nameOfNavPage={"Checkout"} showCloseButton={true} />
+        <BadgeTopOfAsideNav nameOfNavPage={"Checkout"} showCloseButton={true} linkTo={'/'} />
         <hr className="checkout-devider-separator" />
         <div className="content-fill-checkout">
           <StepCircle stepsCompleted={completedSteps} />

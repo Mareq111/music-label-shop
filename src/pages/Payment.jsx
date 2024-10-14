@@ -25,7 +25,11 @@ export default function Payment() {
     <>
       <div className="backdrop-payment"></div>
       <aside className="aside-payment">
-        <BadgeTopOfAsideNav nameOfNavPage={"Payment"} showCloseButton={true} />
+        <BadgeTopOfAsideNav
+          nameOfNavPage={"Payment"}
+          showCloseButton={true}
+          linkTo={"/"}
+        />
 
         <hr className="payment-devider-separator" />
         <div className="content-fill-payment">

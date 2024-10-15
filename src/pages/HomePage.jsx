@@ -74,7 +74,7 @@ export default function Homepage() {
             tabIndex={0}
             buttonText={"View 3 Posters Set"}
             imgSrc={setElDM}
-            dynamicLink={"./posters/el-dm"}
+            dynamicLink={"/poster05-posterSet1-ELDM"}
           />
         </div>
 
@@ -106,7 +106,7 @@ export default function Homepage() {
           <CardInfoHomepage
             buttonText={"See New Posters Trio"}
             imgSrc={setElDMTWO}
-            dynamicLink={"./posters/el-dm"}
+            dynamicLink={"/poster14-posterSet2-ELDM"}
           />
           <CardCustomerFavHomepage titleSection={"Recommended for You "} />
         </div>

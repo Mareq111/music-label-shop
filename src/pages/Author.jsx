@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "./SubpagesInfoShoppingAuthorAccount.scss";
 import BadgeMySocials from "../UI/Badge/BadgeMySocials";
+import ProjectInfo from "../components/ProjectInfo";
 export default function Author() {
   const location = useLocation();
   const margin = 32; // 32px = 2rem
@@ -63,8 +64,8 @@ export default function Author() {
             <h4 className="h-inside-content-section-subpage">Project Info</h4>
             <div className="content-into-section">
               <div className="div-h5-p-into-subpage">
-                <h5 className="h5-into-subpage ">Description</h5>
-                <p className="p-into-subpage">IN BULDING</p>
+            {/*     <h5 className="h5-into-subpage ">Description</h5> */}
+                <ProjectInfo />
               </div>
             </div>
           </div>

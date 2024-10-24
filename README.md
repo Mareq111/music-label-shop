@@ -39,7 +39,7 @@ Working on this project made me realize the importance of better planning and a 
 
 My name is Marek Szulc, and I am an aspiring Front-End Developer. I created this project to showcase my skills in React and enhance my portfolio. Thank you for taking the time to read about my work! I hope you find my project interesting and that it demonstrates my passion for web development.
 
-## 🔗 Links
+## 🔗🌐 Links
 
 - [Github @Mareq111](https://github.com/Mareq111)
 - [Linkedin @Marek Szulc](https://www.linkedin.com/in/marek-szulc-156307247/)

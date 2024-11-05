@@ -37,7 +37,7 @@ Working on this project made me realize the importance of better planning and a 
 
 ## 🙋‍♂️💼 About Me 
 
-My name is Marek Szulc, and I am an aspiring Front-End Developer. I created this project to showcase my skills in React and enhance my portfolio. Thank you for taking the time to read about my work! I hope you find my project interesting and that it demonstrates my passion for web development.
+My name is Marek Szulc, and I am an aspiring Front-End Developer. I created this project as an extension of my initial music label project to showcase my skills in React and enhance my portfolio. Thank you for taking the time to read about my work! I hope you find my project interesting and that it demonstrates my passion for web development.
 
 ## 🔗🌐 Links
 
